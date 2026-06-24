@@ -46,7 +46,8 @@ jobs:
           python3 - <<'EOF'
           import json, pathlib
 
-          registry = json.loads(pathlib.Path('ig/registry.json').read_text())
+          reg_path = pathlib.Path('ig/registry.json')
+          registry = json.loads(reg_path.read_text()) if reg_path.exists() else {}
 
           cards = ''
           for ig in sorted(registry.values(), key=lambda x: x['title']):
