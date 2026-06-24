@@ -53,6 +53,7 @@ jobs:
               href = f'/ig/{ig["name"]}/{ver}/' if ver else f'/ig/{ig["name"]}/'
               ver_badge = f'<span class="tag">v{ver}</span>' if ver else ''
               base_url = f'https://github.com/inera-ab/{ig["name"]}'
+              ci_url = f'https://inera-ab.github.io/{ig["name"]}/branches/main/'
               card_parts.append(
                   f'    <a class="ig-card" href="{href}">\n'
                   f'      <h3>{ig["title"]}</h3>\n'
@@ -60,7 +61,7 @@ jobs:
                   f'      <div class="ig-card-footer">\n'
                   f'        {ver_badge}\n'
                   f'        <div class="ig-links">\n'
-                  f'          <a class="ig-link" href="{base_url}/releases/latest" onclick="event.stopPropagation()">Senaste release</a>\n'
+                  f'          <a class="ig-link" href="{ci_url}" onclick="event.stopPropagation()">CI Build</a>\n'
                   f'          <a class="ig-link" href="{base_url}" onclick="event.stopPropagation()">K\xe4llkod</a>\n'
                   f'        </div>\n'
                   f'      </div>\n'
