@@ -50,37 +50,33 @@ jobs:
           import json, pathlib, textwrap
           reg_path = pathlib.Path('ig/registry.json')
           registry = json.loads(reg_path.read_text()) if reg_path.exists() else {}
-          card_parts = []
+          row_parts = []
           for ig in sorted(registry.values(), key=lambda x: x['title']):
               ver = ig.get('latest_version', '')
               href = f'/ig/{ig["name"]}/{ver}/' if ver else f'/ig/{ig["name"]}/'
-              ver_badge = f'<span class="tag">v{ver}</span>' if ver else ''
+              ver_cell = f'<span class="tag">v{ver}</span>' if ver else ''
               base_url = f'https://github.com/inera-ab/{ig["name"]}'
               ci_url = f'https://inera-ab.github.io/{ig["name"]}/'
-              card_parts.append(
-                  f'    <a class="ig-card" href="{href}">\n'
-                  f'      <h3>{ig["title"]}</h3>\n'
-                  f'      <p>{ig.get("description", "")}</p>\n'
-                  f'      <div class="ig-card-footer">\n'
-                  f'        {ver_badge}\n'
-                  f'        <div class="ig-links">\n'
-                  f'          <a class="ig-link" href="{ci_url}" onclick="event.stopPropagation()">CI Build</a>\n'
-                  f'          <a class="ig-link" href="{base_url}" onclick="event.stopPropagation()">K\xe4llkod</a>\n'
-                  f'        </div>\n'
-                  f'      </div>\n'
-                  f'    </a>'
+              row_parts.append(
+                  f'<tr>'
+                  f'<td><a class="ig-title-link" href="{href}">{ig["title"]}</a></td>'
+                  f'<td class="ig-desc">{ig.get("description", "")}</td>'
+                  f'<td>{ver_cell}</td>'
+                  f'<td class="ig-links"><a class="ig-link" href="{ci_url}">CI Build</a>'
+                  f'<a class="ig-link" href="{base_url}">K\xe4llkod</a></td>'
+                  f'</tr>'
               )
-          if card_parts:
-              cards_html = '\n'.join(card_parts)
+          if row_parts:
+              rows_html = '\n'.join(row_parts)
           else:
-              cards_html = '    <div class="empty-state">\n      <p>Inga implementation guides har publicerats \xe4nnu.</p>\n    </div>'
+              rows_html = '<tr><td colspan="4" class="empty-td">Inga implementation guides har publicerats \xe4nnu.</td></tr>'
           html = textwrap.dedent("""\
           <!DOCTYPE html>
           <html lang="sv">
           <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Implementation Guides – Inera FHIR</title>
+            <title>Implementation Guides &ndash; Inera FHIR</title>
             <link rel="icon" href="/assets/images/inera-thumbnail.png">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=fallback">
@@ -98,7 +94,7 @@ jobs:
               body { font-family: 'Open Sans', Arial, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
               .page-header { background: var(--primary); box-shadow: 0 2px 6px rgba(0,0,0,.2); }
               .header-inner { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; height: 56px; display: flex; align-items: center; gap: 1rem; }
-              .header-logo img { height: 32px; width: auto; }
+              .header-logo { height: 32px; width: auto; }
               .header-title { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; color: white; text-decoration: none; flex: 1; }
               .page-tabs { background: var(--primary-dark); }
               .tabs-inner { max-width: 960px; margin: 0 auto; padding: 0 0.5rem; display: flex; }
@@ -107,17 +103,19 @@ jobs:
               .tab-link.active { color: white; border-bottom: 2px solid white; }
               main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
               h1 { font-family: 'Poppins', sans-serif; color: var(--primary-dark); font-size: 1.5rem; font-weight: 700; border-bottom: 3px solid var(--primary); padding-bottom: 0.3em; margin-bottom: 1.5rem; }
-              .ig-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
-              .ig-card { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 4px rgba(163,54,98,0.08); transition: box-shadow 0.15s, transform 0.15s; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; overflow: hidden; word-break: break-word; }
-              .ig-card:hover { box-shadow: 0 4px 16px rgba(163,54,98,0.20); transform: translateY(-2px); }
-              .ig-card h3 { font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--primary-dark); overflow-wrap: break-word; min-width: 0; }
-              .ig-card p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.5; flex: 1; overflow-wrap: break-word; min-width: 0; }
-              .ig-card-footer { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem; flex-wrap: wrap; }
-              .tag { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; background: #f9edf3; color: var(--primary); }
-              .ig-links { display: flex; gap: 0.75rem; margin-left: auto; }
-              .ig-link { font-size: 0.78rem; color: var(--primary-dark); text-decoration: underline; }
+              .ig-table { width: 100%; border-collapse: collapse; background: white; border: 1px solid var(--border); box-shadow: 0 1px 4px rgba(163,54,98,0.08); margin-bottom: 2.5rem; }
+              .ig-table th { background: var(--primary-dark); color: white; font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600; text-align: left; padding: 0.75rem 1rem; white-space: nowrap; }
+              .ig-table td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 0.85rem; line-height: 1.5; }
+              .ig-table tr:last-child td { border-bottom: none; }
+              .ig-table tbody tr:hover td { background: #fdf5f9; }
+              .ig-title-link { font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--primary-dark); text-decoration: none; }
+              .ig-title-link:hover { color: var(--primary); text-decoration: underline; }
+              .ig-desc { color: var(--text-mid); width: 50%; }
+              .tag { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; background: #f9edf3; color: var(--primary); white-space: nowrap; }
+              .ig-links { white-space: nowrap; }
+              .ig-link { font-size: 0.78rem; color: var(--primary-dark); text-decoration: underline; display: block; }
               .ig-link:hover { color: var(--primary); }
-              .empty-state { background: white; border: 1px dashed var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; color: var(--text-mid); }
+              .empty-td { color: var(--text-mid); text-align: center; padding: 2.5rem; }
               footer { background: var(--primary-dark); color: rgba(255,255,255,0.85); text-align: center; padding: 1.5rem; font-size: 0.82rem; margin-top: 3rem; }
               footer a { color: #ffd4e8; text-decoration: underline; }
               footer a:hover { color: white; }
@@ -126,7 +124,7 @@ jobs:
           <body>
           <header class="page-header">
             <div class="header-inner">
-              <a href="/"><img src="/assets/images/inera-logo.svg" alt="Inera" class="header-logo" style="height:32px;width:auto"></a>
+              <a href="/"><img src="/assets/images/inera-logo.svg" alt="Inera" class="header-logo"></a>
               <a href="/" class="header-title">Inera's FHIR Standards</a>
             </div>
           </header>
@@ -138,9 +136,17 @@ jobs:
           </nav>
           <main>
             <h1>Publicerade Implementation Guides</h1>
-            <div class="ig-grid">
-          __CARDS__
-            </div>
+            <table class="ig-table">
+              <thead><tr>
+                <th>Implementation Guide</th>
+                <th>Beskrivning</th>
+                <th>Version</th>
+                <th>L\xe4nkar</th>
+              </tr></thead>
+              <tbody>
+          __ROWS__
+              </tbody>
+            </table>
           </main>
           <footer>
             <p>Utf\xf6rt av <a href="https://www.inera.se">Inera AB</a> &middot;
@@ -148,7 +154,7 @@ jobs:
           </footer>
           </body>
           </html>
-          """).replace('__CARDS__', cards_html)
+          """).replace('__ROWS__', rows_html)
           out = pathlib.Path('ig/index.html')
           out.parent.mkdir(parents=True, exist_ok=True)
           out.write_text(html)
