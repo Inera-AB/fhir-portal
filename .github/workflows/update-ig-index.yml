@@ -185,7 +185,9 @@ jobs:
           </body>
           </html>
           """).replace('__CARDS__', cards_html)
-          pathlib.Path('ig/index.html').write_text(html)
+          out = pathlib.Path('ig/index.html')
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(html)
           print(f"Generated ig/index.html with {len(registry)} IG(s)")
           EOF
 
