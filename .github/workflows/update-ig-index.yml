@@ -48,36 +48,149 @@ jobs:
 
           cards = ''
           for ig in sorted(registry.values(), key=lambda x: x['title']):
-              ver   = ig.get('latest_version', '')
-              badge = f'<span class="ig-version">v{ver}</span>' if ver else ''
-              ver_link = f'· <a href="/ig/{ig["name"]}/{ver}/">v{ver}</a>' if ver else ''
+              ver      = ig.get('latest_version', '')
+              badge    = f'<span class="tag">v{ver}</span>' if ver else ''
+              ver_link = f'<a class="nav-link" href="/ig/{ig["name"]}/{ver}/">v{ver}</a>' if ver else ''
               cards += f"""
-              <article class="ig-card">
-                <h2><a href="/ig/{ig['name']}/history.html">{ig['title']}</a> {badge}</h2>
-                <p>{ig.get('description', '')}</p>
-                <nav>
-                  <a href="/ig/{ig['name']}/history.html">Version history</a>
-                  {ver_link}
-                </nav>
-              </article>"""
+    <a class="ig-card" href="/ig/{ig['name']}/history.html">
+      <h3>{ig['title']}</h3>
+      <p>{ig.get('description', '')}</p>
+      <div class="ig-card-footer">
+        {badge}
+        {ver_link}
+      </div>
+    </a>"""
 
-          html = f"""<!DOCTYPE html>
-          <html lang="sv">
-          <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Inera FHIR Implementation Guides</title>
-            <link href="/inera.css" rel="stylesheet">
-          </head>
-          <body>
-            <main>
-              <h1>FHIR Implementation Guides</h1>
-              {cards if cards else '<p>Inga implementation guides har publicerats ännu.</p>'}
-            </main>
-          </body>
-          </html>"""
+          cards_html = cards if cards else """
+    <div class="empty-state">
+      <p>Inga implementation guides har publicerats \xe4nnu.</p>
+    </div>"""
 
+          html = """\
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FHIR Implementation Guides – Inera</title>
+  <style>
+    :root {
+      --inera-blue: #005b9c;
+      --inera-light-blue: #e6f0f8;
+      --text: #333;
+      --text-light: #666;
+      --border: #d0dce8;
+      --card-shadow: 0 2px 8px rgba(0,91,156,0.10);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f4f7fb;
+      color: var(--text);
+      min-height: 100vh;
+    }
+    header {
+      background: var(--inera-blue);
+      color: white;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    header .inner { max-width: 900px; margin: 0 auto; }
+    header nav { font-size: 0.85rem; opacity: 0.75; margin-bottom: 0.5rem; }
+    header nav a { color: white; text-decoration: none; }
+    header nav a:hover { text-decoration: underline; }
+    header h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.01em; }
+    header p { margin-top: 0.4rem; opacity: 0.85; font-size: 0.95rem; }
+    main { max-width: 900px; margin: 2.5rem auto; padding: 0 1.5rem; }
+    h2 {
+      font-size: 1.1rem;
+      color: var(--inera-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .ig-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--card-shadow);
+      transition: box-shadow 0.15s, transform 0.15s;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .ig-card:hover { box-shadow: 0 4px 16px rgba(0,91,156,0.18); transform: translateY(-2px); }
+    .ig-card h3 { font-size: 1rem; color: var(--inera-blue); }
+    .ig-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.5; flex: 1; }
+    .ig-card-footer { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem; }
+    .tag {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: var(--inera-light-blue);
+      color: var(--inera-blue);
+    }
+    .nav-link { font-size: 0.8rem; color: var(--inera-blue); }
+    .empty-state {
+      background: white;
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      padding: 2.5rem;
+      text-align: center;
+      color: var(--text-light);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+    footer a { color: var(--inera-blue); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <nav><a href="/">fhir.inera.se</a> &rsaquo; Implementation Guides</nav>
+    <h1>FHIR Implementation Guides</h1>
+    <p>Publicerade specifikationer från Inera AB</p>
+  </div>
+</header>
+
+<main>
+  <h2>Publicerade implementation guides</h2>
+  <div class="ig-grid">
+""" + cards_html + """
+  </div>
+</main>
+
+<footer>
+  <p>Utfört av <a href="https://www.inera.se">Inera AB</a> &middot;
+     Källkod på <a href="https://github.com/inera-ab/fhir-portal">GitHub</a></p>
+</footer>
+
+</body>
+</html>
+"""
           pathlib.Path('ig/index.html').write_text(html)
+          print(f"Generated ig/index.html with {len(registry)} IG(s)")
           EOF
 
       - name: Commit and push
