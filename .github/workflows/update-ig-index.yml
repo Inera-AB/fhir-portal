@@ -197,7 +197,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add ig/registry.json ig/index.html
+          git add ig/
           MSG="chore: update IG registry"
           [ -n "$IG_LABEL" ] && MSG="$MSG for $IG_LABEL"
           git diff --cached --quiet || git commit -m "$MSG"
