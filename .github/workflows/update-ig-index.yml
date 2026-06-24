@@ -3,6 +3,7 @@ name: Update IG registry
 on:
   repository_dispatch:
     types: [ig-deployed]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -16,6 +17,7 @@ jobs:
           ref: gh-pages
 
       - name: Update registry.json
+        if: github.event_name == 'repository_dispatch'
         env:
           IG_NAME: ${{ github.event.client_payload.ig_name }}
           IG_TITLE: ${{ github.event.client_payload.ig_title }}
@@ -198,5 +200,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add ig/registry.json ig/index.html
-          git diff --cached --quiet || git commit -m "chore: update IG registry for ${{ github.event.client_payload.ig_name }}"
+          git diff --cached --quiet || git commit -m "chore: update IG registry${{ github.event_name == 'repository_dispatch' && format(' for {0}', github.event.client_payload.ig_name) || '' }}"
           git push origin gh-pages
