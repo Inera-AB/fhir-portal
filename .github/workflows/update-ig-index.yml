@@ -77,110 +77,64 @@ jobs:
           <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>FHIR Implementation Guides – Inera</title>
+            <title>Implementation Guides – Inera FHIR</title>
+            <link rel="icon" href="/assets/images/inera-thumbnail.png">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=fallback">
             <style>
               :root {
-                --inera-blue: #005b9c;
-                --inera-light-blue: #e6f0f8;
-                --text: #333;
-                --text-light: #666;
-                --border: #d0dce8;
-                --card-shadow: 0 2px 8px rgba(0,91,156,0.10);
+                --primary:       #A33662;
+                --primary-dark:  #7E2A4C;
+                --primary-light: #C03F73;
+                --bg:            #F9F6F1;
+                --text:          #353636;
+                --text-mid:      #727373;
+                --border:        #CCCCCC;
               }
               * { box-sizing: border-box; margin: 0; padding: 0; }
-              body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                background: #f4f7fb;
-                color: var(--text);
-                min-height: 100vh;
-              }
-              header {
-                background: var(--inera-blue);
-                color: white;
-                padding: 2rem 1.5rem;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-              }
-              header .inner { max-width: 900px; margin: 0 auto; }
-              header nav { font-size: 0.85rem; opacity: 0.75; margin-bottom: 0.5rem; }
-              header nav a { color: white; text-decoration: none; }
-              header nav a:hover { text-decoration: underline; }
-              header h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.01em; }
-              header p { margin-top: 0.4rem; opacity: 0.85; font-size: 0.95rem; }
-              main { max-width: 900px; margin: 2.5rem auto; padding: 0 1.5rem; }
-              h2 {
-                font-size: 1.1rem;
-                color: var(--inera-blue);
-                text-transform: uppercase;
-                letter-spacing: 0.06em;
-                margin-bottom: 1rem;
-                padding-bottom: 0.4rem;
-                border-bottom: 2px solid var(--border);
-              }
-              .ig-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 1rem;
-                margin-bottom: 2.5rem;
-              }
-              .ig-card {
-                background: white;
-                border: 1px solid var(--border);
-                border-radius: 8px;
-                padding: 1.25rem 1.5rem;
-                box-shadow: var(--card-shadow);
-                transition: box-shadow 0.15s, transform 0.15s;
-                text-decoration: none;
-                color: inherit;
-                display: flex;
-                flex-direction: column;
-                gap: 0.4rem;
-              }
-              .ig-card:hover { box-shadow: 0 4px 16px rgba(0,91,156,0.18); transform: translateY(-2px); }
-              .ig-card h3 { font-size: 1rem; color: var(--inera-blue); }
-              .ig-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.5; flex: 1; }
-              .ig-card-footer { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem; }
-              .tag {
-                display: inline-block;
-                padding: 0.15rem 0.55rem;
-                border-radius: 999px;
-                font-size: 0.75rem;
-                font-weight: 600;
-                background: var(--inera-light-blue);
-                color: var(--inera-blue);
-              }
+              body { font-family: 'Open Sans', Arial, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+              .page-header { background: var(--primary); box-shadow: 0 2px 6px rgba(0,0,0,.2); }
+              .header-inner { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; height: 56px; display: flex; align-items: center; gap: 1rem; }
+              .header-logo img { height: 32px; width: auto; }
+              .header-title { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; color: white; text-decoration: none; flex: 1; }
+              .page-tabs { background: var(--primary-dark); }
+              .tabs-inner { max-width: 960px; margin: 0 auto; padding: 0 0.5rem; display: flex; }
+              .tab-link { color: rgba(255,255,255,0.8); text-decoration: none; font-weight: 600; font-size: 0.85rem; padding: 0.75rem 1rem; display: inline-block; }
+              .tab-link:hover { color: white; text-decoration: underline; }
+              .tab-link.active { color: white; border-bottom: 2px solid white; }
+              main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
+              h1 { font-family: 'Poppins', sans-serif; color: var(--primary-dark); font-size: 1.5rem; font-weight: 700; border-bottom: 3px solid var(--primary); padding-bottom: 0.3em; margin-bottom: 1.5rem; }
+              .ig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+              .ig-card { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 4px rgba(163,54,98,0.08); transition: box-shadow 0.15s, transform 0.15s; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 0.4rem; }
+              .ig-card:hover { box-shadow: 0 4px 16px rgba(163,54,98,0.20); transform: translateY(-2px); }
+              .ig-card h3 { font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--primary-dark); }
+              .ig-card p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.5; flex: 1; }
+              .ig-card-footer { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem; flex-wrap: wrap; }
+              .tag { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; background: #f9edf3; color: var(--primary); }
               .ig-links { display: flex; gap: 0.75rem; margin-left: auto; }
-              .ig-link { font-size: 0.78rem; color: var(--inera-blue); text-decoration: none; }
-              .ig-link:hover { text-decoration: underline; }
-              .empty-state {
-                background: white;
-                border: 1px dashed var(--border);
-                border-radius: 8px;
-                padding: 2.5rem;
-                text-align: center;
-                color: var(--text-light);
-              }
-              footer {
-                text-align: center;
-                padding: 2rem;
-                color: var(--text-light);
-                font-size: 0.82rem;
-                border-top: 1px solid var(--border);
-                margin-top: 3rem;
-              }
-              footer a { color: var(--inera-blue); text-decoration: none; }
-              footer a:hover { text-decoration: underline; }
+              .ig-link { font-size: 0.78rem; color: var(--primary-dark); text-decoration: underline; }
+              .ig-link:hover { color: var(--primary); }
+              .empty-state { background: white; border: 1px dashed var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; color: var(--text-mid); }
+              footer { background: var(--primary-dark); color: rgba(255,255,255,0.85); text-align: center; padding: 1.5rem; font-size: 0.82rem; margin-top: 3rem; }
+              footer a { color: #ffd4e8; text-decoration: underline; }
+              footer a:hover { color: white; }
             </style>
           </head>
           <body>
-          <header>
-            <div class="inner">
-              <nav><a href="/">fhir.inera.se</a> &rsaquo; Implementation Guides</nav>
-              <h1>FHIR Implementation Guides</h1>
-              <p>Publicerade specifikationer fr\xe5n Inera AB</p>
+          <header class="page-header">
+            <div class="header-inner">
+              <a href="/"><img src="/assets/images/inera-logo.svg" alt="Inera" class="header-logo" style="height:32px;width:auto"></a>
+              <a href="/" class="header-title">Inera's FHIR Standards</a>
             </div>
           </header>
+          <nav class="page-tabs">
+            <div class="tabs-inner">
+              <a href="/" class="tab-link">Hem</a>
+              <a href="/ig/" class="tab-link active">Implementation Guides</a>
+            </div>
+          </nav>
           <main>
-            <h2>Publicerade implementation guides</h2>
+            <h1>Publicerade Implementation Guides</h1>
             <div class="ig-grid">
           __CARDS__
             </div>
