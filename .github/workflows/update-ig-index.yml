@@ -104,8 +104,8 @@ jobs:
               .tab-link.active { color: white; border-bottom: 2px solid white; }
               main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
               h1 { font-family: 'Poppins', sans-serif; color: var(--primary-dark); font-size: 1.5rem; font-weight: 700; border-bottom: 3px solid var(--primary); padding-bottom: 0.3em; margin-bottom: 1.5rem; }
-              .ig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
-              .ig-card { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 4px rgba(163,54,98,0.08); transition: box-shadow 0.15s, transform 0.15s; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 0.4rem; }
+              .ig-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+              .ig-card { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 4px rgba(163,54,98,0.08); transition: box-shadow 0.15s, transform 0.15s; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; overflow: hidden; word-break: break-word; }
               .ig-card:hover { box-shadow: 0 4px 16px rgba(163,54,98,0.20); transform: translateY(-2px); }
               .ig-card h3 { font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--primary-dark); overflow-wrap: break-word; min-width: 0; }
               .ig-card p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.5; flex: 1; overflow-wrap: break-word; min-width: 0; }
