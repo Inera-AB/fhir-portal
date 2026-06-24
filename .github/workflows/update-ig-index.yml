@@ -27,13 +27,19 @@ jobs:
           ig_name = os.environ["IG_NAME"]
           ig_version = os.environ.get("IG_VERSION", "")
 
-          pkg_path = f"ig/{ig_name}/{ig_version}/package.json" if ig_version else f"ig/{ig_name}/package.json"
-          with open(pkg_path, encoding="utf-8") as f:
-              pkg = json.load(f)
+          base = f"ig/{ig_name}/{ig_version}" if ig_version else f"ig/{ig_name}"
 
-          ig_title = pkg.get("title", ig_name)
-          ig_description = pkg.get("description", "")
-          ig_version = ig_version or pkg.get("version", "")
+          with open(f"{base}/package.manifest.json", encoding="utf-8") as f:
+              manifest = json.load(f)
+
+          package_id = manifest["name"]
+          ig_version = ig_version or manifest.get("version", "")
+
+          with open(f"{base}/ImplementationGuide-{package_id}.json", encoding="utf-8") as f:
+              ig_res = json.load(f)
+
+          ig_title = ig_res.get("title", ig_name)
+          ig_description = ig_res.get("description", "")
 
           card_id = f"ig-card-{ig_name}"
           href = f"/ig/{ig_name}/{ig_version}/" if ig_version else f"/ig/{ig_name}/"
