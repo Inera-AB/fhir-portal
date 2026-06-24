@@ -1,0 +1,76 @@
+name: Update IG index
+
+on:
+  repository_dispatch:
+    types: [ig-deployed]
+
+permissions:
+  contents: write
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Update index.html with IG card
+        env:
+          IG_NAME: ${{ github.event.client_payload.ig_name }}
+          IG_TITLE: ${{ github.event.client_payload.ig_title }}
+          IG_DESCRIPTION: ${{ github.event.client_payload.ig_description }}
+          IG_VERSION: ${{ github.event.client_payload.ig_version }}
+        run: |
+          python3 - <<'EOF'
+          import os, re
+
+          ig_name = os.environ["IG_NAME"]
+          ig_title = os.environ["IG_TITLE"]
+          ig_description = os.environ.get("IG_DESCRIPTION", "")
+          ig_version = os.environ.get("IG_VERSION", "")
+
+          card_id = f"ig-card-{ig_name}"
+          href = f"/ig/{ig_name}/"
+          tag_html = f'<span class="tag">v{ig_version}</span>' if ig_version else ""
+
+          new_card = (
+              f'    <a class="ig-card" id="{card_id}" href="{href}">\n'
+              f'      <h3>{ig_title}</h3>\n'
+              f'      <p>{ig_description}</p>\n'
+              f'      {tag_html}\n'
+              f'    </a>'
+          )
+
+          with open("index.html", "r", encoding="utf-8") as f:
+              html = f.read()
+
+          # Remove old card for this IG if it exists
+          pattern = rf'    <a class="ig-card" id="{re.escape(card_id)}"[\s\S]*?</a>'
+          html = re.sub(pattern, "", html)
+
+          # Remove empty-state placeholder if present
+          empty_pattern = r'\s*<div class="empty-state">[\s\S]*?</div>'
+          html = re.sub(empty_pattern, "", html)
+
+          # Insert new card before closing of ig-grid div
+          html = html.replace(
+              "  </div>\n</main>",
+              f"\n{new_card}\n  </div>\n</main>"
+          )
+
+          with open("index.html", "w", encoding="utf-8") as f:
+              f.write(html)
+
+          print(f"Added/updated card for {ig_name}")
+          EOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "chore: update index for ${{ github.event.client_payload.ig_name }} ${{ github.event.client_payload.ig_version }}"
+          git push origin gh-pages
