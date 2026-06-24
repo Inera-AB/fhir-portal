@@ -26,10 +26,13 @@ jobs:
           IS_RELEASE: ${{ github.event.client_payload.is_release }}
         run: |
           python3 - <<'EOF'
-          import json, os, pathlib
+          import json, os, pathlib, sys
           reg_path = pathlib.Path('ig/registry.json')
           registry = json.loads(reg_path.read_text()) if reg_path.exists() else {}
           name = os.environ['IG_NAME']
+          if '/' in name:
+              print(f"Rejected invalid ig_name '{name}' (contains slash)")
+              sys.exit(0)
           entry = registry.get(name, {})
           entry['name']        = name
           entry['title']       = os.environ['IG_TITLE']
