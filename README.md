@@ -6,13 +6,20 @@ Hub-repo för Ineras FHIR Implementation Guides, publicerade på **[fhir.inera.s
 
 ```
 inera-ab/fhir-portal   (gh-pages branch)
-  /ig/EHDS-TK/           ← publicerad av EHDS-TK-repots CI
-  /ig/inera-laboratory/  ← publicerad av laboratory-repots CI
-  /ig/inera-medication/  ← osv.
-  index.html             ← landningssida, uppdateras automatiskt
+  index.html             ← Ineras huvudlandningssida (hanteras manuellt)
+  ig/
+    index.html           ← IG-katalog, auto-genererad från registry.json
+    registry.json        ← maskinläsbar källa, uppdateras av CI-dispatch
+    IneraFHIRTemplate/
+      history.html
+      1.0.0/             ← IG-output publicerad av IG-repots CI
+    inera-laboratory/
+      history.html
+      1.0.0/
 ```
 
-Varje IG-repo bygger sin guide och pushar resultatet till detta repos `gh-pages`-branch. Indexsidan uppdateras automatiskt via `repository_dispatch`.
+Varje IG-repo bygger sin guide och pushar output till `gh-pages/ig/{ig-namn}/{version}/`.
+`registry.json` uppdateras via `repository_dispatch`, och `ig/index.html` regenereras automatiskt.
 
 ## Hur ett IG-repo publicerar hit
 
@@ -33,11 +40,11 @@ Spara PAT:en som en Actions-hemlighet i IG-repot, t.ex. `FHIR_PORTAL_TOKEN`.
     personal_token: ${{ secrets.FHIR_PORTAL_TOKEN }}
     external_repository: inera-ab/fhir-portal
     publish_branch: gh-pages
-    publish_dir: ./output          # katalogen där IG:n byggs
-    destination_dir: ig/mitt-ig-namn
+    publish_dir: ./output
+    destination_dir: ig/${{ github.event.repository.name }}/${{ env.IG_VERSION }}
     keep_files: true               # viktigt – radera inte andra IG:ar
 
-- name: Uppdatera index på fhir-portal
+- name: Uppdatera IG-registret på fhir-portal
   env:
     GH_TOKEN: ${{ secrets.FHIR_PORTAL_TOKEN }}
   run: |
@@ -45,10 +52,38 @@ Spara PAT:en som en Actions-hemlighet i IG-repot, t.ex. `FHIR_PORTAL_TOKEN`.
       --method POST \
       -f event_type=ig-deployed \
       -f "client_payload[ig_name]=${{ github.event.repository.name }}" \
-      -f "client_payload[ig_version]=${{ env.IG_VERSION }}"
+      -f "client_payload[ig_title]=${{ env.IG_TITLE }}" \
+      -f "client_payload[ig_description]=${{ env.IG_DESCRIPTION }}" \
+      -f "client_payload[ig_version]=${{ env.IG_VERSION }}" \
+      -f "client_payload[is_release]=${{ github.event_name == 'release' }}"
 ```
 
-`ig_name` är det enda som skickas — titel, beskrivning och version hämtas automatiskt från `package.json` i IG:ns output (som redan finns på `gh-pages` när dispatchen körs).
+### Miljövariabler att sätta i IG-repots workflow
+
+Läs dem från `ImplementationGuide-{package-id}.json` i output-katalogen:
+
+```yaml
+- name: Läs IG-metadata
+  run: |
+    MANIFEST=output/package.manifest.json
+    PKG_ID=$(jq -r '.name' "$MANIFEST")
+    echo "IG_VERSION=$(jq -r '.version' "$MANIFEST")" >> $GITHUB_ENV
+    IG_FILE="output/ImplementationGuide-${PKG_ID}.json"
+    echo "IG_TITLE=$(jq -r '.title' "$IG_FILE")"       >> $GITHUB_ENV
+    echo "IG_DESCRIPTION=$(jq -r '.description' "$IG_FILE")" >> $GITHUB_ENV
+```
+
+### Parametrar för `repository_dispatch`
+
+| Fält | Beskrivning |
+|---|---|
+| `ig_name` | Mappnamn under `/ig/` — ska matcha repo-namnet |
+| `ig_title` | Visningsnamn i IG-katalogen |
+| `ig_description` | Kort beskrivning |
+| `ig_version` | Versionsnummer, t.ex. `1.0.0` |
+| `is_release` | `true` för release-taggar, `false` för branch-byggen |
+
+`is_release: true` gör att `latest_version` i `registry.json` uppdateras och att ett versionsnummer visas i IG-katalogen. Branch-byggen skriver inte över `latest_version`.
 
 ## GitHub Pages-inställningar
 

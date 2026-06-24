@@ -1,4 +1,4 @@
-name: Update IG index
+name: Update IG registry
 
 on:
   repository_dispatch:
@@ -8,82 +8,82 @@ permissions:
   contents: write
 
 jobs:
-  update-index:
+  update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout gh-pages
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: gh-pages
 
-      - name: Update index.html with IG card
+      - name: Update registry.json
         env:
           IG_NAME: ${{ github.event.client_payload.ig_name }}
+          IG_TITLE: ${{ github.event.client_payload.ig_title }}
+          IG_DESCRIPTION: ${{ github.event.client_payload.ig_description }}
           IG_VERSION: ${{ github.event.client_payload.ig_version }}
+          IS_RELEASE: ${{ github.event.client_payload.is_release }}
         run: |
           python3 - <<'EOF'
-          import os, re, json
+          import json, os, pathlib
+          reg_path = pathlib.Path('ig/registry.json')
+          registry = json.loads(reg_path.read_text()) if reg_path.exists() else {}
+          name = os.environ['IG_NAME']
+          entry = registry.get(name, {})
+          entry['name']        = name
+          entry['title']       = os.environ['IG_TITLE']
+          entry['description'] = os.environ['IG_DESCRIPTION']
+          if os.environ.get('IS_RELEASE') == 'true':
+              entry['latest_version'] = os.environ['IG_VERSION']
+          registry[name] = entry
+          reg_path.parent.mkdir(parents=True, exist_ok=True)
+          reg_path.write_text(json.dumps(registry, indent=2, ensure_ascii=False) + '\n')
+          EOF
 
-          ig_name = os.environ["IG_NAME"]
-          ig_version = os.environ.get("IG_VERSION", "")
+      - name: Regenerate ig/index.html
+        run: |
+          python3 - <<'EOF'
+          import json, pathlib
 
-          base = f"ig/{ig_name}/{ig_version}" if ig_version else f"ig/{ig_name}"
+          registry = json.loads(pathlib.Path('ig/registry.json').read_text())
 
-          with open(f"{base}/package.manifest.json", encoding="utf-8") as f:
-              manifest = json.load(f)
+          cards = ''
+          for ig in sorted(registry.values(), key=lambda x: x['title']):
+              ver   = ig.get('latest_version', '')
+              badge = f'<span class="ig-version">v{ver}</span>' if ver else ''
+              ver_link = f'· <a href="/ig/{ig["name"]}/{ver}/">v{ver}</a>' if ver else ''
+              cards += f"""
+              <article class="ig-card">
+                <h2><a href="/ig/{ig['name']}/history.html">{ig['title']}</a> {badge}</h2>
+                <p>{ig.get('description', '')}</p>
+                <nav>
+                  <a href="/ig/{ig['name']}/history.html">Version history</a>
+                  {ver_link}
+                </nav>
+              </article>"""
 
-          package_id = manifest["name"]
-          ig_version = ig_version or manifest.get("version", "")
+          html = f"""<!DOCTYPE html>
+          <html lang="sv">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Inera FHIR Implementation Guides</title>
+            <link href="/inera.css" rel="stylesheet">
+          </head>
+          <body>
+            <main>
+              <h1>FHIR Implementation Guides</h1>
+              {cards if cards else '<p>Inga implementation guides har publicerats ännu.</p>'}
+            </main>
+          </body>
+          </html>"""
 
-          with open(f"{base}/ImplementationGuide-{package_id}.json", encoding="utf-8") as f:
-              ig_res = json.load(f)
-
-          ig_title = ig_res.get("title", ig_name)
-          ig_description = ig_res.get("description", "")
-
-          card_id = f"ig-card-{ig_name}"
-          href = f"/ig/{ig_name}/{ig_version}/" if ig_version else f"/ig/{ig_name}/"
-          tag_html = f'<span class="tag">v{ig_version}</span>' if ig_version else ""
-
-          new_card = (
-              f'    <a class="ig-card" id="{card_id}" href="{href}">\n'
-              f'      <h3>{ig_title}</h3>\n'
-              f'      <p>{ig_description}</p>\n'
-              f'      {tag_html}\n'
-              f'    </a>'
-          )
-
-          with open("index.html", "r", encoding="utf-8") as f:
-              html = f.read()
-
-          # Remove old card for this IG if it exists
-          pattern = rf'    <a class="ig-card" id="{re.escape(card_id)}"[\s\S]*?</a>'
-          html = re.sub(pattern, "", html)
-
-          # Remove empty-state placeholder if present
-          empty_pattern = r'\s*<div class="empty-state">[\s\S]*?</div>'
-          html = re.sub(empty_pattern, "", html)
-
-          # Insert new card before closing of ig-grid div
-          html = html.replace(
-              "  </div>\n</main>",
-              f"\n{new_card}\n  </div>\n</main>"
-          )
-
-          with open("index.html", "w", encoding="utf-8") as f:
-              f.write(html)
-
-          print(f"Added/updated card for {ig_name} ({ig_title} v{ig_version})")
+          pathlib.Path('ig/index.html').write_text(html)
           EOF
 
       - name: Commit and push
-        env:
-          IG_NAME: ${{ github.event.client_payload.ig_name }}
-          IG_VERSION: ${{ github.event.client_payload.ig_version }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          git diff --cached --quiet && echo "No changes" && exit 0
-          git commit -m "chore: update index for ${IG_NAME} ${IG_VERSION}"
+          git add ig/registry.json ig/index.html
+          git diff --cached --quiet || git commit -m "chore: update IG registry for ${{ github.event.client_payload.ig_name }}"
           git push origin gh-pages
