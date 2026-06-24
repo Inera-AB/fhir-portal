@@ -44,7 +44,8 @@ Spara PAT:en som en Actions-hemlighet i IG-repot, t.ex. `FHIR_PORTAL_TOKEN`.
     gh api repos/inera-ab/fhir-portal/dispatches \
       --method POST \
       -f event_type=ig-deployed \
-      -f "client_payload[ig_name]=${{ github.event.repository.name }}"
+      -f "client_payload[ig_name]=${{ github.event.repository.name }}" \
+      -f "client_payload[ig_version]=${{ env.IG_VERSION }}"
 ```
 
 `ig_name` är det enda som skickas — titel, beskrivning och version hämtas automatiskt från `package.json` i IG:ns output (som redan finns på `gh-pages` när dispatchen körs).

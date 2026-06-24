@@ -19,21 +19,24 @@ jobs:
       - name: Update index.html with IG card
         env:
           IG_NAME: ${{ github.event.client_payload.ig_name }}
+          IG_VERSION: ${{ github.event.client_payload.ig_version }}
         run: |
           python3 - <<'EOF'
           import os, re, json
 
           ig_name = os.environ["IG_NAME"]
+          ig_version = os.environ.get("IG_VERSION", "")
 
-          with open(f"ig/{ig_name}/package.json", encoding="utf-8") as f:
+          pkg_path = f"ig/{ig_name}/{ig_version}/package.json" if ig_version else f"ig/{ig_name}/package.json"
+          with open(pkg_path, encoding="utf-8") as f:
               pkg = json.load(f)
 
           ig_title = pkg.get("title", ig_name)
           ig_description = pkg.get("description", "")
-          ig_version = pkg.get("version", "")
+          ig_version = ig_version or pkg.get("version", "")
 
           card_id = f"ig-card-{ig_name}"
-          href = f"/ig/{ig_name}/"
+          href = f"/ig/{ig_name}/{ig_version}/" if ig_version else f"/ig/{ig_name}/"
           tag_html = f'<span class="tag">v{ig_version}</span>' if ig_version else ""
 
           new_card = (
@@ -70,10 +73,11 @@ jobs:
       - name: Commit and push
         env:
           IG_NAME: ${{ github.event.client_payload.ig_name }}
+          IG_VERSION: ${{ github.event.client_payload.ig_version }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html
           git diff --cached --quiet && echo "No changes" && exit 0
-          git commit -m "chore: update index for ${IG_NAME}"
+          git commit -m "chore: update index for ${IG_NAME} ${IG_VERSION}"
           git push origin gh-pages
