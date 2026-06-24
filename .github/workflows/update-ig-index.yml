@@ -50,15 +50,14 @@ jobs:
           card_parts = []
           for ig in sorted(registry.values(), key=lambda x: x['title']):
               ver = ig.get('latest_version', '')
-              badge = f'<span class="tag">v{ver}</span>' if ver else ''
-              ver_link = f'<a class="nav-link" href="/ig/{ig["name"]}/{ver}/">v{ver}</a>' if ver else ''
+              href = f'/ig/{ig["name"]}/{ver}/' if ver else f'/ig/{ig["name"]}/'
+              ver_badge = f'<span class="tag">v{ver}</span>' if ver else ''
               card_parts.append(
-                  f'    <a class="ig-card" href="/ig/{ig["name"]}/history.html">\n'
+                  f'    <a class="ig-card" href="{href}">\n'
                   f'      <h3>{ig["title"]}</h3>\n'
                   f'      <p>{ig.get("description", "")}</p>\n'
                   f'      <div class="ig-card-footer">\n'
-                  f'        {badge}\n'
-                  f'        {ver_link}\n'
+                  f'        {ver_badge}\n'
                   f'      </div>\n'
                   f'    </a>'
               )
