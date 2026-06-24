@@ -53,7 +53,7 @@ jobs:
               href = f'/ig/{ig["name"]}/{ver}/' if ver else f'/ig/{ig["name"]}/'
               ver_badge = f'<span class="tag">v{ver}</span>' if ver else ''
               base_url = f'https://github.com/inera-ab/{ig["name"]}'
-              ci_url = f'https://inera-ab.github.io/{ig["name"]}/branches/main/'
+              ci_url = f'https://inera-ab.github.io/{ig["name"]}/'
               card_parts.append(
                   f'    <a class="ig-card" href="{href}">\n'
                   f'      <h3>{ig["title"]}</h3>\n'
@@ -107,8 +107,8 @@ jobs:
               .ig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
               .ig-card { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 4px rgba(163,54,98,0.08); transition: box-shadow 0.15s, transform 0.15s; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 0.4rem; }
               .ig-card:hover { box-shadow: 0 4px 16px rgba(163,54,98,0.20); transform: translateY(-2px); }
-              .ig-card h3 { font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--primary-dark); }
-              .ig-card p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.5; flex: 1; }
+              .ig-card h3 { font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--primary-dark); overflow-wrap: break-word; min-width: 0; }
+              .ig-card p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.5; flex: 1; overflow-wrap: break-word; min-width: 0; }
               .ig-card-footer { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem; flex-wrap: wrap; }
               .tag { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; background: #f9edf3; color: var(--primary); }
               .ig-links { display: flex; gap: 0.75rem; margin-left: auto; }
