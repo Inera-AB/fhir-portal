@@ -31,8 +31,8 @@ jobs:
           reg_path = pathlib.Path('ig/registry.json')
           registry = json.loads(reg_path.read_text()) if reg_path.exists() else {}
           name = os.environ['IG_NAME']
-          if '/' in name:
-              print(f"Rejected invalid ig_name '{name}' (contains slash)")
+          if not name or '/' in name:
+              print(f"Rejected invalid ig_name '{name}'")
               sys.exit(0)
           entry = registry.get(name, {})
           entry['name']        = name
