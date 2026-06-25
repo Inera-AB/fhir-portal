@@ -175,4 +175,5 @@ jobs:
           MSG="chore: update IG registry"
           [ -n "$IG_LABEL" ] && MSG="$MSG for $IG_LABEL"
           git diff --cached --quiet || git commit -m "$MSG"
+          git pull --rebase origin gh-pages
           git push origin gh-pages
