@@ -1,0 +1,787 @@
+
+<!doctype html>
+<html lang="sv" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Landing page for Inera's FHIR standards and implementation guides">
+      
+      
+        <meta name="author" content="Inera AB">
+      
+      
+        <link rel="canonical" href="https://fhir.inera.se/assets/documents/Governance/">
+      
+      
+        <link rel="prev" href="../FAQ/">
+      
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="sv">
+        
+          <link rel="alternate" href="../../../en/assets/documents/Governance/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../images/inera-thumbnail.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Styrning - Inera's FHIR Standards</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/inera.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#styrning-av-ineras-fhir-standarder" class="md-skip">
+          Gå till innehållet
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Sidhuvud">
+    <a href="../../.." title="Inera&#39;s FHIR Standards" class="md-header__button md-logo" aria-label="Inera's FHIR Standards" data-md-component="logo">
+      
+  <img src="../../images/inera-logo.svg" alt="" draggable="false">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Inera's FHIR Standards
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Styrning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Välj språk">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="sv" class="md-select__link">
+              🇸🇪 Svenska
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../en/assets/documents/Governance/" hreflang="en" class="md-select__link">
+              🇬🇧 English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Sök" placeholder="Sök" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Sök">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Rensa" aria-label="Rensa" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialiserar sök
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Inera-AB/Inera-FHIR-landingpage" title="Gå till datakatalog" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Inera-AB/Inera-FHIR-landingpage
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Flikar" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hem
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../NewToFHIR/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ny på FHIR?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../FAQ/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Vanliga frågor
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Styrning
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Inera&#39;s FHIR Standards" class="md-nav__button md-logo" aria-label="Inera's FHIR Standards" data-md-component="logo">
+      
+  <img src="../../images/inera-logo.svg" alt="" draggable="false">
+
+    </a>
+    Inera's FHIR Standards
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Inera-AB/Inera-FHIR-landingpage" title="Gå till datakatalog" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Inera-AB/Inera-FHIR-landingpage
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NewToFHIR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ny på FHIR?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vanliga frågor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Styrning
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Styrning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Innehållsförteckning">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Innehållsförteckning
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#styrningsprinciper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Styrningsprinciper
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#livscykel-for-en-fhir-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Livscykel för en FHIR-standard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versionshantering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versionshantering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roller-och-ansvar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roller och ansvar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#andringshanteringsprocess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ändringshanteringsprocess
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fragor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frågor?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="styrning-av-ineras-fhir-standarder">Styrning av Ineras FHIR-standarder<a class="headerlink" href="#styrning-av-ineras-fhir-standarder" title="Permanent link">&para;</a></h1>
+<p>Den här sidan beskriver den generella styrningen för Ineras FHIR-standarder — hur de utvecklas, förvaltas, versionshanteras och avvecklas.</p>
+<h2 id="styrningsprinciper">Styrningsprinciper<a class="headerlink" href="#styrningsprinciper" title="Permanent link">&para;</a></h2>
+<p>Ineras FHIR-standarder styrs enligt följande principer:</p>
+<ul>
+<li><strong>Transparens</strong> — alla standarder och deras ändringshistorik är offentligt tillgängliga på GitHub och Simplifier.net.</li>
+<li><strong>Samverkan</strong> — krav samlas in i samarbete med regioner, kommuner, systemleverantörer och kliniska intressenter.</li>
+<li><strong>Stabilitet</strong> — brytande ändringar minimeras och kommuniceras i god tid.</li>
+<li><strong>Interoperabilitet</strong> — Ineras profiler bygger på nationella basprofiler från <a href="https://hl7.se">HL7 Sweden</a> och internationella standarder från HL7 International.</li>
+</ul>
+<h2 id="livscykel-for-en-fhir-standard">Livscykel för en FHIR-standard<a class="headerlink" href="#livscykel-for-en-fhir-standard" title="Permanent link">&para;</a></h2>
+<pre><code>Krav → Design → Granskning → Publicering (förhandsversion) → Pilot → Publicering (release) → Förvaltning → Avveckling
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Fas</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Krav</strong></td>
+<td>Verksamhetskrav samlas in från intressenter och analyseras.</td>
+</tr>
+<tr>
+<td><strong>Design</strong></td>
+<td>FHIR-profiler, tillägg och terminologi utformas i samarbete med kliniska och tekniska experter.</td>
+</tr>
+<tr>
+<td><strong>Granskning</strong></td>
+<td>Utkast till IG granskas av intressenter och systemleverantörer. Återkoppling bearbetas.</td>
+</tr>
+<tr>
+<td><strong>Förhandsversion</strong></td>
+<td>IG:en publiceras som förhandsversion (t.ex. <code>1.0.0-beta.1</code>) för pilotimplementeringar. Ej för produktionsanvändning.</td>
+</tr>
+<tr>
+<td><strong>Pilot</strong></td>
+<td>Utvalda organisationer implementerar och testar standarden i en kontrollerad miljö.</td>
+</tr>
+<tr>
+<td><strong>Release</strong></td>
+<td>IG:en publiceras som stabil release och godkänns för produktionsanvändning.</td>
+</tr>
+<tr>
+<td><strong>Förvaltning</strong></td>
+<td>Löpande buggfixar (patch-versioner) och mindre förbättringar (minor-versioner).</td>
+</tr>
+<tr>
+<td><strong>Avveckling</strong></td>
+<td>Standarden fasas ut och avvecklas så småningom, med en migrationsväg till en efterföljande standard.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="versionshantering">Versionshantering<a class="headerlink" href="#versionshantering" title="Permanent link">&para;</a></h2>
+<p>Ineras FHIR-standarder använder <a href="https://semver.org/">semantisk versionshantering (SemVer 2.0)</a>:</p>
+<ul>
+<li><code>MAJOR.MINOR.PATCH</code> — t.ex. <code>2.1.4</code></li>
+<li>Förhandsversioner använder ett suffix — t.ex. <code>2.0.0-beta.1</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Versionsdel</th>
+<th>När den ändras</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MAJOR</strong></td>
+<td>Inkompatibla ändringar — befintliga implementeringar behöver uppdateras.</td>
+</tr>
+<tr>
+<td><strong>MINOR</strong></td>
+<td>Nya funktioner tillagda på ett bakåtkompatibelt sätt.</td>
+</tr>
+<tr>
+<td><strong>PATCH</strong></td>
+<td>Bakåtkompatibla buggfixar.</td>
+</tr>
+</tbody>
+</table>
+<p>Beslut om major- och minorversioner fattas i samråd med relevanta styrningsgrupper och dokumenteras i versionsnyheter.</p>
+<h2 id="roller-och-ansvar">Roller och ansvar<a class="headerlink" href="#roller-och-ansvar" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>Ansvar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ineras FHIR-team</strong></td>
+<td>Utformar och förvaltar FHIR-profiler och IG:er.</td>
+</tr>
+<tr>
+<td><strong>Tjänsteförvaltare</strong></td>
+<td>Äger verksamhetskraven för en specifik tjänst.</td>
+</tr>
+<tr>
+<td><strong>Intressentgrupp</strong></td>
+<td>Regioner, kommuner och kliniska experter som deltar i kravinhämtning och granskning.</td>
+</tr>
+<tr>
+<td><strong>Systemleverantörer</strong></td>
+<td>Implementerar standarderna och ger återkoppling från ett tekniskt implementeringsperspektiv.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="andringshanteringsprocess">Ändringshanteringsprocess<a class="headerlink" href="#andringshanteringsprocess" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Ett ändringsönskemål skickas in som ett GitHub-ärende eller via e-post till <a href="mailto:fhir@inera.se">fhir@inera.se</a>.</li>
+<li>Inera bedömer ärendets konsekvenser och angelägenhetsgrad.</li>
+<li>Ärendet prioriteras och schemaläggs för en kommande version.</li>
+<li>Ändringen implementeras, granskas och publiceras som en del av en ny version.</li>
+<li>Den som lämnat in ärendet meddelas och ändringen dokumenteras i versionsnyheter.</li>
+</ol>
+<h2 id="fragor">Frågor?<a class="headerlink" href="#fragor" title="Permanent link">&para;</a></h2>
+<p>Kontakta Ineras FHIR-team på <a href="mailto:fhir@inera.se">fhir@inera.se</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Tillbaka till toppen
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.integrate", "content.tooltips"], "search": "../../javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Kopierat till urklipp", "clipboard.copy": "Kopiera till urklipp", "search.result.more.one": "1 till p\u00e5 denna sida", "search.result.more.other": "# till p\u00e5 denna sida", "search.result.none": "Inga s\u00f6kresultat", "search.result.one": "1 s\u00f6kresultat", "search.result.other": "# s\u00f6kresultat", "search.result.placeholder": "Skriv s\u00f6kord", "search.result.term.missing": "Saknas", "select.version": "V\u00e4lj version"}, "version": null}</script>
+    
+    
+      <script src="../../javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/wcag-aria.js"></script>
+      
+    
+  </body>
+</html>

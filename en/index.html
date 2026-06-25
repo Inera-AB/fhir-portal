@@ -1,0 +1,885 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Landing page for Inera's FHIR standards and implementation guides">
+      
+      
+        <meta name="author" content="Inera AB">
+      
+      
+        <link rel="canonical" href="https://fhir.inera.se/en/">
+      
+      
+      
+        <link rel="next" href="assets/documents/NewToFHIR/">
+      
+      
+        
+          <link rel="alternate" href="/" hreflang="sv">
+        
+          <link rel="alternate" href="/en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../assets/images/inera-thumbnail.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Home - Inera's FHIR Standards</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/inera.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-ineras-fhir-standards" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./" title="Inera&#39;s FHIR Standards" class="md-header__button md-logo" aria-label="Inera's FHIR Standards" data-md-component="logo">
+      
+  <img src="../assets/images/inera-logo.svg" alt="" draggable="false">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Inera's FHIR Standards
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="sv" class="md-select__link">
+              🇸🇪 Svenska
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              🇬🇧 English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Inera-AB/Inera-FHIR-landingpage" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Inera-AB/Inera-FHIR-landingpage
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="assets/documents/NewToFHIR/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  New to FHIR?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="assets/documents/FAQ/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="assets/documents/Governance/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Governance
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./" title="Inera&#39;s FHIR Standards" class="md-nav__button md-logo" aria-label="Inera's FHIR Standards" data-md-component="logo">
+      
+  <img src="../assets/images/inera-logo.svg" alt="" draggable="false">
+
+    </a>
+    Inera's FHIR Standards
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Inera-AB/Inera-FHIR-landingpage" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Inera-AB/Inera-FHIR-landingpage
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ineras-fhir-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Inera's FHIR standards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 Inera&#39;s FHIR standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#published-implementation-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Published Implementation Guides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminology-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terminology Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools and Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-implementing-an-inera-fhir-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Implementing an Inera FHIR standard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 Implementing an Inera FHIR standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-standard-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Standard documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-general-governance-for-inera-fhir-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 General governance for Inera FHIR standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-test-and-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Test and verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-change-management-and-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 Change management and versioning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Change management and versioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-versioning-of-inera-fhir-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Versioning of Inera FHIR standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-change-requests-and-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Change requests and improvements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-want-to-stay-updated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Want to stay updated?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-new-to-fhir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 New to FHIR?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 Frequently asked questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assets/documents/NewToFHIR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    New to FHIR?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assets/documents/FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="assets/documents/Governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="welcome-to-ineras-fhir-standards">Welcome to Inera's FHIR® Standards<a class="headerlink" href="#welcome-to-ineras-fhir-standards" title="Permanent link">&para;</a></h1>
+<p><strong>Table of contents</strong></p>
+<ul>
+<li><a href="#1-ineras-fhir-standards">1 Inera's FHIR standards</a></li>
+<li><a href="#2-implementing-an-inera-fhir-standard">2 Implementing an Inera FHIR standard</a><ul>
+<li><a href="#21-standard-documentation">2.1 Standard documentation</a></li>
+<li><a href="#22-general-governance-for-inera-fhir-standards">2.2 General governance for Inera FHIR standards</a></li>
+</ul>
+</li>
+<li><a href="#3-test-and-verification">3 Test and verification</a></li>
+<li><a href="#4-change-management-and-versioning">4 Change management and versioning</a><ul>
+<li><a href="#41-versioning-of-inera-fhir-standards">4.1 Versioning of Inera FHIR standards</a></li>
+<li><a href="#42-change-requests-and-improvements">4.2 Change requests and improvements</a></li>
+</ul>
+</li>
+<li><a href="#5-want-to-stay-updated">5 Want to stay updated?</a></li>
+<li><a href="#6-new-to-fhir">6 New to FHIR?</a></li>
+<li><a href="#7-frequently-asked-questions">7 Frequently asked questions</a></li>
+</ul>
+<hr />
+<p>Inera manages and develops national digital infrastructure for Swedish healthcare. As part of this work, Inera publishes FHIR-based Implementation Guides (IGs) that enable standardised and interoperable information exchange between healthcare systems and actors across Sweden.</p>
+<p>The purpose of this site is to guide you to the right documentation and technical specifications for Inera's FHIR standards.</p>
+<blockquote>
+<p><strong>Note:</strong> Technical documentation is published in English. Clinical guidelines and governance documents are published in Swedish.</p>
+</blockquote>
+<hr />
+<h2 id="1-ineras-fhir-standards">1 Inera's FHIR standards<a class="headerlink" href="#1-ineras-fhir-standards" title="Permanent link">&para;</a></h2>
+<p>Inera's FHIR standards cover a wide range of national e-health services. Each standard is described in an Implementation Guide (IG) containing profiles, extensions, terminology and rules for how information shall be structured and exchanged.</p>
+<p>All Inera FHIR Implementation Guides are published at <strong><a href="https://fhir.inera.se">fhir.inera.se</a></strong>. Each IG follows a predictable URL pattern based on its name:</p>
+<pre><code>https://fhir.inera.se/ig/&lt;name&gt;/
+</code></pre>
+<p>For example: <a href="https://fhir.inera.se/ig/core/"><code>fhir.inera.se/ig/core/</code></a>, <a href="https://fhir.inera.se/ig/careteam/"><code>fhir.inera.se/ig/careteam/</code></a>.</p>
+<h3 id="published-implementation-guides">Published Implementation Guides<a class="headerlink" href="#published-implementation-guides" title="Permanent link">&para;</a></h3>
+<p>A complete and up-to-date listing of all published Inera FHIR Implementation Guides is available at <strong><a href="https://fhir.inera.se/ig/index.html">fhir.inera.se/ig/</a></strong>. Currently published IGs include:</p>
+<ul>
+<li><strong><a href="https://fhir.inera.se/ig/careteam/">Inera CareTeam</a></strong> — Profiles for representing a patient's designated care contact (<em>fast vårdkontakt</em>) and care team. Used as the first FHIR profile in the 1177 Journal service.</li>
+<li><strong><a href="https://fhir.inera.se/ig/forms/">Inera FHIR Forms</a></strong> — Profiles for <code>Questionnaire</code> and <code>QuestionnaireResponse</code> supporting Inera's national forms service. Enables structured collection and exchange of form-based health information.</li>
+</ul>
+<h3 id="terminology-service">Terminology Service<a class="headerlink" href="#terminology-service" title="Permanent link">&para;</a></h3>
+<p><strong><a href="https://test.api.terminologitjansten.inera.se">Inera Terminologitjänst</a></strong> (<em>Terminologitjänsten</em>) is Inera's national terminology server providing CodeSystems, ValueSets and concept lookups used across Swedish healthcare. It exposes a FHIR Terminology API.</p>
+<h3 id="tools-and-support">Tools and Support<a class="headerlink" href="#tools-and-support" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Inera Core</strong> <em>(coming soon)</em> — Foundational profiles reused across Inera's FHIR standards, e.g. Patient, Organisation and Practitioner profiles adapted to Swedish requirements (personal identity number, HSA-id, etc.).</li>
+<li><strong><a href="https://github.com/Inera-AB/IneraFHIRTemplate">IneraFHIRTemplate</a></strong> — A GitHub template repository for creating new Inera FHIR Implementation Guides, with pre-configured toolchain, CI/CD and Inera branding.</li>
+</ul>
+<p><br><br></p>
+<h2 id="2-implementing-an-inera-fhir-standard">2 Implementing an Inera FHIR standard<a class="headerlink" href="#2-implementing-an-inera-fhir-standard" title="Permanent link">&para;</a></h2>
+<p>When implementing an Inera FHIR standard it is important to understand both the business context and the technical specifications. The sections below describe the key components of the standard documentation and the governance that governs how information exchange shall be carried out.</p>
+<p><br></p>
+<h3 id="21-standard-documentation">2.1 Standard documentation<a class="headerlink" href="#21-standard-documentation" title="Permanent link">&para;</a></h3>
+<p>Each Inera FHIR standard is delivered with documentation that describes how the standard should be used and what requirements apply. The documentation may consist of:</p>
+<ul>
+<li><strong>Implementation Guide (IG):</strong> The technical specifications for the standard, published at <a href="https://fhir.inera.se">fhir.inera.se/ig/\&lt;name&gt;/</a>.</li>
+<li><strong>Clinical guidelines:</strong> Background and clinical rationale behind the standard.</li>
+<li><strong>Use cases:</strong> Descriptions of the intended scenarios for the standard.</li>
+<li><strong>Test protocol:</strong> Used during test and verification to document that the implementation fulfils the standard.</li>
+<li><strong>Conformance resources:</strong> FHIR CapabilityStatements and OperationDefinitions describing what a server or client must support.</li>
+</ul>
+<p><br></p>
+<h3 id="22-general-governance-for-inera-fhir-standards">2.2 General governance for Inera FHIR standards<a class="headerlink" href="#22-general-governance-for-inera-fhir-standards" title="Permanent link">&para;</a></h3>
+<p>The governance describes how Inera manages the lifecycle of its FHIR standards — from requirements gathering and publication to change management and decommissioning. It is important to understand the governance process before starting an implementation.</p>
+<p><a href="assets/documents/Governance/">Click here for more information about governance of Inera's FHIR standards.</a></p>
+<p><br></p>
+<h2 id="3-test-and-verification">3 Test and verification<a class="headerlink" href="#3-test-and-verification" title="Permanent link">&para;</a></h2>
+<p>Before an implementation is put into production and starts exchanging patient information, it must be verified against Inera's test environments. Inera provides:</p>
+<ul>
+<li><strong>Test environments (QA/Staging):</strong> Separate environments for integration and system testing.</li>
+<li><strong>Validators:</strong> Ability to validate FHIR resources against published profiles using the <a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator">HL7 FHIR Validator</a> with the relevant Inera IG loaded from <a href="https://fhir.inera.se">fhir.inera.se</a>.</li>
+<li><strong>Conformance testing:</strong> Inera can offer support for conformance testing against published CapabilityStatements.</li>
+</ul>
+<p>Contact Inera Customer Service or the responsible service manager to start the testing process for a specific service.</p>
+<blockquote>
+<p>Contact: <a href="mailto:kundservice@inera.se">kundservice@inera.se</a></p>
+</blockquote>
+<p><br></p>
+<h2 id="4-change-management-and-versioning">4 Change management and versioning<a class="headerlink" href="#4-change-management-and-versioning" title="Permanent link">&para;</a></h2>
+<h3 id="41-versioning-of-inera-fhir-standards">4.1 Versioning of Inera FHIR standards<a class="headerlink" href="#41-versioning-of-inera-fhir-standards" title="Permanent link">&para;</a></h3>
+<p>Inera's FHIR standards follow <a href="https://semver.org/">semantic versioning (SemVer 2.0)</a>, adapted to Inera's governance process. A version identifier consists of three numbers separated by dots, e.g. <strong>2.1.4</strong>, representing <em>major.minor.patch</em>:</p>
+<ul>
+<li><strong>MAJOR</strong> — changed when making incompatible changes to the API or profiling.</li>
+<li><strong>MINOR</strong> — changed when adding new functionality in a backward-compatible manner.</li>
+<li><strong>PATCH</strong> — changed when making backward-compatible bug fixes.</li>
+</ul>
+<p>A version with a suffix such as <code>2.1.0-beta.1</code> is a pre-release and is not intended for production use.</p>
+<p>Major version changes (major and minor) are decided in consultation with relevant governance groups and communicated via Inera's website and GitHub.</p>
+<p><br></p>
+<h3 id="42-change-requests-and-improvements">4.2 Change requests and improvements<a class="headerlink" href="#42-change-requests-and-improvements" title="Permanent link">&para;</a></h3>
+<p>System vendors and healthcare organisations are welcome to submit requests for changes or improvements:</p>
+<ul>
+<li><strong>Technical questions about an IG:</strong> Create an issue in the relevant <a href="https://github.com/Inera-AB">Inera GitHub repository</a>.</li>
+<li><strong>Business questions or other documentation:</strong> Contact the responsible service manager or write to <a href="mailto:fhir@inera.se">fhir@inera.se</a>.</li>
+</ul>
+<p>Inera performs an impact assessment of incoming requests and decides whether and when changes should be implemented and which version level is affected.</p>
+<p><br></p>
+<h2 id="5-want-to-stay-updated">5 Want to stay updated?<a class="headerlink" href="#5-want-to-stay-updated" title="Permanent link">&para;</a></h2>
+<p>You can subscribe to updates from Inera's FHIR repositories on GitHub:</p>
+<ol>
+<li>Go to <a href="https://github.com/Inera-AB">Inera AB on GitHub</a>.</li>
+<li>Choose the repository you want to follow.</li>
+<li>Click the <strong>Watch</strong> button in the upper right corner and select your preferred notification option.</li>
+</ol>
+<blockquote>
+<p>You need a GitHub account to watch a repository. Create a free account at <a href="https://github.com/signup">github.com/signup</a>.</p>
+</blockquote>
+<p>You can also follow <a href="https://www.inera.se">inera.se</a> for news about service development and FHIR standards.</p>
+<p><br></p>
+<h2 id="6-new-to-fhir">6 New to FHIR?<a class="headerlink" href="#6-new-to-fhir" title="Permanent link">&para;</a></h2>
+<p>This section provides a brief introduction to FHIR for those who are new to it or have limited experience with the standard. You will find an overview of the most commonly used terms, a step-by-step guide to how an Implementation Guide is structured, and links to external resources for further learning.</p>
+<p><a href="assets/documents/NewToFHIR/">Click here for an introduction to FHIR and how to read an Implementation Guide.</a></p>
+<p><br></p>
+<h2 id="7-frequently-asked-questions">7 Frequently asked questions<a class="headerlink" href="#7-frequently-asked-questions" title="Permanent link">&para;</a></h2>
+<p>Here you will find answers to the most common questions about Inera's FHIR work and how to get started.</p>
+<p><a href="assets/documents/FAQ/">Click here to read frequently asked questions.</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.top", "toc.integrate", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/js/wcag-aria.js"></script>
+      
+    
+  </body>
+</html>
