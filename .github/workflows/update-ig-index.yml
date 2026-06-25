@@ -20,6 +20,7 @@ jobs:
         if: github.event_name == 'repository_dispatch'
         env:
           IG_NAME: ${{ github.event.client_payload.ig_name }}
+          IG_SLUG: ${{ github.event.client_payload.ig_slug }}
           IG_TITLE: ${{ github.event.client_payload.ig_title }}
           IG_DESCRIPTION: ${{ github.event.client_payload.ig_description }}
           IG_VERSION: ${{ github.event.client_payload.ig_version }}
@@ -35,6 +36,8 @@ jobs:
               sys.exit(0)
           entry = registry.get(name, {})
           entry['name']        = name
+          slug = os.environ.get('IG_SLUG', '').strip()
+          entry['slug']        = slug if slug else name.lower()
           entry['title']       = os.environ['IG_TITLE']
           entry['description'] = os.environ['IG_DESCRIPTION']
           if os.environ.get('IS_RELEASE') == 'true':
@@ -53,7 +56,8 @@ jobs:
           row_parts = []
           for ig in sorted(registry.values(), key=lambda x: x['title']):
               ver = ig.get('latest_version', '')
-              href = f'/ig/{ig["name"]}/{ver}/' if ver else f'/ig/{ig["name"]}/'
+              slug = ig.get('slug', ig['name'].lower())
+              href = f'/ig/{slug}/{ver}/' if ver else f'/ig/{slug}/'
               ver_cell = f'<span class="tag">v{ver}</span>' if ver else ''
               base_url = f'https://github.com/inera-ab/{ig["name"]}'
               ci_url = f'https://inera-ab.github.io/{ig["name"]}/'
