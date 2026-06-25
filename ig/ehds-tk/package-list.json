@@ -1,0 +1,40 @@
+{
+  "package-id": "inera.ehds.tk",
+  "title": "Inera EHDS Tj\u00e4nstekontrakt \u2013 FHIR Implementation Guide",
+  "canonical": "https://fhir.inera.se/ig/ehds-tk",
+  "introduction": "FHIR IG som beskriver hur Ineras RIVTA-tj\u00e4nstekontrakt mappas till FHIR f\u00f6r att informationsf\u00f6rs\u00f6rja NP\u00d6 och 1177 Journal.",
+  "category": "National Base",
+  "language": "sv",
+  "country": "SE",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build \u2014 latest commit on main branch",
+      "path": "https://inera-ab.github.io/ehds-tk",
+      "status": "ci-build",
+      "current": true
+    },
+    {
+      "version": "0.3.1",
+      "desc": "Release 0.3.1 (2026-06-24)",
+      "path": "https://fhir.inera.se/ig/ehds-tk/0.3.1",
+      "status": "draft",
+      "sequence": "STU 1",
+      "fhirversion": [
+        "4.0.1"
+      ],
+      "current": false
+    },
+    {
+      "version": "0.3.2",
+      "desc": "Release 0.3.2 (2026-06-25)",
+      "path": "https://fhir.inera.se/ig/ehds-tk/0.3.2",
+      "status": "draft",
+      "sequence": "STU 1",
+      "fhirversion": [
+        "4.0.1"
+      ],
+      "current": false
+    }
+  ]
+}

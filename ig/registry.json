@@ -1,0 +1,16 @@
+{
+  "IneraFHIRTemplate": {
+    "name": "IneraFHIRTemplate",
+    "slug": "template",
+    "title": "Inera FHIR Implementation Guide Template",
+    "description": "Mall för Ineras FHIR Implementation Guides.",
+    "latest_version": "2.0.0"
+  },
+  "EHDS-TK": {
+    "name": "EHDS-TK",
+    "slug": "ehds-tk",
+    "title": "Inera EHDS Tjänstekontrakt – FHIR Implementation Guide",
+    "description": "FHIR IG som beskriver hur Ineras RIVTA-tjänstekontrakt mappas till FHIR för att informationsförsörja NPÖ och 1177 Journal.",
+    "latest_version": "0.3.2"
+  }
+}
