@@ -2,56 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://fhir.inera.se/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="sv" href="https://fhir.inera.se/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://fhir.inera.se/en/"/>
     </url>
     <url>
         <loc>https://fhir.inera.se/assets/documents/FAQ/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="sv" href="https://fhir.inera.se/assets/documents/FAQ/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://fhir.inera.se/en/assets/documents/FAQ/"/>
     </url>
     <url>
         <loc>https://fhir.inera.se/assets/documents/Governance/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="sv" href="https://fhir.inera.se/assets/documents/Governance/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://fhir.inera.se/en/assets/documents/Governance/"/>
     </url>
     <url>
         <loc>https://fhir.inera.se/assets/documents/NewToFHIR/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="sv" href="https://fhir.inera.se/assets/documents/NewToFHIR/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://fhir.inera.se/en/assets/documents/NewToFHIR/"/>
     </url>
     <url>
         <loc>https://fhir.inera.se/en/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://fhir.inera.se/en/"/>
         <xhtml:link rel="alternate" hreflang="sv" href="https://fhir.inera.se/"/>
     </url>
     <url>
         <loc>https://fhir.inera.se/en/assets/documents/FAQ/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://fhir.inera.se/en/assets/documents/FAQ/"/>
         <xhtml:link rel="alternate" hreflang="sv" href="https://fhir.inera.se/assets/documents/FAQ/"/>
     </url>
     <url>
         <loc>https://fhir.inera.se/en/assets/documents/Governance/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://fhir.inera.se/en/assets/documents/Governance/"/>
         <xhtml:link rel="alternate" hreflang="sv" href="https://fhir.inera.se/assets/documents/Governance/"/>
     </url>
     <url>
         <loc>https://fhir.inera.se/en/assets/documents/NewToFHIR/</loc>
-        <lastmod>2026-06-25</lastmod>
+        <lastmod>2026-07-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://fhir.inera.se/en/assets/documents/NewToFHIR/"/>
         <xhtml:link rel="alternate" hreflang="sv" href="https://fhir.inera.se/assets/documents/NewToFHIR/"/>
