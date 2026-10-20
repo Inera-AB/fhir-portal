@@ -1,14 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:fhir="http://hl7.org/fhir/feed" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
   <channel>
     <title>Inera FHIR Packages</title>
     <description>Nya FHIR-paket publicerade av Inera</description>
     <link>https://fhir.inera.se/ig/package-feed.xml</link>
     <generator>HL7, Inc FHIR Publication tooling</generator>
-    <lastBuildDate>Mon, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 08:35:22 +0000</lastBuildDate>
     <atom:link href="https://fhir.inera.se/ig/package-feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Oct 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 20 Oct 2026 08:35:22 +0000</pubDate>
     <language>sv-SE</language>
     <ttl>600</ttl>
-  </channel>
+  
+    <item>
+      <title>inera.core.template#2.3.0</title>
+      <description>Övergång till IG Publishers officiella publiceringsläge.</description>
+      <link>https://fhir.inera.se/ig/template/2.3.0/package.tgz</link>
+      <guid isPermaLink="true">https://fhir.inera.se/ig/template/2.3.0/package.tgz</guid>
+      <dc:creator>Inera AB</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>IG</fhir:kind>
+      <pubDate>Tue, 20 Oct 2026 08:35:22 +0000</pubDate>
+      <fhir:details>Publication run at 20/10/2026 by runner using Version 3.0.1 (Git# 27b3216092e5). Built 2026-10-15T17:22:33.724Z (5 days old) source id Unknown (todo)</fhir:details>
+    </item></channel>
 </rss>

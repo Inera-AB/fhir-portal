@@ -1,3 +1,21 @@
 {
-  "packages" : []
+  "packages" : [{
+    "path" : "template/package-list.json",
+    "package-id" : "inera.core.template",
+    "title" : "Inera FHIR Implementation Guide Template",
+    "canonical" : "https://fhir.inera.se/ig/template",
+    "category" : "National Base",
+    "ci-build" : "https://inera-ab.github.io/IneraFHIRTemplate",
+    "version-count" : 6,
+    "latest" : {
+      "version" : "2.3.0",
+      "date" : "2026-10-20",
+      "path" : "https://fhir.inera.se/ig/template/2.3.0"
+    },
+    "milestone" : {
+      "version" : "2.3.0",
+      "date" : "2026-10-20",
+      "path" : "https://fhir.inera.se/ig/template/2.3.0"
+    }
+  }]
 }
