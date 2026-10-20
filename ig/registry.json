@@ -4,7 +4,7 @@
     "slug": "template",
     "title": "Inera FHIR Implementation Guide Template",
     "description": "Mall för Ineras FHIR Implementation Guides.",
-    "latest_version": "2.2.2"
+    "latest_version": "2.3.0"
   },
   "EHDS-TK": {
     "name": "EHDS-TK",
