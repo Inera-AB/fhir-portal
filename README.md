@@ -62,11 +62,11 @@ IG-repot behöver hemligheten `FHIR_PORTAL_TOKEN`: en fine-grained PAT med **Con
 
 ### Testpubliceringar
 
-[inera-ab/fhir-portal-test](https://github.com/Inera-AB/fhir-portal-test) är en kopia av det här upplägget. Manuella körningar av `release.yml` och körningar från andra brancher än taggar publicerar dit, aldrig hit. Testroten kan nollställas fritt.
+[inera-ab/fhir-portal-test](https://github.com/Inera-AB/fhir-portal-test) är en kopia av det här upplägget. En manuell körning av `release.yml` på en branch publicerar dit, aldrig hit. Bara taggar publicerar hit. Testroten kan nollställas fritt.
 
 ### Regler för den här webbroten
 
-- **Publicera aldrig samma version två gånger.** Paketcachar och packages.fhir.org kan redan ha hämtat den, och flödena får dubbletter. Gör en ny patchversion, eller använd `"mode": "technical-correction"`.
+- **Publicera aldrig samma version två gånger.** Paketcachar och packages.fhir.org kan redan ha hämtat den, och flödena får dubbletter. Gör en ny patchversion. (`"mode": "technical-correction"` kräver dessutom mallen `tech-correction.template.html` i `templates/`, som inte är uppsatt än.)
 - Ändra inte `package-list.json`, `history.html`, flödena eller `package-registry.json` för hand. Undantaget är när en befintlig IG flyttas över till publiceringsläget (se mallens instruktion för övergången).
 - Mallarna i `ig/templates/` är gemensamma för alla IG:er. Historiksidans skript kräver att de innehåller elementen `id="ig-title"` och `id="ig-footer"`.
 
