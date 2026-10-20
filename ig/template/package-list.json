@@ -2,72 +2,61 @@
   "package-id": "inera.core.template",
   "title": "Inera FHIR Implementation Guide Template",
   "canonical": "https://fhir.inera.se/ig/template",
-  "introduction": "Template Implementation Guide demonstrating Inera's FHIR IG structure, governance conventions, and publishing workflow.",
+  "introduction": "Mall för Ineras FHIR Implementation Guides.",
   "category": "National Base",
-  "language": "sv",
-  "country": "SE",
   "list": [
     {
       "version": "current",
-      "desc": "Continuous Integration Build \u2014 latest commit on main branch",
       "path": "https://inera-ab.github.io/IneraFHIRTemplate",
       "status": "ci-build",
-      "current": true
-    },
-    {
-      "version": "1.0.1",
-      "desc": "Release 1.0.1 (2026-06-24)",
-      "path": "https://fhir.inera.se/ig/template/1.0.1",
-      "status": "draft",
-      "sequence": "STU 1",
-      "fhirversion": [
-        "4.0.1"
-      ],
-      "current": false
-    },
-    {
-      "version": "1.0.0",
-      "desc": "Release 1.0.0 (2026-06-24)",
-      "path": "https://fhir.inera.se/ig/template/1.0.0",
-      "status": "draft",
-      "sequence": "STU 1",
-      "fhirversion": [
-        "4.0.1"
-      ],
-      "current": false
-    },
-    {
-      "version": "2.0.0",
-      "desc": "Release 2.0.0 (2026-06-25)",
-      "path": "https://fhir.inera.se/ig/template/2.0.0",
-      "status": "draft",
-      "sequence": "STU 1",
-      "fhirversion": [
-        "4.0.1"
-      ],
-      "current": false
-    },
-    {
-      "version": "2.2.0",
-      "desc": "Release 2.2.0 (2026-08-27)",
-      "path": "https://fhir.inera.se/ig/template/2.2.0",
-      "status": "draft",
-      "sequence": "STU 1",
-      "fhirversion": [
-        "4.0.1"
-      ],
-      "current": false
+      "sequence": "ci-build",
+      "desc": "Continuous Integration Build (latest in version control) - Content subject to frequent changes"
     },
     {
       "version": "2.2.2",
-      "desc": "Release 2.2.2 (2026-10-15)",
       "path": "https://fhir.inera.se/ig/template/2.2.2",
-      "status": "draft",
-      "sequence": "STU 1",
-      "fhirversion": [
-        "4.0.1"
-      ],
-      "current": false
+      "status": "release",
+      "sequence": "Releases",
+      "fhirversion": "4.0.1",
+      "date": "2026-10-15",
+      "desc": "Release 2.2.2",
+      "current": true
+    },
+    {
+      "version": "2.2.0",
+      "path": "https://fhir.inera.se/ig/template/2.2.0",
+      "status": "release",
+      "sequence": "Releases",
+      "fhirversion": "4.0.1",
+      "date": "2026-08-27",
+      "desc": "Release 2.2.0"
+    },
+    {
+      "version": "2.0.0",
+      "path": "https://fhir.inera.se/ig/template/2.0.0",
+      "status": "release",
+      "sequence": "Releases",
+      "fhirversion": "4.0.1",
+      "date": "2026-06-25",
+      "desc": "Release 2.0.0"
+    },
+    {
+      "version": "1.0.1",
+      "path": "https://fhir.inera.se/ig/template/1.0.1",
+      "status": "release",
+      "sequence": "Releases",
+      "fhirversion": "4.0.1",
+      "date": "2026-06-24",
+      "desc": "Release 1.0.1"
+    },
+    {
+      "version": "1.0.0",
+      "path": "https://fhir.inera.se/ig/template/1.0.0",
+      "status": "release",
+      "sequence": "Releases",
+      "fhirversion": "4.0.1",
+      "date": "2026-06-24",
+      "desc": "Release 1.0.0"
     }
   ]
 }

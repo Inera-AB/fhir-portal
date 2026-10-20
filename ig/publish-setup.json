@@ -1,0 +1,19 @@
+{
+  "website" : {
+    "style" : "fhir.layout",
+    "url" : "https://fhir.inera.se/ig",
+    "server" : "cloud",
+    "github" : true,
+    "org" : "Inera AB",
+    "clone-xml-json" : false
+  },
+  "feeds" : {
+    "package" : "package-feed.xml",
+    "publication" : "publication-feed.xml"
+  },
+  "layout-rules" : [{
+    "npm" : "inera.*.*",
+    "canonical" : "https://fhir.inera.se/ig/{3}",
+    "destination" : "/{3}"
+  }]
+}

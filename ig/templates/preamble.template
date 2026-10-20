@@ -1,0 +1,9 @@
+<body>
+<header class="inera-header">
+  <div class="inera-header-inner">
+    <a href="https://fhir.inera.se/"><img src="https://fhir.inera.se/assets/images/inera-logo.svg" alt="Inera"/></a>
+    <a class="inera-title" href="https://fhir.inera.se/ig/">Ineras FHIR Implementation Guides</a>
+  </div>
+</header>
+<div class="container">
+<h1 id="ig-title"></h1>
