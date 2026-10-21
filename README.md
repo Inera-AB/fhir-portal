@@ -11,7 +11,7 @@ inera-ab/fhir-portal   (gh-pages)
   index.html                 ← Ineras landningssida (hanteras manuellt)
   ig/                        ← webbroten för -go-publish
     publish-setup.json       ← webbplatsens inställningar och layoutregler (hanteras manuellt)
-    package-feed.xml         ← paketflöde för alla Inera-IG:er (uppdateras av publishern)
+    package-feed.xml         ← paketflöde för Inera-IG:erna (uppdateras av publishern)
     publication-feed.xml     ← publiceringsflöde för alla Inera-IG:er (uppdateras av publishern)
     package-registry.json    ← sammanställning av alla IG:er och deras senaste versioner (uppdateras av publishern)
     templates/               ← Inera-sidhuvud och sidfot för historiksidorna (hanteras manuellt)
@@ -67,7 +67,7 @@ IG-repot behöver hemligheten `FHIR_PORTAL_TOKEN`: en fine-grained PAT med **Con
 ### Regler för den här webbroten
 
 - **Publicera aldrig samma version två gånger.** Paketcachar och packages.fhir.org kan redan ha hämtat den, och flödena får dubbletter. Gör en ny patchversion. (`"mode": "technical-correction"` kräver dessutom mallen `tech-correction.template.html` i `templates/`, som inte är uppsatt än.)
-- Ändra inte `package-list.json`, `history.html`, flödena eller `package-registry.json` för hand. Undantaget är när en befintlig IG flyttas över till publiceringsläget (se mallens instruktion för övergången).
+- Ändra inte `package-list.json`, `history.html`, flödena eller `package-registry.json` för hand. Undantagen är när en befintlig IG flyttas över till publiceringsläget (se mallens instruktion för övergången) och när en IG ska tas bort ur paketflödet (se nedan).
 - Mallarna i `ig/templates/` är gemensamma för alla IG:er. Historiksidans skript kräver att de innehåller elementen `id="ig-title"` och `id="ig-footer"`.
 
 ## IG-katalogen
@@ -87,7 +87,8 @@ IG-repot behöver hemligheten `FHIR_PORTAL_TOKEN`: en fine-grained PAT med **Con
 
 ## FHIR:s IG-register och packages.fhir.org
 
-- **Paketflödet** `https://fhir.inera.se/ig/package-feed.xml` registreras en gång i `package-feeds.json` i [FHIR/ig-registry](https://github.com/FHIR/ig-registry). Därefter hämtar packages.fhir.org alla Inera-paket automatiskt.
+- **Paketflödet** `https://fhir.inera.se/ig/package-feed.xml` registreras en gång i `package-feeds.json` i [FHIR/ig-registry](https://github.com/FHIR/ig-registry). Därefter hämtar packages.fhir.org alla paket i flödet automatiskt. Flödet är inte registrerat än. Det görs när den första riktiga IG:n publiceras.
+- **En IG som inte ska till packages.fhir.org**, till exempel mallen (`inera.core.template`), sätter `package-feed: false` i sin `release.yml`. Releaseworkflowen tar då bort IG:ns poster ur `package-feed.xml` efter publiceringen. IG:n publiceras ändå på fhir.inera.se, med historik och post i publiceringsflödet, som packages.fhir.org inte läser.
 - **Varje IG** läggs till i `fhir-ig-list.json` i FHIR/ig-registry, och varje ny release läggs till som en utgåva. Publishern gör ändringen i sin kopia av registret, och `release.yml` sparar den som artefakt (`fhir-ig-list.diff`). Den skickas som PR till FHIR/ig-registry.
 
 ## GitHub Pages-inställningar
