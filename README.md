@@ -17,7 +17,7 @@ inera-ab/fhir-portal   (gh-pages)
     templates/               ← Inera-sidhuvud och sidfot för historiksidorna (hanteras manuellt)
     index.html               ← IG-katalogen, genereras från registry.json
     registry.json            ← katalogens källa, uppdateras via repository_dispatch
-    <code>/                  ← en mapp per IG
+    <namn>/                  ← en mapp per IG
       package-list.json      ← IG:ns versionshistorik (uppdateras av publishern)
       history.html           ← versionshistoriken (genereras av publishern)
       index.html …           ← kopia av senaste milestone-releasen
@@ -25,7 +25,7 @@ inera-ab/fhir-portal   (gh-pages)
       1.1.0/
 ```
 
-`<code>` är tredje delen av IG:ns paket-id, enligt layoutregeln i `publish-setup.json`:
+`<namn>` är tredje delen av IG:ns paket-id, enligt layoutregeln i `publish-setup.json`:
 
 ```json
 "layout-rules" : [{
@@ -35,7 +35,7 @@ inera-ab/fhir-portal   (gh-pages)
 }]
 ```
 
-Paket-id:t `inera.core.template` publiceras alltså till `https://fhir.inera.se/ig/template`. `<code>` måste vara unikt bland alla Inera-IG:er. Ett paket-id som inte har exakt tre delar matchar inte regeln, och då misslyckas publiceringen.
+Paket-id:t `inera.core.template` publiceras alltså till `https://fhir.inera.se/ig/template`. `<namn>` måste vara unikt bland alla Inera-IG:er. Ett paket-id som inte har exakt tre delar matchar inte regeln, och då misslyckas publiceringen.
 
 ### Statisk hosting
 
@@ -47,14 +47,17 @@ GitHub Pages tillåter högst 1 GB publicerad webbplats. Varje release tar ungef
 
 ## Hur ett IG-repo publicerar hit
 
-IG-repon skapade från [IneraFHIRTemplate](https://github.com/Inera-AB/IneraFHIRTemplate) har workflowen `release.yml` som gör allt automatiskt när en releasetagg (till exempel `1.2.0`) pushas:
+IG-repon skapade från [IneraFHIRTemplate](https://github.com/Inera-AB/IneraFHIRTemplate) har workflowen `release.yml`. Den är ett kort anrop till den delade releaseworkflowen i [Inera-AB/fhir-ig-workflows](https://github.com/Inera-AB/fhir-ig-workflows), som gör allt automatiskt när en releasetagg (till exempel `1.2.0`) pushas:
 
-1. Bygger IG:n.
-2. Checkar ut `gh-pages` i det här repot (bara den egna IG-mappen och de gemensamma filerna i `ig/`).
-3. Kör `-go-publish`. Publishern bygger IG:n på nytt för publicering, lägger versionen i `ig/<code>/<version>/`, uppdaterar IG:ns rot, `package-list.json`, `history.html`, flödena och `package-registry.json`, och skriver om bannern i tidigare versioner.
-4. Pushar till `gh-pages` och skickar `repository_dispatch` så att IG-katalogen uppdateras.
+1. Kontrollerar att taggen och `version` i `sushi-config.yaml` stämmer, att `publication-request.json` har en ny beskrivning och att versionen inte redan är publicerad här.
+2. Bygger IG:n.
+3. Checkar ut `gh-pages` i det här repot (bara den egna IG-mappen och de gemensamma filerna i `ig/`).
+4. Kör `-go-publish`. Publishern bygger IG:n på nytt för publicering, lägger versionen i `ig/<namn>/<version>/`, uppdaterar IG:ns rot, `package-list.json`, `history.html`, flödena och `package-registry.json`, och skriver om bannern i tidigare versioner.
+5. Tar bort IG:ns poster ur `package-feed.xml` om IG:n har `package-feed: false` (se nedan).
+6. Pushar till `gh-pages` och skickar `repository_dispatch` så att IG-katalogen uppdateras.
+7. Sparar ändringen i FHIR:s IG-register (`fhir-ig-list.diff`) och publiceringsloggen som artefakt.
 
-Se mallens README för hur ett IG-repo sätts upp.
+Hur ett IG-repo sätts upp och hur en release görs beskrivs i mallens [README](https://github.com/Inera-AB/IneraFHIRTemplate#readme) och, på svenska, i mallens [`docs/`](https://github.com/Inera-AB/IneraFHIRTemplate/tree/main/docs).
 
 ### Behörighet
 
@@ -77,7 +80,7 @@ IG-repot behöver hemligheten `FHIR_PORTAL_TOKEN`: en fine-grained PAT med **Con
 | Fält | Beskrivning |
 |---|---|
 | `ig_name` | IG-repots namn |
-| `ig_slug` | IG:ns mapp under `/ig/` (`<code>`) |
+| `ig_slug` | IG:ns mapp under `/ig/` (`<namn>`) |
 | `ig_title` | Visningsnamn i IG-katalogen |
 | `ig_description` | Kort beskrivning |
 | `ig_version` | Versionsnummer, t.ex. `1.0.0` |
