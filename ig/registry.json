@@ -18,5 +18,11 @@
     "slug": "engagementindex",
     "title": "FHIR-baserat engagemangsindex (FHIR-EI)",
     "description": "Indexprofil, API och händelsemodell för FHIR-EI, ett index över var det finns information om en patient, vilka informationsmängder som finns där och när de senast uppdaterades."
+  },
+  "tjanstekatalog": {
+    "name": "tjanstekatalog",
+    "slug": "tjanstekatalog",
+    "title": "Tjänstekatalogen",
+    "description": "FHIR-gränssnitt för sökning av organisationers tekniska ändpunkter (endpoints) i tjänstekatalogen (externt sök-API), samt administrativt API (internt) för att registrera organisationer, ändpunkter, deras kopplingar och administratörsbehörigheter. Definierar aktören Synkroniseringstjänst, som läser härifrån och håller E-hälsomyndighetens Organization Endpoint Writer-register synkroniserat."
   }
 }
