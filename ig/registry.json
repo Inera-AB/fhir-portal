@@ -12,5 +12,11 @@
     "title": "Inera EHDS Tjänstekontrakt – FHIR Implementation Guide",
     "description": "FHIR IG som beskriver hur Ineras RIVTA-tjänstekontrakt mappas till FHIR för att informationsförsörja NPÖ och 1177 Journal.",
     "latest_version": "0.3.2"
+  },
+  "EI-on-FHIR": {
+    "name": "EI-on-FHIR",
+    "slug": "engagementindex",
+    "title": "FHIR-baserat engagemangsindex (FHIR-EI)",
+    "description": "Indexprofil, API och händelsemodell för FHIR-EI, ett index över var det finns information om en patient, vilka informationsmängder som finns där och när de senast uppdaterades."
   }
 }
