@@ -58,7 +58,7 @@ jobs:
               ver = ig.get('latest_version', '')
               slug = ig.get('slug', ig['name'].lower())
               href = f'/ig/{slug}/{ver}/' if ver else f'/ig/{slug}/'
-              ver_cell = f'<span class="tag">v{ver}</span>' if ver else ''
+              ver_cell = f'<a class="tag" href="{href}">v{ver}</a>' if ver else ''
               base_url = f'https://github.com/inera-ab/{ig["name"]}'
               ci_url = f'https://inera-ab.github.io/{ig["name"]}/'
               row_parts.append(
@@ -115,7 +115,8 @@ jobs:
               .ig-title-link { font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--primary-dark); text-decoration: none; }
               .ig-title-link:hover { color: var(--primary); text-decoration: underline; }
               .ig-desc { color: var(--text-mid); width: 50%; }
-              .tag { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; background: #f9edf3; color: var(--primary); white-space: nowrap; }
+              .tag { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; background: #f9edf3; color: var(--primary); white-space: nowrap; text-decoration: none; }
+              a.tag:hover { background: var(--primary); color: white; }
               .ig-links { white-space: nowrap; }
               .ig-link { font-size: 0.78rem; color: var(--primary-dark); text-decoration: underline; display: block; }
               .ig-link:hover { color: var(--primary); }
