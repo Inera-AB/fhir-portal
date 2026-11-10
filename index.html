@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="assets/images/inera-thumbnail.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -35,10 +35,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -249,6 +249,25 @@
     
   
   Hem
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://fhir.inera.se/ig/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Specifikationer (IG)
 
       </a>
     </li>
@@ -611,6 +630,33 @@
   
   
     <li class="md-nav__item">
+      <a href="https://fhir.inera.se/ig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Specifikationer (IG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="assets/documents/NewToFHIR/" class="md-nav__link">
         
   
@@ -736,15 +782,17 @@
 <p>Alla Inera FHIR Implementation Guides publiceras på <strong><a href="https://fhir.inera.se">fhir.inera.se</a></strong>. Varje IG följer ett förutsägbart URL-mönster baserat på sitt namn:</p>
 <pre><code>https://fhir.inera.se/ig/&lt;namn&gt;/
 </code></pre>
-<p>Till exempel: <a href="https://fhir.inera.se/ig/core/"><code>fhir.inera.se/ig/core/</code></a>, <a href="https://fhir.inera.se/ig/careteam/"><code>fhir.inera.se/ig/careteam/</code></a>.</p>
+<p>Till exempel: <a href="https://fhir.inera.se/ig/core/"><code>fhir.inera.se/ig/core/</code></a>, <a href="https://fhir.inera.se/ig/fastakontakter/"><code>fhir.inera.se/ig/fastakontakter/</code></a>.</p>
 <h3 id="publicerade-implementation-guides">Publicerade Implementation Guides<a class="headerlink" href="#publicerade-implementation-guides" title="Permanent link">&para;</a></h3>
 <p>En komplett och uppdaterad lista över alla publicerade Inera FHIR Implementation Guides finns på <strong><a href="https://fhir.inera.se/ig/index.html">fhir.inera.se/ig/</a></strong>. Publicerade IG:ar inkluderar för närvarande:</p>
 <ul>
-<li><strong><a href="https://fhir.inera.se/ig/ehds-tk">Inera EHDS Tjänstekontrakt</a></strong> - FHIR IG som beskriver hur Ineras RIVTA-tjänstekontrakt för att informationsförsörja NPÖ och 1177 Journal mappas till FHIR.</li>
+<li><strong><a href="https://fhir.inera.se/ig/ehds-tk">Inera EHDS Tjänstekontrakt</a></strong> (<em>EHDS-bryggan</em>) — FHIR IG som beskriver hur Ineras RIVTA-tjänstekontrakt för att informationsförsörja NPÖ och 1177 Journal mappas till FHIR.</li>
 </ul>
-<p>Kommande IG:ar är:
-- <strong><a href="https://fhir.inera.se/ig/fastakontakter/">RIV Fasta Kontakter</a></strong> — Profiler för att representera en patients utsedda vårdkontakt (<em>fast vårdkontakt</em>) och vårdteam. Används som den första FHIR-profilen i 1177-journaltjänsten.
-- <strong><a href="https://fhir.inera.se/ig/forms/">Inera FHIR Forms</a></strong> — Profiler för <code>Questionnaire</code> och <code>QuestionnaireResponse</code> som stöder Ineras nationella formulärtjänst. Möjliggör strukturerad insamling och utbyte av formulärbaserad hälsoinformation.</p>
+<p>Kommande IG:ar är:</p>
+<ul>
+<li><strong><a href="https://fhir.inera.se/ig/fastakontakter/">Fasta kontakter</a></strong> — Profiler för att representera en patients utsedda vårdkontakt (<em>fast vårdkontakt</em>) och vårdteam. Används som den första FHIR-profilen i 1177-journaltjänsten.</li>
+<li><strong><a href="https://fhir.inera.se/ig/forms/">Inera FHIR Forms</a></strong> (<em>Formulärtjänsten</em>) — Profiler för <code>Questionnaire</code> och <code>QuestionnaireResponse</code> som stöder Ineras nationella formulärtjänst. Möjliggör strukturerad insamling och utbyte av formulärbaserad hälsoinformation.</li>
+</ul>
 <h3 id="terminologitjansten">Terminologitjänsten<a class="headerlink" href="#terminologitjansten" title="Permanent link">&para;</a></h3>
 <p><strong><a href="https://test.api.terminologitjansten.inera.se">Inera Terminologitjänst</a></strong> är Ineras nationella terminologiserver som tillhandahåller kodsystem, värdemängder och begreppsslagningar för svensk hälso- och sjukvård. Den exponerar ett FHIR Terminology API.</p>
 <h3 id="verktyg-och-stod">Verktyg och stöd<a class="headerlink" href="#verktyg-och-stod" title="Permanent link">&para;</a></h3>
@@ -875,10 +923,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.top", "toc.integrate", "content.tooltips"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Kopierat till urklipp", "clipboard.copy": "Kopiera till urklipp", "search.result.more.one": "1 till p\u00e5 denna sida", "search.result.more.other": "# till p\u00e5 denna sida", "search.result.none": "Inga s\u00f6kresultat", "search.result.one": "1 s\u00f6kresultat", "search.result.other": "# s\u00f6kresultat", "search.result.placeholder": "Skriv s\u00f6kord", "search.result.term.missing": "Saknas", "select.version": "V\u00e4lj version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.top", "toc.integrate", "content.tooltips"], "search": "assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Kopierat till urklipp", "clipboard.copy": "Kopiera till urklipp", "search.result.more.one": "1 till p\u00e5 denna sida", "search.result.more.other": "# till p\u00e5 denna sida", "search.result.none": "Inga s\u00f6kresultat", "search.result.one": "1 s\u00f6kresultat", "search.result.other": "# s\u00f6kresultat", "search.result.placeholder": "Skriv s\u00f6kord", "search.result.term.missing": "Saknas", "select.version": "V\u00e4lj version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="assets/js/wcag-aria.js"></script>
       
