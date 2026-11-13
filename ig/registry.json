@@ -16,8 +16,8 @@
   "EI-on-FHIR": {
     "name": "EI-on-FHIR",
     "slug": "engagementindex",
-    "title": "FHIR-baserat engagemangsindex (FHIR-EI)",
-    "description": "Indexprofil, API och händelsemodell för FHIR-EI, ett index över var det finns information om en patient, vilka informationsmängder som finns där och när de senast uppdaterades."
+    "title": "EI-on-FHIR: FHIR-API för engagemangsindex",
+    "description": "Ett FHIR R5-API ovanpå dagens engagemangsindex, för Ineras interna stödtjänster och för synk till eHM:s patientindex, med ett eget register för källor som implementerar en tjänsts FHIR-IG."
   },
   "tjanstekatalog": {
     "name": "tjanstekatalog",
