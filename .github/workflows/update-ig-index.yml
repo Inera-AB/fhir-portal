@@ -8,6 +8,11 @@ on:
 permissions:
   contents: write
 
+# En körning i taget, så att två IG:er som publiceras samtidigt inte skriver över varandra
+concurrency:
+  group: update-ig-index
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -15,6 +20,14 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: gh-pages
+          # Webbroten är flera hundra MB. Hämta bara katalogens egna filer och
+          # varje IG:s package-list.json; resten läses som trädlistning.
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /ig/registry.json
+            /ig/index.html
+            /ig/*/package-list.json
 
       - name: Update registry.json
         if: github.event_name == 'repository_dispatch'
@@ -27,17 +40,21 @@ jobs:
           IS_RELEASE: ${{ github.event.client_payload.is_release }}
         run: |
           python3 - <<'EOF'
-          import json, os, pathlib, sys
+          import json, os, pathlib, re, sys
           reg_path = pathlib.Path('ig/registry.json')
           registry = json.loads(reg_path.read_text()) if reg_path.exists() else {}
           name = os.environ['IG_NAME']
-          if not name or '/' in name:
-              print(f"Rejected invalid ig_name '{name}'")
-              sys.exit(0)
+          if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]*', name):
+              sys.exit(f"::error::Ogiltigt ig_name '{name}'")
+          slug = os.environ.get('IG_SLUG', '').strip() or name.lower()
+          if not re.fullmatch(r'[a-z0-9][a-z0-9._-]*', slug):
+              sys.exit(f"::error::Ogiltig ig_slug '{slug}'")
+          for other in registry.values():
+              if other['name'] != name and other.get('slug', other['name'].lower()) == slug:
+                  sys.exit(f"::error::ig_slug '{slug}' används redan av {other['name']}")
           entry = registry.get(name, {})
           entry['name']        = name
-          slug = os.environ.get('IG_SLUG', '').strip()
-          entry['slug']        = slug if slug else name.lower()
+          entry['slug']        = slug
           entry['title']       = os.environ['IG_TITLE']
           entry['description'] = os.environ['IG_DESCRIPTION']
           if os.environ.get('IS_RELEASE') == 'true':
@@ -50,24 +67,59 @@ jobs:
       - name: Regenerate ig/index.html
         run: |
           python3 - <<'EOF'
-          import json, pathlib, textwrap
+          import json, pathlib, subprocess, textwrap
+          from html import escape
           reg_path = pathlib.Path('ig/registry.json')
           registry = json.loads(reg_path.read_text()) if reg_path.exists() else {}
+
+          def published(path):
+              # Finns filen i webbroten? Trädlistning, så inget innehåll hämtas.
+              out = subprocess.run(['git', 'ls-tree', '--name-only', 'HEAD', path],
+                                   capture_output=True, text=True, check=True).stdout
+              return bool(out.strip())
+
+          def current_version(slug):
+              # Publisherns package-list.json avgör vilken version som gäller.
+              # En patch på en äldre versionslinje ska inte bli "senaste".
+              pl = pathlib.Path(f'ig/{slug}/package-list.json')
+              if not pl.exists():
+                  return ''
+              for v in json.loads(pl.read_text()).get('list', []):
+                  if v.get('current') and v.get('status') != 'ci-build':
+                      return v.get('version', '')
+              return ''
+
           row_parts = []
-          for ig in sorted(registry.values(), key=lambda x: x['title']):
-              ver = ig.get('latest_version', '')
-              slug = ig.get('slug', ig['name'].lower())
-              href = f'/ig/{slug}/{ver}/' if ver else f'/ig/{slug}/'
-              ver_cell = f'<a class="tag" href="{href}">v{ver}</a>' if ver else ''
-              base_url = f'https://github.com/inera-ab/{ig["name"]}'
-              ci_url = f'https://inera-ab.github.io/{ig["name"]}/'
+          for ig in sorted(registry.values(), key=lambda x: x['title'].lower()):
+              name = escape(ig['name'])
+              slug = escape(ig.get('slug', ig['name'].lower()))
+              title = escape(ig['title'])
+              ver = current_version(slug) or ig.get('latest_version', '')
+              if ver and not published(f'ig/{slug}/{ver}/index.html'):
+                  ver = ''
+              ver = escape(ver)
+              base_url = f'https://github.com/inera-ab/{name}'
+              ci_url = f'https://inera-ab.github.io/{name}/'
+              links = [f'<a class="ig-link" href="{ci_url}">CI Build</a>']
+              if ver:
+                  # Länka bara till sidor som finns. En IG utan release ligger inte på fhir.inera.se.
+                  href = f'/ig/{slug}/{ver}/'
+                  title_cell = f'<a class="ig-title-link" href="{href}">{title}</a>'
+                  ver_cell = f'<a class="tag" href="{href}">v{ver}</a>'
+                  if published(f'ig/{slug}/history.html'):
+                      links.append(f'<a class="ig-link" href="/ig/{slug}/history.html">Alla versioner</a>')
+                  if published(f'ig/{slug}/{ver}/package.tgz'):
+                      links.append(f'<a class="ig-link" href="/ig/{slug}/{ver}/package.tgz">Paket (.tgz)</a>')
+              else:
+                  title_cell = f'<a class="ig-title-link" href="{ci_url}">{title}</a>'
+                  ver_cell = '<span class="tag tag-draft">Ej publicerad</span>'
+              links.append(f'<a class="ig-link" href="{base_url}">K\xe4llkod</a>')
               row_parts.append(
                   f'<tr>'
-                  f'<td><a class="ig-title-link" href="{href}">{ig["title"]}</a></td>'
-                  f'<td class="ig-desc">{ig.get("description", "")}</td>'
+                  f'<td>{title_cell}</td>'
+                  f'<td class="ig-desc">{escape(ig.get("description", ""))}</td>'
                   f'<td>{ver_cell}</td>'
-                  f'<td class="ig-links"><a class="ig-link" href="{ci_url}">CI Build</a>'
-                  f'<a class="ig-link" href="{base_url}">K\xe4llkod</a></td>'
+                  f'<td class="ig-links">{"".join(links)}</td>'
                   f'</tr>'
               )
           if row_parts:
@@ -117,6 +169,7 @@ jobs:
               .ig-desc { color: var(--text-mid); width: 50%; }
               .tag { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; background: #f9edf3; color: var(--primary); white-space: nowrap; text-decoration: none; }
               a.tag:hover { background: var(--primary); color: white; }
+              .tag-draft { background: #eeeeee; color: var(--text-mid); }
               .ig-links { white-space: nowrap; }
               .ig-link { font-size: 0.78rem; color: var(--primary-dark); text-decoration: underline; display: block; }
               .ig-link:hover { color: var(--primary); }
@@ -176,5 +229,11 @@ jobs:
           MSG="chore: update IG registry"
           [ -n "$IG_LABEL" ] && MSG="$MSG for $IG_LABEL"
           git diff --cached --quiet || git commit -m "$MSG"
-          git pull --rebase origin gh-pages
-          git push origin gh-pages
+          # IG-repon och landningssidan pushar också hit. Försök igen om någon hann före.
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin gh-pages
+            git push origin gh-pages && exit 0
+            sleep $((attempt * 5))
+          done
+          echo "::error::Kunde inte pusha till gh-pages efter 5 försök"
+          exit 1

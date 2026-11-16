@@ -88,6 +88,8 @@ IG-repot behöver hemligheten `FHIR_PORTAL_TOKEN`: en fine-grained PAT med **Con
 
 `is_release: true` uppdaterar `latest_version` i `registry.json`. Branch-byggen skriver inte över `latest_version`.
 
+Katalogen visar den version som publisherns `package-list.json` pekar ut som gällande (`"current": true`), och `latest_version` bara om den uppgiften saknas. En IG som inte har någon publicerad version här visas som **Ej publicerad** och länkar till sitt CI-bygge. `ig_slug` måste vara unik; ett anrop med en slug som en annan IG redan har avvisas och körningen blir röd.
+
 ## FHIR:s IG-register och packages.fhir.org
 
 - **Paketflödet** `https://fhir.inera.se/ig/package-feed.xml` registreras en gång i `package-feeds.json` i [FHIR/ig-registry](https://github.com/FHIR/ig-registry). Därefter hämtar packages.fhir.org alla paket i flödet automatiskt. Flödet är inte registrerat än. Det görs när den första riktiga IG:n publiceras.
