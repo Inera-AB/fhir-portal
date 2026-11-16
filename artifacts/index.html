@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artefaktsök – Ineras FHIR-specifikationer</title>
+<link rel="icon" type="image/png" href="../assets/images/inera-thumbnail.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap">
+<style>
+  :root {
+    --pink: #A33662; --pink-dark: #7E2A4C; --pink-light: #C03F73;
+    --warm-1: #E7DAC5; --warm-2: #F3EDE2; --warm-3: #F9F6F1;
+    --text: #353636; --text-mid: #727373; --border: #CCCCCC; --bg-light: #F0F0F0;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Open Sans', Arial, sans-serif; color: var(--text); background: #fff; font-size: 15px; }
+  a { color: var(--pink-dark); }
+  a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid var(--pink-dark); outline-offset: 2px; }
+  header.top { background: var(--pink); color: #fff; padding: .75rem 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  header.top img { height: 28px; filter: brightness(0) invert(1); }
+  header.top .site { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.1rem; color: #fff; text-decoration: none; }
+  header.top .back { margin-left: auto; color: #fff; }
+  main { padding: 1.25rem 1.5rem 3rem; max-width: 1600px; margin: 0 auto; }
+  h1 { font-family: 'Poppins', sans-serif; color: var(--pink-dark); font-size: 1.6rem; margin: .25rem 0 .5rem; }
+  .intro { color: var(--text-mid); max-width: 70em; margin: 0 0 1rem; }
+
+  .controls { display: flex; flex-wrap: wrap; gap: .5rem .75rem; align-items: flex-start; background: var(--warm-3); border: 1px solid var(--warm-1); border-radius: 4px; padding: .75rem; margin-bottom: .75rem; }
+  .controls input[type=search] { flex: 1 1 22em; min-width: 14em; padding: .45em .7em; border: 1px solid var(--border); border-radius: 3px; font: inherit; }
+  details.filter { position: relative; }
+  details.filter > summary { list-style: none; cursor: pointer; padding: .45em .7em; border: 1px solid var(--border); border-radius: 3px; background: #fff; white-space: nowrap; user-select: none; }
+  details.filter > summary::-webkit-details-marker { display: none; }
+  details.filter > summary::after { content: " ▾"; color: var(--text-mid); }
+  details.filter.active > summary { border-color: var(--pink-dark); background: #fff; box-shadow: inset 0 -3px 0 var(--pink); font-weight: 600; }
+  details.filter .menu { position: absolute; z-index: 20; top: calc(100% + 4px); left: 0; background: #fff; border: 1px solid var(--border); border-radius: 3px; box-shadow: 0 2px 8px rgba(0,0,0,.18); min-width: 18em; max-height: 26em; overflow: auto; padding: .3em 0; }
+  .menu .menu-head { display: flex; justify-content: space-between; gap: 1em; padding: .2em .8em .4em; border-bottom: 1px solid var(--bg-light); margin-bottom: .2em; font-size: .85em; color: var(--text-mid); }
+  .menu .menu-head button { background: none; border: 0; padding: 0; color: var(--pink-dark); cursor: pointer; font: inherit; text-decoration: underline; }
+  .menu label { display: flex; gap: .5em; align-items: baseline; padding: .25em .8em; cursor: pointer; white-space: nowrap; }
+  .menu label:hover { background: var(--warm-3); }
+  .menu .group { padding: .45em .8em .15em; font-weight: 600; font-size: .85em; color: var(--pink-dark); }
+  .menu .note { color: var(--text-mid); font-size: .85em; }
+  .toggle { display: flex; gap: .4em; align-items: center; padding: .45em 0; white-space: nowrap; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: .35em; margin: 0 0 .6rem; min-height: 0; }
+  .chip { background: var(--warm-2); border: 1px solid var(--warm-1); border-radius: 3px; padding: .1em .3em .1em .55em; font-size: .85em; display: inline-flex; gap: .3em; align-items: center; }
+  .chip button { background: none; border: 0; cursor: pointer; font-size: 1.1em; line-height: 1; color: var(--text-mid); padding: 0 .15em; }
+  .status { color: var(--text-mid); font-size: .9em; margin: 0 0 .5rem; }
+
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  thead th { background: var(--pink); color: #fff; text-align: left; padding: .6em .7em; font-weight: 600; white-space: nowrap; position: sticky; top: 0; }
+  thead th button { all: unset; cursor: pointer; }
+  thead th button::after { content: " ⇅"; opacity: .5; font-size: .85em; }
+  thead th[aria-sort=ascending] button::after { content: " ▲"; opacity: .9; }
+  thead th[aria-sort=descending] button::after { content: " ▼"; opacity: .9; }
+  tbody td { padding: .5em .7em; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tbody tr:nth-child(even) { background: var(--warm-3); }
+  tbody tr:hover { background: var(--warm-2); }
+  td.id { font-family: monospace; font-size: .9em; overflow-wrap: anywhere; min-width: 10em; }
+  td.ig { white-space: nowrap; }
+  td.cat small { display: block; color: var(--text-mid); font-size: .82em; }
+  td.ver { white-space: nowrap; }
+  td.desc { color: var(--text); min-width: 22em; }
+  .badge { display: inline-block; font-size: .78em; padding: 0 .4em; border-radius: 3px; background: var(--bg-light); color: var(--text-mid); margin-left: .3em; }
+  .badge.ci { background: #FFF3E0; color: #8A4B00; }
+  .more { margin: .75rem 0; }
+  .more button, .reset { background: #fff; border: 1px solid var(--pink-dark); color: var(--pink-dark); border-radius: 3px; padding: .4em .9em; cursor: pointer; font: inherit; }
+  footer { color: var(--text-mid); font-size: .85em; margin-top: 1.5rem; }
+  @media (max-width: 700px) { td.desc { display: none; } th.desc { display: none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <img src="../assets/images/inera-logo.svg" alt="Inera">
+  <a class="site" href="../">Ineras FHIR-specifikationer</a>
+  <a class="back" href="../">← Tillbaka till startsidan</a>
+</header>
+<main>
+  <h1>Artefaktsök</h1>
+  <p class="intro">Profiler, extensions, terminologi, förmågedeklarationer och exempel från alla Ineras FHIR Implementation Guides, både publicerade versioner och det senaste CI-bygget. Sök i alla på en gång, eller filtrera på IG och version, kategori och typ. Länkarna går till artefaktens sida i dess IG.</p>
+
+  <div class="controls" role="search">
+    <input id="q" type="search" placeholder="Sök på titel, id, typ eller beskrivning" aria-label="Sök artefakter">
+    <details class="filter" id="f-ver"><summary>IG och version</summary><div class="menu"></div></details>
+    <details class="filter" id="f-cat"><summary>Kategori</summary><div class="menu"></div></details>
+    <details class="filter" id="f-type"><summary>Typ</summary><div class="menu"></div></details>
+    <label class="toggle"><input type="checkbox" id="latest" checked> Bara senaste versionen av varje IG</label>
+    <button class="reset" id="reset" type="button">Rensa filter</button>
+  </div>
+  <div class="chips" id="chips" aria-live="polite"></div>
+  <p class="status" id="status" aria-live="polite">Laddar…</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th data-key="ig"><button type="button">IG</button></th>
+        <th data-key="ver"><button type="button">Version</button></th>
+        <th data-key="cat"><button type="button">Kategori</button></th>
+        <th data-key="n"><button type="button">Titel</button></th>
+        <th data-key="i"><button type="button">Id</button></th>
+        <th data-key="t"><button type="button">Typ</button></th>
+        <th class="desc" data-key="d"><button type="button">Beskrivning</button></th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <div class="more" id="more" hidden><button type="button">Visa alla</button></div>
+  <footer id="footer"></footer>
+</main>
+
+<script>
+(function () {
+  "use strict";
+  var PAGE = 200;               // rows shown before "Show all"
+  var state = { q: "", ver: [], cat: [], type: [], latest: true, sort: null, dir: 1, all: false };
+  var data, rows, igs = {}, latestKey = {};
+
+  function el(tag, attrs, text) {
+    var e = document.createElement(tag);
+    for (var k in attrs || {}) e.setAttribute(k, attrs[k]);
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  // Version order: newest first; the CI build ("current") after the published ones
+  function verCmp(a, b) {
+    if (a === b) return 0;
+    if (a === "current") return 1;
+    if (b === "current") return -1;
+    var pa = a.split(/[.-]/), pb = b.split(/[.-]/);
+    for (var i = 0; i < Math.max(pa.length, pb.length); i++) {
+      var x = pa[i] || "", y = pb[i] || "";
+      var nx = /^\d+$/.test(x), ny = /^\d+$/.test(y);
+      if (nx && ny && +x !== +y) return +y - +x;
+      if (!nx || !ny) { if (x !== y) return x === "" ? -1 : y === "" ? 1 : (x < y ? 1 : -1); }
+    }
+    return 0;
+  }
+
+  function verLabel(v) {
+    return v.version === "current" ? "CI-bygge" + (v.label ? " (" + v.label + ")" : "") : v.version;
+  }
+
+  // ---- URL state, so a filtered view can be shared --------------------------
+  function readUrl() {
+    var p = new URLSearchParams(location.search);
+    state.q = p.get("q") || "";
+    ["ver", "cat", "type"].forEach(function (k) { state[k] = p.getAll(k); });
+    state.latest = p.get("latest") !== "0" && state.ver.length === 0;
+  }
+  function writeUrl() {
+    var p = new URLSearchParams();
+    if (state.q) p.set("q", state.q);
+    ["ver", "cat", "type"].forEach(function (k) { state[k].forEach(function (v) { p.append(k, v); }); });
+    if (!state.latest && state.ver.length === 0) p.set("latest", "0");
+    var s = p.toString();
+    history.replaceState(null, "", s ? "?" + s : location.pathname);
+  }
+
+  // ---- Filter menus -------------------------------------------------------------
+  function buildMenu(id, title, groups, key) {
+    var menu = document.querySelector("#" + id + " .menu");
+    menu.textContent = "";
+    var head = el("div", { "class": "menu-head" });
+    head.appendChild(el("span", null, title));
+    var clear = el("button", { type: "button" }, "Rensa");
+    clear.addEventListener("click", function () { state[key] = []; if (key === "ver") state.latest = false; update(); });
+    head.appendChild(clear);
+    menu.appendChild(head);
+    groups.forEach(function (g) {
+      if (g.label) menu.appendChild(el("div", { "class": "group" }, g.label));
+      g.items.forEach(function (it) {
+        var lab = el("label");
+        var cb = el("input", { type: "checkbox", value: it.value });
+        cb.checked = state[key].indexOf(it.value) !== -1;
+        cb.addEventListener("change", function () {
+          var i = state[key].indexOf(it.value);
+          if (cb.checked && i === -1) state[key].push(it.value);
+          if (!cb.checked && i !== -1) state[key].splice(i, 1);
+          if (key === "ver") { state.latest = false; document.getElementById("latest").checked = false; }
+          update(true);
+        });
+        lab.appendChild(cb);
+        lab.appendChild(el("span", null, it.text));
+        if (it.note) lab.appendChild(el("span", { "class": "note" }, it.note));
+        menu.appendChild(lab);
+      });
+    });
+    document.getElementById(id).classList.toggle("active", state[key].length > 0);
+  }
+
+  function buildMenus() {
+    buildMenu("f-ver", "IG och version", data.igs.map(function (ig) {
+      return { label: ig.name + " – " + ig.title, items: ig.versions.map(function (v) {
+        return { value: ig.name + "|" + v.version, text: verLabel(v), note: v.count + " artefakter" };
+      }) };
+    }), "ver");
+    var cats = {};
+    rows.forEach(function (r) { (cats[r.c] = cats[r.c] || {})[r.s] = 1; });
+    buildMenu("f-cat", "Kategori", Object.keys(cats).sort().map(function (c) {
+      return { label: c, items: Object.keys(cats[c]).sort().map(function (s) { return { value: c + ": " + s, text: s }; }) };
+    }), "cat");
+    var types = {};
+    rows.forEach(function (r) { types[r.t] = (types[r.t] || 0) + 1; });
+    buildMenu("f-type", "Typ", [{ items: Object.keys(types).sort().map(function (t) { return { value: t, text: t }; }) }], "type");
+  }
+
+  // ---- Filtering, sorting and rendering ---------------------------------------
+  function matches(r) {
+    if (state.ver.length) { if (state.ver.indexOf(r.k) === -1) return false; }
+    else if (state.latest && r.k !== latestKey[r.ig]) return false;
+    if (state.cat.length && state.cat.indexOf(r.c + ": " + r.s) === -1) return false;
+    if (state.type.length && state.type.indexOf(r.t) === -1) return false;
+    if (state.q) {
+      var words = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+      for (var i = 0; i < words.length; i++) if (r._text.indexOf(words[i]) === -1) return false;
+    }
+    return true;
+  }
+
+  function sortKey(r, key) {
+    if (key === "ig") return r.ig.toLowerCase();
+    if (key === "cat") return (r.c + " " + r.s).toLowerCase();
+    return String(r[key] || "").toLowerCase();
+  }
+
+  function render() {
+    var list = rows.filter(matches);
+    if (state.sort) {
+      var key = state.sort, dir = state.dir;
+      list.sort(function (a, b) {
+        if (key === "ver") return dir * verCmp(a.ver, b.ver);
+        var x = sortKey(a, key), y = sortKey(b, key);
+        return x < y ? -dir : x > y ? dir : 0;
+      });
+    }
+    var tbody = document.getElementById("rows");
+    tbody.textContent = "";
+    var shown = state.all ? list : list.slice(0, PAGE);
+    var frag = document.createDocumentFragment();
+    shown.forEach(function (r) {
+      var tr = el("tr");
+      tr.appendChild(el("td", { "class": "ig", title: igs[r.ig].title }, r.ig));
+      var tv = el("td", { "class": "ver" }, r.ver === "current" ? "CI-bygge" : r.ver);
+      if (r.ver === "current") tv.appendChild(el("span", { "class": "badge ci", title: "Senaste committen på main, inte en publicerad version" }, "opublicerad"));
+      tr.appendChild(tv);
+      var tc = el("td", { "class": "cat" }); tc.appendChild(el("small", null, r.c)); tc.appendChild(document.createTextNode(r.s)); tr.appendChild(tc);
+      var tn = el("td"); var a = el("a", { href: r.u }, r.n); tn.appendChild(a); tr.appendChild(tn);
+      tr.appendChild(el("td", { "class": "id" }, r.i));
+      tr.appendChild(el("td", null, r.t));
+      tr.appendChild(el("td", { "class": "desc" }, r.d));
+      frag.appendChild(tr);
+    });
+    tbody.appendChild(frag);
+    var more = document.getElementById("more");
+    more.hidden = list.length <= shown.length;
+    more.querySelector("button").textContent = "Visa alla " + list.length + " artefakter";
+    var scope = state.ver.length ? "valda versioner" : state.latest ? "senaste versionen av varje IG" : "alla versioner";
+    document.getElementById("status").textContent =
+      list.length + " av " + rows.length + " artefakter (" + scope + ")" + (shown.length < list.length ? ", visar de första " + shown.length : "");
+    document.querySelectorAll("thead th").forEach(function (th) {
+      th.setAttribute("aria-sort", th.dataset.key === state.sort ? (state.dir > 0 ? "ascending" : "descending") : "none");
+    });
+  }
+
+  function renderChips() {
+    var box = document.getElementById("chips");
+    box.textContent = "";
+    function chip(text, onRemove) {
+      var c = el("span", { "class": "chip" }, text);
+      var b = el("button", { type: "button", "aria-label": "Ta bort filtret " + text }, "×");
+      b.addEventListener("click", onRemove);
+      c.appendChild(b);
+      box.appendChild(c);
+    }
+    state.ver.forEach(function (k) {
+      var p = k.split("|"), ig = igs[p[0]];
+      chip(p[0] + " " + (p[1] === "current" ? "CI-bygge" : p[1]), function () { remove("ver", k); });
+    });
+    state.cat.forEach(function (v) { chip(v, function () { remove("cat", v); }); });
+    state.type.forEach(function (v) { chip(v, function () { remove("type", v); }); });
+  }
+  function remove(key, v) {
+    state[key] = state[key].filter(function (x) { return x !== v; });
+    if (key === "ver" && state.ver.length === 0) { state.latest = true; }
+    update();
+  }
+
+  function update(keepMenus) {
+    state.all = false;
+    document.getElementById("latest").checked = state.latest && state.ver.length === 0;
+    document.getElementById("latest").disabled = state.ver.length > 0;
+    if (!keepMenus) buildMenus();
+    ["ver", "cat", "type"].forEach(function (k) {
+      document.getElementById("f-" + k).classList.toggle("active", state[k].length > 0);
+    });
+    renderChips();
+    writeUrl();
+    render();
+  }
+
+  // ---- Wiring ---------------------------------------------------------------------
+  var qTimer;
+  document.getElementById("q").addEventListener("input", function (e) {
+    clearTimeout(qTimer);
+    qTimer = setTimeout(function () { state.q = e.target.value.trim(); writeUrl(); state.all = false; render(); }, 150);
+  });
+  document.getElementById("latest").addEventListener("change", function (e) { state.latest = e.target.checked; update(true); });
+  document.getElementById("reset").addEventListener("click", function () {
+    state.q = ""; state.ver = []; state.cat = []; state.type = []; state.latest = true;
+    document.getElementById("q").value = "";
+    update();
+  });
+  document.getElementById("more").querySelector("button").addEventListener("click", function () { state.all = true; render(); });
+  document.querySelectorAll("thead th").forEach(function (th) {
+    th.querySelector("button").addEventListener("click", function () {
+      var k = th.dataset.key;
+      state.dir = state.sort === k ? -state.dir : 1;
+      state.sort = k;
+      render();
+    });
+  });
+  // Close an open filter menu when clicking outside it or pressing Escape
+  document.addEventListener("click", function (e) {
+    document.querySelectorAll("details.filter[open]").forEach(function (d) { if (!d.contains(e.target)) d.open = false; });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") document.querySelectorAll("details.filter[open]").forEach(function (d) { d.open = false; d.querySelector("summary").focus(); });
+  });
+
+  fetch("artifacts-data.json").then(function (r) { return r.json(); }).then(function (d) {
+    data = d;
+    data.igs.forEach(function (ig) {
+      ig.versions.sort(function (a, b) { return verCmp(a.version, b.version); });
+      igs[ig.name] = ig;
+      // The newest published version, or the CI build for an IG not yet published
+      latestKey[ig.name] = ig.name + "|" + ig.versions[0].version;
+    });
+    rows = data.rows.map(function (r) {
+      var p = r.k.split("|");
+      r.ig = p[0]; r.ver = p[1];
+      r._text = [r.n, r.i, r.t, r.d, r.c, r.s, igs[r.ig].title].join(" ").toLowerCase();
+      return r;
+    });
+    readUrl();
+    document.getElementById("q").value = state.q;
+    document.getElementById("footer").textContent = "Indexet byggdes " + data.generated.replace("T", " ").replace("Z", " UTC") +
+      " från " + data.igs.length + " IG:ar. Det byggs om varje dag och när startsidan publiceras.";
+    update();
+  }).catch(function () {
+    document.getElementById("status").textContent = "Det gick inte att ladda artefaktindexet.";
+  });
+})();
+</script>
+</body>
+</html>
