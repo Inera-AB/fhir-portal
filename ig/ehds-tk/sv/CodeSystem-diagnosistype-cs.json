@@ -1,0 +1,44 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "diagnosistype-cs",
+  "language" : "sv",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: CodeSystem diagnosistype-cs</b></p><a name=\"diagnosistype-cs\"> </a><a name=\"hcdiagnosistype-cs\"> </a><p>Detta case-sensitive kodsystem <code>https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_diagnostyp</code> tillhandahåller <b>ett fragment</b> som inkluderar följande koder:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Kod</b></td><td><b>Visning</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">HD<a name=\"diagnosistype-cs-HD\"> </a></td><td>Huvuddiagnos</td><td>Huvuddiagnos</td></tr><tr><td style=\"white-space:nowrap\">BY<a name=\"diagnosistype-cs-BY\"> </a></td><td>Bidiagnos</td><td>Bidiagnos</td></tr></table></div>"
+  },
+  "url" : "https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_diagnostyp",
+  "version" : "0.9.0",
+  "name" : "DiagnosisTypeCS",
+  "title" : "KV Diagnostyp (fragment)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-16T16:17:59+00:00",
+  "publisher" : "Inera AB",
+  "contact" : [{
+    "name" : "Inera AB",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.inera.se"
+    }]
+  }],
+  "description" : "Fragment av Ineras kodverk kv_diagnostyp med de koder som används för typ av diagnos i GetDiagnosis (diagnosisBody.typeOfDiagnosis): HD = huvuddiagnos, BY = bidiagnos. Kodverket förvaltas av Inera; detta är en delmängd för validering i IG:n.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "SE",
+      "display" : "Sweden"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "fragment",
+  "concept" : [{
+    "code" : "HD",
+    "display" : "Huvuddiagnos",
+    "definition" : "Huvuddiagnos"
+  },
+  {
+    "code" : "BY",
+    "display" : "Bidiagnos",
+    "definition" : "Bidiagnos"
+  }]
+}

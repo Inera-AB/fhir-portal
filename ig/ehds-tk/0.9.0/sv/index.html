@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="sv" xmlns="http://www.w3.org/1999/xhtml" lang="sv" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Introduction - Inera EHDS Tjänstekontrakt – FHIR Implementation Guide v0.9.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/inera.css" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="assets/images/inera-thumbnail.png"/>
+<link rel="shortcut icon" href="assets/images/inera-thumbnail.png"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="inera-nav">
+  <a id="inera-logo" data-no-external="true" href="https://www.inera.se">
+    <img height="50" alt="Inera" src="assets/images/inera-logo-header.svg"/>
+  </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Inera EHDS Tjänstekontrakt – FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.9.0 - ci-build
+
+
+
+  <img alt="Sweden flagga" src="../assets/images/swe.svg" height="16" title="Sweden"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">Hem</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Bakgrund<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="workflow.html">Workflow</a></li>
+      <li><a href="logical-models.html">Logiska modeller</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Mappningar<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="mappings.html">Översikt</a></li>
+      <li><a href="contract-versions.html">Tjänstekontraktsversioner</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Patientöversikt</li>
+      <li><a href="mapping-getdiagnosis.html">GetDiagnosis – Diagnoser</a></li>
+      <li><a href="mapping-getalertinformation.html">GetAlertInformation – Uppmärksamhet</a></li>
+      <li><a href="mapping-getmedicationhistory.html">GetMedicationHistory – Läkemedel</a></li>
+      <li><a href="mapping-getvaccinationhistory.html">GetVaccinationHistory – Vaccinationer</a></li>
+      <li><a href="mapping-getfunctionalstatus.html">GetFunctionalStatus – Funktionstillstånd</a></li>
+      <li><a href="mapping-getmaternitymedicalhistory.html">GetMaternityMedicalHistory – Mödravård</a></li>
+      <li><a href="mapping-getcareplans.html">GetCarePlans – Vårdplan</a></li>
+      <li><a href="mapping-getcarecontacts.html">GetCareContacts – Vårdkontakter</a></li>
+      <li><a href="mapping-getcaredocumentation.html">GetCareDocumentation – Anteckningar</a></li>
+      <li><a href="guidance-docbook-narrative.html">&#160;&#160;&#8627; DocBook-mappning</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Laboratorie och diagnostik</li>
+      <li><a href="mapping-getlaboratoryorderoutcome.html">GetLaboratoryOrderOutcome – Provsvar</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Bilddiagnostik</li>
+      <li><a href="mapping-getimagingoutcome.html">GetImagingOutcome – Bilddiagnostik</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Remiss och process</li>
+      <li><a href="mapping-getreferraloutcome.html">GetReferralOutcome – Remisser</a></li>
+      <li><a href="mapping-getrequestactivities.html">GetRequestActivities – Remisstatus</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Tillväxtkurva barn</li>
+      <li><a href="mapping-getobservations.html">GetObservations – Tillväxtkurva</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Logg</li>
+      <li><a href="mapping-getaccesslogforpatient.html">Åtkomstloggar och auditloggning</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="profiles.html">Profiles</a></li>
+      <li><a href="terminology.html">Terminology</a></li>
+      <li><a href="examples.html">Examples</a></li>
+      <li><a href="artifacts.html">All Artifacts</a></li>
+    </ul>
+  </li>
+  <li><a href="search-parameters.html">Sökparametrar</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="mapping-issues.html">Issues &amp; Beslut</a></li>
+  <li><a href="version-history.html">Versionshistorik</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Introduction</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Inera EHDS Tjänstekontrakt – FHIR Implementation Guide (v0.9.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a data-no-external="true" href="https://fhir.inera.se/ig/ehds-tk/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Introduction</h2>
+  
+
+
+
+
+  <table class="colsd" data-fhir="generated">
+
+    <tr>
+      <td colspan="4"><i>Officiell URL</i>: <span class="copy-text">https://fhir.inera.se/ig/ehds-tk/ImplementationGuide/inera.ehds.ehds-tk<button title="Klicka för att kopiera URL" class="btn-copy" data-clipboard-text="https://fhir.inera.se/ig/ehds-tk/ImplementationGuide/inera.ehds.ehds-tk"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.9.0<button title="Klicka för att kopiera versionsspecificerad URL" class="btn-copy" data-clipboard-text="https://fhir.inera.se/ig/ehds-tk/ImplementationGuide/inera.ehds.ehds-tk|0.9.0"/></span>
+      </td>
+      <td style="text-align: right;border-left-style: hidden" title="Aktivera detta för att se ändringar sedan den senaste officiella versionen">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Markera textändringar?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="5">
+        
+          Draft
+          
+
+            per 
+2026-11-16
+
+          
+        
+      </td>
+
+
+
+      <td><i>Beräkningsbart namn</i>: <span style="font-family: monospace;">SEEHDSTK</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#domän" id="markdown-toc-domän">Domän</a></li>
+  <li><a href="#omfång" id="markdown-toc-omfång">Omfång</a></li>
+  <li><a href="#loften" id="markdown-toc-loften">Vad IG:n utlovar</a></li>
+  <li><a href="#syfte" id="markdown-toc-syfte">Syfte</a></li>
+  <li><a href="#arkitektur" id="markdown-toc-arkitektur">Arkitektur</a></li>
+  <li><a href="#terminologi" id="markdown-toc-terminologi">Terminologi</a></li>
+  <li><a href="#beroenden" id="markdown-toc-beroenden">Beroenden</a></li>
+  <li><a href="#fhir-version" id="markdown-toc-fhir-version">Val av FHIR-version</a></li>
+  <li><a href="#dokumentation" id="markdown-toc-dokumentation">Dokumentation</a></li>
+  <li><a href="#förvaltning-och-vägledning" id="markdown-toc-förvaltning-och-vägledning">Förvaltning och vägledning</a></li>
+</ul>
+
+</div>
+<h3 id="domän">Domän</h3>
+
+<p>Denna Implementation Guide (IG) beskriver den FHIR-funktionalitet som krävs för att informationsförsörja <strong>NPÖ</strong> (Nationell patientöversikt) och <strong>1177 Journal</strong> via Ineras RIVTA-tjänstekontrakt. IG:n definierar FHIR-profiler, logiska modeller och mappningar för 16 tjänstekontrakt fördelade på 6 FHIR-grupper.</p>
+
+<hr />
+
+<h3 id="omfång">Omfång</h3>
+
+<p>IG:n täcker följande FHIR-grupper och tjänstekontrakt:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>FHIR-grupp</th>
+      <th>Informationsmängd</th>
+      <th>Tjänstekontrakt</th>
+      <th>NPÖ</th>
+      <th>1177 Journal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Patientöversikt</td>
+      <td>Diagnos</td>
+      <td>GetDiagnosis</td>
+      <td>Ja (2.0)</td>
+      <td>Ja (2.0)</td>
+    </tr>
+    <tr>
+      <td>Patientöversikt</td>
+      <td>Uppmärksamhetsinformation</td>
+      <td>GetAlertInformation</td>
+      <td>Ja (2.0, 3.0)</td>
+      <td>Ja (2.0, 3.0)</td>
+    </tr>
+    <tr>
+      <td>Patientöversikt</td>
+      <td>Läkemedel</td>
+      <td>GetMedicationHistory</td>
+      <td>Ja (2.2)</td>
+      <td>Ja (2.2)</td>
+    </tr>
+    <tr>
+      <td>Patientöversikt</td>
+      <td>Vaccinationer</td>
+      <td>GetVaccinationHistory</td>
+      <td>Ja (2.0)</td>
+      <td>Ja (1.0, 2.0)</td>
+    </tr>
+    <tr>
+      <td>Patientöversikt</td>
+      <td>Funktionstillstånd och ADL</td>
+      <td>GetFunctionalStatus</td>
+      <td>Ja (2.0)</td>
+      <td>Ja (2.0)</td>
+    </tr>
+    <tr>
+      <td>Patientöversikt</td>
+      <td>Mödravård</td>
+      <td>GetMaternityMedicalHistory</td>
+      <td>Ja (2.0)</td>
+      <td>Ja (2.0)</td>
+    </tr>
+    <tr>
+      <td>Patientöversikt</td>
+      <td>Vårdplan</td>
+      <td>GetCarePlans</td>
+      <td>Ja (2.0)</td>
+      <td>Ja (2.0)</td>
+    </tr>
+    <tr>
+      <td>Patientöversikt</td>
+      <td>Vårdkontakter</td>
+      <td>GetCareContacts</td>
+      <td>Ja (2.0, 3.0)</td>
+      <td>Ja (2.0, 3.0)</td>
+    </tr>
+    <tr>
+      <td>Patientöversikt</td>
+      <td>Anteckningar</td>
+      <td>GetCareDocumentation</td>
+      <td>Ja (2.1, 3.0)</td>
+      <td>Ja (2.1, 3.0)</td>
+    </tr>
+    <tr>
+      <td>Laboratorie och diagnostik</td>
+      <td>Provsvar</td>
+      <td>GetLaboratoryOrderOutcome</td>
+      <td>Ja (3.1, 4.1)</td>
+      <td>Ja (3.1, 4.2)</td>
+    </tr>
+    <tr>
+      <td>Bilddiagnostik</td>
+      <td>Bilddiagnostik</td>
+      <td>GetImagingOutcome</td>
+      <td>Ja (1.0)</td>
+      <td>Ja (1.0)</td>
+    </tr>
+    <tr>
+      <td>Remiss och process</td>
+      <td>Konsultationsremiss</td>
+      <td>GetReferralOutcome</td>
+      <td>Ja (3.1)</td>
+      <td>Ja (3.1)</td>
+    </tr>
+    <tr>
+      <td>Remiss och process</td>
+      <td>Remisstatus</td>
+      <td>GetRequestActivities</td>
+      <td>Ja (2.0)</td>
+      <td>Ja (1.0, 2.0)</td>
+    </tr>
+    <tr>
+      <td>Tillväxtkurva barn</td>
+      <td>Tillväxtkurva</td>
+      <td>GetObservations</td>
+      <td>Ja (1.2)</td>
+      <td>Ja (1.2)</td>
+    </tr>
+    <tr>
+      <td>Logg</td>
+      <td>Åtkomstloggar</td>
+      <td>GetAccessLogForPatient</td>
+      <td>Nej</td>
+      <td>Ja (1.1, 2.0)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Versionerna inom parentes är de aktiva versionerna av tjänstekontraktet. Alla aktiva versioner har logiska modeller och mappning i IG:n. Mappningstabellerna utgår från en version per tjänstekontrakt, och övriga versioner beskrivs som skillnader mot den, se <a href="contract-versions.html">Tjänstekontraktsversioner</a>.</p>
+
+<p>IG:n täcker <strong>inte</strong> tjänstekontrakt utanför ovanstående tabell, och avser inte att ersätta källsystemen eller specificera gränssnittet mot NPÖ/1177 Journal på transaktionsnivå.</p>
+
+<hr />
+
+<h3 id="loften">Vad IG:n utlovar</h3>
+
+<p>IG:n utlovar att följande tre krav uppfylls <strong>samtidigt</strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Löfte</th>
+      <th>Hur det uppfylls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><strong>Samma kliniska information som TKB:erna, som FHIR-resurser.</strong></td>
+      <td>Varje element i tjänstekontraktens logiska modeller är mappat till ett FHIR-element, eller uttryckligen markerat som ej mappat med motivering. Profilerna kräver det som TKB:n kräver och inget som TKB:n inte bär. Se <a href="mappings.html">Mappningar</a>.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><strong>En giltig profilering av EURIDICE-IG:n</strong> (<a href="https://build.fhir.org/ig/euridice-org/eu-health-data-api/">EU Health Data API</a>, <code class="language-plaintext highlighter-rouge">hl7.fhir.eu.health-data-api</code>).</td>
+      <td>EURIDICE anger att datamodellerna för resursåtkomst ärver från HL7 Europe Core (<code class="language-plaintext highlighter-rouge">hl7.fhir.eu.base</code>). Profilerna ärver därför EU Core-profilen där en sådan finns, och annars FHIR-basresursen. Kraven på API:et anges i <a href="CapabilityStatement-SEEHDSResourceAccessProvider.html">SEEHDSResourceAccessProvider</a>, som utgår från EURIDICE:s Resource Access Provider.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><strong>Svenska basprofilernas namngivnings- och slicingkonventioner</strong> (HL7 Sweden, <code class="language-plaintext highlighter-rouge">hl7se.fhir.base</code>).</td>
+      <td>Profilerna heter <code class="language-plaintext highlighter-rouge">SEEHDS…</code> med <code class="language-plaintext highlighter-rouge">Id</code> lika med namnet. Identifierare slicas med samma slice-namn och system som de svenska basprofilerna: <code class="language-plaintext highlighter-rouge">personnummer</code>, <code class="language-plaintext highlighter-rouge">samordningsnummer</code>, <code class="language-plaintext highlighter-rouge">nationelltReservnummer</code>, och <code class="language-plaintext highlighter-rouge">hsaid</code> (system <code class="language-plaintext highlighter-rouge">urn:oid:1.2.752.29.4.19</code>, typ <code class="language-plaintext highlighter-rouge">PRN</code>).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Profilerna kan inte både ärva EU Core och de svenska basprofilerna, eftersom en profil bara kan ha en
+parent. Därför följs de svenska basprofilerna som konvention, medan EU Core är parent.</p>
+
+<h4 id="ips-och-eps--inspiration-inte-löfte">IPS och EPS – inspiration, inte löfte</h4>
+
+<p>IG:n utlovar <strong>inte</strong> följsamhet mot IPS (International Patient Summary) eller EPS (HL7 Europe
+Patient Summary). De har använts som inspiration, till exempel för vilka resurstyper som passar en
+informationsmängd. Krav och strukturer som bara fanns för att harmonisera med IPS eller EPS har tagits
+bort. Det gäller till exempel härledda statusvärden och kodningar utan stöd i TKB:n, och
+EPS-profiler i <code class="language-plaintext highlighter-rouge">meta.profile</code>.</p>
+
+<hr />
+
+<h3 id="syfte">Syfte</h3>
+
+<p>Syftet med IG:n är att:</p>
+
+<ol>
+  <li>Definiera FHIR-profiler (R4) som uppfyller de tre löftena ovan för data från Ineras RIVTA-tjänstekontrakt</li>
+  <li>Dokumentera mappningen från RIVTA-element till FHIR-element, inklusive OID→URI-översättning, Provenance-mönster och Sparr-hantering</li>
+  <li>Stödja implementörer som transformerar RIVTA-svar till FHIR-resurser för NPÖ och 1177 Journal</li>
+</ol>
+
+<p>IG:n riktar sig till systemleverantörer, arkitekter och integrationsspecialister inom svensk e-hälsa.</p>
+
+<hr />
+
+<h3 id="arkitektur">Arkitektur</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lager</th>
+      <th>Källa</th>
+      <th>Roll</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>API och åtkomst</td>
+      <td>EURIDICE (<code class="language-plaintext highlighter-rouge">hl7.fhir.eu.health-data-api</code>)</td>
+      <td>Resource Access Provider, patientavgränsade sökningar, MHD för dokument</td>
+    </tr>
+    <tr>
+      <td>Datamodell</td>
+      <td>HL7 Europe Core (<code class="language-plaintext highlighter-rouge">hl7.fhir.eu.base</code>)</td>
+      <td>Parent för profilerna där EU Core-profil finns</td>
+    </tr>
+    <tr>
+      <td>Konventioner</td>
+      <td>HL7 Sweden basprofiler (<code class="language-plaintext highlighter-rouge">hl7se.fhir.base</code>)</td>
+      <td>Namngivning och identifier-slicing</td>
+    </tr>
+    <tr>
+      <td>Innehåll</td>
+      <td>Ineras TKB:er</td>
+      <td>Vilken klinisk information som bärs och vilka krav som gäller</td>
+    </tr>
+    <tr>
+      <td>Auditloggning</td>
+      <td>IHE BALP (<code class="language-plaintext highlighter-rouge">ihe.iti.balp</code>)</td>
+      <td>Loggposter vid utlämning, se <a href="mapping-getaccesslogforpatient.html">Åtkomstloggar</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Varje producerad FHIR-resurs anger sin EHDS-TK-profil i <code class="language-plaintext highlighter-rouge">meta.profile</code> (t.ex. <code class="language-plaintext highlighter-rouge">SEEHDSConditionDiagnosis</code>).
+Genom arvet uppfyller resursen även EU Core-profilen.</p>
+
+<hr />
+
+<h3 id="terminologi">Terminologi</h3>
+
+<p>Alla kodverk och värdemängder som Inera förvaltar finns på <a href="https://www.inera.se/tjanster/alla-tjanster-a-o/terminologitjanst-for-nationell-e-halsa/">Inera Terminologitjänst</a>.</p>
+
+<hr />
+
+<h3 id="beroenden">Beroenden</h3>
+
+<p>Denna IG har beroenden till:</p>
+<ul>
+  <li><strong>EURIDICE – EU Health Data API:</strong> <code class="language-plaintext highlighter-rouge">hl7.fhir.eu.health-data-api</code> 1.0.0-ballot</li>
+  <li><strong>HL7 Europe Core:</strong> <code class="language-plaintext highlighter-rouge">hl7.fhir.eu.base</code> 2.0.0-ballot</li>
+  <li><strong>IHE BALP:</strong> <code class="language-plaintext highlighter-rouge">ihe.iti.balp</code> 1.1.4</li>
+  <li><strong>FHIR-extensions:</strong> <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.extensions.r4</code> 5.3.0</li>
+</ul>
+
+<p>HL7 Sweden basprofiler (<code class="language-plaintext highlighter-rouge">hl7se.fhir.base</code>) används som konvention och är inget paketberoende.</p>
+
+<h3 id="fhir-version">Val av FHIR-version</h3>
+
+<p>IG:n bygger på <strong>FHIR R4 (4.0.1)</strong>. Det långsiktiga målet är en R5-IG, men det förutsätter att beroendena först finns i R5, och det avgörs i externa projekt:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Beroende</th>
+      <th>Läge</th>
+      <th>Krävs för R5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>EURIDICE (<code class="language-plaintext highlighter-rouge">hl7.fhir.eu.health-data-api</code>)</td>
+      <td>R4, bygger på EU Core 2.0.0-ballot</td>
+      <td>En R5-version av EURIDICE</td>
+    </tr>
+    <tr>
+      <td>HL7 Europe Core (<code class="language-plaintext highlighter-rouge">hl7.fhir.eu.base</code>)</td>
+      <td>R4; R5 finns bara som opublicerat utkast</td>
+      <td>En publicerad R5-version</td>
+    </tr>
+    <tr>
+      <td>HL7 Sweden basprofiler (<code class="language-plaintext highlighter-rouge">hl7se.fhir.base</code>)</td>
+      <td>R4</td>
+      <td>En R5-version, eftersom IG:n följer dess namn- och slicingkonventioner</td>
+    </tr>
+    <tr>
+      <td>IHE BALP (<code class="language-plaintext highlighter-rouge">ihe.iti.balp</code>)</td>
+      <td>1.1.4 är R4; en R5-version (2.0.0) är under arbete</td>
+      <td>En publicerad R5-version</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Så länge EURIDICE och EU Core bara finns i R4 kan IG:n inte vara en giltig EURIDICE-profilering i R5 (se <a href="#loften">Vad IG:n utlovar</a>). Därför ligger IG:n kvar på R4 tills beroendena är lösta.</p>
+
+<p>Några mappningar blir bättre i R5:</p>
+
+<ul>
+  <li><strong>AuditEvent.patient</strong> – R5 har ett eget patientelement. I R4 används BALP:s entity-mönster (LOG-001).</li>
+  <li><strong>DiagnosticReport.note</strong> – R5 har anteckningar på rapportnivå, vilket R4 saknar.</li>
+  <li><strong>DocumentReference.attester</strong> – R5 har intygare med tidpunkt och roll, som kan bära signatur och signeringstid (<code class="language-plaintext highlighter-rouge">header.signature</code> i GetCareDocumentation). I R4 krävs extensionen <code class="language-plaintext highlighter-rouge">ext-signature-time</code> (DOC-003).</li>
+  <li><strong>Observation.bodyStructure</strong> – R5 kan referera en BodyStructure med flera anatomiska lokalisationer, vilket ersätter R4-extensionen <code class="language-plaintext highlighter-rouge">additionalBodySite</code> för <code class="language-plaintext highlighter-rouge">targetSite</code> (OBS-004).</li>
+</ul>
+
+<p>När bytet görs bör R4-övergångslösningarna ovan ses över.</p>
+
+<hr />
+
+<h3 id="dokumentation">Dokumentation</h3>
+
+<p>Mer information om Inera Core och RIVTA finns på <a href="https://www.inera.se/tjanster/alla-tjanster-a-o/inera-core/">Inera Core</a>.</p>
+
+<hr />
+
+<h3 id="förvaltning-och-vägledning">Förvaltning och vägledning</h3>
+
+<p>FHIR-profilerna förvaltas av Inera: <a href="https://github.com/oskthu2/ehds-tk">Källkod</a>.</p>
+
+<p>Beskrivning av krav på konformans och vägledning för Ineras FHIR-IGs finns på <a href="https://www.inera.se/fhir">Inera FHIR-landningssida</a>.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
+          Paket inera.ehds.ehds-tk#0.9.0 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Genererad 
+  <span title="2026-11-16 16:15:00 +0000">
+    2026-11-16
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Länkar: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Innehållsförteckning</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-rapport</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

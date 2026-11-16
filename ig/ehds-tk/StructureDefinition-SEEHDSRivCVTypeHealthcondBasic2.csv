@@ -1,0 +1,11 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"SEEHDSRivCVTypeHealthcondBasic2","SEEHDSRivCVTypeHealthcondBasic2","","","",0,*,"","","","null {[]} {[]}
+","RIV-TA CVType (clinicalprocess:healthcond:basic:2)","RIV-TA-datatypen CVType i namnrymden urn:riv:clinicalprocess:healthcond:basic:2.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"SEEHDSRivCVTypeHealthcondBasic2.code","SEEHDSRivCVTypeHealthcondBasic2.code","","","",1,1,"","","","https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString {[]} {[]}
+","Kod","Kod","","","","","","","","","",,,,,"",,,,"SEEHDSRivCVTypeHealthcondBasic2.code",1,1,"",""
+"SEEHDSRivCVTypeHealthcondBasic2.codeSystem","SEEHDSRivCVTypeHealthcondBasic2.codeSystem","","","",1,1,"","","","https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString {[]} {[]}
+","OID för kodsystem","OID för kodsystem","","","","","","","","","",,,,,"",,,,"SEEHDSRivCVTypeHealthcondBasic2.codeSystem",1,1,"",""
+"SEEHDSRivCVTypeHealthcondBasic2.codeSystemVersion","SEEHDSRivCVTypeHealthcondBasic2.codeSystemVersion","","","",0,1,"","","","https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString {[]} {[]}
+","Kodsystemets version","Kodsystemets version","","","","","","","","","",,,,,"",,,,"SEEHDSRivCVTypeHealthcondBasic2.codeSystemVersion",0,1,"",""
+"SEEHDSRivCVTypeHealthcondBasic2.displayName","SEEHDSRivCVTypeHealthcondBasic2.displayName","","","",0,1,"","","","https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString {[]} {[]}
+","Kodens klartext","Kodens klartext","","","","","","","","","",,,,,"",,,,"SEEHDSRivCVTypeHealthcondBasic2.displayName",0,1,"",""

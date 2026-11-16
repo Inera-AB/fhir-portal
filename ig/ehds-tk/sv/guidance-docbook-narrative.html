@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="sv" xmlns="http://www.w3.org/1999/xhtml" lang="sv" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>DocBook-mappning – clinicalDocumentNoteText och bilagor - Inera EHDS Tjänstekontrakt – FHIR Implementation Guide v0.9.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/inera.css" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="assets/images/inera-thumbnail.png"/>
+<link rel="shortcut icon" href="assets/images/inera-thumbnail.png"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"15"}
+    h3,h4,h5,h6{--heading-prefix:"15"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="inera-nav">
+  <a id="inera-logo" data-no-external="true" href="https://www.inera.se">
+    <img height="50" alt="Inera" src="assets/images/inera-logo-header.svg"/>
+  </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Inera EHDS Tjänstekontrakt – FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.9.0 - ci-build
+
+
+
+  <img alt="Sweden flagga" src="../assets/images/swe.svg" height="16" title="Sweden"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">Hem</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Bakgrund<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="workflow.html">Workflow</a></li>
+      <li><a href="logical-models.html">Logiska modeller</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Mappningar<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="mappings.html">Översikt</a></li>
+      <li><a href="contract-versions.html">Tjänstekontraktsversioner</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Patientöversikt</li>
+      <li><a href="mapping-getdiagnosis.html">GetDiagnosis – Diagnoser</a></li>
+      <li><a href="mapping-getalertinformation.html">GetAlertInformation – Uppmärksamhet</a></li>
+      <li><a href="mapping-getmedicationhistory.html">GetMedicationHistory – Läkemedel</a></li>
+      <li><a href="mapping-getvaccinationhistory.html">GetVaccinationHistory – Vaccinationer</a></li>
+      <li><a href="mapping-getfunctionalstatus.html">GetFunctionalStatus – Funktionstillstånd</a></li>
+      <li><a href="mapping-getmaternitymedicalhistory.html">GetMaternityMedicalHistory – Mödravård</a></li>
+      <li><a href="mapping-getcareplans.html">GetCarePlans – Vårdplan</a></li>
+      <li><a href="mapping-getcarecontacts.html">GetCareContacts – Vårdkontakter</a></li>
+      <li><a href="mapping-getcaredocumentation.html">GetCareDocumentation – Anteckningar</a></li>
+      <li><a href="guidance-docbook-narrative.html">&#160;&#160;&#8627; DocBook-mappning</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Laboratorie och diagnostik</li>
+      <li><a href="mapping-getlaboratoryorderoutcome.html">GetLaboratoryOrderOutcome – Provsvar</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Bilddiagnostik</li>
+      <li><a href="mapping-getimagingoutcome.html">GetImagingOutcome – Bilddiagnostik</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Remiss och process</li>
+      <li><a href="mapping-getreferraloutcome.html">GetReferralOutcome – Remisser</a></li>
+      <li><a href="mapping-getrequestactivities.html">GetRequestActivities – Remisstatus</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Tillväxtkurva barn</li>
+      <li><a href="mapping-getobservations.html">GetObservations – Tillväxtkurva</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Logg</li>
+      <li><a href="mapping-getaccesslogforpatient.html">Åtkomstloggar och auditloggning</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="profiles.html">Profiles</a></li>
+      <li><a href="terminology.html">Terminology</a></li>
+      <li><a href="examples.html">Examples</a></li>
+      <li><a href="artifacts.html">All Artifacts</a></li>
+    </ul>
+  </li>
+  <li><a href="search-parameters.html">Sökparametrar</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="mapping-issues.html">Issues &amp; Beslut</a></li>
+  <li><a href="version-history.html">Versionshistorik</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>DocBook-mappning – clinicalDocumentNoteText och bilagor</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Inera EHDS Tjänstekontrakt – FHIR Implementation Guide (v0.9.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://fhir.inera.se/ig/ehds-tk/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>DocBook-mappning – clinicalDocumentNoteText och bilagor</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#bakgrund" id="markdown-toc-bakgrund">Bakgrund</a></li>
+  <li><a href="#översikt-över-flödet" id="markdown-toc-översikt-över-flödet">Översikt över flödet</a></li>
+  <li><a href="#steg-1--avkodning" id="markdown-toc-steg-1--avkodning">Steg 1 – Avkodning</a></li>
+  <li><a href="#steg-2--identifiering-av-docbook" id="markdown-toc-steg-2--identifiering-av-docbook">Steg 2 – Identifiering av DocBook</a></li>
+  <li><a href="#steg-3a--strategi-a-docbook--xhtml-obligatorisk" id="markdown-toc-steg-3a--strategi-a-docbook--xhtml-obligatorisk">Steg 3A – Strategi A: DocBook → XHTML (obligatorisk)</a></li>
+  <li><a href="#steg-3b--strategi-b-compositionsection-valfri" id="markdown-toc-steg-3b--strategi-b-compositionsection-valfri">Steg 3B – Strategi B: Composition.section (valfri)</a></li>
+  <li><a href="#exempel" id="markdown-toc-exempel">Exempel</a></li>
+  <li><a href="#kända-begränsningar" id="markdown-toc-kända-begränsningar">Kända begränsningar</a></li>
+</ul>
+
+</div>
+<p><strong>Gäller:</strong> GetCareDocumentation v3.0 (<code class="language-plaintext highlighter-rouge">careDocumentation.body.clinicalDocumentNoteText</code> och <code class="language-plaintext highlighter-rouge">careDocumentation.body.multimediaEntry</code>)<br />
+<strong>FHIR-resurser:</strong> <a href="StructureDefinition-SEEHDSDocumentReference.html">SEEHDSDocumentReference</a> (obligatorisk), <a href="StructureDefinition-SEEHDSCompositionCareDocumentation.html">SEEHDSCompositionCareDocumentation</a> (valfri)<br />
+<strong>Designbeslut:</strong> DOC-004 i <a href="mapping-issues.html#designbeslut-fattade">Mappningsissues och Designbeslut</a><br />
+<strong>Mappningssida:</strong> <a href="mapping-getcaredocumentation.html">GetCareDocumentation – Anteckningar</a></p>
+
+<hr />
+
+<h3 id="bakgrund">Bakgrund</h3>
+
+<p><code class="language-plaintext highlighter-rouge">clinicalDocumentNoteText</code> är av typen string. Fältet innehåller antingen fritext eller ett
+DocBook-dokument. När DocBook används ska fältet innehålla XML. Eftersom XML:en ligger inuti
+ett XML-element måste XML-tecknen entity-kodas:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;clinicalDocumentNoteText&gt;</span>
+  <span class="ni">&amp;lt;</span>?xml version="1.0" encoding="utf-8"?<span class="ni">&amp;gt;</span>
+  <span class="ni">&amp;lt;</span>article<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>section<span class="ni">&amp;gt;</span>
+      <span class="ni">&amp;lt;</span>title<span class="ni">&amp;gt;</span>Bedömning<span class="ni">&amp;lt;</span>/title<span class="ni">&amp;gt;</span>
+      <span class="ni">&amp;lt;</span>para<span class="ni">&amp;gt;</span>Patienten mår bra.<span class="ni">&amp;lt;</span>/para<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>/section<span class="ni">&amp;gt;</span>
+  <span class="ni">&amp;lt;</span>/article<span class="ni">&amp;gt;</span>
+<span class="nt">&lt;/clinicalDocumentNoteText&gt;</span>
+</code></pre></div></div>
+
+<p>DocBook är ett källsystemsformat som FHIR-konsumenter inte kan förväntas rendera. DocBook förs
+därför <strong>inte</strong> över som DocBook till FHIR-resursen. Innehållet transformeras i stället till
+format som FHIR-konsumenter kan använda direkt:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Strategi</th>
+      <th>Resultat</th>
+      <th>Krav</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>A – XHTML</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">DocumentReference.content[0].attachment</code> med XHTML och <code class="language-plaintext highlighter-rouge">contentType: text/html; charset=utf-8</code></td>
+      <td>Obligatorisk</td>
+    </tr>
+    <tr>
+      <td><strong>B – Composition</strong></td>
+      <td>En fristående <code class="language-plaintext highlighter-rouge">Composition</code> enligt <a href="StructureDefinition-SEEHDSCompositionCareDocumentation.html">SEEHDSCompositionCareDocumentation</a> med en <code class="language-plaintext highlighter-rouge">section</code> per DocBook-<code class="language-plaintext highlighter-rouge">&lt;section&gt;</code></td>
+      <td>Valfri – men om den skapas ska den följa profilen</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>DocBook kan förekomma på två ställen, som identifieras på olika sätt (se <a href="#steg-2--identifiering-av-docbook">Steg 2</a>):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Källa</th>
+      <th>Hur DocBook-innehållet levereras</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">clinicalDocumentNoteText</code></td>
+      <td>Som entity-kodad XML i textfältet (se exemplet ovan)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">multimediaEntry</code> (bilaga)</td>
+      <td>Som base64-kodad fil i <code class="language-plaintext highlighter-rouge">multimediaEntry.value</code>, med <code class="language-plaintext highlighter-rouge">multimediaEntry.mediaType</code> som anger formatet</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="översikt-över-flödet">Översikt över flödet</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RIVTA-svar (XML)
+  ├── clinicalDocumentNoteText (entity-kodad sträng)
+  │     │  1. XML-parsning av RIVTA-svaret avkodar entiteterna
+  │     │  2. DocBook om värdet börjar med &lt;?xml / &lt;article och har roten article
+  └── multimediaEntry.value (base64) + mediaType
+        │  1. base64-avkodning
+        │  2. DocBook om mediaType = application/docbook+xml (eller XML med roten article)
+        ▼
+        ├── inte DocBook ──► content.attachment oförändrat
+        │                    (text: text/plain; charset=utf-8 – bilaga: ursprunglig mediaType)
+        └── DocBook
+              ├── 3A. DocBook → XHTML ──► content.attachment (text/html; charset=utf-8)
+              └── 3B. (valfri) DocBook → Composition.section[] ──► Composition
+                                                                      ▲
+                    Provenance.target ─► DocumentReference + Composition
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="steg-1--avkodning">Steg 1 – Avkodning</h3>
+
+<p><strong>clinicalDocumentNoteText:</strong> Entity-kodningen tas bort av den vanliga XML-parsningen av
+RIVTA-svaret. Strängvärdet som parsern ger är alltså DocBook-XML i klartext:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;article&gt;</span>
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Bedömning<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;para&gt;</span>Patienten mår bra.<span class="nt">&lt;/para&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/article&gt;</span>
+</code></pre></div></div>
+
+<p>Ingen ytterligare avkodning ska göras. Att avkoda en gång till skulle förstöra innehåll där
+källtexten själv innehåller <code class="language-plaintext highlighter-rouge">&amp;amp;</code>, <code class="language-plaintext highlighter-rouge">&amp;lt;</code> osv.</p>
+
+<p><strong>multimediaEntry (bilaga):</strong> <code class="language-plaintext highlighter-rouge">multimediaEntry.value</code> är base64-kodad. Bilagans innehåll fås
+genom base64-avkodning, och teckenkodningen anges av XML-deklarationen i filen (UTF-8 om den
+saknas).</p>
+
+<hr />
+
+<h3 id="steg-2--identifiering-av-docbook">Steg 2 – Identifiering av DocBook</h3>
+
+<p>Regeln skiljer sig beroende på var innehållet ligger.</p>
+
+<h4 id="i-clinicaldocumentnotetext">I clinicalDocumentNoteText</h4>
+
+<p>Textfältet saknar en egen typindikator. DocBook känns igen på att fältet innehåller
+<strong>entity-kodad XML</strong>, som i exemplet under <a href="#bakgrund">Bakgrund</a>:</p>
+
+<ol>
+  <li>I det råa RIVTA-svaret börjar elementets innehåll (efter inledande blanktecken) med
+<code class="language-plaintext highlighter-rouge">&amp;lt;?xml</code> eller <code class="language-plaintext highlighter-rouge">&amp;lt;article</code>. Efter XML-parsning (steg 1) motsvarar det att strängvärdet
+börjar med <code class="language-plaintext highlighter-rouge">&lt;?xml</code> eller <code class="language-plaintext highlighter-rouge">&lt;article</code>.</li>
+  <li>Det avkodade värdet är välformad XML med rotelementet <code class="language-plaintext highlighter-rouge">article</code>.</li>
+</ol>
+
+<p>Är båda villkoren uppfyllda behandlas innehållet som <strong>DocBook</strong>. Annars behandlas det som
+<strong>fritext</strong>, även om texten råkar innehålla enstaka tecken som <code class="language-plaintext highlighter-rouge">&lt;</code> eller <code class="language-plaintext highlighter-rouge">&amp;</code>.</p>
+
+<h4 id="i-en-bilaga-multimediaentry">I en bilaga (multimediaEntry)</h4>
+
+<p>En bilaga har en uttrycklig typindikator. DocBook känns igen på <code class="language-plaintext highlighter-rouge">multimediaEntry.mediaType</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><code class="language-plaintext highlighter-rouge">mediaType</code></th>
+      <th>Hantering</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">application/docbook+xml</code></td>
+      <td><strong>DocBook</strong> – transformeras enligt Strategi A (och valfritt B)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">application/xml</code> eller <code class="language-plaintext highlighter-rouge">text/xml</code> med rotelementet <code class="language-plaintext highlighter-rouge">article</code> efter avkodning</td>
+      <td><strong>DocBook</strong> – transformeras på samma sätt</td>
+    </tr>
+    <tr>
+      <td>Övriga (t.ex. <code class="language-plaintext highlighter-rouge">application/pdf</code>, <code class="language-plaintext highlighter-rouge">image/jpeg</code>)</td>
+      <td>Ingen transformation – <code class="language-plaintext highlighter-rouge">value</code> och <code class="language-plaintext highlighter-rouge">mediaType</code> förs över oförändrade till <code class="language-plaintext highlighter-rouge">content.attachment</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>En bilaga som innehåller <code class="language-plaintext highlighter-rouge">multimediaEntry.reference</code> (URL) i stället för <code class="language-plaintext highlighter-rouge">value</code> transformeras
+inte, eftersom innehållet inte finns i svaret.</p>
+
+<h4 id="om-tolkningen-misslyckas">Om tolkningen misslyckas</h4>
+
+<p>Om innehållet ser ut som DocBook men inte kan tolkas, eller om transformationen misslyckas:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">clinicalDocumentNoteText</code> mappas som fritext (<code class="language-plaintext highlighter-rouge">text/plain; charset=utf-8</code>) med strängvärdet
+oförändrat.</li>
+  <li>En bilaga förs över oförändrad med sin ursprungliga <code class="language-plaintext highlighter-rouge">mediaType</code>.</li>
+</ul>
+
+<p>Inget innehåll tappas.</p>
+
+<hr />
+
+<h3 id="steg-3a--strategi-a-docbook--xhtml-obligatorisk">Steg 3A – Strategi A: DocBook → XHTML (obligatorisk)</h3>
+
+<p>DocBook-dokumentet transformeras till ett XHTML-fragment med en rot-<code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> i XHTML-namnrymden.
+Transformationen behåller källans ordning och struktur. Resultatet base64-kodas och läggs i
+<code class="language-plaintext highlighter-rouge">DocumentReference.content[0].attachment.data</code> med
+<code class="language-plaintext highlighter-rouge">contentType: text/html; charset=utf-8</code>.</p>
+
+<h4 id="elementmappning">Elementmappning</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>DocBook</th>
+      <th>XHTML</th>
+      <th>Kommentar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;article&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;div xmlns="http://www.w3.org/1999/xhtml"&gt;</code></td>
+      <td>Rot</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;article&gt;&lt;title&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code></td>
+      <td>Dokumentrubrik, om den finns</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;section&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;div&gt;</code></td>
+      <td>Nästlade sektioner nästlas</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> i <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;h2&gt;</code>–<code class="language-plaintext highlighter-rouge">&lt;h6&gt;</code></td>
+      <td>Nivå efter nästlingsdjup (sektion på nivå 1 → <code class="language-plaintext highlighter-rouge">&lt;h2&gt;</code>); djupare än <code class="language-plaintext highlighter-rouge">&lt;h6&gt;</code> blir <code class="language-plaintext highlighter-rouge">&lt;h6&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;para&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;simpara&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;p&gt;</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;emphasis&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;em&gt;</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;emphasis role="bold"&gt;</code> / <code class="language-plaintext highlighter-rouge">role="strong"</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;itemizedlist&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;orderedlist&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;listitem&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;li&gt;</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;variablelist&gt;</code> / <code class="language-plaintext highlighter-rouge">&lt;varlistentry&gt;</code> / <code class="language-plaintext highlighter-rouge">&lt;term&gt;</code> / <code class="language-plaintext highlighter-rouge">&lt;listitem&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;dl&gt;</code> / – / <code class="language-plaintext highlighter-rouge">&lt;dt&gt;</code> / <code class="language-plaintext highlighter-rouge">&lt;dd&gt;</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;ulink url="…"&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;link xlink:href="…"&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;a href="…"&gt;</code></td>
+      <td>Endast <code class="language-plaintext highlighter-rouge">http</code>/<code class="language-plaintext highlighter-rouge">https</code>-länkar behålls som länkar; övriga blir text</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;informaltable&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;table&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;table&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> i <code class="language-plaintext highlighter-rouge">&lt;table&gt;</code> → <code class="language-plaintext highlighter-rouge">&lt;caption&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;thead&gt;</code> / <code class="language-plaintext highlighter-rouge">&lt;tbody&gt;</code> / <code class="language-plaintext highlighter-rouge">&lt;row&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;thead&gt;</code> / <code class="language-plaintext highlighter-rouge">&lt;tbody&gt;</code> / <code class="language-plaintext highlighter-rouge">&lt;tr&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;tgroup&gt;</code> tas bort, innehållet behålls</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;entry&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;th&gt;</code> i <code class="language-plaintext highlighter-rouge">&lt;thead&gt;</code>, annars <code class="language-plaintext highlighter-rouge">&lt;td&gt;</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;literallayout&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;programlisting&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;screen&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;pre&gt;</code></td>
+      <td>Radbrytningar bevaras</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;sbr/&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;br/&gt;</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Okända element</td>
+      <td>–</td>
+      <td>Elementet tas bort men textinnehållet behålls</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="stylade-sektioner-rutor">Stylade sektioner (rutor)</h4>
+
+<p>En sektion vars <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> innehåller <code class="language-plaintext highlighter-rouge">&lt;emphasis role="…"&gt;</code> med något av rollvärdena
+<code class="language-plaintext highlighter-rouge">information</code>, <code class="language-plaintext highlighter-rouge">observe</code>, <code class="language-plaintext highlighter-rouge">frame</code> eller <code class="language-plaintext highlighter-rouge">collapsible</code> är en informationsruta, inte en
+strukturell rubrik. Den renderas som en inbäddad ruta i föräldern:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>DocBook</th>
+      <th>XHTML</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;section&gt;&lt;title&gt;&lt;emphasis role="information"&gt;Rubrik&lt;/emphasis&gt;&lt;/title&gt;…&lt;/section&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;div class="information"&gt;&lt;p&gt;&lt;strong&gt;Rubrik&lt;/strong&gt;&lt;/p&gt;…&lt;/div&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Motsvarande gäller rollerna <code class="language-plaintext highlighter-rouge">observe</code>, <code class="language-plaintext highlighter-rouge">frame</code> och <code class="language-plaintext highlighter-rouge">collapsible</code> (klassnamnet är rollvärdet).</p>
+
+<h4 id="säkerhet">Säkerhet</h4>
+
+<p>XHTML:en ska följa FHIR:s regler för narrativ XHTML: inga <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code>-, <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code>-, <code class="language-plaintext highlighter-rouge">&lt;form&gt;</code>-
+eller <code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code>-element, inga händelseattribut (<code class="language-plaintext highlighter-rouge">on*</code>) och inga <code class="language-plaintext highlighter-rouge">javascript:</code>-länkar. Allt
+innehåll som inte täcks av elementmappningen ovan blir text.</p>
+
+<h4 id="placering">Placering</h4>
+
+<p>XHTML:en läggs i <code class="language-plaintext highlighter-rouge">content.attachment</code> och <strong>inte</strong> i resursens <code class="language-plaintext highlighter-rouge">DomainResource.text</code>.
+<code class="language-plaintext highlighter-rouge">text</code> ska sammanfatta resursen, inte bära dokumentets faktiska innehåll.</p>
+
+<hr />
+
+<h3 id="steg-3b--strategi-b-compositionsection-valfri">Steg 3B – Strategi B: Composition.section (valfri)</h3>
+
+<p>Utöver Strategi A kan en fristående <code class="language-plaintext highlighter-rouge">Composition</code> skapas när innehållet är DocBook. Den gör
+dokumentets sektioner adresserbara var för sig, till exempel för navigering eller för att visa
+enskilda avsnitt.</p>
+
+<p>Strategi B är valfri, men en <code class="language-plaintext highlighter-rouge">Composition</code> som skapas ska följa profilen
+<a href="StructureDefinition-SEEHDSCompositionCareDocumentation.html">SEEHDSCompositionCareDocumentation</a>.
+Då kan konsumenter lita på strukturen oavsett vilket API som skapat den.</p>
+
+<h4 id="sektionsmappning">Sektionsmappning</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>DocBook</th>
+      <th>Composition.section</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;section&gt;&lt;title&gt;…&lt;/title&gt;…&lt;/section&gt;</code></td>
+      <td>En <code class="language-plaintext highlighter-rouge">section</code> med <code class="language-plaintext highlighter-rouge">title</code> från <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code>-texten</td>
+    </tr>
+    <tr>
+      <td>Nästlad <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code> inom en <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code></td>
+      <td>Nästlad <code class="language-plaintext highlighter-rouge">section.section</code> (rekursivt)</td>
+    </tr>
+    <tr>
+      <td>Stylad sektion (<code class="language-plaintext highlighter-rouge">&lt;emphasis role="information/observe/frame/collapsible"&gt;</code> i titeln)</td>
+      <td>Bryts <strong>inte</strong> ut – stannar som inbäddad ruta i förälderns <code class="language-plaintext highlighter-rouge">section.text</code></td>
+    </tr>
+    <tr>
+      <td>Löst innehåll direkt under <code class="language-plaintext highlighter-rouge">&lt;article&gt;</code> (utanför alla <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code>)</td>
+      <td>En avslutande namnlös <code class="language-plaintext highlighter-rouge">section</code> sist i listan</td>
+    </tr>
+    <tr>
+      <td>Inget <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code>-element alls</td>
+      <td>En enda namnlös <code class="language-plaintext highlighter-rouge">section</code> med hela innehållet</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Varje <code class="language-plaintext highlighter-rouge">section.text</code> är en <code class="language-plaintext highlighter-rouge">Narrative</code> med <code class="language-plaintext highlighter-rouge">status = generated</code> och samma slags XHTML-<code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>
+som Strategi A ger, men begränsad till sektionens eget innehåll. Nästlade sektioner ligger i
+<code class="language-plaintext highlighter-rouge">section.section</code> och upprepas inte i förälderns <code class="language-plaintext highlighter-rouge">text</code>.</p>
+
+<h4 id="övriga-fält-i-composition">Övriga fält i Composition</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Composition-element</th>
+      <th>Värde</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">status</code></td>
+      <td>Alltid <code class="language-plaintext highlighter-rouge">final</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">type</code></td>
+      <td>Kopieras från <code class="language-plaintext highlighter-rouge">DocumentReference.type</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">subject</code></td>
+      <td>Kopieras från <code class="language-plaintext highlighter-rouge">DocumentReference.subject</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">date</code></td>
+      <td>Kopieras från <code class="language-plaintext highlighter-rouge">DocumentReference.date</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">author</code></td>
+      <td>Kopieras från <code class="language-plaintext highlighter-rouge">DocumentReference.author</code>. Om <code class="language-plaintext highlighter-rouge">author</code> saknas i källan används vårdenheten (<code class="language-plaintext highlighter-rouge">accessControlHeader.accountableCareUnit</code>) som logisk referens till <code class="language-plaintext highlighter-rouge">Organization</code>, eftersom <code class="language-plaintext highlighter-rouge">Composition.author</code> är obligatorisk</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td><code class="language-plaintext highlighter-rouge">clinicalDocumentNoteTitle</code>; fallback <code class="language-plaintext highlighter-rouge">"Journalanteckning"</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="koppling-till-documentreference">Koppling till DocumentReference</h4>
+
+<p><code class="language-plaintext highlighter-rouge">Composition</code> saknar ett eget element som pekar på <code class="language-plaintext highlighter-rouge">DocumentReference</code>. Kopplingen görs genom
+att samma <code class="language-plaintext highlighter-rouge">Provenance</code> har både <code class="language-plaintext highlighter-rouge">DocumentReference</code> och <code class="language-plaintext highlighter-rouge">Composition</code> i <code class="language-plaintext highlighter-rouge">Provenance.target</code>.
+Den <code class="language-plaintext highlighter-rouge">Provenance</code> bär redan Sparr-agenterna (<code class="language-plaintext highlighter-rouge">agent[custodian]</code>, <code class="language-plaintext highlighter-rouge">agent[author]</code>), så samma
+spärrkontroll gäller för båda resurserna. En konsument som hämtar <code class="language-plaintext highlighter-rouge">Provenance</code> för en
+<code class="language-plaintext highlighter-rouge">DocumentReference</code> hittar den tillhörande <code class="language-plaintext highlighter-rouge">Composition</code> bland dess targets.</p>
+
+<hr />
+
+<h3 id="exempel">Exempel</h3>
+
+<h4 id="källa-efter-avkodning">Källa (efter avkodning)</h4>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;article&gt;</span>
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Bedömning<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;para&gt;</span>Patienten mår bra.<span class="nt">&lt;/para&gt;</span>
+    <span class="nt">&lt;section&gt;</span>
+      <span class="nt">&lt;title&gt;</span>Status<span class="nt">&lt;/title&gt;</span>
+      <span class="nt">&lt;itemizedlist&gt;</span>
+        <span class="nt">&lt;listitem&gt;&lt;para&gt;</span>Afebril<span class="nt">&lt;/para&gt;&lt;/listitem&gt;</span>
+        <span class="nt">&lt;listitem&gt;&lt;para&gt;</span>Opåverkad<span class="nt">&lt;/para&gt;&lt;/listitem&gt;</span>
+      <span class="nt">&lt;/itemizedlist&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;title&gt;&lt;emphasis</span> <span class="na">role=</span><span class="s">"observe"</span><span class="nt">&gt;</span>Observera<span class="nt">&lt;/emphasis&gt;&lt;/title&gt;</span>
+    <span class="nt">&lt;para&gt;</span>Ny kontroll om två veckor.<span class="nt">&lt;/para&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/article&gt;</span>
+</code></pre></div></div>
+
+<h4 id="strategi-a--contentattachment">Strategi A – content.attachment</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+  </span><span class="nl">"attachment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"contentType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/html; charset=utf-8"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Besöksanteckning"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;base64 av XHTML nedan&gt;"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}]</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/1999/xhtml"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Bedömning<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Patienten mår bra.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      <span class="nt">&lt;h3&gt;</span>Status<span class="nt">&lt;/h3&gt;</span>
+      <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;p&gt;</span>Afebril<span class="nt">&lt;/p&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;p&gt;</span>Opåverkad<span class="nt">&lt;/p&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"observe"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;strong&gt;</span>Observera<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Ny kontroll om två veckor.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h4 id="strategi-b--composition">Strategi B – Composition</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Composition"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"final"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:oid:1.2.752.129.2.2.2.11"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bes"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/pat-191212121212"</span><span class="p">,</span><span class="w"> </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://electronichealth.se/identifier/personnummer"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"191212121212"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-06-01T12:00:00+02:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:oid:1.2.752.29.4.19"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SE2321000016-1234"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}],</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Besöksanteckning"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"section"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bedömning"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"generated"</span><span class="p">,</span><span class="w"> </span><span class="nl">"div"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;div xmlns=</span><span class="se">\"</span><span class="s2">http://www.w3.org/1999/xhtml</span><span class="se">\"</span><span class="s2">&gt;&lt;p&gt;Patienten mår bra.&lt;/p&gt;&lt;/div&gt;"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"section"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Status"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"generated"</span><span class="p">,</span><span class="w"> </span><span class="nl">"div"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;div xmlns=</span><span class="se">\"</span><span class="s2">http://www.w3.org/1999/xhtml</span><span class="se">\"</span><span class="s2">&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;Afebril&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Opåverkad&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"</span><span class="w"> </span><span class="p">}</span><span class="w">
+      </span><span class="p">}]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"generated"</span><span class="p">,</span><span class="w"> </span><span class="nl">"div"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;div xmlns=</span><span class="se">\"</span><span class="s2">http://www.w3.org/1999/xhtml</span><span class="se">\"</span><span class="s2">&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">observe</span><span class="se">\"</span><span class="s2">&gt;&lt;p&gt;&lt;strong&gt;Observera&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Ny kontroll om två veckor.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Den stylade sektionen "Observera" bryts inte ut som egen rubrik. Den ligger direkt under
+<code class="language-plaintext highlighter-rouge">&lt;article&gt;</code> och hamnar därför i den avslutande namnlösa sektionen.</p>
+
+<hr />
+
+<h3 id="kända-begränsningar">Kända begränsningar</h3>
+
+<ul>
+  <li><strong>Identifieringen i clinicalDocumentNoteText bygger på innehållet.</strong> Textfältet saknar typindikator, så
+DocBook känns igen på den entity-kodade XML:en. Se <a href="#steg-2--identifiering-av-docbook">Steg 2</a>.</li>
+  <li><strong>Dokumentordning i Strategi B.</strong> Löst innehåll direkt under <code class="language-plaintext highlighter-rouge">&lt;article&gt;</code> vid sidan av
+strukturella <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code>-element samlas i en avslutande sektion i stället för att behålla
+sin ursprungliga position. Det är en medveten förenkling för att inget innehåll ska tappas.
+Strategi A bevarar alltid exakt källordning och är den representation som ska användas när
+exakt visuell återgivning krävs.</li>
+  <li><strong>Ingen direkt länk Composition → DocumentReference.</strong> Kopplingen går via <code class="language-plaintext highlighter-rouge">Provenance.target</code>.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
+          Paket inera.ehds.ehds-tk#0.9.0 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Genererad 
+  <span title="2026-11-16 16:17:00 +0000">
+    2026-11-16
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Länkar: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Innehållsförteckning</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-rapport</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

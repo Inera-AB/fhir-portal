@@ -1,0 +1,984 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="sv" xmlns="http://www.w3.org/1999/xhtml" lang="sv" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>SE EHDS Organization – Organisationsenhet - Inera EHDS Tjänstekontrakt – FHIR Implementation Guide v0.9.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/inera.css" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="assets/images/inera-thumbnail.png"/>
+<link rel="shortcut icon" href="assets/images/inera-thumbnail.png"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"29.109"}
+    h3,h4,h5,h6{--heading-prefix:"29.109"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="inera-nav">
+  <a id="inera-logo" data-no-external="true" href="https://www.inera.se">
+    <img height="50" alt="Inera" src="assets/images/inera-logo-header.svg"/>
+  </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Inera EHDS Tjänstekontrakt – FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.9.0 - ci-build
+
+
+
+  <img alt="Sweden flagga" src="../assets/images/swe.svg" height="16" title="Sweden"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">Hem</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Bakgrund<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="workflow.html">Workflow</a></li>
+      <li><a href="logical-models.html">Logiska modeller</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Mappningar<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="mappings.html">Översikt</a></li>
+      <li><a href="contract-versions.html">Tjänstekontraktsversioner</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Patientöversikt</li>
+      <li><a href="mapping-getdiagnosis.html">GetDiagnosis – Diagnoser</a></li>
+      <li><a href="mapping-getalertinformation.html">GetAlertInformation – Uppmärksamhet</a></li>
+      <li><a href="mapping-getmedicationhistory.html">GetMedicationHistory – Läkemedel</a></li>
+      <li><a href="mapping-getvaccinationhistory.html">GetVaccinationHistory – Vaccinationer</a></li>
+      <li><a href="mapping-getfunctionalstatus.html">GetFunctionalStatus – Funktionstillstånd</a></li>
+      <li><a href="mapping-getmaternitymedicalhistory.html">GetMaternityMedicalHistory – Mödravård</a></li>
+      <li><a href="mapping-getcareplans.html">GetCarePlans – Vårdplan</a></li>
+      <li><a href="mapping-getcarecontacts.html">GetCareContacts – Vårdkontakter</a></li>
+      <li><a href="mapping-getcaredocumentation.html">GetCareDocumentation – Anteckningar</a></li>
+      <li><a href="guidance-docbook-narrative.html">&#160;&#160;&#8627; DocBook-mappning</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Laboratorie och diagnostik</li>
+      <li><a href="mapping-getlaboratoryorderoutcome.html">GetLaboratoryOrderOutcome – Provsvar</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Bilddiagnostik</li>
+      <li><a href="mapping-getimagingoutcome.html">GetImagingOutcome – Bilddiagnostik</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Remiss och process</li>
+      <li><a href="mapping-getreferraloutcome.html">GetReferralOutcome – Remisser</a></li>
+      <li><a href="mapping-getrequestactivities.html">GetRequestActivities – Remisstatus</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Tillväxtkurva barn</li>
+      <li><a href="mapping-getobservations.html">GetObservations – Tillväxtkurva</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Logg</li>
+      <li><a href="mapping-getaccesslogforpatient.html">Åtkomstloggar och auditloggning</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="profiles.html">Profiles</a></li>
+      <li><a href="terminology.html">Terminology</a></li>
+      <li><a href="examples.html">Examples</a></li>
+      <li><a href="artifacts.html">All Artifacts</a></li>
+    </ul>
+  </li>
+  <li><a href="search-parameters.html">Sökparametrar</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="mapping-issues.html">Issues &amp; Beslut</a></li>
+  <li><a href="version-history.html">Versionshistorik</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Sammanfattning av artefakter</b></a></li><li><b>SE EHDS Organization – Organisationsenhet</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-profile-mappings -->
+<div style="counter-reset: section 5" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Inera EHDS Tjänstekontrakt – FHIR Implementation Guide (v0.9.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://fhir.inera.se/ig/ehds-tk/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="StructureDefinition-SEEHDSOrganization.html">Innehåll</a>
+  </li>
+
+
+
+  <li>
+    <a href="StructureDefinition-SEEHDSOrganization-definitions.html">Detaljerade beskrivningar</a>
+  </li>
+
+
+
+  
+    <li class="active">
+      <a href="#">Mappningar</a>
+    </li>
+  
+
+
+
+
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-SEEHDSOrganization.profile.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-SEEHDSOrganization.profile.json.html">JSON</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+<h2 id="root">Resursprofil: SE EHDS Organization – Organisationsenhet - Mappningar</h2>
+
+  <table class="colsd" data-fhir="generated">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+
+            per 
+2026-11-16
+
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+
+  <p>Mappningar för SEEHDSOrganization resursprofil.</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <h3>Mappings to Structures in this Implementation Guide</h3>
+<p>No Mappings Found</p>
+<h3>Mappings to other Structures</h3>
+<p>No Mappings Found</p>
+<h3>Other Mappings</h3>
+<table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" id="SEEHDSOrganizationMo" class="xhtTableBorder0" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" class="xhtRowBorder1" data-fhir="generated-heirarchy"><th scope="col" style="" class="hierarchy xhtCellBorder0"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Elementets logiska namn">Namn</a></th><th scope="col" style="" class="hierarchy xhtCellBorder0"><a href="http://hl7.org/v2" title="http://hl7.org/v2">HL7 v2 Mapping</a></th><th scope="col" style="" class="hierarchy xhtCellBorder0"><a href="http://hl7.org/v3" title="http://hl7.org/v3">RIM Mapping</a></th><th scope="col" style="" class="hierarchy xhtCellBorder0"><a href="http://www.omg.org/spec/ServD/1.0/" title="http://www.omg.org/spec/ServD/1.0/">ServD</a></th><th scope="col" style="" class="hierarchy xhtCellBorder0"><a href="http://hl7.org/fhir/fivews" title="http://hl7.org/fhir/fivews">FiveWs Pattern Mapping</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
+<tr fhir="generated-heirarchy" id="o-a" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization" title="A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.">Organization</a><a name="o-Organization"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>(also see master files messages)</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div><ul><li>Organization(classCode=ORG</li><li> determinerCode=INST)</li></ul></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>Organization</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aa" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.id" title="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.">id</a><a name="o-Organization.id"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-ab" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: white; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.meta" title="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.">meta</a><a name="o-Organization.meta"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-ac" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.implicitRules" title="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.">implicitRules</a><a name="o-Organization.implicitRules"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-ad" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.language" title="The base language in which the resource is written.">language</a><a name="o-Organization.language"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-ae" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.text" title="A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.">text</a><a name="o-Organization.text"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>Act.text?</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-af" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.contained" title="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.">contained</a><a name="o-Organization.contained"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>N/A</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-ag" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Enkel extension" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.extension" title="May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.">extension</a><a name="o-Organization.extension"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>N/A</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-ah" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_modifier_extension_simple.png" alt="" style="background-color: white; background-color: inherit" title="Enkel extension" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.modifierExtension" title="May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).">modifierExtension</a><a name="o-Organization.modifierExtension"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>N/A</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-ai" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck13.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_slice.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Skivdefinition" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier" title="Identifier for the organization that is used to identify the organization across multiple disparate systems." class="xhtPieceItalic">Skivor för identifier</a><a name="o-Organization.identifier"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceItalic"></span>
+<div>XON.10 / XON.3</div></td>
+<td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceItalic"></span>
+<div>.scopes[Role](classCode=IDENT)</div></td>
+<td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceItalic"></span>
+<div>./Identifiers</div></td>
+<td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceItalic"></span>
+<div>FiveWs.identifier</div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aia" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck135.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_slicer-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="" style="background-color: white; background-color: inherit" title="Skivobjekt" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:hsaid" title="Skiva hsaid: Identifier for the organization that is used to identify the organization across multiple disparate systems.">identifier:hsaid</a><a name="o-Organization.identifier:hsaid"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>XON.10 / XON.3</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>.scopes[Role](classCode=IDENT)</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./Identifiers</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>FiveWs.identifier</div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aiaa" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1350.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:hsaid / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:hsaid.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.">id</a><a name="o-Organization.identifier:hsaid.id"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>n/a</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aiab" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1352.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="" style="background-color: white; background-color: inherit" title="Enkel extension" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:hsaid / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:hsaid.extension" title="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.">extension</a><a name="o-Organization.identifier:hsaid.extension"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>n/a</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aiac" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1350.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:hsaid / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:hsaid.use" title="The purpose of this identifier.">use</a><a name="o-Organization.identifier:hsaid.use"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>N/A</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>Role.code or implied by context</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aiad" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1350.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: white; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:hsaid / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:hsaid.type" title="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.">type</a><a name="o-Organization.identifier:hsaid.type"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>CX.5</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>Role.code or implied by context</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aiae" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1350.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:hsaid / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:hsaid.system" title="Establishes the namespace for the value - that is, a URL that describes a set values that are unique.">system</a><a name="o-Organization.identifier:hsaid.system"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>CX.4 / EI-2-4</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>II.root or Role.id.root</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./IdentifierType</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aiaf" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1350.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:hsaid / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:hsaid.value" title="The portion of the identifier typically relevant to the user and which is unique within the context of the system.">value</a><a name="o-Organization.identifier:hsaid.value"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>CX.1 / EI.1</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./Value</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aiag" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1350.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:hsaid / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:hsaid.period" title="Time period during which identifier is/was valid for use.">period</a><a name="o-Organization.identifier:hsaid.period"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>CX.7 + CX.8</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>Role.effectiveTime or implied by context</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./StartDate and ./EndDate</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aiah" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1340.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline_slicer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="" style="background-color: white; background-color: inherit" title="Referens till en annan resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:hsaid / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:hsaid.assigner" title="Organization that issued/manages the identifier.">assigner</a><a name="o-Organization.identifier:hsaid.assigner"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div><ul><li>CX.4 / (CX.4</li><li>CX.9</li><li>CX.10)</li></ul></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./IdentifierIssuingAuthority</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aib" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck125.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end_slicer-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Skivobjekt" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:smiId" title="Skiva smiId: Identifier for the organization that is used to identify the organization across multiple disparate systems.">identifier:smiId</a><a name="o-Organization.identifier:smiId"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>XON.10 / XON.3</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>.scopes[Role](classCode=IDENT)</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./Identifiers</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>FiveWs.identifier</div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aiba" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1250.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:smiId / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:smiId.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.">id</a><a name="o-Organization.identifier:smiId.id"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>n/a</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aibb" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1252.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Enkel extension" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:smiId / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:smiId.extension" title="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.">extension</a><a name="o-Organization.identifier:smiId.extension"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>n/a</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aibc" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1250.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:smiId / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:smiId.use" title="The purpose of this identifier.">use</a><a name="o-Organization.identifier:smiId.use"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>N/A</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>Role.code or implied by context</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aibd" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1250.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:smiId / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:smiId.type" title="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.">type</a><a name="o-Organization.identifier:smiId.type"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>CX.5</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>Role.code or implied by context</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aibe" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1250.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:smiId / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:smiId.system" title="Establishes the namespace for the value - that is, a URL that describes a set values that are unique.">system</a><a name="o-Organization.identifier:smiId.system"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>CX.4 / EI-2-4</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>II.root or Role.id.root</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./IdentifierType</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aibf" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1250.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:smiId / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:smiId.value" title="The portion of the identifier typically relevant to the user and which is unique within the context of the system.">value</a><a name="o-Organization.identifier:smiId.value"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>CX.1 / EI.1</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./Value</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aibg" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1250.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: white; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:smiId / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:smiId.period" title="Time period during which identifier is/was valid for use.">period</a><a name="o-Organization.identifier:smiId.period"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>CX.7 + CX.8</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>Role.effectiveTime or implied by context</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./StartDate and ./EndDate</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aibh" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1240.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Referens till en annan resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / Skivor för identifier / identifier:smiId / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.identifier:smiId.assigner" title="Organization that issued/manages the identifier.">assigner</a><a name="o-Organization.identifier:smiId.assigner"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div><ul><li>CX.4 / (CX.4</li><li>CX.9</li><li>CX.10)</li></ul></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./IdentifierIssuingAuthority</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aj" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.active" title="Whether the organization's record is still in active use.">active</a><a name="o-Organization.active"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>No equivalent in HL7 v2</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>.status</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div><ul><li>./Status (however this concept in ServD more covers why the organization is active or not</li><li> could be delisted</li><li> deregistered</li><li> not operational yet) this could alternatively be derived from ./StartDate and ./EndDate and given a context date.</li></ul></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>FiveWs.status</div></td></tr>
+<tr fhir="generated-heirarchy" id="o-ak" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.type" title="The kind(s) of organization that this is.">type</a><a name="o-Organization.type"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>No equivalent in v2</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>.code</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>n/a</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>FiveWs.class</div></td></tr>
+<tr fhir="generated-heirarchy" id="o-al" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.name" title="A name associated with the organization.">name</a><a name="o-Organization.name"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>XON.1</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>.name</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>.PreferredName/Name</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-am" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.alias" title="A list of alternate names that the organization is known as, or was known as in the past.">alias</a><a name="o-Organization.alias"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>.name</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-an" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: white; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.telecom" title="A contact detail for the organization.">telecom</a><a name="o-Organization.telecom"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>ORC-22?</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>.telecom</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./ContactPoints</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-ao" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address" title="An address for the organization.">address</a><a name="o-Organization.address"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>ORC-23?</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>.address</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./PrimaryAddress and ./OtherAddresses</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aoa" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.">id</a><a name="o-Organization.address.id"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>n/a</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aob" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck112.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Enkel extension" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.extension" title="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.">extension</a><a name="o-Organization.address.extension"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>n/a</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aoc" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.use" title="The purpose of this address.">use</a><a name="o-Organization.address.use"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>XAD.7</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>unique(./use)</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./AddressPurpose</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aod" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.type" title="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.">type</a><a name="o-Organization.address.type"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>XAD.18</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>unique(./use)</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aoe" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.text" title="Specifies the entire address as it should be displayed e.g. on a postal label. This may be provided instead of or as well as the specific parts.">text</a><a name="o-Organization.address.text"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>XAD.1 + XAD.2 + XAD.3 + XAD.4 + XAD.5 + XAD.6</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./formatted</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aof" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck111.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.line" title="This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.">line</a><a name="o-Organization.address.line"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div> XAD.1 and XAD.2 have different meanings for a company address than for a person address)</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>AD.part[parttype = AL]</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./StreetAddress (newline delimitted)</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aofa" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / line / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.line.id" title="unique id for the element within a resource (for internal references)">id</a><a name="o-Organization.address.line.id"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aofb" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1113.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Enkel extension" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / line / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.line.extension" title="An Extension">Skivor för extension</a><a name="o-Organization.address.line.extension"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aofba" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11134.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slicer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="" style="background-color: white; background-color: inherit" title="Skivobjekt" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / line / Skivor för extension / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.line.extension:streetName" title="Skiva streetName: streetName.">extension:streetName</a><a name="o-Organization.address.line.extension:streetName"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>ADXP[partType=STR]</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aofbb" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11134.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slicer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Skivobjekt" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / line / Skivor för extension / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.line.extension:houseNumber" title="Skiva houseNumber: The number of a building, house or lot alongside the street. Also known as &quot;primary street number&quot;. This does not number the street but rather the building.">extension:houseNumber</a><a name="o-Organization.address.line.extension:houseNumber"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>ADXP[partType=BNR]</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aofbc" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11124.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="" style="background-color: white; background-color: inherit" title="Skivobjekt" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / line / Skivor för extension / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.line.extension:postBox" title="Skiva postBox: A numbered box located in a post station.">extension:postBox</a><a name="o-Organization.address.line.extension:postBox"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>ADXP[partType=POB]</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aofc" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1100.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / line / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.line.value" title="The actual value">value</a><a name="o-Organization.address.line.value"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aog" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.city" title="The name of the city, town, suburb, village or other community or delivery center.">city</a><a name="o-Organization.address.city"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>XAD.3</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>AD.part[parttype = CTY]</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./Jurisdiction</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aoh" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.district" title="The name of the administrative area (county).">district</a><a name="o-Organization.address.district"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>XAD.9</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>AD.part[parttype = CNT | CPA]</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aoi" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.state" title="Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (e.g. US 2 letter state codes).">state</a><a name="o-Organization.address.state"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>XAD.4</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>AD.part[parttype = STA]</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./Region</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aoj" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.postalCode" title="A postal code designating a region defined by the postal service.">postalCode</a><a name="o-Organization.address.postalCode"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>XAD.5</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>AD.part[parttype = ZIP]</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./PostalIdentificationCode</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aok" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck111.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.country" title="Country - a nation as commonly understood or generally accepted.">country</a><a name="o-Organization.address.country"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>XAD.6</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>AD.part[parttype = CNT]</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./Country</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aoka" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / country / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.country.id" title="unique id for the element within a resource (for internal references)">id</a><a name="o-Organization.address.country.id"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aokb" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1113.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="" style="background-color: white; background-color: inherit" title="Enkel extension" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / country / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.country.extension" title="An Extension">Skivor för extension</a><a name="o-Organization.address.country.extension"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aokba" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11125.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end_slicer-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Skivobjekt" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / country / Skivor för extension / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.country.extension:countryCode" title="Skiva countryCode: Provides a coded expression for the content represented in a string.">extension:countryCode</a><a name="o-Organization.address.country.extension:countryCode"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>SC.code</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aokbaa" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck111250.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / country / Skivor för extension / extension:countryCode / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.country.extension:countryCode.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.">id</a><a name="o-Organization.address.country.extension:countryCode.id"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>n/a</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aokbab" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck111252.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Enkel extension" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / country / Skivor för extension / extension:countryCode / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.country.extension:countryCode.extension" title="An Extension">extension</a><a name="o-Organization.address.country.extension:countryCode.extension"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aokbac" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck111250.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / country / Skivor för extension / extension:countryCode / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.country.extension:countryCode.url" title="Source of the definition for the extension code - a logical name or a URL.">url</a><a name="o-Organization.address.country.extension:countryCode.url"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>N/A</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aokbad" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck111240.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slice.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / country / Skivor för extension / extension:countryCode / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.country.extension:countryCode.value[x]" title="Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R5/extensibility.html) for a list).">value[x]</a><a name="o-Organization.address.country.extension:countryCode.value_x_"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>N/A</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aokc" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck1100.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / country / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.country.value" title="The actual value">value</a><a name="o-Organization.address.country.value"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aol" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck100.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / address / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.address.period" title="Time period when address was/is in use.">period</a><a name="o-Organization.address.period"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>XAD.12 / XAD.13 + XAD.14</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./usablePeriod[type="IVL&lt;TS&gt;"]</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./StartDate and ./EndDate</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-ap" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck10.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="" style="background-color: white; background-color: inherit" title="Referens till en annan resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.partOf" title="The organization of which this organization forms a part.">partOf</a><a name="o-Organization.partOf"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>No equivalent in HL7 v2</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>.playedBy[classCode=Part].scoper</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>n/a</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aq" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck11.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.contact" title="Contact for the organization for a certain purpose.">contact</a><a name="o-Organization.contact"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>.contactParty</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aqa" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="" style="background-color: white; background-color: inherit" title="Primitiv datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / contact / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.contact.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.">id</a><a name="o-Organization.contact.id"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>n/a</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aqb" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_extension_simple.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Enkel extension" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / contact / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.contact.extension" title="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.">extension</a><a name="o-Organization.contact.extension"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>n/a</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aqc" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_modifier_extension_simple.png" alt="" style="background-color: white; background-color: inherit" title="Enkel extension" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / contact / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.contact.modifierExtension" title="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).">modifierExtension</a><a name="o-Organization.contact.modifierExtension"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>N/A</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aqd" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / contact / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.contact.purpose" title="Indicates a purpose for which the contact can be reached.">purpose</a><a name="o-Organization.contact.purpose"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./type</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aqe" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: white; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / contact / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.contact.name" title="A name associated with the contact.">name</a><a name="o-Organization.contact.name"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div><ul><li>PID-5</li><li> PID-9</li></ul></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./name</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aqf" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / contact / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.contact.telecom" title="A contact detail (e.g. a telephone number or an email address) by which the party may be contacted.">telecom</a><a name="o-Organization.contact.telecom"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div><ul><li>PID-13</li><li> PID-14</li></ul></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./telecom</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-aqg" class="xhtRowBorder0 xhtRowEven" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck100.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: white; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / contact / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.contact.address" title="Visiting or postal addresses for the contact.">address</a><a name="o-Organization.contact.address"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>PID-11</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>./addr</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" id="o-ar" class="xhtRowBorder0 xhtRowOdd" data-fhir="generated-heirarchy"><td role="rowheader" style="background-image: url(tbl_bck00.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_reference.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Referens till en annan resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">Organization / </span><a href="StructureDefinition-SEEHDSOrganization-definitions.html#Organization.endpoint" title="Technical endpoints providing access to services operated for the organization.">endpoint</a><a name="o-Organization.endpoint"> </a></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div>n/a</div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td>
+<td style="" class="hierarchy xhtCellBorder0">
+<div></div></td></tr>
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr></table>
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/tabs.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
+          Paket inera.ehds.ehds-tk#0.9.0 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Genererad 
+  <span title="2026-11-16 16:17:00 +0000">
+    2026-11-16
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Länkar: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Innehållsförteckning</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-rapport</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

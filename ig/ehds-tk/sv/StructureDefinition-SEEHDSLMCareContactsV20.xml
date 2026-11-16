@@ -1,0 +1,1909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="SEEHDSLMCareContactsV20"/>
+  <language value="sv"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Genererad berättande text: StructureDefinition SEEHDSLMCareContactsV20</b></p><table border="0" cellpadding="0" cellspacing="0" class="xhtTableBorder0"><tr class="xhtRowBorder1"><th scope="col" style="" class="hierarchy xhtCellBorder0"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Elementets logiska namn">Namn</a></th><th scope="col" style="" class="hierarchy xhtCellBorder0"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information om användningen av elementet">Flaggor</a></th><th scope="col" style="" class="hierarchy xhtCellBorder0"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Lägsta och högsta antal gånger elementet kan förekomma i instansen">Kard.</a></th><th scope="col" style="; width: 100px" class="hierarchy xhtCellBorder0"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Referens till elementets typ">Typ</a></th><th scope="col" style="" class="hierarchy xhtCellBorder0"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Ytterligare information om elementet">Beskrivning &amp; begränsningar</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck1.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="" style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20" title="Logisk modell för version 2.0 av tjänstekontraktet GetCareContacts
+(urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:2).
+Mappningen utgår från versionen i SEEHDSLMCareContacts. Skillnaderna mot den och hur de
+påverkar mappningen beskrivs på tjänstekontraktets mappningssida.">SEEHDSLMCareContactsV20</a><a name="SEEHDSLMCareContactsV20"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceDeEmphasized">0</span><span class="xhtPieceDeEmphasized">..</span><span class="xhtPieceDeEmphasized">*</span></td><td style="" class="hierarchy xhtCellBorder0"><a href="http://build.fhir.org/types.html#Base">Base</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:2<br/>GetCareContacts 2.0<br/><span class="xhtPieceBold">Instanser av denna logiska modell kan vara mål för en Reference</span></td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck01.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact" title="De hälso- och sjukvårdskontakter som matchar begäran.">careContact</a><a name="SEEHDSLMCareContactsV20.careContact"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..*</td><td style="" class="hierarchy xhtCellBorder0"><a href="http://hl7.org/fhir/R4/datatypes.html#BackboneElement">BackboneElement</a></td><td style="" class="hierarchy xhtCellBorder0">De hälso- och sjukvårdskontakter som matchar begäran<br/></td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck011.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: white; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader" title="careContactId: Vårdkontaktens identitet som är unik inom källsystemet sourceSystemHSAId: HSAId för det system som dokumentet är skapat i. documentTime: Tid då vård- eller omsorgskontakten registrerades patientId: Patientens ID (enligt PatientIdType). type sätts till OID för typ av identifierare. För personnummer ska Skatteverkets personnummer (1.2.752.129.2.1.3.1). För samordningsnummer ska Skatteverkets samordningsnummer (1.2.752.129.2.1.3.3). För reservnummer används lokalt definierade reservnummet, exempelvis SLL reservnummer (1.2.752.97.3.1.3) accountableHealthcareProfessional Hälso- och sjukvårdsperson som ansvarar för vårdkontakten. accountableHealthcareProfessionalOrgUnit Organisationsenhet för vård- och omsorgspersonens uppdrag i samband med vårdkontakten. approvedForPatient: Anger om information får delas till patient. Värdet sätts i sådant fall till true, i annat fall till false.">careContactHeader</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="http://hl7.org/fhir/R4/datatypes.html#BackboneElement">BackboneElement</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>careContactId: Vårdkontaktens identitet som är unik inom källsystemet sourceSystemHSAId: HSAId för det system …<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck0110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.documentId" title="Identifieraren ska vara konsistent och beständigt mellan olika majorversioner av ett kontrakt. Ett exempel på detta är att en vårdkontakt ska ha samma identifierare i majorversion 3 och 4 av ett tjänstekontrakt för att läsa vårdkontakter. Identifieraren ska vara konsistent och beständigt mellan olika kontrakt. Ett exempel på detta är att samma remiss-identitet ska användas i ett tjänstekontrakt för att läsa remisser, samt tjänstekontraktet som läser remissvar som refererar till den ursprungliga remissen.">documentId</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.documentId"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Identifieraren ska vara konsistent och beständigt mellan olika majorversioner av ett kontrakt<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck0110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.sourceSystemHSAId" title="HSAid för det system som dokumentet är skapat i.">sourceSystemHSAId</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.sourceSystemHSAId"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>HSAid för det system som dokumentet är skapat i<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck0110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.patientId" title="Id för patienten. Anges med 12 siffror utan avskiljare.id sätts till patientens identifierare.Type sätts till OID för typ av identifierare. För personnummer ska Skatteverkets personnummer (1.2.752.129.2.1.3.1).För samordningsnummer ska Skatteverkets samordningsnummer (1.2.752.129.2.1.3.3).För reservnummer används lokalt definierade reservnummet, exempelvis SLL reservnummer (1.2.752.97.3.1.3)">patientId</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.patientId"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivPersonIdTypeLogisticsLogistics2.html">SEEHDSRivPersonIdTypeLogisticsLogistics2</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Id för patienten<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck0111.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: white; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional" title="Ansvarig hälso- och sjukvårdsperson.">accountableHealthcareProfessional</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="http://hl7.org/fhir/R4/datatypes.html#BackboneElement">BackboneElement</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Ansvarig hälso- och sjukvårdsperson<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck01110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.authorTime" title="Den tidpunkt då dokumentet skapades.
+Format enligt XSD (TimeStampType): ÅÅÅÅMMDDttmmss.">authorTime</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.authorTime"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivTimeStamp.html">SEEHDSRivTimeStamp</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Den tidpunkt då dokumentet skapades<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck01110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalHSAId" title="HSA-id för hälso- och sjukvårdspersonal. Ska anges om tillgänglig.
+TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n.">healthcareProfessionalHSAId</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalHSAId"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>HSA-id för hälso- och sjukvårdspersonal<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck01110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalName" title="Namn på hälso- och sjukvårdspersonal. Om tillgängligt ska detta anges.
+TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n.">healthcareProfessionalName</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalName"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Namn på hälso- och sjukvårdspersonal<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck01110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalRoleCode" title="Information om personens befattning. Om möjligt ska KV Befattning (OID 1.2.752.129.2.2.1.4) användas.">healthcareProfessionalRoleCode</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalRoleCode"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivCVTypeLogisticsLogistics2.html">SEEHDSRivCVTypeLogisticsLogistics2</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Information om personens befattning<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck01111.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit" title="Den organisation som angiven hälso- och sjukvårdsperson är uppdragstagare på. Om tillgängligt ska detta anges.
+TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n.">healthcareProfessionalOrgUnit</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="http://hl7.org/fhir/R4/datatypes.html#BackboneElement">BackboneElement</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Den organisation som angiven hälso- och sjukvårdsperson är uppdragstagare på<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck011110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitHSAId" title="HSA-id för organisationsenhet. Om tillgängligt ska detta anges.
+TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n.">orgUnitHSAId</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitHSAId"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>HSA-id för organisationsenhet<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck011110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitName" title="Namn på organisationsenhet. Om tillgängligt ska detta anges.
+TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n.">orgUnitName</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitName"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Namn på organisationsenhet<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck011110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitTelecom" title="Telefon till organisationsenhet">orgUnitTelecom</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitTelecom"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Telefon till organisationsenhet<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck011110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitEmail" title="Epost till enhet">orgUnitEmail</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitEmail"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Epost till enhet<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck011110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitAddress" title="Postadress till enhet">orgUnitAddress</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitAddress"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Postadress till enhet<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck011100.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitLocation" title="Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering">orgUnitLocation</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitLocation"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck01110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareUnitHSAId" title="HSA-id för vårdenhet som hälso- och sjukvårdspersonen är uppdragstagare för. Ska anges om tillgänglig.">healthcareProfessionalCareUnitHSAId</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareUnitHSAId"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>HSA-id för vårdenhet som hälso- och sjukvårdspersonen är uppdragstagare för<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck01100.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareGiverHSAId" title="HSA-id för vårdgivaren, som är vårdgivare för den enhet som författaren är uppdragstagare för. Ska anges om tillgänglig.">healthcareProfessionalCareGiverHSAId</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareGiverHSAId"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>HSA-id för vårdgivaren, som är vårdgivare för den enhet som författaren är uppdragstagare för<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck0110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.approvedForPatient" title="Anger om information får delas till patient. Värdet sätts i sådant fall till true, i annat fall till false.">approvedForPatient</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.approvedForPatient"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivBoolean.html">SEEHDSRivBoolean</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Anger om information får delas till patient<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck0110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.nullified" title="Anger om dokumentet makulerats i källsystemet. Sätts i så fall till true annars false. Används bl.a. i statistik-/rapportuttag med hjälp av tjänstekontrakten.">nullified</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.nullified"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivBoolean.html">SEEHDSRivBoolean</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Anger om dokumentet makulerats i källsystemet<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck0100.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactHeader.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactHeader.nullifiedReason" title="Anger orsak till makulering.">nullifiedReason</a><a name="SEEHDSLMCareContactsV20.careContact.careContactHeader.nullifiedReason"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Anger orsak till makulering<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck001.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactBody" title="careContactCode: Typ av vård- och omsorgsdokumentation. Nullvärde tillåtetet. careContactReason: Text som beskriver orsaken till vård- och omsorgskontakt som vård- och omsorgstagaren själv eller dess företrädare anger. careContactOrgUnit: Den enhet som kontakt utfördes vid careContactTimePeriod: För besök sätts sluttidpunken till samma tid som anges som starttidpunkt. För planerade kontakter sätts ingen sluttidpunkt. Pågående vårdtillfälle ska anges på samma sätt som en planerad vårdkontakt, dvs med angivet startdatum, men utan slutdatum. careContactStatus: Status på vårdkontakten enligt kodverk ur NPÖ RIV-spec 2.2.">careContactBody</a><a name="SEEHDSLMCareContactsV20.careContact.careContactBody"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="http://hl7.org/fhir/R4/datatypes.html#BackboneElement">BackboneElement</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>careContactCode: Typ av vård- och omsorgsdokumentation<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck0010.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactBody.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactBody.careContactCode" title="Tillåtna värden enligt XSD: 1, 2, 3, 4, 5.">careContactCode</a><a name="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactCode"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivInteger.html">SEEHDSRivInteger</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>careContactCode<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck0010.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactBody.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactBody.careContactReason" title="careContactReason">careContactReason</a><a name="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactReason"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>careContactReason<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck0011.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="" style="background-color: white; background-color: inherit" title="Datatyp" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactBody.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit" title="Information om en organisationsenhet careContactOrgUnitHsaId: HSA-id för organisationsenhet careContactOrgUnitName Namn på organisationsenhet careContactOrgUnitTelecom: Telefon till organisationsenhet careContactOrgUnitEmail: Epost till enhet careContactOrgUnitAddress: Postadress till enhet careContactOrgUnitLocation: Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering">careContactOrgUnit</a><a name="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="http://hl7.org/fhir/R4/datatypes.html#BackboneElement">BackboneElement</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Information om en organisationsenhet careContactOrgUnitHsaId: HSA-id för organisationsenhet …<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck00110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitHSAId" title="HSA-id för organisationsenhet. Om tillgängligt ska detta anges.
+TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n.">orgUnitHSAId</a><a name="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitHSAId"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>HSA-id för organisationsenhet<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck00110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitName" title="Namn på organisationsenhet. Om tillgängligt ska detta anges.
+TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n.">orgUnitName</a><a name="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitName"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Namn på organisationsenhet<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck00110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitTelecom" title="Telefon till organisationsenhet">orgUnitTelecom</a><a name="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitTelecom"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Telefon till organisationsenhet<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck00110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitEmail" title="Epost till enhet">orgUnitEmail</a><a name="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitEmail"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Epost till enhet<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck00110.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitAddress" title="Postadress till enhet">orgUnitAddress</a><a name="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitAddress"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Postadress till enhet<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck00100.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitLocation" title="Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering">orgUnitLocation</a><a name="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitLocation"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivString.html">SEEHDSRivString</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowOdd"><td style="background-image: url(tbl_bck0010.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactBody.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactBody.careContactTimePeriod" title="Används för att specificera ett datumintervall med hjälp av start- och slutdatum. start: Startdatum på formatet YYYYMMDDhhmmss end: Slutdatum på formatet YYYYMMDDhhmmss">careContactTimePeriod</a><a name="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactTimePeriod"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">1..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivTimePeriodTypeLogisticsLogistics2.html">SEEHDSRivTimePeriodTypeLogisticsLogistics2</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>Används för att specificera ett datumintervall med hjälp av start- och slutdatum<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr class="xhtRowBorder0 xhtRowEven"><td style="background-image: url(tbl_bck0000.png)" class="hierarchy xhtCellBorder0 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="" style="background-color: white; background-color: inherit" title="Resurs" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">SEEHDSLMCareContactsV20.careContact.careContactBody.</span><a href="StructureDefinition-SEEHDSLMCareContactsV20-definitions.html#SEEHDSLMCareContactsV20.careContact.careContactBody.careContactStatus" title="Tillåtna värden enligt XSD: 1, 2, 3, 4, 5.">careContactStatus</a><a name="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactStatus"> </a></td><td style="" class="hierarchy xhtCellBorder0"/><td style="" class="hierarchy xhtCellBorder0">0..1</td><td style="" class="hierarchy xhtCellBorder0"><a href="StructureDefinition-SEEHDSRivInteger.html">SEEHDSRivInteger</a></td><td style="" class="hierarchy xhtCellBorder0"><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2<br/>careContactStatus<br/><span class="xhtPieceBold">XML-namnrymd: </span>urn:riv:clinicalprocess:logistics:logistics:2</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Förklaring för detta format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Dokumentation för detta format</a></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics">
+    <valueCode value="can-be-target"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/xml-name">
+    <valueString value="GetCareContactsResponse"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+    <valueUri value="urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:2"/>
+  </extension>
+  <url value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMCareContactsV20"/>
+  <version value="0.9.0"/>
+  <name value="SEEHDSLMCareContactsV20"/>
+  <title value="GetCareContacts 2.0"/>
+  <status value="draft"/>
+  <date value="2026-11-16T16:17:59+00:00"/>
+  <publisher value="Inera AB"/>
+  <contact>
+    <name value="Inera AB"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.inera.se"/>
+    </telecom>
+  </contact>
+  <description value="Logisk modell för version 2.0 av tjänstekontraktet GetCareContacts&#xA;(urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:2).&#xA;Mappningen utgår från versionen i SEEHDSLMCareContacts. Skillnaderna mot den och hur de&#xA;påverkar mappningen beskrivs på tjänstekontraktets mappningssida."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="SE"/>
+      <display value="Sweden"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMCareContactsV20"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Base"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="4.0.1"/>
+    </extension>
+    <element id="SEEHDSLMCareContactsV20">
+      <path value="SEEHDSLMCareContactsV20"/>
+      <short value="GetCareContacts 2.0"/>
+      <definition value="Logisk modell för version 2.0 av tjänstekontraktet GetCareContacts&#xA;(urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:2).&#xA;Mappningen utgår från versionen i SEEHDSLMCareContacts. Skillnaderna mot den och hur de&#xA;påverkar mappningen beskrivs på tjänstekontraktets mappningssida."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <isModifier value="false"/>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact">
+      <path value="SEEHDSLMCareContactsV20.careContact"/>
+      <short value="De hälso- och sjukvårdskontakter som matchar begäran"/>
+      <definition value="De hälso- och sjukvårdskontakter som matchar begäran."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.id">
+      <path value="SEEHDSLMCareContactsV20.careContact.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.extension">
+      <path value="SEEHDSLMCareContactsV20.careContact.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.modifierExtension">
+      <path value="SEEHDSLMCareContactsV20.careContact.modifierExtension"/>
+      <short value="Extensions that cannot be ignored even if unrecognized"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <requirements value="Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader"/>
+      <short value="careContactId: Vårdkontaktens identitet som är unik inom källsystemet sourceSystemHSAId: HSAId för det system …"/>
+      <definition value="careContactId: Vårdkontaktens identitet som är unik inom källsystemet sourceSystemHSAId: HSAId för det system som dokumentet är skapat i. documentTime: Tid då vård- eller omsorgskontakten registrerades patientId: Patientens ID (enligt PatientIdType). type sätts till OID för typ av identifierare. För personnummer ska Skatteverkets personnummer (1.2.752.129.2.1.3.1). För samordningsnummer ska Skatteverkets samordningsnummer (1.2.752.129.2.1.3.3). För reservnummer används lokalt definierade reservnummet, exempelvis SLL reservnummer (1.2.752.97.3.1.3) accountableHealthcareProfessional Hälso- och sjukvårdsperson som ansvarar för vårdkontakten. accountableHealthcareProfessionalOrgUnit Organisationsenhet för vård- och omsorgspersonens uppdrag i samband med vårdkontakten. approvedForPatient: Anger om information får delas till patient. Värdet sätts i sådant fall till true, i annat fall till false."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.id">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.extension">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.modifierExtension">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.modifierExtension"/>
+      <short value="Extensions that cannot be ignored even if unrecognized"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <requirements value="Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.documentId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.documentId"/>
+      <short value="Identifieraren ska vara konsistent och beständigt mellan olika majorversioner av ett kontrakt"/>
+      <definition value="Identifieraren ska vara konsistent och beständigt mellan olika majorversioner av ett kontrakt. Ett exempel på detta är att en vårdkontakt ska ha samma identifierare i majorversion 3 och 4 av ett tjänstekontrakt för att läsa vårdkontakter. Identifieraren ska vara konsistent och beständigt mellan olika kontrakt. Ett exempel på detta är att samma remiss-identitet ska användas i ett tjänstekontrakt för att läsa remisser, samt tjänstekontraktet som läser remissvar som refererar till den ursprungliga remissen."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.documentId"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.sourceSystemHSAId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.sourceSystemHSAId"/>
+      <short value="HSAid för det system som dokumentet är skapat i"/>
+      <definition value="HSAid för det system som dokumentet är skapat i."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.sourceSystemHSAId"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.patientId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.patientId"/>
+      <short value="Id för patienten"/>
+      <definition value="Id för patienten. Anges med 12 siffror utan avskiljare.id sätts till patientens identifierare.Type sätts till OID för typ av identifierare. För personnummer ska Skatteverkets personnummer (1.2.752.129.2.1.3.1).För samordningsnummer ska Skatteverkets samordningsnummer (1.2.752.129.2.1.3.3).För reservnummer används lokalt definierade reservnummet, exempelvis SLL reservnummer (1.2.752.97.3.1.3)"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.patientId"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivPersonIdTypeLogisticsLogistics2"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional"/>
+      <short value="Ansvarig hälso- och sjukvårdsperson"/>
+      <definition value="Ansvarig hälso- och sjukvårdsperson."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.id">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.extension">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.modifierExtension">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.modifierExtension"/>
+      <short value="Extensions that cannot be ignored even if unrecognized"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <requirements value="Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.authorTime">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.authorTime"/>
+      <short value="Den tidpunkt då dokumentet skapades"/>
+      <definition value="Den tidpunkt då dokumentet skapades.&#xA;Format enligt XSD (TimeStampType): ÅÅÅÅMMDDttmmss."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.authorTime"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivTimeStamp"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalHSAId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalHSAId"/>
+      <short value="HSA-id för hälso- och sjukvårdspersonal"/>
+      <definition value="HSA-id för hälso- och sjukvårdspersonal. Ska anges om tillgänglig.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalHSAId"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalName">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalName"/>
+      <short value="Namn på hälso- och sjukvårdspersonal"/>
+      <definition value="Namn på hälso- och sjukvårdspersonal. Om tillgängligt ska detta anges.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalName"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalRoleCode">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalRoleCode"/>
+      <short value="Information om personens befattning"/>
+      <definition value="Information om personens befattning. Om möjligt ska KV Befattning (OID 1.2.752.129.2.2.1.4) användas."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalRoleCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivCVTypeLogisticsLogistics2"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit"/>
+      <short value="Den organisation som angiven hälso- och sjukvårdsperson är uppdragstagare på"/>
+      <definition value="Den organisation som angiven hälso- och sjukvårdsperson är uppdragstagare på. Om tillgängligt ska detta anges.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.id">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.extension">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.modifierExtension">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.modifierExtension"/>
+      <short value="Extensions that cannot be ignored even if unrecognized"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <requirements value="Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitHSAId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitHSAId"/>
+      <short value="HSA-id för organisationsenhet"/>
+      <definition value="HSA-id för organisationsenhet. Om tillgängligt ska detta anges.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitHSAId"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitName">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitName"/>
+      <short value="Namn på organisationsenhet"/>
+      <definition value="Namn på organisationsenhet. Om tillgängligt ska detta anges.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitName"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitTelecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitTelecom"/>
+      <short value="Telefon till organisationsenhet"/>
+      <definition value="Telefon till organisationsenhet"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitTelecom"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitEmail">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitEmail"/>
+      <short value="Epost till enhet"/>
+      <definition value="Epost till enhet"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitEmail"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitAddress">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitAddress"/>
+      <short value="Postadress till enhet"/>
+      <definition value="Postadress till enhet"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitAddress"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitLocation">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitLocation"/>
+      <short value="Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering"/>
+      <definition value="Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitLocation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareUnitHSAId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareUnitHSAId"/>
+      <short value="HSA-id för vårdenhet som hälso- och sjukvårdspersonen är uppdragstagare för"/>
+      <definition value="HSA-id för vårdenhet som hälso- och sjukvårdspersonen är uppdragstagare för. Ska anges om tillgänglig."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareUnitHSAId"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareGiverHSAId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareGiverHSAId"/>
+      <short value="HSA-id för vårdgivaren, som är vårdgivare för den enhet som författaren är uppdragstagare för"/>
+      <definition value="HSA-id för vårdgivaren, som är vårdgivare för den enhet som författaren är uppdragstagare för. Ska anges om tillgänglig."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareGiverHSAId"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.approvedForPatient">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.approvedForPatient"/>
+      <short value="Anger om information får delas till patient"/>
+      <definition value="Anger om information får delas till patient. Värdet sätts i sådant fall till true, i annat fall till false."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.approvedForPatient"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivBoolean"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.nullified">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.nullified"/>
+      <short value="Anger om dokumentet makulerats i källsystemet"/>
+      <definition value="Anger om dokumentet makulerats i källsystemet. Sätts i så fall till true annars false. Används bl.a. i statistik-/rapportuttag med hjälp av tjänstekontrakten."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.nullified"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivBoolean"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.nullifiedReason">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.nullifiedReason"/>
+      <short value="Anger orsak till makulering"/>
+      <definition value="Anger orsak till makulering."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.nullifiedReason"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody"/>
+      <short value="careContactCode: Typ av vård- och omsorgsdokumentation"/>
+      <definition value="careContactCode: Typ av vård- och omsorgsdokumentation. Nullvärde tillåtetet. careContactReason: Text som beskriver orsaken till vård- och omsorgskontakt som vård- och omsorgstagaren själv eller dess företrädare anger. careContactOrgUnit: Den enhet som kontakt utfördes vid careContactTimePeriod: För besök sätts sluttidpunken till samma tid som anges som starttidpunkt. För planerade kontakter sätts ingen sluttidpunkt. Pågående vårdtillfälle ska anges på samma sätt som en planerad vårdkontakt, dvs med angivet startdatum, men utan slutdatum. careContactStatus: Status på vårdkontakten enligt kodverk ur NPÖ RIV-spec 2.2."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactBody"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.id">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.extension">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.modifierExtension">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.modifierExtension"/>
+      <short value="Extensions that cannot be ignored even if unrecognized"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <requirements value="Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactCode">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactCode"/>
+      <short value="careContactCode"/>
+      <definition value="Tillåtna värden enligt XSD: 1, 2, 3, 4, 5."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactCode"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivInteger"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactReason">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactReason"/>
+      <short value="careContactReason"/>
+      <definition value="careContactReason"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactReason"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit"/>
+      <short value="Information om en organisationsenhet careContactOrgUnitHsaId: HSA-id för organisationsenhet …"/>
+      <definition value="Information om en organisationsenhet careContactOrgUnitHsaId: HSA-id för organisationsenhet careContactOrgUnitName Namn på organisationsenhet careContactOrgUnitTelecom: Telefon till organisationsenhet careContactOrgUnitEmail: Epost till enhet careContactOrgUnitAddress: Postadress till enhet careContactOrgUnitLocation: Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.id">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.extension">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.modifierExtension">
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.modifierExtension"/>
+      <short value="Extensions that cannot be ignored even if unrecognized"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <requirements value="Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitHSAId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitHSAId"/>
+      <short value="HSA-id för organisationsenhet"/>
+      <definition value="HSA-id för organisationsenhet. Om tillgängligt ska detta anges.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitHSAId"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitName">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitName"/>
+      <short value="Namn på organisationsenhet"/>
+      <definition value="Namn på organisationsenhet. Om tillgängligt ska detta anges.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitName"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitTelecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitTelecom"/>
+      <short value="Telefon till organisationsenhet"/>
+      <definition value="Telefon till organisationsenhet"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitTelecom"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitEmail">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitEmail"/>
+      <short value="Epost till enhet"/>
+      <definition value="Epost till enhet"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitEmail"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitAddress">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitAddress"/>
+      <short value="Postadress till enhet"/>
+      <definition value="Postadress till enhet"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitAddress"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitLocation">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitLocation"/>
+      <short value="Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering"/>
+      <definition value="Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitLocation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactTimePeriod">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactTimePeriod"/>
+      <short value="Används för att specificera ett datumintervall med hjälp av start- och slutdatum"/>
+      <definition value="Används för att specificera ett datumintervall med hjälp av start- och slutdatum. start: Startdatum på formatet YYYYMMDDhhmmss end: Slutdatum på formatet YYYYMMDDhhmmss"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactTimePeriod"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivTimePeriodTypeLogisticsLogistics2"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactStatus"/>
+      <short value="careContactStatus"/>
+      <definition value="Tillåtna värden enligt XSD: 1, 2, 3, 4, 5."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactStatus"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivInteger"/>
+      </type>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="SEEHDSLMCareContactsV20">
+      <path value="SEEHDSLMCareContactsV20"/>
+      <short value="GetCareContacts 2.0"/>
+      <definition value="Logisk modell för version 2.0 av tjänstekontraktet GetCareContacts&#xA;(urn:riv:clinicalprocess:logistics:logistics:GetCareContactsResponder:2).&#xA;Mappningen utgår från versionen i SEEHDSLMCareContacts. Skillnaderna mot den och hur de&#xA;påverkar mappningen beskrivs på tjänstekontraktets mappningssida."/>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact">
+      <path value="SEEHDSLMCareContactsV20.careContact"/>
+      <short value="De hälso- och sjukvårdskontakter som matchar begäran"/>
+      <definition value="De hälso- och sjukvårdskontakter som matchar begäran."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader"/>
+      <short value="careContactId: Vårdkontaktens identitet som är unik inom källsystemet sourceSystemHSAId: HSAId för det system …"/>
+      <definition value="careContactId: Vårdkontaktens identitet som är unik inom källsystemet sourceSystemHSAId: HSAId för det system som dokumentet är skapat i. documentTime: Tid då vård- eller omsorgskontakten registrerades patientId: Patientens ID (enligt PatientIdType). type sätts till OID för typ av identifierare. För personnummer ska Skatteverkets personnummer (1.2.752.129.2.1.3.1). För samordningsnummer ska Skatteverkets samordningsnummer (1.2.752.129.2.1.3.3). För reservnummer används lokalt definierade reservnummet, exempelvis SLL reservnummer (1.2.752.97.3.1.3) accountableHealthcareProfessional Hälso- och sjukvårdsperson som ansvarar för vårdkontakten. accountableHealthcareProfessionalOrgUnit Organisationsenhet för vård- och omsorgspersonens uppdrag i samband med vårdkontakten. approvedForPatient: Anger om information får delas till patient. Värdet sätts i sådant fall till true, i annat fall till false."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.documentId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.documentId"/>
+      <short value="Identifieraren ska vara konsistent och beständigt mellan olika majorversioner av ett kontrakt"/>
+      <definition value="Identifieraren ska vara konsistent och beständigt mellan olika majorversioner av ett kontrakt. Ett exempel på detta är att en vårdkontakt ska ha samma identifierare i majorversion 3 och 4 av ett tjänstekontrakt för att läsa vårdkontakter. Identifieraren ska vara konsistent och beständigt mellan olika kontrakt. Ett exempel på detta är att samma remiss-identitet ska användas i ett tjänstekontrakt för att läsa remisser, samt tjänstekontraktet som läser remissvar som refererar till den ursprungliga remissen."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.sourceSystemHSAId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.sourceSystemHSAId"/>
+      <short value="HSAid för det system som dokumentet är skapat i"/>
+      <definition value="HSAid för det system som dokumentet är skapat i."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.patientId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.patientId"/>
+      <short value="Id för patienten"/>
+      <definition value="Id för patienten. Anges med 12 siffror utan avskiljare.id sätts till patientens identifierare.Type sätts till OID för typ av identifierare. För personnummer ska Skatteverkets personnummer (1.2.752.129.2.1.3.1).För samordningsnummer ska Skatteverkets samordningsnummer (1.2.752.129.2.1.3.3).För reservnummer används lokalt definierade reservnummet, exempelvis SLL reservnummer (1.2.752.97.3.1.3)"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivPersonIdTypeLogisticsLogistics2"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional"/>
+      <short value="Ansvarig hälso- och sjukvårdsperson"/>
+      <definition value="Ansvarig hälso- och sjukvårdsperson."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.authorTime">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.authorTime"/>
+      <short value="Den tidpunkt då dokumentet skapades"/>
+      <definition value="Den tidpunkt då dokumentet skapades.&#xA;Format enligt XSD (TimeStampType): ÅÅÅÅMMDDttmmss."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivTimeStamp"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalHSAId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalHSAId"/>
+      <short value="HSA-id för hälso- och sjukvårdspersonal"/>
+      <definition value="HSA-id för hälso- och sjukvårdspersonal. Ska anges om tillgänglig.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalName">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalName"/>
+      <short value="Namn på hälso- och sjukvårdspersonal"/>
+      <definition value="Namn på hälso- och sjukvårdspersonal. Om tillgängligt ska detta anges.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalRoleCode">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalRoleCode"/>
+      <short value="Information om personens befattning"/>
+      <definition value="Information om personens befattning. Om möjligt ska KV Befattning (OID 1.2.752.129.2.2.1.4) användas."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivCVTypeLogisticsLogistics2"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit"/>
+      <short value="Den organisation som angiven hälso- och sjukvårdsperson är uppdragstagare på"/>
+      <definition value="Den organisation som angiven hälso- och sjukvårdsperson är uppdragstagare på. Om tillgängligt ska detta anges.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitHSAId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitHSAId"/>
+      <short value="HSA-id för organisationsenhet"/>
+      <definition value="HSA-id för organisationsenhet. Om tillgängligt ska detta anges.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitName">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitName"/>
+      <short value="Namn på organisationsenhet"/>
+      <definition value="Namn på organisationsenhet. Om tillgängligt ska detta anges.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitTelecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitTelecom"/>
+      <short value="Telefon till organisationsenhet"/>
+      <definition value="Telefon till organisationsenhet"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitEmail">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitEmail"/>
+      <short value="Epost till enhet"/>
+      <definition value="Epost till enhet"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitAddress">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitAddress"/>
+      <short value="Postadress till enhet"/>
+      <definition value="Postadress till enhet"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitLocation">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitLocation"/>
+      <short value="Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering"/>
+      <definition value="Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareUnitHSAId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareUnitHSAId"/>
+      <short value="HSA-id för vårdenhet som hälso- och sjukvårdspersonen är uppdragstagare för"/>
+      <definition value="HSA-id för vårdenhet som hälso- och sjukvårdspersonen är uppdragstagare för. Ska anges om tillgänglig."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareGiverHSAId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.accountableHealthcareProfessional.healthcareProfessionalCareGiverHSAId"/>
+      <short value="HSA-id för vårdgivaren, som är vårdgivare för den enhet som författaren är uppdragstagare för"/>
+      <definition value="HSA-id för vårdgivaren, som är vårdgivare för den enhet som författaren är uppdragstagare för. Ska anges om tillgänglig."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.approvedForPatient">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.approvedForPatient"/>
+      <short value="Anger om information får delas till patient"/>
+      <definition value="Anger om information får delas till patient. Värdet sätts i sådant fall till true, i annat fall till false."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivBoolean"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.nullified">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.nullified"/>
+      <short value="Anger om dokumentet makulerats i källsystemet"/>
+      <definition value="Anger om dokumentet makulerats i källsystemet. Sätts i så fall till true annars false. Används bl.a. i statistik-/rapportuttag med hjälp av tjänstekontrakten."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivBoolean"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactHeader.nullifiedReason">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactHeader.nullifiedReason"/>
+      <short value="Anger orsak till makulering"/>
+      <definition value="Anger orsak till makulering."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody"/>
+      <short value="careContactCode: Typ av vård- och omsorgsdokumentation"/>
+      <definition value="careContactCode: Typ av vård- och omsorgsdokumentation. Nullvärde tillåtetet. careContactReason: Text som beskriver orsaken till vård- och omsorgskontakt som vård- och omsorgstagaren själv eller dess företrädare anger. careContactOrgUnit: Den enhet som kontakt utfördes vid careContactTimePeriod: För besök sätts sluttidpunken till samma tid som anges som starttidpunkt. För planerade kontakter sätts ingen sluttidpunkt. Pågående vårdtillfälle ska anges på samma sätt som en planerad vårdkontakt, dvs med angivet startdatum, men utan slutdatum. careContactStatus: Status på vårdkontakten enligt kodverk ur NPÖ RIV-spec 2.2."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactCode">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactCode"/>
+      <short value="careContactCode"/>
+      <definition value="Tillåtna värden enligt XSD: 1, 2, 3, 4, 5."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivInteger"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactReason">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactReason"/>
+      <short value="careContactReason"/>
+      <definition value="careContactReason"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit"/>
+      <short value="Information om en organisationsenhet careContactOrgUnitHsaId: HSA-id för organisationsenhet …"/>
+      <definition value="Information om en organisationsenhet careContactOrgUnitHsaId: HSA-id för organisationsenhet careContactOrgUnitName Namn på organisationsenhet careContactOrgUnitTelecom: Telefon till organisationsenhet careContactOrgUnitEmail: Epost till enhet careContactOrgUnitAddress: Postadress till enhet careContactOrgUnitLocation: Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitHSAId">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitHSAId"/>
+      <short value="HSA-id för organisationsenhet"/>
+      <definition value="HSA-id för organisationsenhet. Om tillgängligt ska detta anges.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitName">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitName"/>
+      <short value="Namn på organisationsenhet"/>
+      <definition value="Namn på organisationsenhet. Om tillgängligt ska detta anges.&#xA;TKB anger kardinaliteten 0..1, men XSD:n kräver 1..1. Modellen följer XSD:n."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitTelecom">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitTelecom"/>
+      <short value="Telefon till organisationsenhet"/>
+      <definition value="Telefon till organisationsenhet"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitEmail">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitEmail"/>
+      <short value="Epost till enhet"/>
+      <definition value="Epost till enhet"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitAddress">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitAddress"/>
+      <short value="Postadress till enhet"/>
+      <definition value="Postadress till enhet"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitLocation">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactOrgUnit.orgUnitLocation"/>
+      <short value="Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering"/>
+      <definition value="Text som anger namnet på plats eller ort för enhetens eller funktionens fysiska placering"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactTimePeriod">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactTimePeriod"/>
+      <short value="Används för att specificera ett datumintervall med hjälp av start- och slutdatum"/>
+      <definition value="Används för att specificera ett datumintervall med hjälp av start- och slutdatum. start: Startdatum på formatet YYYYMMDDhhmmss end: Slutdatum på formatet YYYYMMDDhhmmss"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivTimePeriodTypeLogisticsLogistics2"/>
+      </type>
+    </element>
+    <element id="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+        <valueUri value="urn:riv:clinicalprocess:logistics:logistics:2"/>
+      </extension>
+      <path value="SEEHDSLMCareContactsV20.careContact.careContactBody.careContactStatus"/>
+      <short value="careContactStatus"/>
+      <definition value="Tillåtna värden enligt XSD: 1, 2, 3, 4, 5."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivInteger"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

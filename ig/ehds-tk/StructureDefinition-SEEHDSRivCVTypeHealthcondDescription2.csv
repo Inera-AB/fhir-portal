@@ -1,0 +1,15 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"SEEHDSRivCVTypeHealthcondDescription2","SEEHDSRivCVTypeHealthcondDescription2","","","",0,*,"","","","null {[]} {[]}
+","RIV-TA CVType (clinicalprocess:healthcond:description:2)","RIV-TA-datatypen CVType i namnrymden urn:riv:clinicalprocess:healthcond:description:2.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"SEEHDSRivCVTypeHealthcondDescription2.code","SEEHDSRivCVTypeHealthcondDescription2.code","","","",0,1,"","","","https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString {[]} {[]}
+","Kod","Kod","","","","","","","","","",,,,,"",,,,"SEEHDSRivCVTypeHealthcondDescription2.code",0,1,"",""
+"SEEHDSRivCVTypeHealthcondDescription2.codeSystem","SEEHDSRivCVTypeHealthcondDescription2.codeSystem","","","",0,1,"","","","https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString {[]} {[]}
+","OID för kodsystem","OID för kodsystem","","","","","","","","","",,,,,"",,,,"SEEHDSRivCVTypeHealthcondDescription2.codeSystem",0,1,"",""
+"SEEHDSRivCVTypeHealthcondDescription2.codeSystemName","SEEHDSRivCVTypeHealthcondDescription2.codeSystemName","","","",0,1,"","","","https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString {[]} {[]}
+","Kodsystemets namn","Kodsystemets namn","","","","","","","","","",,,,,"",,,,"SEEHDSRivCVTypeHealthcondDescription2.codeSystemName",0,1,"",""
+"SEEHDSRivCVTypeHealthcondDescription2.codeSystemVersion","SEEHDSRivCVTypeHealthcondDescription2.codeSystemVersion","","","",0,1,"","","","https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString {[]} {[]}
+","Kodsystemets version","Kodsystemets version","","","","","","","","","",,,,,"",,,,"SEEHDSRivCVTypeHealthcondDescription2.codeSystemVersion",0,1,"",""
+"SEEHDSRivCVTypeHealthcondDescription2.displayName","SEEHDSRivCVTypeHealthcondDescription2.displayName","","","",0,1,"","","","https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString {[]} {[]}
+","Kodens klartext","Kodens klartext","","","","","","","","","",,,,,"",,,,"SEEHDSRivCVTypeHealthcondDescription2.displayName",0,1,"",""
+"SEEHDSRivCVTypeHealthcondDescription2.originalText","SEEHDSRivCVTypeHealthcondDescription2.originalText","","","",0,1,"","","","https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString {[]} {[]}
+","Originaltext (om kod saknas eller som komplement)","Originaltext (om kod saknas eller som komplement)","","","","","","","","","",,,,,"",,,,"SEEHDSRivCVTypeHealthcondDescription2.originalText",0,1,"",""

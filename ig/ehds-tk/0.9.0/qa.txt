@@ -1,0 +1,1200 @@
+SEEHDSTK : Validation Results
+=========================================
+
+err = 0, warn = 132, info = 368, broken links = 0
+IG Publisher Version: 3.0.4
+Generated Mon Nov 16 16:17:49 UTC 2026. FHIR version 4.0.1 for inera.ehds.ehds-tk#0.9.0 (canonical = https://fhir.inera.se/ig/ehds-tk)
+ Build Errors : 0 / 0 / 0
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CapabilityStatement-SEEHDSResourceAccessProvider : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-assessmentcategory-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-clinicaldocumentnotecode-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-deliverycode-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-diagnosistype-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-errorcode-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-examinationstatuscode-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-fetalpositioncode-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-maternity-section : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-nonreplaceable-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-prescriptionstatus-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-referraloutcometypecode-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-resultcode-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-sexcode-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-typeofcareplan-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-typeofleavecode-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-typeofprescription-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/CodeSystem-typeofresultcode-cs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ConceptMap-observation-status-map : 0 / 1 / 5
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ImplementationGuide-inera.ehds.ehds-tk : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/Provenance-SEEHDSProvenanceExample : 0 / 2 / 1
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSAllergyIntolerance : 0 / 7 / 5
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSAuditEventPatientQuery : 0 / 1 / 5
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSAuditEventPatientRead : 0 / 1 / 5
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSAuditEventReadAccessLog : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSCarePlan : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSCompositionCareDocumentation : 0 / 1 / 6
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSConditionDiagnosis : 0 / 3 / 8
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSConditionFunctional : 0 / 3 / 6
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSDevice : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSDiagnosticReportImaging : 0 / 1 / 5
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSDiagnosticReportLab : 0 / 1 / 5
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSDiagnosticReportReferral : 0 / 1 / 5
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSDocumentReference : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSEncounter : 0 / 1 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSFlag : 0 / 1 / 8
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSImagingStudy : 0 / 4 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSImmunization : 0 / 6 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMAccessLog : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMAccessLogV11 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMAlertInformation : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMAlertInformationV30 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMCareContacts : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMCareContactsV20 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMCareDocumentation : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMCareDocumentationV21 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMCarePlans : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMDiagnosis : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMFunctionalStatus : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMImagingOutcome : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMLaboratoryOrderOutcome : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMLaboratoryOrderOutcomeV31 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMLaboratoryOrderOutcomeV41 : 0 / 3 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMMaternityMedicalHistory : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMMedicationHistory : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMObservations : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMObservationsV12 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMReferralOutcome : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMReferralOutcomeV31 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMRequestActivities : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMRequestActivitiesV10 : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMVaccinationHistory : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSLMVaccinationHistoryV10 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSMedicationStatement : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSObservationBase : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSObservationGrowth : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSObservationLab : 0 / 1 / 5
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSObservationMaternity : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSOrganization : 0 / 1 / 7
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSPatient : 0 / 1 / 10
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSPractitionerRole : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSProvenance : 0 / 0 / 5
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivAnyURI : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivBase64Binary : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivBoolean : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeActivityprescriptionActoutcome1 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeActivityprescriptionActoutcome2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeCrmRequeststatus2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondActoutcome2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondActoutcome3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondActoutcome4 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondBasic1 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondBasic2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondDescription2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondDescription3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeLogisticsLogistics2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeLogisticsLogistics3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivDate : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivDateTime : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivDecimal : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeActivityprescriptionActoutcome1 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeActivityprescriptionActoutcome2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeCrmRequeststatus2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeHealthcondActoutcome3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeHealthcondActoutcome4 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeHealthcondBasic1 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeHealthcondBasic2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeHealthcondDescription2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeHealthcondDescription3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeLogisticsLogistics3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivInteger : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPQIntervalTypeActivityprescriptionActoutcome2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPQIntervalTypeHealthcondActoutcome4 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPQIntervalTypeHealthcondBasic12 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPQIntervalTypeHealthcondBasic2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeActivityprescriptionActoutcome1 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeActivityprescriptionActoutcome2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeHealthcondActoutcome2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeHealthcondActoutcome3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeHealthcondActoutcome4 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeHealthcondBasic1 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeHealthcondBasic2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPartialDateTypeLogisticsLogistics3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPartialTimeStampTypeHealthcondBasic1 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPartialTimeStampTypeHealthcondBasic2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeActivityprescriptionActoutcome1 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeActivityprescriptionActoutcome2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeHealthcondActoutcome2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeHealthcondActoutcome3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeHealthcondDescription2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeLogisticsLogistics2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeLogisticsLogistics3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivString : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeActivityprescriptionActoutcome2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeHealthcondActoutcome3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeHealthcondActoutcome4 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeHealthcondBasic1 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeHealthcondDescription2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeHealthcondDescription3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeLogisticsLogistics2 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeLogisticsLogistics3 : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSRivTimeStamp : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSServiceRequestReferral : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-SEEHDSTask : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-alert-ascertained-date : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-alert-asserted-date : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-alert-asserter : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-alert-degree-of-certainty : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-alert-degree-of-severity : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-alert-information-comment : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-alert-pharmaceutical-hypersensitivity : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-alert-pharmaceutical-treatment : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-alert-restriction-of-care-comment : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-alert-route-of-transmission : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-alert-treatment-description : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-alert-verified-time : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-approved-for-patient : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-condition-chronic-diagnosis : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-device-source-system-contact : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-ext-signature-time : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-immunization-is-dose-complete : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-immunization-legal-authenticator : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-immunization-patient-postal-code : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-immunization-registration-device : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/StructureDefinition-related-alert-information : 0 / 2 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-assessmentcategory-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-clinicaldocumentnotecode-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-deliverycode-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-diagnosistype-vs : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-errorcode-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-examinationstatuscode-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-fetalpositioncode-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-growth-observation-type-vs : 0 / 2 / 8
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-prescriptionstatus-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-referraloutcometypecode-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-resultcode-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-se-observation-status-vs : 0 / 2 / 7
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-sexcode-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-typeofcareplan-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-typeofleavecode-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-typeofprescription-vs : 0 / 1 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.ehds.ehds-tk#0.9.0/fsh-generated/resources/ValueSet-typeofresultcode-vs : 0 / 1 / 2
+</table>
+
+== n/a ==
+
+
+== fsh-generated/resources/CapabilityStatement-SEEHDSResourceAccessProvider.json ==
+INFORMATION: CapabilityStatement/SEEHDSResourceAccessProvider: CapabilityStatement.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: CapabilityStatement/SEEHDSResourceAccessProvider: CapabilityStatement.instantiates[0]: En definition kunde inte hittas för kanonisk URL 'http://hl7.eu/fhir/health-data-api/CapabilityStatement/resource-access-provider-eu-api'
+INFORMATION: Resource: The resource CapabilityStatement/SEEHDSResourceAccessProvider could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-assessmentcategory-cs.json ==
+INFORMATION: CodeSystem/assessmentcategory-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/assessmentcategory-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-clinicaldocumentnotecode-cs.json ==
+INFORMATION: CodeSystem/clinicaldocumentnotecode-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/clinicaldocumentnotecode-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-deliverycode-cs.json ==
+INFORMATION: CodeSystem/deliverycode-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/deliverycode-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-diagnosistype-cs.json ==
+INFORMATION: CodeSystem/diagnosistype-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/diagnosistype-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-errorcode-cs.json ==
+INFORMATION: CodeSystem/errorcode-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/errorcode-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-examinationstatuscode-cs.json ==
+INFORMATION: CodeSystem/examinationstatuscode-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/examinationstatuscode-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-fetalpositioncode-cs.json ==
+INFORMATION: CodeSystem/fetalpositioncode-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/fetalpositioncode-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-maternity-section.json ==
+INFORMATION: CodeSystem/maternity-section: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/maternity-section should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-nonreplaceable-cs.json ==
+INFORMATION: CodeSystem/nonreplaceable-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/nonreplaceable-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-prescriptionstatus-cs.json ==
+INFORMATION: CodeSystem/prescriptionstatus-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/prescriptionstatus-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-referraloutcometypecode-cs.json ==
+INFORMATION: CodeSystem/referraloutcometypecode-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/referraloutcometypecode-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-resultcode-cs.json ==
+INFORMATION: CodeSystem/resultcode-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/resultcode-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-sexcode-cs.json ==
+INFORMATION: CodeSystem/sexcode-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/sexcode-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-typeofcareplan-cs.json ==
+INFORMATION: CodeSystem/typeofcareplan-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/typeofcareplan-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-typeofleavecode-cs.json ==
+INFORMATION: CodeSystem/typeofleavecode-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/typeofleavecode-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-typeofprescription-cs.json ==
+INFORMATION: CodeSystem/typeofprescription-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/typeofprescription-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-typeofresultcode-cs.json ==
+INFORMATION: CodeSystem/typeofresultcode-cs: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/typeofresultcode-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ConceptMap-observation-status-map.json ==
+INFORMATION: ConceptMap.group[0].target: Pinned the version of http://hl7.org/fhir/observation-status to 4.0.1 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.0.0 (hl7.fhir.uv.xver-r5.r4#0.0.1-snapshot-2)
+INFORMATION: ConceptMap/observation-status-map: ConceptMap.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: ConceptMap/observation-status-map: ConceptMap.group[0].source: Käll-kodsystem http://snomed.info/sct stöds endast på terminologiservern, så källkoderna valideras inte av prestandaskäl
+WARNING: ConceptMap/observation-status-map: ConceptMap.group[0].element[4].target[0]: The code 59776000 is mapped to cancelled as 'equivalent', and 444301002 is mapped to cancelled as 'source-is-broader-than-target', which means that 444301002 should subsume 59776000, but it does not
+INFORMATION: Resource: The resource ConceptMap/observation-status-map could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ImplementationGuide-inera.ehds.ehds-tk.json ==
+INFORMATION: ImplementationGuide/inera.ehds.ehds-tk: ImplementationGuide.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: ImplementationGuide/inera.ehds.ehds-tk: ImplementationGuide.dependsOn[2]: ImplementationGuide använder paketet hl7.fhir.eu.base#2.0.0-ballot släppt 2025-12-19, men den senaste lämpliga versionen är 2.0.1. Denna referens börjar bli gammal och den nyare versionen bör övervägas
+WARNING: ImplementationGuide/inera.ehds.ehds-tk: ImplementationGuide.dependsOn[3]: ImplementationGuide använder paketet hl7.fhir.uv.extensions.r4#5.3.0 släppt 2026-05-16, men den senaste lämpliga versionen är 5.4.0. Denna referens börjar bli gammal och den nyare versionen bör övervägas
+INFORMATION: Resource: The resource ImplementationGuide/inera.ehds.ehds-tk could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/Provenance-SEEHDSProvenanceExample.json ==
+WARNING: Provenance/SEEHDSProvenanceExample: Provenance.agent[0].who.identifier.system: Ingen definition kunde hittas för URL-värdet 'urn:oid:1.2.752.29.4.19'
+WARNING: Provenance/SEEHDSProvenanceExample: Provenance.agent[1].who.identifier.system: Ingen definition kunde hittas för URL-värdet 'urn:oid:1.2.752.29.4.19'
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSAllergyIntolerance.json ==
+INFORMATION: StructureDefinition.snapshot.element[16].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition/SEEHDSAllergyIntolerance: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: StructureDefinition/SEEHDSAllergyIntolerance: StructureDefinition.snapshot.element[12].binding.extension[0]: extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 är föråldrad med noteringen: 'Use additionalBinding extension or element instead'
+WARNING: StructureDefinition/SEEHDSAllergyIntolerance: StructureDefinition.snapshot.element[29].binding.extension[0].extension[1].value.ofType(canonical): En definition kunde inte hittas för kanonisk URL 'http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug'
+WARNING: StructureDefinition/SEEHDSAllergyIntolerance: StructureDefinition.snapshot.element[29].binding.extension[0]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at AllergyIntolerance.code
+WARNING: StructureDefinition/SEEHDSAllergyIntolerance: StructureDefinition.snapshot.element[29].binding.extension[1]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at AllergyIntolerance.code
+WARNING: StructureDefinition/SEEHDSAllergyIntolerance: StructureDefinition.snapshot.element[53].binding.valueSet: En definition kunde inte hittas för kanonisk URL 'http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug'
+WARNING: StructureDefinition/SEEHDSAllergyIntolerance: StructureDefinition.snapshot.element[54].binding.extension[0].extension[1].value.ofType(canonical): En definition kunde inte hittas för kanonisk URL 'http://terminology.ehdsi.eu/ValueSet/eHDSIReactionAllergy'
+WARNING: StructureDefinition/SEEHDSAllergyIntolerance: StructureDefinition.snapshot.element[54].binding.extension[0]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at AllergyIntolerance.reaction.manifestation
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSAllergyIntolerance could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSAllergyIntolerance'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSAuditEventPatientQuery.json ==
+INFORMATION: StructureDefinition/SEEHDSAuditEventPatientQuery: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: StructureDefinition/SEEHDSAuditEventPatientQuery: StructureDefinition.snapshot.element[108].pattern.ofType(CodeableConcept).coding[0].display: Inga giltiga visningsnamn hittades för koden http://terminology.hl7.org/CodeSystem/v3-ParticipationType#CST för språk 'sv'. Visningen är 'custodian' vilket är standardspråksvisningen
+INFORMATION: StructureDefinition/SEEHDSAuditEventPatientQuery: StructureDefinition.differential.element[9].pattern.ofType(CodeableConcept).coding[0].display: Inga giltiga visningsnamn hittades för koden http://terminology.hl7.org/CodeSystem/v3-ParticipationType#CST för språk 'sv'. Visningen är 'custodian' vilket är standardspråksvisningen
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSAuditEventPatientQuery could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSAuditEventPatientQuery'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSAuditEventPatientRead.json ==
+INFORMATION: StructureDefinition/SEEHDSAuditEventPatientRead: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: StructureDefinition/SEEHDSAuditEventPatientRead: StructureDefinition.snapshot.element[108].pattern.ofType(CodeableConcept).coding[0].display: Inga giltiga visningsnamn hittades för koden http://terminology.hl7.org/CodeSystem/v3-ParticipationType#CST för språk 'sv'. Visningen är 'custodian' vilket är standardspråksvisningen
+INFORMATION: StructureDefinition/SEEHDSAuditEventPatientRead: StructureDefinition.differential.element[9].pattern.ofType(CodeableConcept).coding[0].display: Inga giltiga visningsnamn hittades för koden http://terminology.hl7.org/CodeSystem/v3-ParticipationType#CST för språk 'sv'. Visningen är 'custodian' vilket är standardspråksvisningen
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSAuditEventPatientRead could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSAuditEventPatientRead'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSAuditEventReadAccessLog.json ==
+INFORMATION: StructureDefinition/SEEHDSAuditEventReadAccessLog: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSAuditEventReadAccessLog could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSAuditEventReadAccessLog'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSCarePlan.json ==
+INFORMATION: StructureDefinition/SEEHDSCarePlan: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSCarePlan could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSCarePlan'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSCompositionCareDocumentation.json ==
+INFORMATION: StructureDefinition.snapshot.element[69].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/note to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition/SEEHDSCompositionCareDocumentation: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: StructureDefinition/SEEHDSCompositionCareDocumentation: StructureDefinition.snapshot.element[66].short: Strängvärdet innehåller text som ser ut som inbäddade HTML-taggar. Om detta innehåll renderas till HTML utan lämplig efterbearbetning kan det vara en säkerhetsrisk
+INFORMATION: StructureDefinition/SEEHDSCompositionCareDocumentation: StructureDefinition.differential.element[8].short: Strängvärdet innehåller text som ser ut som inbäddade HTML-taggar. Om detta innehåll renderas till HTML utan lämplig efterbearbetning kan det vara en säkerhetsrisk
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSCompositionCareDocumentation could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSCompositionCareDocumentation'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSConditionDiagnosis.json ==
+INFORMATION: StructureDefinition.snapshot.element[16].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/condition-assertedDate to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[21].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[23].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/condition-related to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[68].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/bodySite to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.differential.element[4].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/condition-related to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition/SEEHDSConditionDiagnosis: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/SEEHDSConditionDiagnosis: StructureDefinition.snapshot.element[52].binding.extension[0].extension[1].value.ofType(canonical): En definition kunde inte hittas för kanonisk URL 'http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder'
+WARNING: StructureDefinition/SEEHDSConditionDiagnosis: StructureDefinition.snapshot.element[52].binding.extension[0]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at Condition.code
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSConditionDiagnosis could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSConditionDiagnosis'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSConditionFunctional.json ==
+INFORMATION: StructureDefinition.snapshot.element[16].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/condition-assertedDate to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[21].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[32].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/bodySite to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition/SEEHDSConditionFunctional: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/SEEHDSConditionFunctional: StructureDefinition.snapshot.element[28].binding.extension[0].extension[1].value.ofType(canonical): En definition kunde inte hittas för kanonisk URL 'http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder'
+WARNING: StructureDefinition/SEEHDSConditionFunctional: StructureDefinition.snapshot.element[28].binding.extension[0]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at Condition.code
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSConditionFunctional could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSConditionFunctional'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSDevice.json ==
+INFORMATION: StructureDefinition/SEEHDSDevice: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSDevice could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSDevice'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSDiagnosticReportImaging.json ==
+INFORMATION: StructureDefinition.snapshot.element[28].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/annotationType to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[32].binding.valueSet: Pinned the version of http://terminology.hl7.org/ValueSet/v2-0364 to 3.0.0 from choices of 2.0.0 (hl7.terminology.r4#7.0.1), 3.0.0 (hl7.terminology.r4#7.5.0)
+INFORMATION: StructureDefinition/SEEHDSDiagnosticReportImaging: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSDiagnosticReportImaging could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSDiagnosticReportImaging'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSDiagnosticReportLab.json ==
+INFORMATION: StructureDefinition.snapshot.element[28].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/annotationType to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[32].binding.valueSet: Pinned the version of http://terminology.hl7.org/ValueSet/v2-0364 to 3.0.0 from choices of 2.0.0 (hl7.terminology.r4#7.0.1), 3.0.0 (hl7.terminology.r4#7.5.0)
+INFORMATION: StructureDefinition/SEEHDSDiagnosticReportLab: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSDiagnosticReportLab could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSDiagnosticReportLab'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSDiagnosticReportReferral.json ==
+INFORMATION: StructureDefinition.snapshot.element[28].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/annotationType to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[32].binding.valueSet: Pinned the version of http://terminology.hl7.org/ValueSet/v2-0364 to 3.0.0 from choices of 2.0.0 (hl7.terminology.r4#7.0.1), 3.0.0 (hl7.terminology.r4#7.5.0)
+INFORMATION: StructureDefinition/SEEHDSDiagnosticReportReferral: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSDiagnosticReportReferral could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSDiagnosticReportReferral'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSDocumentReference.json ==
+INFORMATION: StructureDefinition/SEEHDSDocumentReference: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSDocumentReference could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSDocumentReference'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSEncounter.json ==
+INFORMATION: StructureDefinition.snapshot.element[69].binding.valueSet: Pinned the version of http://terminology.hl7.org/ValueSet/v2-0092 to 3.0.0 from choices of 2.0.0 (hl7.terminology.r4#7.0.1), 3.0.0 (hl7.terminology.r4#7.5.0)
+INFORMATION: StructureDefinition/SEEHDSEncounter: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSEncounter could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSEncounter'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSFlag.json ==
+INFORMATION: StructureDefinition.snapshot.element[16].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/flag-detail to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[17].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/flag-priority to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[18].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/note to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition/SEEHDSFlag: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: StructureDefinition/SEEHDSFlag: StructureDefinition.differential.element[19].slicing.discriminator[0]: Diskriminatortypen 'pattern' är föråldrad i R5+. För framtida kompatibilitet kan du överväga att använda type=value med ett pattern[x] istället (om detta inte är en ärvd uppdelning)
+INFORMATION: StructureDefinition/SEEHDSFlag: StructureDefinition.snapshot.element[35].slicing.discriminator[0]: Diskriminatortypen 'pattern' är föråldrad i R5+. För framtida kompatibilitet kan du överväga att använda type=value med ett pattern[x] istället (om detta inte är en ärvd uppdelning)
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSFlag could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSFlag'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSImagingStudy.json ==
+INFORMATION: StructureDefinition/SEEHDSImagingStudy: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/SEEHDSImagingStudy: StructureDefinition.snapshot.element[30].binding.valueSet: En definition kunde inte hittas för kanonisk URL 'http://www.rsna.org/RadLex_Playbook.aspx'
+WARNING: StructureDefinition/SEEHDSImagingStudy: StructureDefinition.snapshot.element[61].binding.valueSet: En definition kunde inte hittas för kanonisk URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1'
+WARNING: StructureDefinition/SEEHDSImagingStudy: StructureDefinition.snapshot.element[54].binding: Definitionen för elementet 'ImagingStudy.series.performer.function' binder till värdemängden 'http://hl7.org/fhir/ValueSet/series-performer-function|4.0.1' som är experimentell, men denna struktur är inte märkt som experimentell
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSImagingStudy could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSImagingStudy'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSImmunization.json ==
+INFORMATION: StructureDefinition/SEEHDSImmunization: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/SEEHDSImmunization: StructureDefinition.snapshot.element[44].binding.extension[0]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at Immunization.vaccineCode
+WARNING: StructureDefinition/SEEHDSImmunization: StructureDefinition.snapshot.element[44].binding.extension[1].extension[1].value.ofType(canonical): En definition kunde inte hittas för kanonisk URL 'http://terminology.ehdsi.eu/ValueSet/eHDSIVaccine'
+WARNING: StructureDefinition/SEEHDSImmunization: StructureDefinition.snapshot.element[44].binding.extension[1]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at Immunization.vaccineCode
+INFORMATION: StructureDefinition/SEEHDSImmunization: StructureDefinition.snapshot.element[56].type[0].extension[1]: extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0 är föråldrad med noteringen: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
+WARNING: StructureDefinition/SEEHDSImmunization: StructureDefinition.snapshot.element[114].binding.extension[0].extension[1].value.ofType(canonical): En definition kunde inte hittas för kanonisk URL 'http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder'
+WARNING: StructureDefinition/SEEHDSImmunization: StructureDefinition.snapshot.element[114].binding.extension[0]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at Immunization.protocolApplied.targetDisease
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSImmunization could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSImmunization'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMAccessLog.json ==
+INFORMATION: StructureDefinition/SEEHDSLMAccessLog: StructureDefinition.extension[2]: extension http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace|5.3.0 är föråldrad med noteringen: 'Replaced by [[[http://hl7.org/fhir/tools/StructureDefinition/xml-namespace]]]'
+INFORMATION: StructureDefinition/SEEHDSLMAccessLog: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMAccessLog could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMAccessLogV11.json ==
+INFORMATION: StructureDefinition/SEEHDSLMAccessLogV11: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMAccessLogV11 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMAlertInformation.json ==
+INFORMATION: StructureDefinition/SEEHDSLMAlertInformation: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMAlertInformation could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMAlertInformationV30.json ==
+INFORMATION: StructureDefinition/SEEHDSLMAlertInformationV30: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMAlertInformationV30 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMCareContacts.json ==
+INFORMATION: StructureDefinition/SEEHDSLMCareContacts: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMCareContacts could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMCareContactsV20.json ==
+INFORMATION: StructureDefinition/SEEHDSLMCareContactsV20: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMCareContactsV20 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMCareDocumentation.json ==
+INFORMATION: StructureDefinition/SEEHDSLMCareDocumentation: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMCareDocumentation could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMCareDocumentationV21.json ==
+INFORMATION: StructureDefinition/SEEHDSLMCareDocumentationV21: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMCareDocumentationV21 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMCarePlans.json ==
+INFORMATION: StructureDefinition/SEEHDSLMCarePlans: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMCarePlans could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMDiagnosis.json ==
+INFORMATION: StructureDefinition/SEEHDSLMDiagnosis: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMDiagnosis could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMFunctionalStatus.json ==
+INFORMATION: StructureDefinition/SEEHDSLMFunctionalStatus: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMFunctionalStatus could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMImagingOutcome.json ==
+INFORMATION: StructureDefinition/SEEHDSLMImagingOutcome: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMImagingOutcome could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMLaboratoryOrderOutcome.json ==
+WARNING: StructureDefinition/SEEHDSLMLaboratoryOrderOutcome: StructureDefinition.text.div: Hyperlänk '#SEEHDSLMLaboratoryOrderOutcome.laboratoryOrderOutcome.body.groupOfAnalyses.analysis' vid 'div/table/tr/td/a' för 'analysis' löser till flera mål ($/text/div/table/tr[56]/td[0]/a[1]/@name, $/snapshot/element/id, $/differential/element/id)
+INFORMATION: StructureDefinition/SEEHDSLMLaboratoryOrderOutcome: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMLaboratoryOrderOutcome could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMLaboratoryOrderOutcomeV31.json ==
+INFORMATION: StructureDefinition/SEEHDSLMLaboratoryOrderOutcomeV31: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMLaboratoryOrderOutcomeV31 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMLaboratoryOrderOutcomeV41.json ==
+WARNING: StructureDefinition/SEEHDSLMLaboratoryOrderOutcomeV41: StructureDefinition.text.div: Hyperlänk '#SEEHDSLMLaboratoryOrderOutcomeV41.laboratoryOrderOutcome.body.groupOfAnalyses.analysis' vid 'div/table/tr/td/a' för 'analysis' löser till flera mål ($/text/div/table/tr[53]/td[0]/a[1]/@name, $/snapshot/element/id, $/differential/element/id)
+INFORMATION: StructureDefinition/SEEHDSLMLaboratoryOrderOutcomeV41: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/SEEHDSLMLaboratoryOrderOutcomeV41: StructureDefinition.snapshot.element[136].definition: Markdown innehåller innehåll som verkar vara en inbäddad HTML-tagg som börjar vid '<P'. Detta kommer (eller BÖR) escapeas av presentationslagret. Innehållet bör kontrolleras för att bekräfta att detta är det önskade beteendet
+WARNING: StructureDefinition/SEEHDSLMLaboratoryOrderOutcomeV41: StructureDefinition.differential.element[79].definition: Markdown innehåller innehåll som verkar vara en inbäddad HTML-tagg som börjar vid '<P'. Detta kommer (eller BÖR) escapeas av presentationslagret. Innehållet bör kontrolleras för att bekräfta att detta är det önskade beteendet
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMLaboratoryOrderOutcomeV41 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMMaternityMedicalHistory.json ==
+INFORMATION: StructureDefinition/SEEHDSLMMaternityMedicalHistory: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMMaternityMedicalHistory could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMMedicationHistory.json ==
+INFORMATION: StructureDefinition/SEEHDSLMMedicationHistory: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMMedicationHistory could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMObservations.json ==
+INFORMATION: StructureDefinition/SEEHDSLMObservations: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMObservations could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMObservationsV12.json ==
+INFORMATION: StructureDefinition/SEEHDSLMObservationsV12: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMObservationsV12 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMReferralOutcome.json ==
+INFORMATION: StructureDefinition/SEEHDSLMReferralOutcome: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMReferralOutcome could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMReferralOutcomeV31.json ==
+INFORMATION: StructureDefinition/SEEHDSLMReferralOutcomeV31: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMReferralOutcomeV31 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMRequestActivities.json ==
+INFORMATION: StructureDefinition/SEEHDSLMRequestActivities: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMRequestActivities could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMRequestActivitiesV10.json ==
+INFORMATION: StructureDefinition/SEEHDSLMRequestActivitiesV10: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/SEEHDSLMRequestActivitiesV10: StructureDefinition.snapshot.element[17].definition: Markdown innehåller innehåll som verkar vara en inbäddad HTML-tagg som börjar vid '<S'. Detta kommer (eller BÖR) escapeas av presentationslagret. Innehållet bör kontrolleras för att bekräfta att detta är det önskade beteendet
+WARNING: StructureDefinition/SEEHDSLMRequestActivitiesV10: StructureDefinition.differential.element[14].definition: Markdown innehåller innehåll som verkar vara en inbäddad HTML-tagg som börjar vid '<S'. Detta kommer (eller BÖR) escapeas av presentationslagret. Innehållet bör kontrolleras för att bekräfta att detta är det önskade beteendet
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMRequestActivitiesV10 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMVaccinationHistory.json ==
+INFORMATION: StructureDefinition/SEEHDSLMVaccinationHistory: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMVaccinationHistory could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSLMVaccinationHistoryV10.json ==
+INFORMATION: StructureDefinition/SEEHDSLMVaccinationHistoryV10: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSLMVaccinationHistoryV10 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSMedicationStatement.json ==
+INFORMATION: StructureDefinition/SEEHDSMedicationStatement: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/SEEHDSMedicationStatement: StructureDefinition.snapshot.element[37].binding.extension[0]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at MedicationStatement.category
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSMedicationStatement could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSMedicationStatement'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSObservationBase.json ==
+INFORMATION: StructureDefinition/SEEHDSObservationBase: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSObservationBase could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSObservationBase'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSObservationGrowth.json ==
+INFORMATION: StructureDefinition/SEEHDSObservationGrowth: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSObservationGrowth could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSObservationGrowth'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSObservationLab.json ==
+INFORMATION: StructureDefinition.snapshot.element[53].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[97].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition/SEEHDSObservationLab: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSObservationLab could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSObservationLab'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSObservationMaternity.json ==
+INFORMATION: StructureDefinition/SEEHDSObservationMaternity: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSObservationMaternity could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSObservationMaternity'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSOrganization.json ==
+INFORMATION: StructureDefinition.snapshot.element[42].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[43].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[44].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[53].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/iso21090-codedString to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition/SEEHDSOrganization: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSOrganization could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSOrganization'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSPatient.json ==
+INFORMATION: StructureDefinition.snapshot.element[8].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/patient-birthPlace to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[13].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[14].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/individual-genderIdentity to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[15].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/individual-pronouns to 5.3.0 from choices of 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[16].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/patient-citizenship to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[17].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/patient-nationality to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition.snapshot.element[18].type[0].profile[0]: Pinned the version of http://hl7.org/fhir/StructureDefinition/patient-birthTime to 5.3.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (hl7.fhir.uv.extensions.r4#5.3.0)
+INFORMATION: StructureDefinition/SEEHDSPatient: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSPatient could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSPatient'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSPractitionerRole.json ==
+INFORMATION: StructureDefinition/SEEHDSPractitionerRole: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSPractitionerRole could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSPractitionerRole'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSProvenance.json ==
+INFORMATION: StructureDefinition/SEEHDSProvenance: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: StructureDefinition/SEEHDSProvenance: StructureDefinition.differential.element[3].slicing.discriminator[0]: Diskriminatortypen 'pattern' är föråldrad i R5+. För framtida kompatibilitet kan du överväga att använda type=value med ett pattern[x] istället (om detta inte är en ärvd uppdelning)
+INFORMATION: StructureDefinition/SEEHDSProvenance: StructureDefinition.snapshot.element[16].slicing.discriminator[0]: Diskriminatortypen 'pattern' är föråldrad i R5+. För framtida kompatibilitet kan du överväga att använda type=value med ett pattern[x] istället (om detta inte är en ärvd uppdelning)
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSProvenance could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivAnyURI.json ==
+INFORMATION: StructureDefinition/SEEHDSRivAnyURI: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivAnyURI could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivBase64Binary.json ==
+INFORMATION: StructureDefinition/SEEHDSRivBase64Binary: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivBase64Binary could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivBoolean.json ==
+INFORMATION: StructureDefinition/SEEHDSRivBoolean: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivBoolean could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeActivityprescriptionActoutcome1.json ==
+INFORMATION: StructureDefinition/SEEHDSRivCVTypeActivityprescriptionActoutcome1: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivCVTypeActivityprescriptionActoutcome1 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeActivityprescriptionActoutcome2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivCVTypeActivityprescriptionActoutcome2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivCVTypeActivityprescriptionActoutcome2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeCrmRequeststatus2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivCVTypeCrmRequeststatus2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivCVTypeCrmRequeststatus2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondActoutcome2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivCVTypeHealthcondActoutcome2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivCVTypeHealthcondActoutcome2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondActoutcome3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivCVTypeHealthcondActoutcome3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivCVTypeHealthcondActoutcome3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondActoutcome4.json ==
+INFORMATION: StructureDefinition/SEEHDSRivCVTypeHealthcondActoutcome4: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivCVTypeHealthcondActoutcome4 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondBasic1.json ==
+INFORMATION: StructureDefinition/SEEHDSRivCVTypeHealthcondBasic1: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivCVTypeHealthcondBasic1 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondBasic2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivCVTypeHealthcondBasic2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivCVTypeHealthcondBasic2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondDescription2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivCVTypeHealthcondDescription2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivCVTypeHealthcondDescription2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeHealthcondDescription3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivCVTypeHealthcondDescription3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivCVTypeHealthcondDescription3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeLogisticsLogistics2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivCVTypeLogisticsLogistics2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivCVTypeLogisticsLogistics2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivCVTypeLogisticsLogistics3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivCVTypeLogisticsLogistics3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivCVTypeLogisticsLogistics3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivDate.json ==
+INFORMATION: StructureDefinition/SEEHDSRivDate: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivDate could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivDateTime.json ==
+INFORMATION: StructureDefinition/SEEHDSRivDateTime: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivDateTime could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivDecimal.json ==
+INFORMATION: StructureDefinition/SEEHDSRivDecimal: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivDecimal could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeActivityprescriptionActoutcome1.json ==
+INFORMATION: StructureDefinition/SEEHDSRivIITypeActivityprescriptionActoutcome1: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivIITypeActivityprescriptionActoutcome1 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeActivityprescriptionActoutcome2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivIITypeActivityprescriptionActoutcome2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivIITypeActivityprescriptionActoutcome2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeCrmRequeststatus2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivIITypeCrmRequeststatus2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivIITypeCrmRequeststatus2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeHealthcondActoutcome3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivIITypeHealthcondActoutcome3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivIITypeHealthcondActoutcome3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeHealthcondActoutcome4.json ==
+INFORMATION: StructureDefinition/SEEHDSRivIITypeHealthcondActoutcome4: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivIITypeHealthcondActoutcome4 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeHealthcondBasic1.json ==
+INFORMATION: StructureDefinition/SEEHDSRivIITypeHealthcondBasic1: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivIITypeHealthcondBasic1 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeHealthcondBasic2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivIITypeHealthcondBasic2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivIITypeHealthcondBasic2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeHealthcondDescription2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivIITypeHealthcondDescription2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivIITypeHealthcondDescription2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeHealthcondDescription3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivIITypeHealthcondDescription3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivIITypeHealthcondDescription3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivIITypeLogisticsLogistics3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivIITypeLogisticsLogistics3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivIITypeLogisticsLogistics3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivInteger.json ==
+INFORMATION: StructureDefinition/SEEHDSRivInteger: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivInteger could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPQIntervalTypeActivityprescriptionActoutcome2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPQIntervalTypeActivityprescriptionActoutcome2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPQIntervalTypeActivityprescriptionActoutcome2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPQIntervalTypeHealthcondActoutcome4.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPQIntervalTypeHealthcondActoutcome4: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPQIntervalTypeHealthcondActoutcome4 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPQIntervalTypeHealthcondBasic12.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPQIntervalTypeHealthcondBasic12: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPQIntervalTypeHealthcondBasic12 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPQIntervalTypeHealthcondBasic2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPQIntervalTypeHealthcondBasic2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPQIntervalTypeHealthcondBasic2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeActivityprescriptionActoutcome1.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPQTypeActivityprescriptionActoutcome1: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPQTypeActivityprescriptionActoutcome1 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeActivityprescriptionActoutcome2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPQTypeActivityprescriptionActoutcome2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPQTypeActivityprescriptionActoutcome2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeHealthcondActoutcome2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPQTypeHealthcondActoutcome2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPQTypeHealthcondActoutcome2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeHealthcondActoutcome3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPQTypeHealthcondActoutcome3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPQTypeHealthcondActoutcome3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeHealthcondActoutcome4.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPQTypeHealthcondActoutcome4: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPQTypeHealthcondActoutcome4 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeHealthcondBasic1.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPQTypeHealthcondBasic1: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPQTypeHealthcondBasic1 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPQTypeHealthcondBasic2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPQTypeHealthcondBasic2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPQTypeHealthcondBasic2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPartialDateTypeLogisticsLogistics3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPartialDateTypeLogisticsLogistics3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPartialDateTypeLogisticsLogistics3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPartialTimeStampTypeHealthcondBasic1.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPartialTimeStampTypeHealthcondBasic1: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPartialTimeStampTypeHealthcondBasic1 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPartialTimeStampTypeHealthcondBasic2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPartialTimeStampTypeHealthcondBasic2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPartialTimeStampTypeHealthcondBasic2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeActivityprescriptionActoutcome1.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPersonIdTypeActivityprescriptionActoutcome1: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPersonIdTypeActivityprescriptionActoutcome1 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeActivityprescriptionActoutcome2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPersonIdTypeActivityprescriptionActoutcome2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPersonIdTypeActivityprescriptionActoutcome2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeHealthcondActoutcome2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPersonIdTypeHealthcondActoutcome2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPersonIdTypeHealthcondActoutcome2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeHealthcondActoutcome3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPersonIdTypeHealthcondActoutcome3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPersonIdTypeHealthcondActoutcome3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeHealthcondDescription2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPersonIdTypeHealthcondDescription2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPersonIdTypeHealthcondDescription2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeLogisticsLogistics2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPersonIdTypeLogisticsLogistics2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPersonIdTypeLogisticsLogistics2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivPersonIdTypeLogisticsLogistics3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivPersonIdTypeLogisticsLogistics3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivPersonIdTypeLogisticsLogistics3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivString.json ==
+INFORMATION: StructureDefinition/SEEHDSRivString: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivString could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeActivityprescriptionActoutcome2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivTimePeriodTypeActivityprescriptionActoutcome2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivTimePeriodTypeActivityprescriptionActoutcome2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeHealthcondActoutcome3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivTimePeriodTypeHealthcondActoutcome3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivTimePeriodTypeHealthcondActoutcome3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeHealthcondActoutcome4.json ==
+INFORMATION: StructureDefinition/SEEHDSRivTimePeriodTypeHealthcondActoutcome4: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivTimePeriodTypeHealthcondActoutcome4 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeHealthcondBasic1.json ==
+INFORMATION: StructureDefinition/SEEHDSRivTimePeriodTypeHealthcondBasic1: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivTimePeriodTypeHealthcondBasic1 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeHealthcondDescription2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivTimePeriodTypeHealthcondDescription2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivTimePeriodTypeHealthcondDescription2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeHealthcondDescription3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivTimePeriodTypeHealthcondDescription3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivTimePeriodTypeHealthcondDescription3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeLogisticsLogistics2.json ==
+INFORMATION: StructureDefinition/SEEHDSRivTimePeriodTypeLogisticsLogistics2: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivTimePeriodTypeLogisticsLogistics2 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivTimePeriodTypeLogisticsLogistics3.json ==
+INFORMATION: StructureDefinition/SEEHDSRivTimePeriodTypeLogisticsLogistics3: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivTimePeriodTypeLogisticsLogistics3 could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSRivTimeStamp.json ==
+INFORMATION: StructureDefinition/SEEHDSRivTimeStamp: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSRivTimeStamp could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSServiceRequestReferral.json ==
+INFORMATION: StructureDefinition/SEEHDSServiceRequestReferral: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSServiceRequestReferral could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSServiceRequestReferral'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-SEEHDSTask.json ==
+INFORMATION: StructureDefinition/SEEHDSTask: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/SEEHDSTask could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSTask'): The Implementation Guide contains no examples for this profile
+
+
+== fsh-generated/resources/StructureDefinition-alert-ascertained-date.json ==
+INFORMATION: StructureDefinition/alert-ascertained-date: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/alert-ascertained-date: StructureDefinition.context[0]: Granska extensionstypen för alert-ascertained-date: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/alert-ascertained-date could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/alert-ascertained-date'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-alert-asserted-date.json ==
+INFORMATION: StructureDefinition/alert-asserted-date: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/alert-asserted-date: StructureDefinition.context[0]: Granska extensionstypen för alert-asserted-date: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/alert-asserted-date could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/alert-asserted-date'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-alert-asserter.json ==
+INFORMATION: StructureDefinition/alert-asserter: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/alert-asserter: StructureDefinition.context[0]: Granska extensionstypen för alert-asserter: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/alert-asserter could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/alert-asserter'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-alert-degree-of-certainty.json ==
+INFORMATION: StructureDefinition/alert-degree-of-certainty: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/alert-degree-of-certainty: StructureDefinition.context[0]: Granska extensionstypen för alert-degree-of-certainty: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/alert-degree-of-certainty could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/alert-degree-of-certainty'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-alert-degree-of-severity.json ==
+INFORMATION: StructureDefinition/alert-degree-of-severity: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/alert-degree-of-severity: StructureDefinition.context[0]: Granska extensionstypen för alert-degree-of-severity: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/alert-degree-of-severity could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/alert-degree-of-severity'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-alert-information-comment.json ==
+INFORMATION: StructureDefinition/alert-information-comment: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/alert-information-comment: StructureDefinition.context[0]: Granska extensionstypen för alert-information-comment: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/alert-information-comment could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/alert-information-comment'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-alert-pharmaceutical-hypersensitivity.json ==
+INFORMATION: StructureDefinition/alert-pharmaceutical-hypersensitivity: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/alert-pharmaceutical-hypersensitivity: StructureDefinition.context[0]: Granska extensionstypen för alert-pharmaceutical-hypersensitivity: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/alert-pharmaceutical-hypersensitivity could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/alert-pharmaceutical-hypersensitivity'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-alert-pharmaceutical-treatment.json ==
+INFORMATION: StructureDefinition/alert-pharmaceutical-treatment: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/alert-pharmaceutical-treatment: StructureDefinition.context[0]: Granska extensionstypen för alert-pharmaceutical-treatment: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/alert-pharmaceutical-treatment could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/alert-pharmaceutical-treatment'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-alert-restriction-of-care-comment.json ==
+INFORMATION: StructureDefinition/alert-restriction-of-care-comment: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/alert-restriction-of-care-comment: StructureDefinition.context[0]: Granska extensionstypen för alert-restriction-of-care-comment: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/alert-restriction-of-care-comment could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/alert-restriction-of-care-comment'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-alert-route-of-transmission.json ==
+INFORMATION: StructureDefinition/alert-route-of-transmission: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/alert-route-of-transmission: StructureDefinition.context[0]: Granska extensionstypen för alert-route-of-transmission: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/alert-route-of-transmission could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/alert-route-of-transmission'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-alert-treatment-description.json ==
+INFORMATION: StructureDefinition/alert-treatment-description: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/alert-treatment-description: StructureDefinition.context[0]: Granska extensionstypen för alert-treatment-description: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/alert-treatment-description could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/alert-treatment-description'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-alert-verified-time.json ==
+INFORMATION: StructureDefinition/alert-verified-time: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/alert-verified-time: StructureDefinition.context[0]: Granska extensionstypen för alert-verified-time: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/alert-verified-time could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/alert-verified-time'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-approved-for-patient.json ==
+INFORMATION: StructureDefinition/approved-for-patient: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/approved-for-patient: StructureDefinition.context[0]: Granska extensionstypen för approved-for-patient: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/approved-for-patient could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/approved-for-patient'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-condition-chronic-diagnosis.json ==
+INFORMATION: StructureDefinition/condition-chronic-diagnosis: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/condition-chronic-diagnosis could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/condition-chronic-diagnosis'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-device-source-system-contact.json ==
+INFORMATION: StructureDefinition/device-source-system-contact: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/device-source-system-contact: StructureDefinition.context[0]: Granska extensionstypen för device-source-system-contact: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/device-source-system-contact could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/device-source-system-contact'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-ext-signature-time.json ==
+INFORMATION: StructureDefinition/ext-signature-time: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/ext-signature-time could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/ext-signature-time'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-immunization-is-dose-complete.json ==
+INFORMATION: StructureDefinition/immunization-is-dose-complete: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/immunization-is-dose-complete: StructureDefinition.context[0]: Granska extensionstypen för immunization-is-dose-complete: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/immunization-is-dose-complete could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/immunization-is-dose-complete'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-immunization-legal-authenticator.json ==
+INFORMATION: StructureDefinition/immunization-legal-authenticator: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/immunization-legal-authenticator: StructureDefinition.context[0]: Granska extensionstypen för immunization-legal-authenticator: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/immunization-legal-authenticator could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/immunization-legal-authenticator'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-immunization-patient-postal-code.json ==
+INFORMATION: StructureDefinition/immunization-patient-postal-code: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/immunization-patient-postal-code: StructureDefinition.context[0]: Granska extensionstypen för immunization-patient-postal-code: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/immunization-patient-postal-code could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/immunization-patient-postal-code'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-immunization-registration-device.json ==
+INFORMATION: StructureDefinition/immunization-registration-device: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/immunization-registration-device: StructureDefinition.context[0]: Granska extensionstypen för immunization-registration-device: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/immunization-registration-device could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/immunization-registration-device'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-related-alert-information.json ==
+INFORMATION: StructureDefinition/related-alert-information: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/related-alert-information: StructureDefinition.context[0]: Granska extensionstypen för related-alert-information: extensions bör inte ha en kontext av Element om det inte verkligen är avsett att de kan användas var som helst
+INFORMATION: Resource: The resource StructureDefinition/related-alert-information could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/ehds-tk/StructureDefinition/related-alert-information'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/ValueSet-assessmentcategory-vs.json ==
+INFORMATION: ValueSet/assessmentcategory-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/assessmentcategory-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-clinicaldocumentnotecode-vs.json ==
+INFORMATION: ValueSet/clinicaldocumentnotecode-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/clinicaldocumentnotecode-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-deliverycode-vs.json ==
+INFORMATION: ValueSet/deliverycode-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/deliverycode-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-diagnosistype-vs.json ==
+INFORMATION: ValueSet/diagnosistype-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: ValueSet/diagnosistype-vs: ValueSet.compose.include[0]: Värdemängden refererar till CodeSystem 'https://terminologitjansten.inera.se/inera-kodverksforvaltning/kodverk/kv_diagnostyp' som har status 'fragment'
+WARNING: Resource: The resource ValueSet/diagnosistype-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-errorcode-vs.json ==
+INFORMATION: ValueSet/errorcode-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/errorcode-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-examinationstatuscode-vs.json ==
+INFORMATION: ValueSet/examinationstatuscode-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/examinationstatuscode-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-fetalpositioncode-vs.json ==
+INFORMATION: ValueSet/fetalpositioncode-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/fetalpositioncode-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-growth-observation-type-vs.json ==
+INFORMATION: ValueSet/growth-observation-type-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: ValueSet/growth-observation-type-vs: ValueSet.compose.include[0].concept[0]: Wrong Display Name 'Kroppslängd' for http://snomed.info/sct#1153637007. There are no valid display names found for language(s) 'sv'. Default display is 'Body height'. Observera att visningen i ValueSet inte behöver matcha; denna kontroll finns för att hjälpa till att kontrollera att det inte av misstag är fel kod
+INFORMATION: ValueSet/growth-observation-type-vs: ValueSet.compose.include[0].concept[1]: Wrong Display Name 'Mått på kroppslängd' for http://snomed.info/sct#50373000. There are no valid display names found for language(s) 'sv'. Default display is 'Body height measure'. Observera att visningen i ValueSet inte behöver matcha; denna kontroll finns för att hjälpa till att kontrollera att det inte av misstag är fel kod
+INFORMATION: ValueSet/growth-observation-type-vs: ValueSet.compose.include[0].concept[2]: Wrong Display Name 'Längd i liggande (bakåtkompatibel – ej för nyanslutning)' for http://snomed.info/sct#248334005. There are no valid display names found for language(s) 'sv'. Default display is 'Length of body'. Observera att visningen i ValueSet inte behöver matcha; denna kontroll finns för att hjälpa till att kontrollera att det inte av misstag är fel kod
+INFORMATION: ValueSet/growth-observation-type-vs: ValueSet.compose.include[0].concept[3]: Wrong Display Name 'Kroppsvikt' for http://snomed.info/sct#27113001. There are no valid display names found for language(s) 'sv'. Default display is 'Body weight'. Observera att visningen i ValueSet inte behöver matcha; denna kontroll finns för att hjälpa till att kontrollera att det inte av misstag är fel kod
+INFORMATION: ValueSet/growth-observation-type-vs: ValueSet.compose.include[0].concept[4]: Wrong Display Name 'Huvudomfång' for http://snomed.info/sct#363812007. There are no valid display names found for language(s) 'sv'. Default display is 'Head circumference'. Observera att visningen i ValueSet inte behöver matcha; denna kontroll finns för att hjälpa till att kontrollera att det inte av misstag är fel kod
+INFORMATION: ValueSet/growth-observation-type-vs: ValueSet.compose.include[0].concept[5]: Wrong Display Name 'Graviditetslängd vid födelse' for http://snomed.info/sct#412726003. There are no valid display names found for language(s) 'sv'. Default display is 'Length of gestation at birth'. Observera att visningen i ValueSet inte behöver matcha; denna kontroll finns för att hjälpa till att kontrollera att det inte av misstag är fel kod
+WARNING: Resource: The resource ValueSet/growth-observation-type-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-prescriptionstatus-vs.json ==
+INFORMATION: ValueSet/prescriptionstatus-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/prescriptionstatus-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-referraloutcometypecode-vs.json ==
+INFORMATION: ValueSet/referraloutcometypecode-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/referraloutcometypecode-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-resultcode-vs.json ==
+INFORMATION: ValueSet/resultcode-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/resultcode-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-se-observation-status-vs.json ==
+INFORMATION: ValueSet/se-observation-status-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: ValueSet/se-observation-status-vs: ValueSet.compose.include[0].concept[0]: Wrong Display Name 'Under utförande' for http://snomed.info/sct#385676005. There are no valid display names found for language(s) 'sv'. Default display is 'Outcome of action'. Observera att visningen i ValueSet inte behöver matcha; denna kontroll finns för att hjälpa till att kontrollera att det inte av misstag är fel kod
+INFORMATION: ValueSet/se-observation-status-vs: ValueSet.compose.include[0].concept[1]: Wrong Display Name 'Slutlig' for http://snomed.info/sct#385651009. There are no valid display names found for language(s) 'sv'. Default display is 'In progress'. Observera att visningen i ValueSet inte behöver matcha; denna kontroll finns för att hjälpa till att kontrollera att det inte av misstag är fel kod
+INFORMATION: ValueSet/se-observation-status-vs: ValueSet.compose.include[0].concept[2]: Wrong Display Name 'Korrigerad' for http://snomed.info/sct#272393004. There are no valid display names found for language(s) 'sv'. Default display is 'Tests'. Observera att visningen i ValueSet inte behöver matcha; denna kontroll finns för att hjälpa till att kontrollera att det inte av misstag är fel kod
+INFORMATION: ValueSet/se-observation-status-vs: ValueSet.compose.include[0].concept[3]: Wrong Display Name 'Avbeställd/annullerad' for http://snomed.info/sct#59776000. There are no valid display names found for language(s) 'sv'. Default display is 'Calcium cyanide'. Observera att visningen i ValueSet inte behöver matcha; denna kontroll finns för att hjälpa till att kontrollera att det inte av misstag är fel kod
+INFORMATION: ValueSet/se-observation-status-vs: ValueSet.compose.include[0].concept[4]: Wrong Display Name 'Avböjd av patient' for http://snomed.info/sct#444301002. There are no valid display names found for language(s) 'sv'. Default display is 'Mother of subject'. Observera att visningen i ValueSet inte behöver matcha; denna kontroll finns för att hjälpa till att kontrollera att det inte av misstag är fel kod
+WARNING: Resource: The resource ValueSet/se-observation-status-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-sexcode-vs.json ==
+INFORMATION: ValueSet/sexcode-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/sexcode-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-typeofcareplan-vs.json ==
+INFORMATION: ValueSet/typeofcareplan-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/typeofcareplan-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-typeofleavecode-vs.json ==
+INFORMATION: ValueSet/typeofleavecode-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/typeofleavecode-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-typeofprescription-vs.json ==
+INFORMATION: ValueSet/typeofprescription-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/typeofprescription-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-typeofresultcode-vs.json ==
+INFORMATION: ValueSet/typeofresultcode-vs: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/typeofresultcode-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+

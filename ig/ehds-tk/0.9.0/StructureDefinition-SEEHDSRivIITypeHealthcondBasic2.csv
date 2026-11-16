@@ -1,0 +1,7 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"SEEHDSRivIITypeHealthcondBasic2","SEEHDSRivIITypeHealthcondBasic2","","","",0,*,"","","","null {[]} {[]}
+","RIV-TA IIType (clinicalprocess:healthcond:basic:2)","RIV-TA-datatypen IIType i namnrymden urn:riv:clinicalprocess:healthcond:basic:2.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"SEEHDSRivIITypeHealthcondBasic2.root","SEEHDSRivIITypeHealthcondBasic2.root","","","",1,1,"","","","https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString {[]} {[]}
+","OID eller UUID för identifierarens namnrymd","OID eller UUID för identifierarens namnrymd","","","","","","","","","",,,,,"",,,,"SEEHDSRivIITypeHealthcondBasic2.root",1,1,"",""
+"SEEHDSRivIITypeHealthcondBasic2.rivExtension","SEEHDSRivIITypeHealthcondBasic2.rivExtension","","","",0,1,"","","","https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString {[]} {[]}
+","Identifierarens värde inom namnrymden","Identifierarens värde inom namnrymden","","","","","","","","","",,,,,"",,,,"SEEHDSRivIITypeHealthcondBasic2.rivExtension",0,1,"",""

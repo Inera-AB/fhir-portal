@@ -1,0 +1,813 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "SEEHDSLMRequestActivitiesV10",
+  "language" : "sv",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: StructureDefinition SEEHDSLMRequestActivitiesV10</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"xhtTableBorder0\"><tr class=\"xhtRowBorder1\"><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Elementets logiska namn\">Namn</a></th><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information om användningen av elementet\">Flaggor</a></th><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Lägsta och högsta antal gånger elementet kan förekomma i instansen\">Kard.</a></th><th scope=\"col\" style=\"; width: 100px\" class=\"hierarchy xhtCellBorder0\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Referens till elementets typ\">Typ</a></th><th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Ytterligare information om elementet\">Beskrivning &amp; begränsningar</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr class=\"xhtRowBorder0 xhtRowEven\"><td style=\"background-image: url(tbl_bck1.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10\" title=\"Logisk modell för version 1.0 av tjänstekontraktet GetRequestActivities\n(urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1).\nMappningen utgår från versionen i SEEHDSLMRequestActivities. Skillnaderna mot den och hur de\npåverkar mappningen beskrivs på tjänstekontraktets mappningssida.\">SEEHDSLMRequestActivitiesV10</a><a name=\"SEEHDSLMRequestActivitiesV10\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceDeEmphasized\">0</span><span class=\"xhtPieceDeEmphasized\">..</span><span class=\"xhtPieceDeEmphasized\">*</span></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"http://build.fhir.org/types.html#Base\">Base</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1<br/>GetRequestActivities 1.0<br/><span class=\"xhtPieceBold\">Instanser av denna logiska modell kan vara mål för en Reference</span></td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowOdd\"><td style=\"background-image: url(tbl_bck01.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Datatyp\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity\" title=\"requestActivity\">requestActivity</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"http://hl7.org/fhir/R4/conformance-rules.html#constraints\" title=\"Detta element har eller påverkas av begränsningar ( getrequestactivities1-request-id, getrequestactivities1-issued-by-unit, getrequestactivities1-receiving-unit, getrequestactivities1-status-code )\" class=\"xhtConstraintStyle\">C</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\">0..*</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#BackboneElement\">BackboneElement</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\">requestActivity<br class=\"constraint\"/><span class=\"constraint\">Constraints: </span><span title=\"Minst ett av senderRequestId och receiverRequestId ska anges\" class=\"xhtPieceBold constraint\">getrequestactivities1-request-id</span><span class=\"constraint\">, </span><span title=\"Minst ett av requestIssuedByOrganizationalUnitId och requestIssuedByOrganizationalUnitDescription ska anges\" class=\"xhtPieceBold constraint\">getrequestactivities1-issued-by-unit</span><span class=\"constraint\">, </span><span title=\"Minst ett av receivingOrganizationalUnitId och receivingOrganizationalUnitDescription ska anges\" class=\"xhtPieceBold constraint\">getrequestactivities1-receiving-unit</span><span class=\"constraint\">, </span><span title=\"typeOfRequest ska vara 1, 2, 4 eller 10 och statusCode ska vara en av de koder som är tillåtna för remisstypen (VER-005)\" class=\"xhtPieceBold constraint\">getrequestactivities1-status-code</span><br/></td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowEven\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId\" title=\"Person eller samordnings-nummer enligt skatteverkets definition 12 tecken. Del av instansen unikhet. Personnummer OID: 1.2.752.129.2.1.3.1\">subjectOfCareId</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">1..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Person eller samordnings-nummer enligt skatteverkets definition 12 tecken<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowOdd\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId\" title=\"Framställarens identitetsbeteckning för framställan. Är Remiss Id. Identifierare som är unik inom källsystemet. Om tomt så måste receiverRequestId vara infylld, alltså båda kan inte vara tomma.\">senderRequestId</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Framställarens identitetsbeteckning för framställan<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowEven\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId\" title=\"Mottagarens identitetsbeteckning för framställan Identifierare som är unik inom källsystemet. Om tomt så måste senderRequestId vara infylld, alltså båda kan inte vara tomma.\">receiverRequestId</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Mottagarens identitetsbeteckning för framställan Identifierare som är unik inom källsystemet<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowOdd\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest\" title=\"Kod som anger vilken typ av framställan som avses. Kodverket saknar nationell förankring. Giltiga värden: 1 = röntgenremiss 2 = labbremiss 4 = allmänremiss 10 = fysiologiremiss\nTillåtna värden enligt XSD: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.\">typeOfRequest</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">1..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Kod som anger vilken typ av framställan som avses<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowEven\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium\" title=\"Kod och klartext som anger medium för framställan. KTOV/KV Form av framställan (OID: 1.2.752.129.2.2.2.7). Giltiga värden: 3 = skriftligt elektroniskt 4 = skriftligt papper\nTillåtna värden enligt XSD: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.\">requestMedium</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Kod och klartext som anger medium för framställan<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowOdd\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName\" title=\"Namn på den person som framställt framställan.\">requestIssuedByPersonName</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Namn på den person som framställt framställan<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowEven\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId\" title=\"Identitetsbeteckning för den organisationsenhet inom vars uppdrag som framställan görs. HSA-id OID 1.2.752.129.2.1.4.1\">requestIssuedByOrganizationalUnitId</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Identitetsbeteckning för den organisationsenhet inom vars uppdrag som framställan görs<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowOdd\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription\" title=\"Beskrivning av enheten. Format: fritext. Exempel: Närakuten +468 398 72, Solna Torg 3, 171 45 SOLNA. Saknas requestIssuedByOrganizationalUnitId så skrivs information om enheten här.\">requestIssuedByOrganizationalUnitDescription</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Beskrivning av enheten<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowEven\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName\" title=\"Namn på den hälso- och sjukvårdspersonal som mottar framställan Motsvarar HSA ”fullName”.\">receivingPersonName</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Namn på den hälso- och sjukvårdspersonal som mottar framställan Motsvarar HSA ”fullName”<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowOdd\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId\" title=\"Identitetsbeteckning för den enhet inom vars uppdrag som framställan mottages HSA-id OID 1.2.752.129.2.1.4.1\">receivingOrganizationalUnitId</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Identitetsbeteckning för den enhet inom vars uppdrag som framställan mottages HSA-id OID 1.2.752.129.2.1.4.1<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowEven\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription\" title=\"Beskrivning av enheten. Format: fritext Exempel: Närakuten +468 398 72, Solna Torg 3, 171 45 SOLNA. Om receivingOrganizationalUnitId saknas skrivs information om enheten här.\">receivingOrganizationalUnitDescription</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Beskrivning av enheten<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowOdd\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.careUnit\" title=\"HSA-id för informationsägande vårdenhet. Inre sekretess enligt PDL 4 kap. 4-5 §§ ”vårdenhet”. HSA-id OID 1.2.752.129.2.1.4.1\">careUnit</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.careUnit\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">0..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>HSA-id för informationsägande vårdenhet<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowEven\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId\" title=\"Referens till informationskällan. `&lt;Systemets HSA-id&gt;`. Format enligt aktuell identiferare, tex HSA-id OID 1.2.752.129.2.1.4.1\">logicalSystemId</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">1..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Referens till informationskällan<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowOdd\"><td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.statusCode\" title=\"Anger i vilken status remissen befinner sig i. Kodverket saknar nationell förankring. kod=20 namn=Skickad, används av framställantyp (1=Ja, 4=Ja,10=Ja, 2=Ja) kod=30 namn=Mottagen används av framställantyp (1=Ja, 4=Ja, 10=Ja, 2=Ja) kod=90 namn=Bedömd används av framställantyp (1=Ja, 4=Ja, 10= Ja) kod=126 namn=Preliminärsvar skickat används av framställantyp (1=Ja , 2=Ja) kod=130 namn=Svar skickat används av framställantyp (1=Ja, 4=Ja, 2=Ja) kod=136 namn=Preliminärsvar mottaget används av framställantyp (1=Ja , 2=Ja) kod=140 namn=Svar mottaget används av framställantyp (1=Ja, 4=Ja, 10=Ja, 2=Ja)\nTillåtna värden enligt XSD: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 126, 130, 136, 140, 150, 160, 170.\">statusCode</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.statusCode\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">1..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Anger i vilken status remissen befinner sig i<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr class=\"xhtRowBorder0 xhtRowEven\"><td style=\"background-image: url(tbl_bck000.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"><img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/> <span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\">SEEHDSLMRequestActivitiesV10.requestActivity.</span><a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.eventTime\" title=\"Anger tidspunkt när händelsen inträffade.\">eventTime</a><a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.eventTime\"> </a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"/><td style=\"\" class=\"hierarchy xhtCellBorder0\">1..1</td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><a href=\"StructureDefinition-SEEHDSRivString.html\">SEEHDSRivString</a></td><td style=\"\" class=\"hierarchy xhtCellBorder0\"><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1<br/>Anger tidspunkt när händelsen inträffade<br/><span class=\"xhtPieceBold\">XML-namnrymd: </span>urn:riv:crm:requeststatus:1</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Förklaring för detta format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Dokumentation för detta format</a></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
+    "valueCode" : "can-be-target"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/xml-name",
+    "valueString" : "GetRequestActivitiesResponse"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+    "valueUri" : "urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1"
+  }],
+  "url" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10",
+  "version" : "0.9.0",
+  "name" : "SEEHDSLMRequestActivitiesV10",
+  "title" : "GetRequestActivities 1.0",
+  "status" : "draft",
+  "date" : "2026-11-16T16:15:01+00:00",
+  "publisher" : "Inera AB",
+  "contact" : [{
+    "name" : "Inera AB",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.inera.se"
+    }]
+  }],
+  "description" : "Logisk modell för version 1.0 av tjänstekontraktet GetRequestActivities\n(urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1).\nMappningen utgår från versionen i SEEHDSLMRequestActivities. Skillnaderna mot den och hur de\npåverkar mappningen beskrivs på tjänstekontraktets mappningssida.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "SE",
+      "display" : "Sweden"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation" : "specialization",
+  "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "4.0.1"
+    }],
+    "element" : [{
+      "id" : "SEEHDSLMRequestActivitiesV10",
+      "path" : "SEEHDSLMRequestActivitiesV10",
+      "short" : "GetRequestActivities 1.0",
+      "definition" : "Logisk modell för version 1.0 av tjänstekontraktet GetRequestActivities\n(urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1).\nMappningen utgår från versionen i SEEHDSLMRequestActivities. Skillnaderna mot den och hur de\npåverkar mappningen beskrivs på tjänstekontraktets mappningssida.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Base",
+        "min" : 0,
+        "max" : "*"
+      },
+      "isModifier" : false
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity",
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity",
+      "short" : "requestActivity",
+      "definition" : "requestActivity",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "constraint" : [{
+        "key" : "getrequestactivities1-request-id",
+        "severity" : "error",
+        "human" : "Minst ett av senderRequestId och receiverRequestId ska anges",
+        "expression" : "senderRequestId.exists() or receiverRequestId.exists()",
+        "source" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+      },
+      {
+        "key" : "getrequestactivities1-issued-by-unit",
+        "severity" : "error",
+        "human" : "Minst ett av requestIssuedByOrganizationalUnitId och requestIssuedByOrganizationalUnitDescription ska anges",
+        "expression" : "requestIssuedByOrganizationalUnitId.exists() or requestIssuedByOrganizationalUnitDescription.exists()",
+        "source" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+      },
+      {
+        "key" : "getrequestactivities1-receiving-unit",
+        "severity" : "error",
+        "human" : "Minst ett av receivingOrganizationalUnitId och receivingOrganizationalUnitDescription ska anges",
+        "expression" : "receivingOrganizationalUnitId.exists() or receivingOrganizationalUnitDescription.exists()",
+        "source" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+      },
+      {
+        "key" : "getrequestactivities1-status-code",
+        "severity" : "error",
+        "human" : "typeOfRequest ska vara 1, 2, 4 eller 10 och statusCode ska vara en av de koder som är tillåtna för remisstypen (VER-005)",
+        "expression" : "(typeOfRequest.value = '1' and statusCode.value in ('20' | '30' | '90' | '126' | '130' | '136' | '140')) or (typeOfRequest.value = '2' and statusCode.value in ('20' | '30' | '126' | '130' | '136' | '140')) or (typeOfRequest.value = '4' and statusCode.value in ('20' | '30' | '90' | '130' | '140')) or (typeOfRequest.value = '10' and statusCode.value in ('20' | '30' | '90' | '140'))",
+        "source" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+      },
+      {
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.id",
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.id",
+      "representation" : ["xmlAttr"],
+      "short" : "Unique id for inter-element referencing",
+      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Element.id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.extension",
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "description" : "Extensions are always sliced by (at least) url",
+        "rules" : "open"
+      },
+      "short" : "Additional content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Element.extension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.modifierExtension",
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.modifierExtension",
+      "short" : "Extensions that cannot be ignored even if unrecognized",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "requirements" : "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
+      "alias" : ["extensions",
+      "user content",
+      "modifiers"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "BackboneElement.modifierExtension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : true,
+      "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId",
+      "short" : "Person eller samordnings-nummer enligt skatteverkets definition 12 tecken",
+      "definition" : "Person eller samordnings-nummer enligt skatteverkets definition 12 tecken. Del av instansen unikhet. Personnummer OID: 1.2.752.129.2.1.3.1",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId",
+      "short" : "Framställarens identitetsbeteckning för framställan",
+      "definition" : "Framställarens identitetsbeteckning för framställan. Är Remiss Id. Identifierare som är unik inom källsystemet. Om tomt så måste receiverRequestId vara infylld, alltså båda kan inte vara tomma.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId",
+      "short" : "Mottagarens identitetsbeteckning för framställan Identifierare som är unik inom källsystemet",
+      "definition" : "Mottagarens identitetsbeteckning för framställan Identifierare som är unik inom källsystemet. Om tomt så måste senderRequestId vara infylld, alltså båda kan inte vara tomma.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest",
+      "short" : "Kod som anger vilken typ av framställan som avses",
+      "definition" : "Kod som anger vilken typ av framställan som avses. Kodverket saknar nationell förankring. Giltiga värden: 1 = röntgenremiss 2 = labbremiss 4 = allmänremiss 10 = fysiologiremiss\nTillåtna värden enligt XSD: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium",
+      "short" : "Kod och klartext som anger medium för framställan",
+      "definition" : "Kod och klartext som anger medium för framställan. KTOV/KV Form av framställan (OID: 1.2.752.129.2.2.2.7). Giltiga värden: 3 = skriftligt elektroniskt 4 = skriftligt papper\nTillåtna värden enligt XSD: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName",
+      "short" : "Namn på den person som framställt framställan",
+      "definition" : "Namn på den person som framställt framställan.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId",
+      "short" : "Identitetsbeteckning för den organisationsenhet inom vars uppdrag som framställan görs",
+      "definition" : "Identitetsbeteckning för den organisationsenhet inom vars uppdrag som framställan görs. HSA-id OID 1.2.752.129.2.1.4.1",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription",
+      "short" : "Beskrivning av enheten",
+      "definition" : "Beskrivning av enheten. Format: fritext. Exempel: Närakuten +468 398 72, Solna Torg 3, 171 45 SOLNA. Saknas requestIssuedByOrganizationalUnitId så skrivs information om enheten här.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName",
+      "short" : "Namn på den hälso- och sjukvårdspersonal som mottar framställan Motsvarar HSA ”fullName”",
+      "definition" : "Namn på den hälso- och sjukvårdspersonal som mottar framställan Motsvarar HSA ”fullName”.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId",
+      "short" : "Identitetsbeteckning för den enhet inom vars uppdrag som framställan mottages HSA-id OID 1.2.752.129.2.1.4.1",
+      "definition" : "Identitetsbeteckning för den enhet inom vars uppdrag som framställan mottages HSA-id OID 1.2.752.129.2.1.4.1",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription",
+      "short" : "Beskrivning av enheten",
+      "definition" : "Beskrivning av enheten. Format: fritext Exempel: Närakuten +468 398 72, Solna Torg 3, 171 45 SOLNA. Om receivingOrganizationalUnitId saknas skrivs information om enheten här.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.careUnit",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.careUnit",
+      "short" : "HSA-id för informationsägande vårdenhet",
+      "definition" : "HSA-id för informationsägande vårdenhet. Inre sekretess enligt PDL 4 kap. 4-5 §§ ”vårdenhet”. HSA-id OID 1.2.752.129.2.1.4.1",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.careUnit",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId",
+      "short" : "Referens till informationskällan",
+      "definition" : "Referens till informationskällan. `<Systemets HSA-id>`. Format enligt aktuell identiferare, tex HSA-id OID 1.2.752.129.2.1.4.1",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.statusCode",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.statusCode",
+      "short" : "Anger i vilken status remissen befinner sig i",
+      "definition" : "Anger i vilken status remissen befinner sig i. Kodverket saknar nationell förankring. kod=20 namn=Skickad, används av framställantyp (1=Ja, 4=Ja,10=Ja, 2=Ja) kod=30 namn=Mottagen används av framställantyp (1=Ja, 4=Ja, 10=Ja, 2=Ja) kod=90 namn=Bedömd används av framställantyp (1=Ja, 4=Ja, 10= Ja) kod=126 namn=Preliminärsvar skickat används av framställantyp (1=Ja , 2=Ja) kod=130 namn=Svar skickat används av framställantyp (1=Ja, 4=Ja, 2=Ja) kod=136 namn=Preliminärsvar mottaget används av framställantyp (1=Ja , 2=Ja) kod=140 namn=Svar mottaget används av framställantyp (1=Ja, 4=Ja, 10=Ja, 2=Ja)\nTillåtna värden enligt XSD: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 126, 130, 136, 140, 150, 160, 170.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.statusCode",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.eventTime",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.eventTime",
+      "short" : "Anger tidspunkt när händelsen inträffade",
+      "definition" : "Anger tidspunkt när händelsen inträffade.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.eventTime",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    }]
+  },
+  "differential" : {
+    "element" : [{
+      "id" : "SEEHDSLMRequestActivitiesV10",
+      "path" : "SEEHDSLMRequestActivitiesV10",
+      "short" : "GetRequestActivities 1.0",
+      "definition" : "Logisk modell för version 1.0 av tjänstekontraktet GetRequestActivities\n(urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1).\nMappningen utgår från versionen i SEEHDSLMRequestActivities. Skillnaderna mot den och hur de\npåverkar mappningen beskrivs på tjänstekontraktets mappningssida."
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity",
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity",
+      "short" : "requestActivity",
+      "definition" : "requestActivity",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "constraint" : [{
+        "key" : "getrequestactivities1-request-id",
+        "severity" : "error",
+        "human" : "Minst ett av senderRequestId och receiverRequestId ska anges",
+        "expression" : "senderRequestId.exists() or receiverRequestId.exists()",
+        "source" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+      },
+      {
+        "key" : "getrequestactivities1-issued-by-unit",
+        "severity" : "error",
+        "human" : "Minst ett av requestIssuedByOrganizationalUnitId och requestIssuedByOrganizationalUnitDescription ska anges",
+        "expression" : "requestIssuedByOrganizationalUnitId.exists() or requestIssuedByOrganizationalUnitDescription.exists()",
+        "source" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+      },
+      {
+        "key" : "getrequestactivities1-receiving-unit",
+        "severity" : "error",
+        "human" : "Minst ett av receivingOrganizationalUnitId och receivingOrganizationalUnitDescription ska anges",
+        "expression" : "receivingOrganizationalUnitId.exists() or receivingOrganizationalUnitDescription.exists()",
+        "source" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+      },
+      {
+        "key" : "getrequestactivities1-status-code",
+        "severity" : "error",
+        "human" : "typeOfRequest ska vara 1, 2, 4 eller 10 och statusCode ska vara en av de koder som är tillåtna för remisstypen (VER-005)",
+        "expression" : "(typeOfRequest.value = '1' and statusCode.value in ('20' | '30' | '90' | '126' | '130' | '136' | '140')) or (typeOfRequest.value = '2' and statusCode.value in ('20' | '30' | '126' | '130' | '136' | '140')) or (typeOfRequest.value = '4' and statusCode.value in ('20' | '30' | '90' | '130' | '140')) or (typeOfRequest.value = '10' and statusCode.value in ('20' | '30' | '90' | '140'))",
+        "source" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId",
+      "short" : "Person eller samordnings-nummer enligt skatteverkets definition 12 tecken",
+      "definition" : "Person eller samordnings-nummer enligt skatteverkets definition 12 tecken. Del av instansen unikhet. Personnummer OID: 1.2.752.129.2.1.3.1",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId",
+      "short" : "Framställarens identitetsbeteckning för framställan",
+      "definition" : "Framställarens identitetsbeteckning för framställan. Är Remiss Id. Identifierare som är unik inom källsystemet. Om tomt så måste receiverRequestId vara infylld, alltså båda kan inte vara tomma.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId",
+      "short" : "Mottagarens identitetsbeteckning för framställan Identifierare som är unik inom källsystemet",
+      "definition" : "Mottagarens identitetsbeteckning för framställan Identifierare som är unik inom källsystemet. Om tomt så måste senderRequestId vara infylld, alltså båda kan inte vara tomma.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest",
+      "short" : "Kod som anger vilken typ av framställan som avses",
+      "definition" : "Kod som anger vilken typ av framställan som avses. Kodverket saknar nationell förankring. Giltiga värden: 1 = röntgenremiss 2 = labbremiss 4 = allmänremiss 10 = fysiologiremiss\nTillåtna värden enligt XSD: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium",
+      "short" : "Kod och klartext som anger medium för framställan",
+      "definition" : "Kod och klartext som anger medium för framställan. KTOV/KV Form av framställan (OID: 1.2.752.129.2.2.2.7). Giltiga värden: 3 = skriftligt elektroniskt 4 = skriftligt papper\nTillåtna värden enligt XSD: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName",
+      "short" : "Namn på den person som framställt framställan",
+      "definition" : "Namn på den person som framställt framställan.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId",
+      "short" : "Identitetsbeteckning för den organisationsenhet inom vars uppdrag som framställan görs",
+      "definition" : "Identitetsbeteckning för den organisationsenhet inom vars uppdrag som framställan görs. HSA-id OID 1.2.752.129.2.1.4.1",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription",
+      "short" : "Beskrivning av enheten",
+      "definition" : "Beskrivning av enheten. Format: fritext. Exempel: Närakuten +468 398 72, Solna Torg 3, 171 45 SOLNA. Saknas requestIssuedByOrganizationalUnitId så skrivs information om enheten här.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName",
+      "short" : "Namn på den hälso- och sjukvårdspersonal som mottar framställan Motsvarar HSA ”fullName”",
+      "definition" : "Namn på den hälso- och sjukvårdspersonal som mottar framställan Motsvarar HSA ”fullName”.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId",
+      "short" : "Identitetsbeteckning för den enhet inom vars uppdrag som framställan mottages HSA-id OID 1.2.752.129.2.1.4.1",
+      "definition" : "Identitetsbeteckning för den enhet inom vars uppdrag som framställan mottages HSA-id OID 1.2.752.129.2.1.4.1",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription",
+      "short" : "Beskrivning av enheten",
+      "definition" : "Beskrivning av enheten. Format: fritext Exempel: Närakuten +468 398 72, Solna Torg 3, 171 45 SOLNA. Om receivingOrganizationalUnitId saknas skrivs information om enheten här.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.careUnit",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.careUnit",
+      "short" : "HSA-id för informationsägande vårdenhet",
+      "definition" : "HSA-id för informationsägande vårdenhet. Inre sekretess enligt PDL 4 kap. 4-5 §§ ”vårdenhet”. HSA-id OID 1.2.752.129.2.1.4.1",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId",
+      "short" : "Referens till informationskällan",
+      "definition" : "Referens till informationskällan. `<Systemets HSA-id>`. Format enligt aktuell identiferare, tex HSA-id OID 1.2.752.129.2.1.4.1",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.statusCode",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.statusCode",
+      "short" : "Anger i vilken status remissen befinner sig i",
+      "definition" : "Anger i vilken status remissen befinner sig i. Kodverket saknar nationell förankring. kod=20 namn=Skickad, används av framställantyp (1=Ja, 4=Ja,10=Ja, 2=Ja) kod=30 namn=Mottagen används av framställantyp (1=Ja, 4=Ja, 10=Ja, 2=Ja) kod=90 namn=Bedömd används av framställantyp (1=Ja, 4=Ja, 10= Ja) kod=126 namn=Preliminärsvar skickat används av framställantyp (1=Ja , 2=Ja) kod=130 namn=Svar skickat används av framställantyp (1=Ja, 4=Ja, 2=Ja) kod=136 namn=Preliminärsvar mottaget används av framställantyp (1=Ja , 2=Ja) kod=140 namn=Svar mottaget används av framställantyp (1=Ja, 4=Ja, 10=Ja, 2=Ja)\nTillåtna värden enligt XSD: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 126, 130, 136, 140, 150, 160, 170.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    },
+    {
+      "id" : "SEEHDSLMRequestActivitiesV10.requestActivity.eventTime",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+        "valueUri" : "urn:riv:crm:requeststatus:1"
+      }],
+      "path" : "SEEHDSLMRequestActivitiesV10.requestActivity.eventTime",
+      "short" : "Anger tidspunkt när händelsen inträffade",
+      "definition" : "Anger tidspunkt när händelsen inträffade.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+      }]
+    }]
+  }
+}

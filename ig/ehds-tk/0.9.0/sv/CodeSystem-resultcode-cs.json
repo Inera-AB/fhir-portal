@@ -1,0 +1,50 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "resultcode-cs",
+  "language" : "sv",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: CodeSystem resultcode-cs</b></p><a name=\"resultcode-cs\"> </a><a name=\"hcresultcode-cs\"> </a><p>Detta case-sensitive kodsystem <code>https://fhir.inera.se/CodeSystem/resultcode-actoutcome</code> definierar följande koder:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Kod</b></td><td><b>Visning</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">OK<a name=\"resultcode-cs-OK\"> </a></td><td>OK</td><td>Begäran genomfördes utan fel</td></tr><tr><td style=\"white-space:nowrap\">INFO<a name=\"resultcode-cs-INFO\"> </a></td><td>Info</td><td>Begäran genomfördes men med informationsmeddelande</td></tr><tr><td style=\"white-space:nowrap\">ERROR<a name=\"resultcode-cs-ERROR\"> </a></td><td>Fel</td><td>Begäran misslyckades med logiskt fel</td></tr></table></div>"
+  },
+  "url" : "https://fhir.inera.se/CodeSystem/resultcode-actoutcome",
+  "version" : "0.9.0",
+  "name" : "ResultCodeCS",
+  "title" : "ResultCode",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-11-16T16:15:01+00:00",
+  "publisher" : "Inera AB",
+  "contact" : [{
+    "name" : "Inera AB",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.inera.se"
+    }]
+  }],
+  "description" : "Kodverk för resultatkod i svar från tjänstekontrakten i domänen clinicalprocess:activityprescription:actoutcome.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "SE",
+      "display" : "Sweden"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "OK",
+    "display" : "OK",
+    "definition" : "Begäran genomfördes utan fel"
+  },
+  {
+    "code" : "INFO",
+    "display" : "Info",
+    "definition" : "Begäran genomfördes men med informationsmeddelande"
+  },
+  {
+    "code" : "ERROR",
+    "display" : "Fel",
+    "definition" : "Begäran misslyckades med logiskt fel"
+  }]
+}

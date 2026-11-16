@@ -1,26 +1,33 @@
 {
-  "package-id": "inera.ehds.ehds-tk",
-  "title": "Inera EHDS Tjänstekontrakt – FHIR Implementation Guide",
-  "canonical": "https://fhir.inera.se/ig/ehds-tk",
-  "introduction": "FHIR IG som beskriver hur Ineras RIVTA-tjänstekontrakt mappas till FHIR för att informationsförsörja NPÖ och 1177 Journal.",
-  "category": "National Base",
-  "list": [
-    {
-      "version": "current",
-      "path": "https://inera-ab.github.io/EHDS-TK",
-      "status": "ci-build",
-      "sequence": "ci-build",
-      "desc": "Continuous Integration Build (latest in version control) - Content subject to frequent changes"
-    },
-    {
-      "version": "0.3.2",
-      "path": "https://fhir.inera.se/ig/ehds-tk/0.3.2",
-      "status": "release",
-      "sequence": "Releases",
-      "fhirversion": "4.0.1",
-      "date": "2026-06-25",
-      "desc": "Första publicerade versionen på fhir.inera.se, med profiler och mappningar för de första tjänstekontrakten.",
-      "current": true
-    }
-  ]
+  "package-id" : "inera.ehds.ehds-tk",
+  "title" : "Inera EHDS Tjänstekontrakt – FHIR Implementation Guide",
+  "canonical" : "https://fhir.inera.se/ig/ehds-tk",
+  "introduction" : "FHIR IG som beskriver hur Ineras RIVTA-tjänstekontrakt mappas till FHIR för att informationsförsörja NPÖ och 1177 Journal.",
+  "category" : "National Base",
+  "list" : [{
+    "version" : "current",
+    "path" : "https://inera-ab.github.io/EHDS-TK",
+    "status" : "ci-build",
+    "sequence" : "ci-build",
+    "desc" : "Continuous Integration Build (latest in version control) - Content subject to frequent changes"
+  },
+  {
+    "version" : "0.9.0",
+    "path" : "https://fhir.inera.se/ig/ehds-tk/0.9.0",
+    "status" : "release",
+    "sequence" : "Releases",
+    "fhirversion" : "4.0.1",
+    "date" : "2026-11-16",
+    "current" : true,
+    "desc" : "Övergång till IG Publishers officiella publiceringsläge, med logiska modeller och mappningar för alla aktiva tjänstekontraktsversioner."
+  },
+  {
+    "version" : "0.3.2",
+    "path" : "https://fhir.inera.se/ig/ehds-tk/0.3.2",
+    "status" : "release",
+    "sequence" : "Releases",
+    "fhirversion" : "4.0.1",
+    "date" : "2026-06-25",
+    "desc" : "Första publicerade versionen på fhir.inera.se, med profiler och mappningar för de första tjänstekontrakten."
+  }]
 }

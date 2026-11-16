@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="sv" xmlns="http://www.w3.org/1999/xhtml" lang="sv" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Logical Models - Inera EHDS Tjänstekontrakt – FHIR Implementation Guide v0.9.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/inera.css" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="assets/images/inera-thumbnail.png"/>
+<link rel="shortcut icon" href="assets/images/inera-thumbnail.png"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="inera-nav">
+  <a id="inera-logo" data-no-external="true" href="https://www.inera.se">
+    <img height="50" alt="Inera" src="assets/images/inera-logo-header.svg"/>
+  </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Inera EHDS Tjänstekontrakt – FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.9.0 - ci-build
+
+
+
+  <img alt="Sweden flagga" src="../assets/images/swe.svg" height="16" title="Sweden"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">Hem</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Bakgrund<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="workflow.html">Workflow</a></li>
+      <li><a href="logical-models.html">Logiska modeller</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Mappningar<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="mappings.html">Översikt</a></li>
+      <li><a href="contract-versions.html">Tjänstekontraktsversioner</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Patientöversikt</li>
+      <li><a href="mapping-getdiagnosis.html">GetDiagnosis – Diagnoser</a></li>
+      <li><a href="mapping-getalertinformation.html">GetAlertInformation – Uppmärksamhet</a></li>
+      <li><a href="mapping-getmedicationhistory.html">GetMedicationHistory – Läkemedel</a></li>
+      <li><a href="mapping-getvaccinationhistory.html">GetVaccinationHistory – Vaccinationer</a></li>
+      <li><a href="mapping-getfunctionalstatus.html">GetFunctionalStatus – Funktionstillstånd</a></li>
+      <li><a href="mapping-getmaternitymedicalhistory.html">GetMaternityMedicalHistory – Mödravård</a></li>
+      <li><a href="mapping-getcareplans.html">GetCarePlans – Vårdplan</a></li>
+      <li><a href="mapping-getcarecontacts.html">GetCareContacts – Vårdkontakter</a></li>
+      <li><a href="mapping-getcaredocumentation.html">GetCareDocumentation – Anteckningar</a></li>
+      <li><a href="guidance-docbook-narrative.html">&#160;&#160;&#8627; DocBook-mappning</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Laboratorie och diagnostik</li>
+      <li><a href="mapping-getlaboratoryorderoutcome.html">GetLaboratoryOrderOutcome – Provsvar</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Bilddiagnostik</li>
+      <li><a href="mapping-getimagingoutcome.html">GetImagingOutcome – Bilddiagnostik</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Remiss och process</li>
+      <li><a href="mapping-getreferraloutcome.html">GetReferralOutcome – Remisser</a></li>
+      <li><a href="mapping-getrequestactivities.html">GetRequestActivities – Remisstatus</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Tillväxtkurva barn</li>
+      <li><a href="mapping-getobservations.html">GetObservations – Tillväxtkurva</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Logg</li>
+      <li><a href="mapping-getaccesslogforpatient.html">Åtkomstloggar och auditloggning</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="profiles.html">Profiles</a></li>
+      <li><a href="terminology.html">Terminology</a></li>
+      <li><a href="examples.html">Examples</a></li>
+      <li><a href="artifacts.html">All Artifacts</a></li>
+    </ul>
+  </li>
+  <li><a href="search-parameters.html">Sökparametrar</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="mapping-issues.html">Issues &amp; Beslut</a></li>
+  <li><a href="version-history.html">Versionshistorik</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Logical Models</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Inera EHDS Tjänstekontrakt – FHIR Implementation Guide (v0.9.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://fhir.inera.se/ig/ehds-tk/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Logical Models</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#syfte" id="markdown-toc-syfte">Syfte</a></li>
+  <li><a href="#modeller" id="markdown-toc-modeller">Modeller</a></li>
+  <li><a href="#uppbyggnad" id="markdown-toc-uppbyggnad">Hur modellerna är byggda</a></li>
+  <li><a href="#fml" id="markdown-toc-fml">Användning med FML</a></li>
+  <li><a href="#invarianter" id="markdown-toc-invarianter">Invarianter</a></li>
+  <li><a href="#verifiering" id="markdown-toc-verifiering">Verifiering mot TKB</a></li>
+</ul>
+
+</div>
+<p>Denna sida dokumenterar de logiska informationsmodeller som utgör grunden för profilerna i denna IG. De logiska modellerna är en exakt avbildning av svarsmeddelandena i Ineras RIVTA-tjänstekontrakt: samma elementnamn, nästling, ordning, XML-namnrymder och datatyper som i XSD:erna, med kardinaliteter verifierade mot respektive TKB. De kan därför användas både som dokumentation och som källstruktur när en FML-motor (StructureMap) läser RIV-TA-XML direkt.</p>
+
+<hr />
+
+<h3 id="syfte">Syfte</h3>
+
+<p>De logiska modellerna nedan representerar de informationskrav som definieras av respektive tjänstekontrakt i Ineras tjänstekatalog. De tjänar som auktoritativ källa för vilka data som ska utväxlas och utgör grunden för FHIR-profilerna i IG:n.</p>
+
+<hr />
+
+<h3 id="modeller">Modeller</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Logisk modell</th>
+      <th>Tjänstekontrakt</th>
+      <th>FHIR-grupp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMDiagnosis.html">SEEHDSLMDiagnosis</a></td>
+      <td>GetDiagnosis</td>
+      <td>Patientöversikt</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMAlertInformation.html">SEEHDSLMAlertInformation</a></td>
+      <td>GetAlertInformation</td>
+      <td>Patientöversikt</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMMedicationHistory.html">SEEHDSLMMedicationHistory</a></td>
+      <td>GetMedicationHistory</td>
+      <td>Patientöversikt</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMVaccinationHistory.html">SEEHDSLMVaccinationHistory</a></td>
+      <td>GetVaccinationHistory</td>
+      <td>Patientöversikt</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMFunctionalStatus.html">SEEHDSLMFunctionalStatus</a></td>
+      <td>GetFunctionalStatus</td>
+      <td>Patientöversikt</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMMaternityMedicalHistory.html">SEEHDSLMMaternityMedicalHistory</a></td>
+      <td>GetMaternityMedicalHistory</td>
+      <td>Patientöversikt</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMCarePlans.html">SEEHDSLMCarePlans</a></td>
+      <td>GetCarePlans</td>
+      <td>Patientöversikt</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMCareContacts.html">SEEHDSLMCareContacts</a></td>
+      <td>GetCareContacts</td>
+      <td>Patientöversikt</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMCareDocumentation.html">SEEHDSLMCareDocumentation</a></td>
+      <td>GetCareDocumentation</td>
+      <td>Patientöversikt</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMLaboratoryOrderOutcome.html">SEEHDSLMLaboratoryOrderOutcome</a></td>
+      <td>GetLaboratoryOrderOutcome</td>
+      <td>Laboratorie och diagnostik</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMImagingOutcome.html">SEEHDSLMImagingOutcome</a></td>
+      <td>GetImagingOutcome</td>
+      <td>Bilddiagnostik</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMReferralOutcome.html">SEEHDSLMReferralOutcome</a></td>
+      <td>GetReferralOutcome</td>
+      <td>Remiss och process</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMRequestActivities.html">SEEHDSLMRequestActivities</a></td>
+      <td>GetRequestActivities</td>
+      <td>Remiss och process</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMObservations.html">SEEHDSLMObservations</a></td>
+      <td>GetObservations</td>
+      <td>Tillväxtkurva barn</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMAccessLog.html">SEEHDSLMAccessLog</a></td>
+      <td>GetAccessLogForPatient</td>
+      <td>Logg</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="versioner">Övriga aktiva versioner</h4>
+
+<p>Modellerna ovan avser den version som mappningstabellerna utgår från. Övriga aktiva versioner har egna modeller med versionen som suffix, se <a href="contract-versions.html">Tjänstekontraktsversioner</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Logisk modell</th>
+      <th>Tjänstekontrakt och version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMAlertInformationV30.html">SEEHDSLMAlertInformationV30</a></td>
+      <td>GetAlertInformation 3.0 (beta)</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMVaccinationHistoryV10.html">SEEHDSLMVaccinationHistoryV10</a></td>
+      <td>GetVaccinationHistory 1.0</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMCareContactsV20.html">SEEHDSLMCareContactsV20</a></td>
+      <td>GetCareContacts 2.0</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMCareDocumentationV21.html">SEEHDSLMCareDocumentationV21</a></td>
+      <td>GetCareDocumentation 2.1</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMLaboratoryOrderOutcomeV41.html">SEEHDSLMLaboratoryOrderOutcomeV41</a></td>
+      <td>GetLaboratoryOrderOutcome 4.1</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMLaboratoryOrderOutcomeV31.html">SEEHDSLMLaboratoryOrderOutcomeV31</a></td>
+      <td>GetLaboratoryOrderOutcome 3.1</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMReferralOutcomeV31.html">SEEHDSLMReferralOutcomeV31</a></td>
+      <td>GetReferralOutcome 3.1</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMRequestActivitiesV10.html">SEEHDSLMRequestActivitiesV10</a></td>
+      <td>GetRequestActivities 1.0</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMObservationsV12.html">SEEHDSLMObservationsV12</a></td>
+      <td>GetObservations 1.2</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-SEEHDSLMAccessLogV11.html">SEEHDSLMAccessLogV11</a></td>
+      <td>GetAccessLogsForPatient 1.1 (ehr:log:querying)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="uppbyggnad">Hur modellerna är byggda</h3>
+
+<p>Modellerna är genererade från XSD:erna i respektive RIV-TA-domän (bitbucket.org/rivta-domains) och slås ihop med beskrivningar från TKB:n och den tidigare handskrivna dokumentationen.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Egenskap i XSD:n</th>
+      <th>Representation i den logiska modellen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rotelementet, t.ex. <code class="language-plaintext highlighter-rouge">GetDiagnosisResponse</code></td>
+      <td>Modellens rot. Tillägget <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/tools/StructureDefinition/xml-name</code> anger XML-namnet och <code class="language-plaintext highlighter-rouge">elementdefinition-namespace</code> responder-namnrymden</td>
+    </tr>
+    <tr>
+      <td>Elementets namnrymd</td>
+      <td><code class="language-plaintext highlighter-rouge">elementdefinition-namespace</code> på varje element vars namnrymd skiljer sig från rotens. Rotens direkta barn ligger i responder-namnrymden; allt därunder i domänens kärnnamnrymd (eller en <code class="language-plaintext highlighter-rouge">_ext</code>-namnrymd)</td>
+    </tr>
+    <tr>
+      <td>Komplex typ, t.ex. <code class="language-plaintext highlighter-rouge">PatientSummaryHeaderType</code></td>
+      <td><code class="language-plaintext highlighter-rouge">BackboneElement</code> med samma barn i samma ordning</td>
+    </tr>
+    <tr>
+      <td>RIV-TA-datatyp: <code class="language-plaintext highlighter-rouge">IIType</code>, <code class="language-plaintext highlighter-rouge">CVType</code>, <code class="language-plaintext highlighter-rouge">PersonIdType</code>, <code class="language-plaintext highlighter-rouge">PQType</code>, <code class="language-plaintext highlighter-rouge">PQIntervalType</code>, <code class="language-plaintext highlighter-rouge">TimePeriodType</code>, <code class="language-plaintext highlighter-rouge">PartialDateType</code>, <code class="language-plaintext highlighter-rouge">PartialTimeStampType</code></td>
+      <td>Egen logisk modell per namnrymd, t.ex. <code class="language-plaintext highlighter-rouge">SEEHDSRivCVTypeHealthcondDescription2</code>, eftersom datatypens underelement ärver datatypens namnrymd och fälten skiljer sig mellan domänerna</td>
+    </tr>
+    <tr>
+      <td>Enkelt innehåll (<code class="language-plaintext highlighter-rouge">xs:string</code>, <code class="language-plaintext highlighter-rouge">TimeStampType</code>, <code class="language-plaintext highlighter-rouge">xs:boolean</code> …)</td>
+      <td>En omslagstyp (<code class="language-plaintext highlighter-rouge">SEEHDSRivString</code>, <code class="language-plaintext highlighter-rouge">SEEHDSRivTimeStamp</code>, <code class="language-plaintext highlighter-rouge">SEEHDSRivBoolean</code>, <code class="language-plaintext highlighter-rouge">SEEHDSRivInteger</code>, <code class="language-plaintext highlighter-rouge">SEEHDSRivDecimal</code>, <code class="language-plaintext highlighter-rouge">SEEHDSRivDate</code>, <code class="language-plaintext highlighter-rouge">SEEHDSRivDateTime</code>, <code class="language-plaintext highlighter-rouge">SEEHDSRivBase64Binary</code>, <code class="language-plaintext highlighter-rouge">SEEHDSRivAnyURI</code>) vars <code class="language-plaintext highlighter-rouge">value</code> har <code class="language-plaintext highlighter-rouge">representation = xmlText</code>, eftersom RIV-TA lägger värdet som textinnehåll och inte i ett <code class="language-plaintext highlighter-rouge">value</code>-attribut</td>
+    </tr>
+    <tr>
+      <td>Kodlista (<code class="language-plaintext highlighter-rouge">xs:enumeration</code>)</td>
+      <td>Omslagstyp med tillåtna värden i definitionen; där IG:n har en värdemängd binds den på <code class="language-plaintext highlighter-rouge">.value</code></td>
+    </tr>
+    <tr>
+      <td>Elementnamn med understreck eller inledande versal, t.ex. <code class="language-plaintext highlighter-rouge">ivl_pq</code> och <code class="language-plaintext highlighter-rouge">ResultCode</code></td>
+      <td>FHIR-namn i camelCase (<code class="language-plaintext highlighter-rouge">ivlPq</code>, <code class="language-plaintext highlighter-rouge">resultCode</code>) och XML-namnet i <code class="language-plaintext highlighter-rouge">xml-name</code></td>
+    </tr>
+    <tr>
+      <td>Elementnamn som krockar med FHIR:s ärvda element: <code class="language-plaintext highlighter-rouge">id</code>, <code class="language-plaintext highlighter-rouge">extension</code>, <code class="language-plaintext highlighter-rouge">modifierExtension</code></td>
+      <td>FHIR-namnen <code class="language-plaintext highlighter-rouge">rivId</code>, <code class="language-plaintext highlighter-rouge">rivExtension</code> och <code class="language-plaintext highlighter-rouge">rivModifierExtension</code>, med XML-namnet i <code class="language-plaintext highlighter-rouge">xml-name</code>. Mappningssidorna använder XSD-namnen, t.ex. <code class="language-plaintext highlighter-rouge">header.record.id</code> och <code class="language-plaintext highlighter-rouge">id.extension</code></td>
+    </tr>
+    <tr>
+      <td>Rekursion (<code class="language-plaintext highlighter-rouge">result.related</code> i GetLaboratoryOrderOutcome)</td>
+      <td><code class="language-plaintext highlighter-rouge">contentReference</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">xs:any</code> (utökningspunkter)</td>
+      <td>Utelämnas</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Typer som <code class="language-plaintext highlighter-rouge">PatientSummaryHeaderType</code>, <code class="language-plaintext highlighter-rouge">HealthcareProfessionalType</code>, <code class="language-plaintext highlighter-rouge">OrgUnitType</code>, <code class="language-plaintext highlighter-rouge">LegalAuthenticatorType</code> och <code class="language-plaintext highlighter-rouge">ResultType</code> skrivs ut i varje modell, så att mappningssidornas sökvägar (t.ex. <code class="language-plaintext highlighter-rouge">diagnosisHeader.accountableHealthcareProfessional.healthcareProfessionalOrgUnit.orgUnitHSAId</code>) gäller i modellen.</p>
+
+<h3 id="fml">Användning med FML</h3>
+
+<p>En FML-motor baserad på HL7:s Java-verktyg (t.ex. Matchbox eller validatorn) kan läsa svarsmeddelandet som källa när modellen och datatypmodellerna är laddade:</p>
+
+<ul>
+  <li>Källan är själva svarselementet, t.ex. <code class="language-plaintext highlighter-rouge">&lt;GetDiagnosisResponse&gt;</code>. SOAP-kuvertet måste skalas av först.</li>
+  <li>Rotelementet matchas mot modellen via <code class="language-plaintext highlighter-rouge">xml-name</code> och namnrymd.</li>
+  <li>Textinnehåll nås via <code class="language-plaintext highlighter-rouge">.value</code>, t.ex. <code class="language-plaintext highlighter-rouge">src.diagnosis.diagnosisHeader.documentId.value</code>.</li>
+  <li>Tidsstämplar (<code class="language-plaintext highlighter-rouge">SEEHDSRivTimeStamp</code>) är text i formatet ÅÅÅÅMMDDttmmss och konverteras i FML till <code class="language-plaintext highlighter-rouge">dateTime</code> med tidszon enligt <a href="mappings.html#tidszon">GENERAL-001</a>. OID:er och <code class="language-plaintext highlighter-rouge">PersonIdType {id, type}</code> konverteras enligt <a href="mapping-issues.html">GENERAL-002</a> och <a href="mappings.html#patientreferens">GENERAL-006</a>.</li>
+</ul>
+
+<h3 id="invarianter">Invarianter</h3>
+
+<p>En del regler i tjänstekontrakten finns inte i XSD:n utan i TKB:ns text och i schematron-filerna i domänernas testsviter (<code class="language-plaintext highlighter-rouge">test-suite/&lt;kontrakt&gt;/constraints.xml</code>). Regler som gäller ett enskilt meddelandeelement är uttryckta som FHIRPath-invarianter (<code class="language-plaintext highlighter-rouge">Severity: error</code>) på motsvarande element i den logiska modellen. Uttrycken utgår från modellens FHIR-namn, t.ex. <code class="language-plaintext highlighter-rouge">rivId</code> för XML-elementet <code class="language-plaintext highlighter-rouge">id</code>, och textvärden nås via <code class="language-plaintext highlighter-rouge">.value</code>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modell</th>
+      <th>Invariant</th>
+      <th>Element</th>
+      <th>Regel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SEEHDSLMMedicationHistory</td>
+      <td><code class="language-plaintext highlighter-rouge">getmedicationhistory-drug-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">drug</code> (ordination, expediering, administrering)</td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">unstructuredDrugInformation</code>, <code class="language-plaintext highlighter-rouge">merchandise</code>, <code class="language-plaintext highlighter-rouge">drugArticle</code>, <code class="language-plaintext highlighter-rouge">drug</code> och <code class="language-plaintext highlighter-rouge">generics</code> (MED-003)</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getmedicationhistory-npl-or-atc</code></td>
+      <td><code class="language-plaintext highlighter-rouge">drug.drug</code></td>
+      <td>Minst ett av <code class="language-plaintext highlighter-rouge">nplId</code> och <code class="language-plaintext highlighter-rouge">atcCode</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getmedicationhistory-dosage</code></td>
+      <td><code class="language-plaintext highlighter-rouge">drug.dosage</code> (ordination, administrering)</td>
+      <td>Minst ett av <code class="language-plaintext highlighter-rouge">setDosage</code> och <code class="language-plaintext highlighter-rouge">conditionalDosage</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getmedicationhistory-prescriber</code></td>
+      <td><code class="language-plaintext highlighter-rouge">medicationPrescription</code></td>
+      <td><code class="language-plaintext highlighter-rouge">prescriber</code> krävs när <code class="language-plaintext highlighter-rouge">selfMedication</code> är <code class="language-plaintext highlighter-rouge">false</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getmedicationhistory-start-of-treatment</code></td>
+      <td><code class="language-plaintext highlighter-rouge">medicationPrescription</code></td>
+      <td><code class="language-plaintext highlighter-rouge">startOfTreatment</code> krävs när <code class="language-plaintext highlighter-rouge">typeOfPrescription</code> är <code class="language-plaintext highlighter-rouge">I</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getmedicationhistory-administration-time</code></td>
+      <td><code class="language-plaintext highlighter-rouge">administration.administrationTime</code></td>
+      <td>Minst ett av <code class="language-plaintext highlighter-rouge">start</code> och <code class="language-plaintext highlighter-rouge">end</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getmedicationhistory-occasion-dosage</code></td>
+      <td><code class="language-plaintext highlighter-rouge">occasionDosage</code></td>
+      <td><code class="language-plaintext highlighter-rouge">period.value</code> 1–28 och <code class="language-plaintext highlighter-rouge">administration.dayOfPeriod</code> 1–14</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getmedicationhistory-total-amount</code></td>
+      <td><code class="language-plaintext highlighter-rouge">dispensationAuthorization</code></td>
+      <td><code class="language-plaintext highlighter-rouge">totalAmount</code> och <code class="language-plaintext highlighter-rouge">packageUnit</code> anges tillsammans eller inte alls</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getmedicationhistory-referred-type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">relation.referredInformation.type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">originalText</code> är <code class="language-plaintext highlighter-rouge">caa-ga</code> eller <code class="language-plaintext highlighter-rouge">chb-go</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getmedicationhistory-pq-interval</code></td>
+      <td><code class="language-plaintext highlighter-rouge">dose</code>, <code class="language-plaintext highlighter-rouge">treatmentInterval</code></td>
+      <td>Minst ett av <code class="language-plaintext highlighter-rouge">low</code> och <code class="language-plaintext highlighter-rouge">high</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getmedicationhistory-cv-strict</code></td>
+      <td><code class="language-plaintext highlighter-rouge">reason</code>, <code class="language-plaintext highlighter-rouge">articleNumber</code>, <code class="language-plaintext highlighter-rouge">atcCode</code>, <code class="language-plaintext highlighter-rouge">nplId</code>, <code class="language-plaintext highlighter-rouge">nplPackId</code>, <code class="language-plaintext highlighter-rouge">gender</code></td>
+      <td><code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">codeSystem</code> och <code class="language-plaintext highlighter-rouge">displayName</code> anges, inte <code class="language-plaintext highlighter-rouge">originalText</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getmedicationhistory-ii-strict</code></td>
+      <td><code class="language-plaintext highlighter-rouge">receivingPharmacy</code>, <code class="language-plaintext highlighter-rouge">informationOwner.id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">extension</code> anges</td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMAlertInformation</td>
+      <td><code class="language-plaintext highlighter-rouge">getalertinformation-body-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">alertInformationBody</code></td>
+      <td>Exakt en av <code class="language-plaintext highlighter-rouge">hypersensitivity</code>, <code class="language-plaintext highlighter-rouge">seriousDisease</code>, <code class="language-plaintext highlighter-rouge">treatment</code>, <code class="language-plaintext highlighter-rouge">communicableDisease</code>, <code class="language-plaintext highlighter-rouge">restrictionOfCare</code> och <code class="language-plaintext highlighter-rouge">unstructuredAlertInformation</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getalertinformation-substance-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">pharmaceuticalHypersensitivity</code></td>
+      <td>Antingen <code class="language-plaintext highlighter-rouge">atcSubstance</code> eller både <code class="language-plaintext highlighter-rouge">nonATCSubstance</code> och <code class="language-plaintext highlighter-rouge">nonATCSubstanceComment</code></td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMAlertInformationV30</td>
+      <td><code class="language-plaintext highlighter-rouge">getalertinformation3-body-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">body</code></td>
+      <td>Exakt en av de sju typerna av uppmärksamhetsinformation</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getalertinformation3-time-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">time</code> (sex ställen)</td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">timestamp</code> och <code class="language-plaintext highlighter-rouge">timePeriod</code></td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMCareDocumentation, V21</td>
+      <td><code class="language-plaintext highlighter-rouge">getcaredocumentation-body-xor</code>, <code class="language-plaintext highlighter-rouge">getcaredocumentation-multimedia-xor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">body</code>, <code class="language-plaintext highlighter-rouge">multimediaEntry</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">clinicalDocumentNoteText</code> och <code class="language-plaintext highlighter-rouge">multimediaEntry</code>, och av <code class="language-plaintext highlighter-rouge">value</code> och <code class="language-plaintext highlighter-rouge">reference</code></td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMCareDocumentationV21</td>
+      <td><code class="language-plaintext highlighter-rouge">getcaredocumentation21-code-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">clinicalDocumentNote</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">clinicalDocumentNoteCode</code> och <code class="language-plaintext highlighter-rouge">clinicalDocumentTypeCode</code></td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMCarePlans</td>
+      <td><code class="language-plaintext highlighter-rouge">getcareplans-content-xor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">content</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">value</code> och <code class="language-plaintext highlighter-rouge">reference</code></td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMImagingOutcome</td>
+      <td><code class="language-plaintext highlighter-rouge">getimagingoutcome-dicom-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">imageDicomData</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">dicomValue</code> och <code class="language-plaintext highlighter-rouge">dicomReference</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getimagingoutcome-imagedata-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">imageData</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">value</code> och <code class="language-plaintext highlighter-rouge">reference</code></td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMLaboratoryOrderOutcome, V41</td>
+      <td><code class="language-plaintext highlighter-rouge">getlaboratoryorderoutcome-reference-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">result.reference</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">interval</code> och <code class="language-plaintext highlighter-rouge">description</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getlaboratoryorderoutcome-value-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">result.value</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">cv</code>, <code class="language-plaintext highlighter-rouge">pq</code>, <code class="language-plaintext highlighter-rouge">intervalPQ</code> och <code class="language-plaintext highlighter-rouge">st</code></td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMLaboratoryOrderOutcomeV31</td>
+      <td><code class="language-plaintext highlighter-rouge">getlaboratoryorderoutcome31-analysis-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">analysis</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">analysisCode</code> och <code class="language-plaintext highlighter-rouge">analysisText</code></td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMMaternityMedicalHistory</td>
+      <td><code class="language-plaintext highlighter-rouge">getmaternitymedicalhistory-body-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">maternityMedicalRecordBody</code></td>
+      <td>Exakt en av <code class="language-plaintext highlighter-rouge">registrationRecord</code>, <code class="language-plaintext highlighter-rouge">pregnancyCheckupRecord</code> och <code class="language-plaintext highlighter-rouge">postDeliveryRecord</code></td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMReferralOutcome, V31</td>
+      <td><code class="language-plaintext highlighter-rouge">getreferraloutcome-actresult-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">act.actResult</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">value</code> och <code class="language-plaintext highlighter-rouge">reference</code></td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMObservations</td>
+      <td><code class="language-plaintext highlighter-rouge">getobservations-patient-id-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">observationBody.patient</code>, <code class="language-plaintext highlighter-rouge">participation.patient</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">id</code> och <code class="language-plaintext highlighter-rouge">person.id</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getobservations-participation-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">participation</code></td>
+      <td>Exakt en av <code class="language-plaintext highlighter-rouge">healthcareProfessional</code>, <code class="language-plaintext highlighter-rouge">patient</code>, <code class="language-plaintext highlighter-rouge">otherPerson</code>, <code class="language-plaintext highlighter-rouge">locationRole</code>, <code class="language-plaintext highlighter-rouge">resource</code> och <code class="language-plaintext highlighter-rouge">organisation</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getobservations-time-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">observationBody.time</code>, <code class="language-plaintext highlighter-rouge">participation.time</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">ts</code> och <code class="language-plaintext highlighter-rouge">ivl_ts</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getobservations-amount-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">resource.amount</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">pq</code> och <code class="language-plaintext highlighter-rouge">ivl_pq</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getobservations-value-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">observationBody.value</code>, <code class="language-plaintext highlighter-rouge">resourceProperty.value</code></td>
+      <td>Exakt ett av <code class="language-plaintext highlighter-rouge">cv</code>, <code class="language-plaintext highlighter-rouge">pq</code>, <code class="language-plaintext highlighter-rouge">ivl_pq</code>, <code class="language-plaintext highlighter-rouge">ts</code>, <code class="language-plaintext highlighter-rouge">ivl_ts</code>, <code class="language-plaintext highlighter-rouge">st</code> och <code class="language-plaintext highlighter-rouge">int</code></td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMObservationsV12</td>
+      <td><code class="language-plaintext highlighter-rouge">getobservations12-id-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">performerRole</code>, <code class="language-plaintext highlighter-rouge">additionalParticipant</code></td>
+      <td>Högst ett av <code class="language-plaintext highlighter-rouge">id</code> och <code class="language-plaintext highlighter-rouge">person.id</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getobservations12-participant-choice</code></td>
+      <td><code class="language-plaintext highlighter-rouge">additionalParticipant</code></td>
+      <td>Exakt en av <code class="language-plaintext highlighter-rouge">person</code>, <code class="language-plaintext highlighter-rouge">organisation</code>, <code class="language-plaintext highlighter-rouge">device</code> och <code class="language-plaintext highlighter-rouge">location</code></td>
+    </tr>
+    <tr>
+      <td>SEEHDSLMRequestActivitiesV10</td>
+      <td><code class="language-plaintext highlighter-rouge">getrequestactivities1-status-code</code></td>
+      <td><code class="language-plaintext highlighter-rouge">requestActivity</code></td>
+      <td><code class="language-plaintext highlighter-rouge">typeOfRequest</code> är 1, 2, 4 eller 10, och <code class="language-plaintext highlighter-rouge">statusCode</code> är en av de koder som testsviten tillåter för remisstypen (VER-005)</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">getrequestactivities1-request-id</code>, <code class="language-plaintext highlighter-rouge">-issued-by-unit</code>, <code class="language-plaintext highlighter-rouge">-receiving-unit</code></td>
+      <td><code class="language-plaintext highlighter-rouge">requestActivity</code></td>
+      <td>Minst ett av <code class="language-plaintext highlighter-rouge">senderRequestId</code>/<code class="language-plaintext highlighter-rouge">receiverRequestId</code>, och id eller beskrivning för remitterande respektive mottagande enhet</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Följande schematron-regler är inte invarianter i modellerna:</p>
+
+<ul>
+  <li>Regler för datatypen CVType (att <code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">codeSystem</code> och <code class="language-plaintext highlighter-rouge">displayName</code> anges tillsammans och att <code class="language-plaintext highlighter-rouge">originalText</code> utesluter kod), eftersom datatypmodellerna genereras och delas mellan kontrakten. <code class="language-plaintext highlighter-rouge">getmedicationhistory-cv-strict</code> är undantaget, där TKB:n skärper regeln för vissa element.</li>
+  <li>Unika id:n i svaret, att inga element är tomma och kontroller av OID:er och kodvärden mot fasta listor.</li>
+  <li>Regler som rör begäran eller resultatkoden i svaret.</li>
+  <li>Övriga villkorsregler i de andra kontrakten, t.ex. <code class="language-plaintext highlighter-rouge">uterusNote</code> i GetMaternityMedicalHistory och <code class="language-plaintext highlighter-rouge">nullifiedReason</code> i GetVaccinationHistory. De kan läggas till på samma sätt.</li>
+</ul>
+
+<p>Generatorn i <code class="language-plaintext highlighter-rouge">tools/rivta-lm</code> behåller invarianterna och deras <code class="language-plaintext highlighter-rouge">obeys</code>-regler när modellerna genereras om.</p>
+
+<h3 id="verifiering">Verifiering mot TKB</h3>
+
+<p>Varje kardinalitet har jämförts mellan XSD, TKB och den tidigare modellen. TKB:ns tabell "Fältregler" (svar) är källan för begränsningar som är strängare än XSD:n, inklusive N/A (0..0).</p>
+
+<ul>
+  <li><strong>Bekräftade av TKB</strong> (29 element): strängare än XSD:n och oförändrade, t.ex. <code class="language-plaintext highlighter-rouge">documentTitle</code>/<code class="language-plaintext highlighter-rouge">documentTime</code> 0..0 i GetDiagnosis, <code class="language-plaintext highlighter-rouge">result</code> 1..1 i GetDiagnosis och GetAlertInformation, <code class="language-plaintext highlighter-rouge">documentTime</code> 1..1 i GetFunctionalStatus, GetMaternityMedicalHistory och GetReferralOutcome.</li>
+  <li><strong>Nya begränsningar från TKB</strong> (24 element), främst 0..0: <code class="language-plaintext highlighter-rouge">nullified</code>/<code class="language-plaintext highlighter-rouge">nullifiedReason</code> i GetDiagnosis, GetCarePlans, GetMaternityMedicalHistory och GetReferralOutcome; <code class="language-plaintext highlighter-rouge">legalAuthenticatorRoleCode</code> och vårdenhet/vårdgivare under bildtagning och remiss i GetImagingOutcome och GetReferralOutcome; <code class="language-plaintext highlighter-rouge">header.signature.orgUnit</code> i GetLaboratoryOrderOutcome; <code class="language-plaintext highlighter-rouge">documentTime</code> samt vårdenhet/vårdgivare för förskrivare och utvärderare i GetMedicationHistory.</li>
+  <li><strong>Behållna trots att TKB:n anger annat:</strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tjänstekontrakt</th>
+      <th>Element</th>
+      <th>Modell</th>
+      <th>TKB</th>
+      <th>XSD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GetMedicationHistory</td>
+      <td><code class="language-plaintext highlighter-rouge">medicationMedicalRecord.medicationMedicalRecordHeader.documentTitle</code></td>
+      <td>0..0 (avsiktligt undertryckt)</td>
+      <td>0..1</td>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <td>GetCareContacts</td>
+      <td><code class="language-plaintext highlighter-rouge">careContact.careContactHeader.nullified</code>, <code class="language-plaintext highlighter-rouge">nullifiedReason</code></td>
+      <td>0..0</td>
+      <td>saknas i TKB</td>
+      <td>0..1</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>TKB lösare än XSD</strong> – modellen följer XSD:n:</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tjänstekontrakt</th>
+      <th>Element</th>
+      <th>TKB</th>
+      <th>XSD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GetCareDocumentation</td>
+      <td><code class="language-plaintext highlighter-rouge">careDocumentation.header.signature.timestamp</code></td>
+      <td>0..1</td>
+      <td>1..1</td>
+    </tr>
+    <tr>
+      <td>GetMedicationHistory</td>
+      <td><code class="language-plaintext highlighter-rouge">…drug.dosage.conditionalDosage.conditionDescription</code> (två ställen)</td>
+      <td>0..1</td>
+      <td>1..1 (TKB:n hänvisar själv till ett arkitekturbeslut om diskrepansen)</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Stavning:</strong> TKB:n för GetMedicationHistory och GetCarePlans skriver <code class="language-plaintext highlighter-rouge">healthcareProfessionalcareUnitHSAId</code>/<code class="language-plaintext highlighter-rouge">…careGiverHSAId</code> med litet c; XSD:n och modellerna har <code class="language-plaintext highlighter-rouge">healthcareProfessionalCareUnitHSAId</code>. XSD:n stavar <code class="language-plaintext highlighter-rouge">accesssLogs</code> (GetAccessLogsForPatient) och <code class="language-plaintext highlighter-rouge">burnedInaAnnotations</code> (GetImagingOutcome) på det sättet, och modellerna följer XSD:n.</li>
+</ul>
+
+<blockquote>
+  <p><strong>Vägledning för författare:</strong> Modellerna i <code class="language-plaintext highlighter-rouge">input/fsh/logicalmodels/</code> är genererade. Ändringar i struktur görs genom att generera om från XSD:n; beskrivningar kan redigeras direkt.</p>
+</blockquote>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
+          Paket inera.ehds.ehds-tk#0.9.0 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Genererad 
+  <span title="2026-11-16 16:17:00 +0000">
+    2026-11-16
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Länkar: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Innehållsförteckning</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-rapport</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

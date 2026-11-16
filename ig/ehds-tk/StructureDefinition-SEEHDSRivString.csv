@@ -1,0 +1,5 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"SEEHDSRivString","SEEHDSRivString","","","",0,*,"","","","null {[]} {[]}
+","RIV-TA text","Textinnehåll i ett RIV-TA-element av typen xs:string eller en strängbaserad typ (t.ex. HSAIdType, kodlistor). Elementets värde ligger som textinnehåll i XML-elementet (representation xmlText).","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"SEEHDSRivString.value","SEEHDSRivString.value","","","",1,1,"","","","string {[]} {[]}
+","Elementets textinnehåll","Elementets textinnehåll","","","","","","","","","",,,,,"",,,,"SEEHDSRivString.value",1,1,"",""

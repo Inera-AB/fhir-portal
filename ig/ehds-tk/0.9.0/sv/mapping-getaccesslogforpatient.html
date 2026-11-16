@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="sv" xmlns="http://www.w3.org/1999/xhtml" lang="sv" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Åtkomstloggar – patientåtkomst och auditloggning - Inera EHDS Tjänstekontrakt – FHIR Implementation Guide v0.9.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/inera.css" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="assets/images/inera-thumbnail.png"/>
+<link rel="shortcut icon" href="assets/images/inera-thumbnail.png"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"21"}
+    h3,h4,h5,h6{--heading-prefix:"21"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="inera-nav">
+  <a id="inera-logo" data-no-external="true" href="https://www.inera.se">
+    <img height="50" alt="Inera" src="assets/images/inera-logo-header.svg"/>
+  </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Inera EHDS Tjänstekontrakt – FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.9.0 - ci-build
+
+
+
+  <img alt="Sweden flagga" src="../assets/images/swe.svg" height="16" title="Sweden"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">Hem</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Bakgrund<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="workflow.html">Workflow</a></li>
+      <li><a href="logical-models.html">Logiska modeller</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Mappningar<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="mappings.html">Översikt</a></li>
+      <li><a href="contract-versions.html">Tjänstekontraktsversioner</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Patientöversikt</li>
+      <li><a href="mapping-getdiagnosis.html">GetDiagnosis – Diagnoser</a></li>
+      <li><a href="mapping-getalertinformation.html">GetAlertInformation – Uppmärksamhet</a></li>
+      <li><a href="mapping-getmedicationhistory.html">GetMedicationHistory – Läkemedel</a></li>
+      <li><a href="mapping-getvaccinationhistory.html">GetVaccinationHistory – Vaccinationer</a></li>
+      <li><a href="mapping-getfunctionalstatus.html">GetFunctionalStatus – Funktionstillstånd</a></li>
+      <li><a href="mapping-getmaternitymedicalhistory.html">GetMaternityMedicalHistory – Mödravård</a></li>
+      <li><a href="mapping-getcareplans.html">GetCarePlans – Vårdplan</a></li>
+      <li><a href="mapping-getcarecontacts.html">GetCareContacts – Vårdkontakter</a></li>
+      <li><a href="mapping-getcaredocumentation.html">GetCareDocumentation – Anteckningar</a></li>
+      <li><a href="guidance-docbook-narrative.html">&#160;&#160;&#8627; DocBook-mappning</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Laboratorie och diagnostik</li>
+      <li><a href="mapping-getlaboratoryorderoutcome.html">GetLaboratoryOrderOutcome – Provsvar</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Bilddiagnostik</li>
+      <li><a href="mapping-getimagingoutcome.html">GetImagingOutcome – Bilddiagnostik</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Remiss och process</li>
+      <li><a href="mapping-getreferraloutcome.html">GetReferralOutcome – Remisser</a></li>
+      <li><a href="mapping-getrequestactivities.html">GetRequestActivities – Remisstatus</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Tillväxtkurva barn</li>
+      <li><a href="mapping-getobservations.html">GetObservations – Tillväxtkurva</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Logg</li>
+      <li><a href="mapping-getaccesslogforpatient.html">Åtkomstloggar och auditloggning</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="profiles.html">Profiles</a></li>
+      <li><a href="terminology.html">Terminology</a></li>
+      <li><a href="examples.html">Examples</a></li>
+      <li><a href="artifacts.html">All Artifacts</a></li>
+    </ul>
+  </li>
+  <li><a href="search-parameters.html">Sökparametrar</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="mapping-issues.html">Issues &amp; Beslut</a></li>
+  <li><a href="version-history.html">Versionshistorik</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Åtkomstloggar – patientåtkomst och auditloggning</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Inera EHDS Tjänstekontrakt – FHIR Implementation Guide (v0.9.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a data-no-external="true" href="https://fhir.inera.se/ig/ehds-tk/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Åtkomstloggar – patientåtkomst och auditloggning</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#patientatkomst" id="markdown-toc-patientatkomst">Patientens åtkomst till loggar via API:et</a></li>
+  <li><a href="#loggar-som-maste-skapas" id="markdown-toc-loggar-som-maste-skapas">Loggar som måste skapas när API:et nyttjas</a></li>
+  <li><a href="#getaccesslogforpatient" id="markdown-toc-getaccesslogforpatient">Läsning av källsystemens åtkomstloggar – GetAccessLogForPatient</a></li>
+  <li><a href="#öppna-frågor" id="markdown-toc-öppna-frågor">Öppna frågor</a></li>
+</ul>
+
+</div>
+<p><strong>Gäller:</strong> EHDS-bryggor och andra FHIR-API:er som lämnar ut patientdata från RIVTA-tjänstekontrakten i denna IG<br />
+<strong>FHIR-resurs:</strong> <code class="language-plaintext highlighter-rouge">AuditEvent</code> (FHIR R4)<br />
+<strong>Profiler:</strong></p>
+<ul>
+  <li><a href="StructureDefinition-SEEHDSAuditEventReadAccessLog.html">SEEHDSAuditEventReadAccessLog</a> – läsning av källsystemens åtkomstloggar (GetAccessLogForPatient)</li>
+  <li><a href="StructureDefinition-SEEHDSAuditEventPatientQuery.html">SEEHDSAuditEventPatientQuery</a> – loggpost som skapas vid sökning och träfflista (bygger på IHE BALP PatientQuery)</li>
+  <li><a href="StructureDefinition-SEEHDSAuditEventPatientRead.html">SEEHDSAuditEventPatientRead</a> – loggpost som skapas vid innehållshämtning (bygger på IHE BALP PatientRead)</li>
+</ul>
+
+<p><strong>IHE-profiler:</strong> mXDE med basprofilerna MHD, QEDm och ATNA/BALP</p>
+
+<hr />
+
+<h3 id="patientatkomst">Patientens åtkomst till loggar via API:et</h3>
+
+<p>EHDS ger patienten rätt att få veta vem som har tagit del av patientens elektroniska
+patientuppgifter. I ett EHDS-kompatibelt FHIR-API tillhandahålls därför åtkomstloggar till
+patienten som en del av API:et, på samma sätt som övriga patientuppgifter. Patienten (eller en
+app som agerar för patienten, t.ex. 1177 Journal) hämtar loggarna som <code class="language-plaintext highlighter-rouge">AuditEvent</code>-resurser:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/AuditEvent?patient.identifier=http://electronichealth.se/identifier/personnummer|191212121212&amp;date=ge2026-01-01
+</code></pre></div></div>
+
+<p>Sökningen motsvarar ATNA ITI-81 Retrieve ATNA Audit Event. Se även
+<a href="search-parameters.html">Sökparametrar</a> för filtrering på datum och vårdgivare.</p>
+
+<p>En fullständig bild av vem som har tagit del av patientens uppgifter består av två delar:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Del</th>
+      <th>Var loggarna skapas</th>
+      <th>Hur de når patienten</th>
+      <th>Profil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Källsystemens åtkomstloggar</strong></td>
+      <td>I journalsystemen, när vårdpersonal läser journalen direkt i källsystemet</td>
+      <td>Hämtas via RIVTA-tjänstekontraktet GetAccessLogForPatient och mappas till <code class="language-plaintext highlighter-rouge">AuditEvent</code></td>
+      <td><a href="StructureDefinition-SEEHDSAuditEventReadAccessLog.html">SEEHDSAuditEventReadAccessLog</a>, se <a href="#getaccesslogforpatient">Läsning av källsystemens åtkomstloggar</a></td>
+    </tr>
+    <tr>
+      <td><strong>API:ets egna loggposter</strong></td>
+      <td>I FHIR-API:et (t.ex. bryggan), när patientdata lämnas ut via API:et</td>
+      <td>Lagras i ett Audit Record Repository och lämnas ut via <code class="language-plaintext highlighter-rouge">GET [base]/AuditEvent</code></td>
+      <td><a href="StructureDefinition-SEEHDSAuditEventPatientQuery.html">SEEHDSAuditEventPatientQuery</a>, <a href="StructureDefinition-SEEHDSAuditEventPatientRead.html">SEEHDSAuditEventPatientRead</a>, se <a href="#loggar-som-maste-skapas">Loggar som måste skapas</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Källsystemens loggar täcker inte utlämningar som sker via API:et. Om API:et inte skapar egna
+loggposter kan patienten alltså inte se att uppgifterna lämnats ut den vägen. Därför ställs
+kraven i nästa avsnitt.</p>
+
+<p>Patientens egen hämtning av loggar är också en utlämning av patientdata. Den ska loggas på samma
+sätt som andra utlämningar, med syftet <code class="language-plaintext highlighter-rouge">PATRQT</code>.</p>
+
+<hr />
+
+<h3 id="loggar-som-maste-skapas">Loggar som måste skapas när API:et nyttjas</h3>
+
+<p><strong>Dessa loggar måste skapas när detta API nyttjas för att kunna stödja patientåtkomsten till
+loggar.</strong> Varje gång API:et lämnar ut patientdata ska det skapa en loggpost som patienten
+senare kan ta del av enligt <a href="#patientatkomst">föregående avsnitt</a>.</p>
+
+<h4 id="antaganden">Antaganden</h4>
+
+<p>EURIDICE hänvisar till IHE:s profiler för hur loggningen ska realiseras tekniskt. Denna IG gör
+följande antaganden:</p>
+
+<ol>
+  <li><strong>Kravnivån är klinisk åtkomstloggning.</strong> För FHIR-bryggor och liknande API:er motsvarar
+kraven IHE <strong>mXDE</strong> (Mobile Cross-Enterprise Document Data Element Extraction) och dess
+basprofiler.</li>
+  <li>
+    <p><strong>mXDE kombinerar tre förmågor:</strong></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Profil</th>
+          <th>Förmåga</th>
+          <th>Relevans för API:et</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>MHD</strong> (Mobile access to Health Documents)</td>
+          <td>Dokumentsökning och dokumenthämtning</td>
+          <td><code class="language-plaintext highlighter-rouge">DocumentReference</code>-sökning och hämtning av dokumentinnehåll, t.ex. <a href="mapping-getcaredocumentation.html">GetCareDocumentation</a></td>
+        </tr>
+        <tr>
+          <td><strong>QEDm</strong> (Query for Existing Data for Mobile)</td>
+          <td>Sökning i strukturerad data</td>
+          <td>Sökning efter <code class="language-plaintext highlighter-rouge">Condition</code>, <code class="language-plaintext highlighter-rouge">AllergyIntolerance</code>, <code class="language-plaintext highlighter-rouge">MedicationStatement</code>, <code class="language-plaintext highlighter-rouge">Immunization</code>, <code class="language-plaintext highlighter-rouge">Observation</code>, <code class="language-plaintext highlighter-rouge">Encounter</code> m.fl.</td>
+        </tr>
+        <tr>
+          <td><strong>ATNA / BALP</strong> (Audit Trail and Node Authentication / Basic Audit Log Patterns)</td>
+          <td>Audit-infrastruktur och FHIR-nativa <code class="language-plaintext highlighter-rouge">AuditEvent</code>-mönster</td>
+          <td>Hur varje utlämning loggas och vart loggposterna skickas</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><strong>Varje utlämning av patientdata ska generera ett <code class="language-plaintext highlighter-rouge">AuditEvent</code>.</strong> Det gäller:
+    <ul>
+      <li><strong>sökning</strong> – en fråga om en patients uppgifter tas emot,</li>
+      <li><strong>träfflista</strong> – resultatet av frågan lämnas ut,</li>
+      <li><strong>innehållshämtning</strong> (framtida) – innehållet i ett enskilt dokument eller en enskild
+resurs hämtas.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Varje <code class="language-plaintext highlighter-rouge">AuditEvent</code> ska fånga:</strong></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Fråga</th>
+          <th>Innehåll</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Vem</strong></td>
+          <td>Användaren, applikationen (klienten) och källsystemet/noden</td>
+        </tr>
+        <tr>
+          <td><strong>Varför</strong></td>
+          <td>Syftet med åtkomsten (purpose of use)</td>
+        </tr>
+        <tr>
+          <td><strong>Vilken patient</strong></td>
+          <td>Patientens identitet (personnummer eller samordningsnummer)</td>
+        </tr>
+        <tr>
+          <td><strong>Resultat</strong></td>
+          <td>Om utlämningen lyckades eller nekades/misslyckades</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<h4 id="händelser-och-profiler">Händelser och profiler</h4>
+
+<p>En <code class="language-plaintext highlighter-rouge">AuditEvent</code> skapas per FHIR-interaktion som lämnar ut, eller försöker lämna ut,
+patientdata.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Händelse</th>
+      <th>FHIR-interaktion</th>
+      <th>IHE-transaktion</th>
+      <th>Profil</th>
+      <th><code class="language-plaintext highlighter-rouge">type</code></th>
+      <th><code class="language-plaintext highlighter-rouge">subtype</code></th>
+      <th><code class="language-plaintext highlighter-rouge">action</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sökning + träfflista, dokument</td>
+      <td><code class="language-plaintext highlighter-rouge">GET [base]/DocumentReference?patient=…</code></td>
+      <td>MHD ITI-67 Find Document References</td>
+      <td><a href="StructureDefinition-SEEHDSAuditEventPatientQuery.html">SEEHDSAuditEventPatientQuery</a></td>
+      <td><code class="language-plaintext highlighter-rouge">audit-event-type#rest</code></td>
+      <td><code class="language-plaintext highlighter-rouge">restful-interaction#search-type</code> och <code class="language-plaintext highlighter-rouge">urn:ihe:event-type-code#ITI-67</code></td>
+      <td><code class="language-plaintext highlighter-rouge">E</code></td>
+    </tr>
+    <tr>
+      <td>Sökning + träfflista, strukturerad data</td>
+      <td><code class="language-plaintext highlighter-rouge">GET [base]/Condition?patient=…</code> m.fl.</td>
+      <td>QEDm PCC-44 Mobile Query Existing Data</td>
+      <td><a href="StructureDefinition-SEEHDSAuditEventPatientQuery.html">SEEHDSAuditEventPatientQuery</a></td>
+      <td><code class="language-plaintext highlighter-rouge">audit-event-type#rest</code></td>
+      <td><code class="language-plaintext highlighter-rouge">restful-interaction#search-type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">E</code></td>
+    </tr>
+    <tr>
+      <td>Patientens hämtning av åtkomstloggar</td>
+      <td><code class="language-plaintext highlighter-rouge">GET [base]/AuditEvent?patient=…</code></td>
+      <td>ATNA ITI-81 Retrieve ATNA Audit Event</td>
+      <td><a href="StructureDefinition-SEEHDSAuditEventPatientQuery.html">SEEHDSAuditEventPatientQuery</a></td>
+      <td><code class="language-plaintext highlighter-rouge">audit-event-type#rest</code></td>
+      <td><code class="language-plaintext highlighter-rouge">restful-interaction#search-type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">E</code></td>
+    </tr>
+    <tr>
+      <td>Läsning av enskild resurs (framtida)</td>
+      <td><code class="language-plaintext highlighter-rouge">GET [base]/[typ]/[id]</code></td>
+      <td>–</td>
+      <td><a href="StructureDefinition-SEEHDSAuditEventPatientRead.html">SEEHDSAuditEventPatientRead</a></td>
+      <td><code class="language-plaintext highlighter-rouge">audit-event-type#rest</code></td>
+      <td><code class="language-plaintext highlighter-rouge">restful-interaction#read</code></td>
+      <td><code class="language-plaintext highlighter-rouge">R</code></td>
+    </tr>
+    <tr>
+      <td>Innehållshämtning, dokument (framtida)</td>
+      <td><code class="language-plaintext highlighter-rouge">GET</code> av <code class="language-plaintext highlighter-rouge">DocumentReference.content.attachment.url</code></td>
+      <td>MHD ITI-68 Retrieve Document</td>
+      <td><a href="StructureDefinition-SEEHDSAuditEventPatientRead.html">SEEHDSAuditEventPatientRead</a></td>
+      <td><code class="language-plaintext highlighter-rouge">audit-event-type#rest</code></td>
+      <td><code class="language-plaintext highlighter-rouge">restful-interaction#read</code> och <code class="language-plaintext highlighter-rouge">urn:ihe:event-type-code#ITI-68</code></td>
+      <td><code class="language-plaintext highlighter-rouge">R</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Kodsystem: <code class="language-plaintext highlighter-rouge">audit-event-type</code> = <code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/audit-event-type</code>,
+<code class="language-plaintext highlighter-rouge">restful-interaction</code> = <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/restful-interaction</code>.</p>
+
+<p>Sökning och träfflista loggas i <strong>samma</strong> <code class="language-plaintext highlighter-rouge">AuditEvent</code>. Frågan registreras som en
+query-entity och de resurser som lämnades ut registreras som egna entities (se
+<a href="#trafflistan">Träfflistan</a>).</p>
+
+<h4 id="vad-inera-profilerna-lägger-till-utöver-balp">Vad Inera-profilerna lägger till utöver BALP</h4>
+
+<p>Profilerna ärver från IHE BALP (<code class="language-plaintext highlighter-rouge">ihe.iti.balp</code>) och skärper följande:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Krav</th>
+      <th>BALP</th>
+      <th>Inera-profilerna</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Användaragent (<code class="language-plaintext highlighter-rouge">agent[user]</code>)</td>
+      <td>0..1</td>
+      <td>1..1, med identifier (HSA-id eller personnummer)</td>
+    </tr>
+    <tr>
+      <td>Syfte (<code class="language-plaintext highlighter-rouge">purposeOfEvent</code>, <code class="language-plaintext highlighter-rouge">agent[user].purposeOfUse</code>)</td>
+      <td>Valfritt</td>
+      <td>Obligatoriskt</td>
+    </tr>
+    <tr>
+      <td>Källsystem/vårdgivare</td>
+      <td>–</td>
+      <td>Ny slice <code class="language-plaintext highlighter-rouge">agent[custodian]</code>, en per källsystem som bidrog</td>
+    </tr>
+    <tr>
+      <td>Loggkälla (<code class="language-plaintext highlighter-rouge">source.observer</code>)</td>
+      <td>Valfri typ</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Device)</code> – bryggan</td>
+    </tr>
+    <tr>
+      <td>Patient (<code class="language-plaintext highlighter-rouge">entity[patient].what</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Patient)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(SEEHDSPatient)</code></td>
+    </tr>
+    <tr>
+      <td>Träfflista</td>
+      <td>Antal och innehåll registreras inte</td>
+      <td>Varje utlämnad resurs registreras som entity (PatientQuery)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="vem--agenter">Vem – agenter</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Agent</th>
+      <th><code class="language-plaintext highlighter-rouge">agent.type</code></th>
+      <th><code class="language-plaintext highlighter-rouge">agent.who</code></th>
+      <th><code class="language-plaintext highlighter-rouge">requestor</code></th>
+      <th>Övrigt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Användare</strong> (<code class="language-plaintext highlighter-rouge">agent[user]</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">v3-ParticipationType#IRCP</code> "information recipient"</td>
+      <td>Identifier med användarens HSA-id (<code class="language-plaintext highlighter-rouge">urn:oid:1.2.752.29.4.19</code>); för patienten själv personnummer</td>
+      <td><code class="language-plaintext highlighter-rouge">true</code></td>
+      <td><code class="language-plaintext highlighter-rouge">role</code>: befattning/roll om den finns. <code class="language-plaintext highlighter-rouge">purposeOfUse</code>: se nedan</td>
+    </tr>
+    <tr>
+      <td><strong>Applikation</strong> (<code class="language-plaintext highlighter-rouge">agent[client]</code>)</td>
+      <td>PatientQuery: <code class="language-plaintext highlighter-rouge">DCM#110153</code> "Source Role ID"; PatientRead: <code class="language-plaintext highlighter-rouge">DCM#110152</code> "Destination Role ID"</td>
+      <td>Identifier för klientapplikationen (t.ex. OAuth <code class="language-plaintext highlighter-rouge">client_id</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">false</code></td>
+      <td><code class="language-plaintext highlighter-rouge">network</code>: klientens adress (obligatorisk i BALP)</td>
+    </tr>
+    <tr>
+      <td><strong>API:et/bryggan</strong> (<code class="language-plaintext highlighter-rouge">agent[server]</code>)</td>
+      <td>PatientQuery: <code class="language-plaintext highlighter-rouge">DCM#110152</code>; PatientRead: <code class="language-plaintext highlighter-rouge">DCM#110153</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(Device)</code> eller identifier för bryggan</td>
+      <td><code class="language-plaintext highlighter-rouge">false</code></td>
+      <td><code class="language-plaintext highlighter-rouge">network</code>: serverns adress (obligatorisk i BALP)</td>
+    </tr>
+    <tr>
+      <td><strong>Källsystem</strong> (<code class="language-plaintext highlighter-rouge">agent[custodian]</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">v3-ParticipationType#CST</code> "custodian"</td>
+      <td>Identifier med källsystemets eller vårdgivarens HSA-id</td>
+      <td><code class="language-plaintext highlighter-rouge">false</code></td>
+      <td>En agent per källsystem, se <a href="#kallsystem-och-noder">Källsystem</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Att klient och server har olika DICOM-roller för sökning respektive läsning följer BALP.</p>
+
+<p>När åtkomsttoken är en OAuth-token eller SAML-assertion följs BALP:s mönster för
+tokenanvändning: uppgifter ur token (t.ex. subjekt, <code class="language-plaintext highlighter-rouge">client_id</code>, organisation, syfte) förs
+över till användar- och applikationsagenterna.</p>
+
+<h4 id="vilken-patient--entitypatient">Vilken patient – entity[patient]</h4>
+
+<p>FHIR R4 saknar <code class="language-plaintext highlighter-rouge">AuditEvent.patient</code>. Patienten anges med BALP:s entity-mönster:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Värde</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity.type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">audit-entity-type#1</code> "Person"</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity.role</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object-role#1</code> "Patient"</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity.what</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Reference(SEEHDSPatient)</code> med <code class="language-plaintext highlighter-rouge">identifier</code> = personnummer eller samordningsnummer</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Varje <code class="language-plaintext highlighter-rouge">AuditEvent</code> gäller exakt en patient. Om en sökning ger träffar för flera patienter skapas
+en <code class="language-plaintext highlighter-rouge">AuditEvent</code> per patient, enligt BALP.</p>
+
+<h4 id="frågan--entityquery">Frågan – entity[query]</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Värde</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity.type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">audit-entity-type#2</code> "System Object"</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity.role</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object-role#24</code> "Query"</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity.query</code></td>
+      <td>Den råa frågesträngen, base64-kodad</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity.description</code></td>
+      <td>Valfritt: den tvättade frågesträngen i klartext</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="trafflistan">Träfflistan</h4>
+
+<p>Träfflistan är en utlämning i sig. Varje resurs som lämnades ut registreras som en entity i
+samma <code class="language-plaintext highlighter-rouge">AuditEvent</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Värde</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity.type</code></td>
+      <td>Resurstypen, t.ex. <code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/resource-types#Condition</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity.role</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object-role#4</code> "Domain Resource"</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity.what</code></td>
+      <td>Referens till den utlämnade resursen (<code class="language-plaintext highlighter-rouge">[typ]/[id]</code>), eller logisk referens via identifier</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Resurser som filtrerades bort före utlämning, till exempel på grund av spärr eller
+<code class="language-plaintext highlighter-rouge">approvedForPatient = false</code>, registreras <strong>inte</strong>.</p>
+
+<h4 id="syfte-purpose-of-use">Syfte (purpose of use)</h4>
+
+<p>Syftet anges i <code class="language-plaintext highlighter-rouge">AuditEvent.purposeOfEvent</code> och i <code class="language-plaintext highlighter-rouge">agent[user].purposeOfUse</code>, med koder från
+<code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/v3-ActReason</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Situation</th>
+      <th>Kod</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Vård och behandling inom vårdrelation (PDL)</td>
+      <td><code class="language-plaintext highlighter-rouge">TREAT</code></td>
+    </tr>
+    <tr>
+      <td>Nödåtkomst (nödöppning)</td>
+      <td><code class="language-plaintext highlighter-rouge">ETREAT</code></td>
+    </tr>
+    <tr>
+      <td>Patientens egen åtkomst, t.ex. via 1177 Journal</td>
+      <td><code class="language-plaintext highlighter-rouge">PATRQT</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Syftet ska komma från anropet (t.ex. åtkomsttokenens claims). Om syftet saknas i ett anrop som
+kräver ett syfte ska utlämningen nekas och loggas (se nedan).</p>
+
+<h4 id="resultat-outcome">Resultat (outcome)</h4>
+
+<p>Inera-profilerna, liksom BALP, beskriver <strong>lyckade</strong> utlämningar (<code class="language-plaintext highlighter-rouge">outcome = 0</code>, även med noll
+träffar). Nekade och misslyckade försök ska också loggas. De loggas med samma struktur men utan
+<code class="language-plaintext highlighter-rouge">meta.profile</code> till profilerna, med ett <code class="language-plaintext highlighter-rouge">OperationOutcome</code> till klienten enligt FHIR:s mönster
+för nekad åtkomst:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Situation</th>
+      <th><code class="language-plaintext highlighter-rouge">outcome</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Utlämning genomförd</td>
+      <td><code class="language-plaintext highlighter-rouge">0</code> "Success"</td>
+    </tr>
+    <tr>
+      <td>Utlämning nekad, t.ex. saknad behörighet, saknat syfte eller spärr på hela svaret</td>
+      <td><code class="language-plaintext highlighter-rouge">4</code> "Minor failure"</td>
+    </tr>
+    <tr>
+      <td>Fel i källsystem eller underliggande RIVTA-anrop</td>
+      <td><code class="language-plaintext highlighter-rouge">8</code> "Serious failure"</td>
+    </tr>
+    <tr>
+      <td>Fel i API:et/bryggan</td>
+      <td><code class="language-plaintext highlighter-rouge">12</code> "Major failure"</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">outcomeDesc</code> får inte avslöja bortfiltrerad eller spärrad information.</p>
+
+<h4 id="kallsystem-och-noder">Källsystem och noder</h4>
+
+<p>En utlämning från bryggan bygger på ett eller flera RIVTA-anrop mot källsystem. För
+spårbarhet hela vägen tillbaka till källan:</p>
+
+<ul>
+  <li>Bryggan registreras som <code class="language-plaintext highlighter-rouge">source.observer</code> och som <code class="language-plaintext highlighter-rouge">agent[server]</code>.</li>
+  <li>Varje källsystem (eller vårdgivare) som bidrog till svaret registreras som <code class="language-plaintext highlighter-rouge">agent[custodian]</code>,
+med samma HSA-id som <code class="language-plaintext highlighter-rouge">Provenance.agent[custodian]</code> för de utlämnade resurserna.</li>
+  <li>RIVTA-anropets <code class="language-plaintext highlighter-rouge">logId</code> (<code class="language-plaintext highlighter-rouge">result.logId</code>, där det finns) kan anges som extra identifier på
+<code class="language-plaintext highlighter-rouge">agent[custodian]</code>, så att API:ets loggpost kan kopplas till källsystemets egen loggpost.</li>
+</ul>
+
+<h4 id="lagring-atna">Lagring (ATNA)</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">AuditEvent</code> skickas till ett <strong>Audit Record Repository</strong> enligt ATNA, med FHIR-överföring
+(ITI-20 Record Audit Event, FHIR Feed) eller ett likvärdigt säkert flöde.</li>
+  <li>Loggposter får inte ändras eller raderas av den som utför åtkomsten och ska bevaras enligt
+gällande krav (t.ex. patientdatalagen).</li>
+  <li>Loggposterna innehåller inte själva patientdatat, bara referenser till det som lämnades ut.</li>
+  <li>Loggposterna lämnas ut till patienten enligt <a href="#patientatkomst">Patientens åtkomst till loggar</a>.</li>
+</ul>
+
+<h4 id="exempel--sökning-efter-diagnoser">Exempel – sökning efter diagnoser</h4>
+
+<p>En användare i vården söker aktiva diagnoser för en patient via QEDm. Två <code class="language-plaintext highlighter-rouge">Condition</code> lämnas ut
+från ett källsystem.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AuditEvent"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSAuditEventPatientQuery"</span><span class="p">]</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/audit-event-type"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rest"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Restful Operation"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"subtype"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/restful-interaction"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"search-type"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"search type"</span><span class="w"> </span><span class="p">}],</span><span class="w">
+  </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"E"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"recorded"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-01T10:15:00+02:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"outcome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"purposeOfEvent"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-ActReason"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TREAT"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}],</span><span class="w">
+  </span><span class="nl">"agent"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-ParticipationType"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IRCP"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"information recipient"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"who"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:oid:1.2.752.29.4.19"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SE2321000016-ABC1"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"requestor"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"purposeOfUse"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-ActReason"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TREAT"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://dicom.nema.org/resources/ontology/DCM"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"110153"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Source Role ID"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"who"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:ietf:rfc:3986"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:7f1c2a64-1e0b-4c55-9d36-2b1a1f2c9e10"</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Journalapp"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"requestor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"network"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.0.0.15"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://dicom.nema.org/resources/ontology/DCM"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"110152"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Destination Role ID"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"who"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Device/ehds-brygga"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"requestor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"network"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ehds-brygga.example.se"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-ParticipationType"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CST"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"custodian"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"who"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:oid:1.2.752.29.4.19"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SE2321000016-4HK5"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"requestor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"observer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Device/ehds-brygga"</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/security-source-type"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="w"> </span><span class="p">}]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"what"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://electronichealth.se/identifier/personnummer"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"191212121212"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/audit-entity-type"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/object-role"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/audit-entity-type"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/object-role"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"query"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Q29uZGl0aW9uP3BhdGllbnQ9MTkxMjEyMTIxMjEyJmNsaW5pY2FsLXN0YXR1cz1hY3RpdmU="</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"what"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Condition/diag-1"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/resource-types"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Condition"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/object-role"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"what"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Condition/diag-2"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/resource-types"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Condition"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/object-role"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<hr />
+
+<h3 id="getaccesslogforpatient">Läsning av källsystemens åtkomstloggar – GetAccessLogForPatient</h3>
+
+<p><strong>Tjänstekontrakt:</strong> <code class="language-plaintext highlighter-rouge">informationsecurity:auditing:log</code> GetAccessLogsForPatient v2.0 och <code class="language-plaintext highlighter-rouge">ehr:log:querying</code> GetAccessLogsForPatient v1.1<br />
+<strong>FHIR-profil:</strong> <a href="StructureDefinition-SEEHDSAuditEventReadAccessLog.html">SEEHDSAuditEventReadAccessLog</a><br />
+<strong>Logiska modeller:</strong> <a href="StructureDefinition-SEEHDSLMAccessLog.html">SEEHDSLMAccessLog</a> (v2.0) | <a href="StructureDefinition-SEEHDSLMAccessLogV11.html">SEEHDSLMAccessLogV11</a> (v1.1, se <a href="#getaccesslogforpatient-1-1">Övriga aktiva versioner</a>)<br />
+<strong>Krävs för NPÖ:</strong> Nej | <strong>Krävs för 1177 Journal:</strong> Ja (v1.1, 2.0)</p>
+
+<p>GetAccessLogForPatient används för att lämna ut källsystemens befintliga åtkomstloggar till
+patienten. Varje loggpost mappas till en <code class="language-plaintext highlighter-rouge">AuditEvent</code> enligt
+SEEHDSAuditEventReadAccessLog. Profilen används bara för att <strong>läsa</strong> loggar. Den används
+inte för de loggposter API:et själv skapar (se <a href="#loggar-som-maste-skapas">Loggar som måste skapas</a>).</p>
+
+<p>Svaret <code class="language-plaintext highlighter-rouge">GetAccessLogsForPatientResponse</code> innehåller ett <code class="language-plaintext highlighter-rouge">accessLogsResult</code> med rapportstatus (<code class="language-plaintext highlighter-rouge">reportResult</code>) och en lista med loggposter (<code class="language-plaintext highlighter-rouge">accesssLogs.accessLog</code>). Elementnamnet <code class="language-plaintext highlighter-rouge">accesssLogs</code> stavas med tre s i XSD:n och måste användas så i XML:en. Loggposten har ingen patientidentitet, ingen åtkomsttyp och inget utfall: patienten är den som efterfrågades i begäran, och övriga AuditEvent-fält får fasta värden enligt profilen. Strukturen följer <a href="StructureDefinition-SEEHDSLMAccessLog.html">SEEHDSLMAccessLog</a>, som är genererad från XSD:n och verifierad mot TKB:n.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>RIVTA-element</th>
+      <th>Kard.</th>
+      <th>FHIR-element</th>
+      <th>Kommentar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>(begärans <code class="language-plaintext highlighter-rouge">patientId</code>)</td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.entity[patient].what</code></td>
+      <td>SEEHDSPatient för den efterfrågade patienten, entity-mönstret (<code class="language-plaintext highlighter-rouge">entity.role = 1</code>), se LOG-001</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.accesssLogs.accessLog.accessDate</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.recorded</code></td>
+      <td>Tidpunkt för åtkomst (xs:dateTime); tidszon Europe/Stockholm om den saknas (GENERAL-001)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.accesssLogs.accessLog.userId</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.agent[user].who.identifier.value</code></td>
+      <td>Vårdaktörens id; HSA-id med system <code class="language-plaintext highlighter-rouge">urn:oid:1.2.752.29.4.19</code>. <code class="language-plaintext highlighter-rouge">agent.requestor = true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.accesssLogs.accessLog.userName</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.agent[user].who.display</code></td>
+      <td>Vårdaktörens namn</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.accesssLogs.accessLog.userTitle</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.agent[user].role.text</code></td>
+      <td>Vårdaktörens titel</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.accesssLogs.accessLog.purpose</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.agent[user].purposeOfUse</code></td>
+      <td>Syftet i klartext i <code class="language-plaintext highlighter-rouge">text</code>; "Vård och behandling" kodas även som <code class="language-plaintext highlighter-rouge">v3-ActReason#TREAT</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.accesssLogs.accessLog.careUnitId</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.agent[vårdenhet].who.identifier.value</code></td>
+      <td>Vårdenhet som haft åtkomst; logisk referens till SEEHDSOrganization. <code class="language-plaintext highlighter-rouge">agent.requestor = false</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.accesssLogs.accessLog.careUnitName</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.agent[vårdenhet].who.display</code></td>
+      <td>Vårdenhetens namn</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.accesssLogs.accessLog.careProviderId</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.agent[vårdgivare].who.identifier.value</code></td>
+      <td>Vårdgivare som haft åtkomst; logisk referens till SEEHDSOrganization. <code class="language-plaintext highlighter-rouge">agent.requestor = false</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.accesssLogs.accessLog.careProviderName</code></td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.agent[vårdgivare].who.display</code></td>
+      <td>Vårdgivarens namn</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.accesssLogs.accessLog.resourceType</code></td>
+      <td>1..1</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.entity[resurs].description</code></td>
+      <td>Typ av resurs som åtkomsten avsåg</td>
+    </tr>
+    <tr>
+      <td>(saknas i meddelandet)</td>
+      <td>–</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.type</code>, <code class="language-plaintext highlighter-rouge">action</code>, <code class="language-plaintext highlighter-rouge">outcome</code></td>
+      <td>Fasta värden enligt profilen: <code class="language-plaintext highlighter-rouge">action = R</code>, <code class="language-plaintext highlighter-rouge">outcome = 0</code> (loggposten avser en genomförd åtkomst); <code class="language-plaintext highlighter-rouge">type</code> se LOG-002</td>
+    </tr>
+    <tr>
+      <td>(saknas i meddelandet)</td>
+      <td>–</td>
+      <td><code class="language-plaintext highlighter-rouge">AuditEvent.source.observer</code></td>
+      <td>Det källsystem (logisk adress) som bryggan anropade</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.reportResult.result.resultCode</code></td>
+      <td>1..1</td>
+      <td>Ej mappad</td>
+      <td>Teknisk statuskod – hanteras av transportlagret</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.reportResult.result.resultText</code></td>
+      <td>0..1</td>
+      <td>Ej mappad</td>
+      <td>Teknisk statustext</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.reportResult.startInterval</code></td>
+      <td>0..1</td>
+      <td>Ej mappad</td>
+      <td>Datum för första loggposten som finns för uppföljning när rapporten skapades</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.reportResult.endInterval</code></td>
+      <td>0..1</td>
+      <td>Ej mappad</td>
+      <td>Datum för sista loggposten som finns för uppföljning när rapporten skapades</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.reportResult.queuedReportId</code></td>
+      <td>0..1</td>
+      <td>Ej mappad</td>
+      <td>Id för köad rapport (asynkront svar); bryggan behöver anropa igen</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.reportResult.queueTime</code></td>
+      <td>0..1</td>
+      <td>Ej mappad</td>
+      <td>Förväntad tid i sekunder tills den köade rapporten kan levereras</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="getaccesslogforpatient-1-1">Övriga aktiva versioner – GetAccessLogsForPatient 1.1</h4>
+
+<p>Tabellen ovan utgår från GetAccessLogsForPatient 2.0 i <code class="language-plaintext highlighter-rouge">informationsecurity:auditing:log</code>. Version 1.1 är också aktiv för 1177 Journal. Den ligger i en annan domän, <code class="language-plaintext highlighter-rouge">ehr:log:querying</code> (<code class="language-plaintext highlighter-rouge">riv.ehr.log</code> 1.2.4), och beskrivs av den logiska modellen <a href="StructureDefinition-SEEHDSLMAccessLogV11.html">SEEHDSLMAccessLogV11</a>.</p>
+
+<!-- Genererad av tools/rivta-lm/vdiff.py: SEEHDSLMAccessLogV11 mot SEEHDSLMAccessLog. Redigera inte för hand. -->
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>1.1</th>
+      <th>2.0</th>
+      <th>Skillnad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.reportResult.result</code></td>
+      <td>–</td>
+      <td>1..1 Backbone</td>
+      <td>Finns bara i 2.0</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResultType</code></td>
+      <td>1..1 Backbone</td>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult</code></td>
+      <td>Bytt namn</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResultType.result</code></td>
+      <td>1..1 Backbone</td>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResult.reportResult</code></td>
+      <td>Bytt namn</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">accessLogsResultType.result.resultText</code></td>
+      <td>1..1 String</td>
+      <td>0..1 String</td>
+      <td>Ändrad kardinalitet</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Innehållet i loggposterna är detsamma; skillnaderna gäller namn och nästling:</p>
+
+<ul>
+  <li>XML-namnen i 1.1 börjar med versal (<code class="language-plaintext highlighter-rouge">AccessLogsResultType/AccesssLogs/AccessLog/UserId</code>) och namnrymden är <code class="language-plaintext highlighter-rouge">urn:riv:ehr:log:querying:1</code>. I den logiska modellen börjar elementnamnen med gemen (<code class="language-plaintext highlighter-rouge">accessLogsResultType.accesssLogs.accessLog.userId</code>) och XML-namnet bärs i <code class="language-plaintext highlighter-rouge">xml-name</code>, som för <code class="language-plaintext highlighter-rouge">id</code> i andra modeller. Varje <code class="language-plaintext highlighter-rouge">accessLog</code>-element mappas till samma <code class="language-plaintext highlighter-rouge">AuditEvent</code>-element som motsvarande element i 2.0.</li>
+  <li>Rapportstatusen ligger direkt i <code class="language-plaintext highlighter-rouge">accessLogsResultType.result</code> (<code class="language-plaintext highlighter-rouge">resultCode</code>, <code class="language-plaintext highlighter-rouge">resultText</code>, <code class="language-plaintext highlighter-rouge">startInterval</code>, <code class="language-plaintext highlighter-rouge">endInterval</code>, <code class="language-plaintext highlighter-rouge">queuedReportId</code>, <code class="language-plaintext highlighter-rouge">queueTime</code>) i stället för i <code class="language-plaintext highlighter-rouge">reportResult</code> med ett inre <code class="language-plaintext highlighter-rouge">result</code>. Fälten mappas inte, som i 2.0.</li>
+  <li><code class="language-plaintext highlighter-rouge">result.resultText</code> är obligatorisk i 1.1. Det påverkar inte mappningen.</li>
+</ul>
+
+<p>Öppen fråga: LOG-002 i <a href="mapping-issues.html">Mappningsissues</a>. LOG-001 är beslutad (BALP:s entity-mönster).</p>
+
+<hr />
+
+<h3 id="öppna-frågor">Öppna frågor</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Fråga</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AUDIT-002</td>
+      <td><strong>Källa för syfte och användaridentitet.</strong> Hur anropande system skickar användarens HSA-id, roll och syfte till API:et (token-claims, SAML-attribut eller headrar) behöver fastställas.</td>
+    </tr>
+    <tr>
+      <td>AUDIT-003</td>
+      <td><strong>Träfflistans granularitet.</strong> En entity per utlämnad resurs ger fullständig spårbarhet men stora loggposter vid stora träfflistor. Alternativ: entity per resurs upp till en gräns, därefter referens till ett sparat sökresultat.</td>
+    </tr>
+    <tr>
+      <td>AUDIT-004</td>
+      <td><strong>Audit Record Repository.</strong> Var API:ets loggposter lagras (nationell, regional eller lokal loggtjänst) och hur de görs tillgängliga för patienten tillsammans med källsystemens loggar.</td>
+    </tr>
+    <tr>
+      <td>AUDIT-005</td>
+      <td><strong>Koppling till källsystemens PDL-loggning.</strong> Hur API:ets loggpost och källsystemens egna åtkomstloggar knyts ihop, t.ex. via <code class="language-plaintext highlighter-rouge">logId</code> eller ett gemensamt korrelations-id.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>AUDIT-001 (egna AuditEvent-profiler baserade på BALP) är beslutad: se
+<a href="StructureDefinition-SEEHDSAuditEventPatientQuery.html">SEEHDSAuditEventPatientQuery</a> och
+<a href="StructureDefinition-SEEHDSAuditEventPatientRead.html">SEEHDSAuditEventPatientRead</a>.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
+          Paket inera.ehds.ehds-tk#0.9.0 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Genererad 
+  <span title="2026-11-16 16:15:00 +0000">
+    2026-11-16
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Länkar: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Innehållsförteckning</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-rapport</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

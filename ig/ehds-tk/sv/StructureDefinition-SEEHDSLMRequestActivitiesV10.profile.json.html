@@ -1,0 +1,1327 @@
+﻿<!-- layouts\layout-profile-format --><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="sv" xmlns="http://www.w3.org/1999/xhtml" lang="sv" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>GetRequestActivities 1.0 - JSON Representation - Inera EHDS Tjänstekontrakt – FHIR Implementation Guide v0.9.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+    <link rel="stylesheet" href="assets/css/liquid.css"/>
+    <link rel="stylesheet" href="assets/css/project.css"/>
+  	<link rel="stylesheet" href="assets/css/inera.css"/>
+<link rel="icon" href="assets/images/inera-thumbnail.png" type="image/png"/>
+<link rel="shortcut icon" href="assets/images/inera-thumbnail.png"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script src="assets/js/direction-management.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-fhirpath.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-cql.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"29.24"}
+    h3,h4,h5,h6{--heading-prefix:"29.24"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+
+        <div id="inera-nav">
+  <a id="inera-logo" href="https://www.inera.se" data-no-external="true">
+    <img src="assets/images/inera-logo-header.svg" alt="Inera" height="50"/>
+  </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Inera EHDS Tjänstekontrakt – FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.9.0 - ci-build
+
+
+
+  <img src="../assets/images/swe.svg" alt="Sweden flagga" title="Sweden" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">Hem</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Bakgrund<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="workflow.html">Workflow</a></li>
+      <li><a href="logical-models.html">Logiska modeller</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Mappningar<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="mappings.html">Översikt</a></li>
+      <li><a href="contract-versions.html">Tjänstekontraktsversioner</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Patientöversikt</li>
+      <li><a href="mapping-getdiagnosis.html">GetDiagnosis – Diagnoser</a></li>
+      <li><a href="mapping-getalertinformation.html">GetAlertInformation – Uppmärksamhet</a></li>
+      <li><a href="mapping-getmedicationhistory.html">GetMedicationHistory – Läkemedel</a></li>
+      <li><a href="mapping-getvaccinationhistory.html">GetVaccinationHistory – Vaccinationer</a></li>
+      <li><a href="mapping-getfunctionalstatus.html">GetFunctionalStatus – Funktionstillstånd</a></li>
+      <li><a href="mapping-getmaternitymedicalhistory.html">GetMaternityMedicalHistory – Mödravård</a></li>
+      <li><a href="mapping-getcareplans.html">GetCarePlans – Vårdplan</a></li>
+      <li><a href="mapping-getcarecontacts.html">GetCareContacts – Vårdkontakter</a></li>
+      <li><a href="mapping-getcaredocumentation.html">GetCareDocumentation – Anteckningar</a></li>
+      <li><a href="guidance-docbook-narrative.html">&nbsp;&nbsp;↳ DocBook-mappning</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Laboratorie och diagnostik</li>
+      <li><a href="mapping-getlaboratoryorderoutcome.html">GetLaboratoryOrderOutcome – Provsvar</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Bilddiagnostik</li>
+      <li><a href="mapping-getimagingoutcome.html">GetImagingOutcome – Bilddiagnostik</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Remiss och process</li>
+      <li><a href="mapping-getreferraloutcome.html">GetReferralOutcome – Remisser</a></li>
+      <li><a href="mapping-getrequestactivities.html">GetRequestActivities – Remisstatus</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Tillväxtkurva barn</li>
+      <li><a href="mapping-getobservations.html">GetObservations – Tillväxtkurva</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">Logg</li>
+      <li><a href="mapping-getaccesslogforpatient.html">Åtkomstloggar och auditloggning</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="profiles.html">Profiles</a></li>
+      <li><a href="terminology.html">Terminology</a></li>
+      <li><a href="examples.html">Examples</a></li>
+      <li><a href="artifacts.html">All Artifacts</a></li>
+    </ul>
+  </li>
+  <li><a href="search-parameters.html">Sökparametrar</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="mapping-issues.html">Issues &amp; Beslut</a></li>
+  <li><a href="version-history.html">Versionshistorik</a></li>
+</ul>
+
+            </div>    <!-- /.nav-collapse -->
+
+              
+
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Sammanfattning av artefakter</b></a></li><li><b>GetRequestActivities 1.0</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">This page is part of the Inera EHDS Tjänstekontrakt – FHIR Implementation Guide (v0.9.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://fhir.inera.se/ig/ehds-tk/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="StructureDefinition-SEEHDSLMRequestActivitiesV10.html">Innehåll</a>
+  </li>
+
+
+
+  <li>
+    <a href="StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html">Detaljerade beskrivningar</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-SEEHDSLMRequestActivitiesV10-mappings.html">Mappningar</a>
+    </li>
+  
+
+
+
+
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-SEEHDSLMRequestActivitiesV10.profile.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">Logisk modell: GetRequestActivities 1.0 - 
+
+JSON-profil
+
+</h2>
+
+  <table class="colsd" data-fhir="generated">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+
+            per 
+2026-11-16
+
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+
+<p>JSON-representation av SEEHDSLMRequestActivitiesV10 logisk modell.</p>
+
+<p><a href="StructureDefinition-SEEHDSLMRequestActivitiesV10.json" no-download="true">Raw json</a> | <a href="StructureDefinition-SEEHDSLMRequestActivitiesV10.json">Download</a></p>
+
+    <!-- insert intro if present -->
+  
+
+
+
+  <pre style="white-space: pre; text-wrap: nowrap; width: auto;" class="json" data-fhir="generated"><code style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition">resourceType</a>" : "StructureDefinition",
+  "<a href="http://hl7.org/fhir/R4/resource.html#StructureDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10",
+  "<a href="http://hl7.org/fhir/R4/resource.html#StructureDefinition.language">language</a>" : "sv",
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#StructureDefinition.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p class=\"res-header-id\"&gt;&lt;b&gt;Genererad berättande text: StructureDefinition SEEHDSLMRequestActivitiesV10&lt;/b&gt;&lt;/p&gt;&lt;table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"xhtTableBorder0\"&gt;&lt;tr class=\"xhtRowBorder1\"&gt;&lt;th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Elementets logiska namn\"&gt;Namn&lt;/a&gt;&lt;/th&gt;&lt;th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information om användningen av elementet\"&gt;Flaggor&lt;/a&gt;&lt;/th&gt;&lt;th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Lägsta och högsta antal gånger elementet kan förekomma i instansen\"&gt;Kard.&lt;/a&gt;&lt;/th&gt;&lt;th scope=\"col\" style=\"; width: 100px\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Referens till elementets typ\"&gt;Typ&lt;/a&gt;&lt;/th&gt;&lt;th scope=\"col\" style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Ytterligare information om elementet\"&gt;Beskrivning &amp;amp; begränsningar&lt;/a&gt;&lt;span style=\"float: right\"&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"&gt;&lt;img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr class=\"xhtRowBorder0 xhtRowEven\"&gt;&lt;td style=\"background-image: url(tbl_bck1.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_element.gif\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10\" title=\"Logisk modell för version 1.0 av tjänstekontraktet GetRequestActivities\n(urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1).\nMappningen utgår från versionen i SEEHDSLMRequestActivities. Skillnaderna mot den och hur de\npåverkar mappningen beskrivs på tjänstekontraktets mappningssida.\"&gt;SEEHDSLMRequestActivitiesV10&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceDeEmphasized\"&gt;0&lt;/span&gt;&lt;span class=\"xhtPieceDeEmphasized\"&gt;..&lt;/span&gt;&lt;span class=\"xhtPieceDeEmphasized\"&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"http://build.fhir.org/types.html#Base\"&gt;Base&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1&lt;br/&gt;GetRequestActivities 1.0&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;Instanser av denna logiska modell kan vara mål för en Reference&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowOdd\"&gt;&lt;td style=\"background-image: url(tbl_bck01.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin_end.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_datatype.gif\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Datatyp\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity\" title=\"requestActivity\"&gt;requestActivity&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"http://hl7.org/fhir/R4/conformance-rules.html#constraints\" title=\"Detta element har eller påverkas av begränsningar ( getrequestactivities1-request-id, getrequestactivities1-issued-by-unit, getrequestactivities1-receiving-unit, getrequestactivities1-status-code )\" class=\"xhtConstraintStyle\"&gt;C&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;0..*&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"http://hl7.org/fhir/R4/datatypes.html#BackboneElement\"&gt;BackboneElement&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;requestActivity&lt;br class=\"constraint\"/&gt;&lt;span class=\"constraint\"&gt;Constraints: &lt;/span&gt;&lt;span title=\"Minst ett av senderRequestId och receiverRequestId ska anges\" class=\"xhtPieceBold constraint\"&gt;getrequestactivities1-request-id&lt;/span&gt;&lt;span class=\"constraint\"&gt;, &lt;/span&gt;&lt;span title=\"Minst ett av requestIssuedByOrganizationalUnitId och requestIssuedByOrganizationalUnitDescription ska anges\" class=\"xhtPieceBold constraint\"&gt;getrequestactivities1-issued-by-unit&lt;/span&gt;&lt;span class=\"constraint\"&gt;, &lt;/span&gt;&lt;span title=\"Minst ett av receivingOrganizationalUnitId och receivingOrganizationalUnitDescription ska anges\" class=\"xhtPieceBold constraint\"&gt;getrequestactivities1-receiving-unit&lt;/span&gt;&lt;span class=\"constraint\"&gt;, &lt;/span&gt;&lt;span title=\"typeOfRequest ska vara 1, 2, 4 eller 10 och statusCode ska vara en av de koder som är tillåtna för remisstypen (VER-005)\" class=\"xhtPieceBold constraint\"&gt;getrequestactivities1-status-code&lt;/span&gt;&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowEven\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId\" title=\"Person eller samordnings-nummer enligt skatteverkets definition 12 tecken. Del av instansen unikhet. Personnummer OID: 1.2.752.129.2.1.3.1\"&gt;subjectOfCareId&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;1..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Person eller samordnings-nummer enligt skatteverkets definition 12 tecken&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowOdd\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId\" title=\"Framställarens identitetsbeteckning för framställan. Är Remiss Id. Identifierare som är unik inom källsystemet. Om tomt så måste receiverRequestId vara infylld, alltså båda kan inte vara tomma.\"&gt;senderRequestId&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;0..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Framställarens identitetsbeteckning för framställan&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowEven\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId\" title=\"Mottagarens identitetsbeteckning för framställan Identifierare som är unik inom källsystemet. Om tomt så måste senderRequestId vara infylld, alltså båda kan inte vara tomma.\"&gt;receiverRequestId&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;0..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Mottagarens identitetsbeteckning för framställan Identifierare som är unik inom källsystemet&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowOdd\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest\" title=\"Kod som anger vilken typ av framställan som avses. Kodverket saknar nationell förankring. Giltiga värden: 1 = röntgenremiss 2 = labbremiss 4 = allmänremiss 10 = fysiologiremiss\nTillåtna värden enligt XSD: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.\"&gt;typeOfRequest&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;1..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Kod som anger vilken typ av framställan som avses&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowEven\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium\" title=\"Kod och klartext som anger medium för framställan. KTOV/KV Form av framställan (OID: 1.2.752.129.2.2.2.7). Giltiga värden: 3 = skriftligt elektroniskt 4 = skriftligt papper\nTillåtna värden enligt XSD: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.\"&gt;requestMedium&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;0..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Kod och klartext som anger medium för framställan&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowOdd\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName\" title=\"Namn på den person som framställt framställan.\"&gt;requestIssuedByPersonName&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;0..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Namn på den person som framställt framställan&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowEven\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId\" title=\"Identitetsbeteckning för den organisationsenhet inom vars uppdrag som framställan görs. HSA-id OID 1.2.752.129.2.1.4.1\"&gt;requestIssuedByOrganizationalUnitId&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;0..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Identitetsbeteckning för den organisationsenhet inom vars uppdrag som framställan görs&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowOdd\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription\" title=\"Beskrivning av enheten. Format: fritext. Exempel: Närakuten +468 398 72, Solna Torg 3, 171 45 SOLNA. Saknas requestIssuedByOrganizationalUnitId så skrivs information om enheten här.\"&gt;requestIssuedByOrganizationalUnitDescription&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;0..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Beskrivning av enheten&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowEven\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName\" title=\"Namn på den hälso- och sjukvårdspersonal som mottar framställan Motsvarar HSA ”fullName”.\"&gt;receivingPersonName&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;0..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Namn på den hälso- och sjukvårdspersonal som mottar framställan Motsvarar HSA ”fullName”&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowOdd\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId\" title=\"Identitetsbeteckning för den enhet inom vars uppdrag som framställan mottages HSA-id OID 1.2.752.129.2.1.4.1\"&gt;receivingOrganizationalUnitId&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;0..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Identitetsbeteckning för den enhet inom vars uppdrag som framställan mottages HSA-id OID 1.2.752.129.2.1.4.1&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowEven\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription\" title=\"Beskrivning av enheten. Format: fritext Exempel: Närakuten +468 398 72, Solna Torg 3, 171 45 SOLNA. Om receivingOrganizationalUnitId saknas skrivs information om enheten här.\"&gt;receivingOrganizationalUnitDescription&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;0..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Beskrivning av enheten&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowOdd\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.careUnit\" title=\"HSA-id för informationsägande vårdenhet. Inre sekretess enligt PDL 4 kap. 4-5 <span class="fhir-conformance"></span> ”vårdenhet”. HSA-id OID 1.2.752.129.2.1.4.1\"&gt;careUnit&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.careUnit\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;0..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;HSA-id för informationsägande vårdenhet&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowEven\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId\" title=\"Referens till informationskällan. `&amp;lt;Systemets HSA-id&amp;gt;`. Format enligt aktuell identiferare, tex HSA-id OID 1.2.752.129.2.1.4.1\"&gt;logicalSystemId&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;1..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Referens till informationskällan&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowOdd\"&gt;&lt;td style=\"background-image: url(tbl_bck010.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.statusCode\" title=\"Anger i vilken status remissen befinner sig i. Kodverket saknar nationell förankring. kod=20 namn=Skickad, används av framställantyp (1=Ja, 4=Ja,10=Ja, 2=Ja) kod=30 namn=Mottagen används av framställantyp (1=Ja, 4=Ja, 10=Ja, 2=Ja) kod=90 namn=Bedömd används av framställantyp (1=Ja, 4=Ja, 10= Ja) kod=126 namn=Preliminärsvar skickat används av framställantyp (1=Ja , 2=Ja) kod=130 namn=Svar skickat används av framställantyp (1=Ja, 4=Ja, 2=Ja) kod=136 namn=Preliminärsvar mottaget används av framställantyp (1=Ja , 2=Ja) kod=140 namn=Svar mottaget används av framställantyp (1=Ja, 4=Ja, 10=Ja, 2=Ja)\nTillåtna värden enligt XSD: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 126, 130, 136, 140, 150, 160, 170.\"&gt;statusCode&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.statusCode\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;1..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Anger i vilken status remissen befinner sig i&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\"xhtRowBorder0 xhtRowEven\"&gt;&lt;td style=\"background-image: url(tbl_bck000.png)\" class=\"hierarchy xhtCellBorder0 xhtCellNoWrap\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_blank.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin_end.png\" alt=\"\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\"\" style=\"background-color: white; background-color: inherit\" title=\"Resurs\" class=\"hierarchy\"/&gt; &lt;span style=\"position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\" class=\"sr-only\"&gt;SEEHDSLMRequestActivitiesV10.requestActivity.&lt;/span&gt;&lt;a href=\"StructureDefinition-SEEHDSLMRequestActivitiesV10-definitions.html#SEEHDSLMRequestActivitiesV10.requestActivity.eventTime\" title=\"Anger tidspunkt när händelsen inträffade.\"&gt;eventTime&lt;/a&gt;&lt;a name=\"SEEHDSLMRequestActivitiesV10.requestActivity.eventTime\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"/&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;1..1&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;a href=\"StructureDefinition-SEEHDSRivString.html\"&gt;SEEHDSRivString&lt;/a&gt;&lt;/td&gt;&lt;td style=\"\" class=\"hierarchy xhtCellBorder0\"&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;br/&gt;Anger tidspunkt när händelsen inträffade&lt;br/&gt;&lt;span class=\"xhtPieceBold\"&gt;XML-namnrymd: &lt;/span&gt;urn:riv:crm:requeststatus:1&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr&gt;&lt;td colspan=\"5\" class=\"hierarchy\"&gt;&lt;br/&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Förklaring för detta format\"&gt;&lt;img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/&gt; Dokumentation för detta format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#StructureDefinition.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "can-be-target"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/xml-name",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "GetRequestActivitiesResponse"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.url">url</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a>" : "0.9.0",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">name</a>" : "SEEHDSLMRequestActivitiesV10",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.title">title</a>" : "GetRequestActivities 1.0",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a>" : "2026-11-16T16:17:59+00:00",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "Inera AB",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Inera AB",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.inera.se"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.description">description</a>" : "Logisk modell för version 1.0 av tjänstekontraktet GetRequestActivities\n(urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1).\nMappningen utgår från versionen i SEEHDSLMRequestActivities. Skillnaderna mot den och hur de\npåverkar mappningen beskrivs på tjänstekontraktets mappningssida.",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SE",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Sweden"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.fhirVersion">fhirVersion</a>" : "4.0.1",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.kind">kind</a>" : "logical",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.abstract">abstract</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.type">type</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.baseDefinition">baseDefinition</a>" : "http://hl7.org/fhir/StructureDefinition/Base",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.derivation">derivation</a>" : "specialization",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot">snapshot</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#StructureDefinition.snapshot.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "4.0.1"
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "GetRequestActivities 1.0",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Logisk modell för version 1.0 av tjänstekontraktet GetRequestActivities\n(urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1).\nMappningen utgår från versionen i SEEHDSLMRequestActivities. Skillnaderna mot den och hur de\npåverkar mappningen beskrivs på tjänstekontraktets mappningssida.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Base",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "requestActivity",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "requestActivity",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "BackboneElement"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "getrequestactivities1-request-id",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Minst ett av senderRequestId och receiverRequestId ska anges",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "senderRequestId.exists() or receiverRequestId.exists()",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "getrequestactivities1-issued-by-unit",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Minst ett av requestIssuedByOrganizationalUnitId och requestIssuedByOrganizationalUnitDescription ska anges",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "requestIssuedByOrganizationalUnitId.exists() or requestIssuedByOrganizationalUnitDescription.exists()",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "getrequestactivities1-receiving-unit",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Minst ett av receivingOrganizationalUnitId och receivingOrganizationalUnitDescription ska anges",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "receivingOrganizationalUnitId.exists() or receivingOrganizationalUnitDescription.exists()",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "getrequestactivities1-status-code",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "typeOfRequest ska vara 1, 2, 4 eller 10 och statusCode ska vara en av de koder som är tillåtna för remisstypen (VER-005)",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "(typeOfRequest.value = '1' and statusCode.value in ('20' | '30' | '90' | '126' | '130' | '136' | '140')) or (typeOfRequest.value = '2' and statusCode.value in ('20' | '30' | '126' | '130' | '136' | '140')) or (typeOfRequest.value = '4' and statusCode.value in ('20' | '30' | '90' | '130' | '140')) or (typeOfRequest.value = '10' and statusCode.value in ('20' | '30' | '90' | '140'))",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+          "xmlAttr"
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Unique id for inter-element referencing",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.type.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUrl</a>" : "string"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">type</a>" : "value",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">path</a>" : "url"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.description">description</a>" : "Extensions are always sliced by (at least) url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a>" : "open"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional content defined by implementations",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content"
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.modifierExtension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.modifierExtension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extensions that cannot be ignored even if unrecognized",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BackboneElement.modifierExtension",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifierReason">isModifierReason</a>" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Person eller samordnings-nummer enligt skatteverkets definition 12 tecken",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Person eller samordnings-nummer enligt skatteverkets definition 12 tecken. Del av instansen unikhet. Personnummer OID: 1.2.752.129.2.1.3.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Framställarens identitetsbeteckning för framställan",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Framställarens identitetsbeteckning för framställan. Är Remiss Id. Identifierare som är unik inom källsystemet. Om tomt så måste receiverRequestId vara infylld, alltså båda kan inte vara tomma.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Mottagarens identitetsbeteckning för framställan Identifierare som är unik inom källsystemet",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Mottagarens identitetsbeteckning för framställan Identifierare som är unik inom källsystemet. Om tomt så måste senderRequestId vara infylld, alltså båda kan inte vara tomma.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Kod som anger vilken typ av framställan som avses",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Kod som anger vilken typ av framställan som avses. Kodverket saknar nationell förankring. Giltiga värden: 1 = röntgenremiss 2 = labbremiss 4 = allmänremiss 10 = fysiologiremiss\nTillåtna värden enligt XSD: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Kod och klartext som anger medium för framställan",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Kod och klartext som anger medium för framställan. KTOV/KV Form av framställan (OID: 1.2.752.129.2.2.2.7). Giltiga värden: 3 = skriftligt elektroniskt 4 = skriftligt papper\nTillåtna värden enligt XSD: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Namn på den person som framställt framställan",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Namn på den person som framställt framställan.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Identitetsbeteckning för den organisationsenhet inom vars uppdrag som framställan görs",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identitetsbeteckning för den organisationsenhet inom vars uppdrag som framställan görs. HSA-id OID 1.2.752.129.2.1.4.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Beskrivning av enheten",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Beskrivning av enheten. Format: fritext. Exempel: Närakuten +468 398 72, Solna Torg 3, 171 45 SOLNA. Saknas requestIssuedByOrganizationalUnitId så skrivs information om enheten här.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Namn på den hälso- och sjukvårdspersonal som mottar framställan Motsvarar HSA ”fullName”",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Namn på den hälso- och sjukvårdspersonal som mottar framställan Motsvarar HSA ”fullName”.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Identitetsbeteckning för den enhet inom vars uppdrag som framställan mottages HSA-id OID 1.2.752.129.2.1.4.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identitetsbeteckning för den enhet inom vars uppdrag som framställan mottages HSA-id OID 1.2.752.129.2.1.4.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Beskrivning av enheten",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Beskrivning av enheten. Format: fritext Exempel: Närakuten +468 398 72, Solna Torg 3, 171 45 SOLNA. Om receivingOrganizationalUnitId saknas skrivs information om enheten här.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.careUnit",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.careUnit",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "HSA-id för informationsägande vårdenhet",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "HSA-id för informationsägande vårdenhet. Inre sekretess enligt PDL 4 kap. 4-5 <span class="fhir-conformance"></span> ”vårdenhet”. HSA-id OID 1.2.752.129.2.1.4.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.careUnit",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Referens till informationskällan",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Referens till informationskällan. `&lt;Systemets HSA-id&gt;`. Format enligt aktuell identiferare, tex HSA-id OID 1.2.752.129.2.1.4.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.statusCode",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.statusCode",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Anger i vilken status remissen befinner sig i",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Anger i vilken status remissen befinner sig i. Kodverket saknar nationell förankring. kod=20 namn=Skickad, används av framställantyp (1=Ja, 4=Ja,10=Ja, 2=Ja) kod=30 namn=Mottagen används av framställantyp (1=Ja, 4=Ja, 10=Ja, 2=Ja) kod=90 namn=Bedömd används av framställantyp (1=Ja, 4=Ja, 10= Ja) kod=126 namn=Preliminärsvar skickat används av framställantyp (1=Ja , 2=Ja) kod=130 namn=Svar skickat används av framställantyp (1=Ja, 4=Ja, 2=Ja) kod=136 namn=Preliminärsvar mottaget används av framställantyp (1=Ja , 2=Ja) kod=140 namn=Svar mottaget används av framställantyp (1=Ja, 4=Ja, 10=Ja, 2=Ja)\nTillåtna värden enligt XSD: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 126, 130, 136, 140, 150, 160, 170.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.statusCode",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.eventTime",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.eventTime",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Anger tidspunkt när händelsen inträffade",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Anger tidspunkt när händelsen inträffade.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.eventTime",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential">differential</a>" : {
+    "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "GetRequestActivities 1.0",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Logisk modell för version 1.0 av tjänstekontraktet GetRequestActivities\n(urn:riv:crm:requeststatus:GetRequestActivitiesResponder:1).\nMappningen utgår från versionen i SEEHDSLMRequestActivities. Skillnaderna mot den och hur de\npåverkar mappningen beskrivs på tjänstekontraktets mappningssida."
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "requestActivity",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "requestActivity",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "BackboneElement"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "getrequestactivities1-request-id",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Minst ett av senderRequestId och receiverRequestId ska anges",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "senderRequestId.exists() or receiverRequestId.exists()",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "getrequestactivities1-issued-by-unit",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Minst ett av requestIssuedByOrganizationalUnitId och requestIssuedByOrganizationalUnitDescription ska anges",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "requestIssuedByOrganizationalUnitId.exists() or requestIssuedByOrganizationalUnitDescription.exists()",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "getrequestactivities1-receiving-unit",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Minst ett av receivingOrganizationalUnitId och receivingOrganizationalUnitDescription ska anges",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "receivingOrganizationalUnitId.exists() or receivingOrganizationalUnitDescription.exists()",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "getrequestactivities1-status-code",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "typeOfRequest ska vara 1, 2, 4 eller 10 och statusCode ska vara en av de koder som är tillåtna för remisstypen (VER-005)",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "(typeOfRequest.value = '1' and statusCode.value in ('20' | '30' | '90' | '126' | '130' | '136' | '140')) or (typeOfRequest.value = '2' and statusCode.value in ('20' | '30' | '126' | '130' | '136' | '140')) or (typeOfRequest.value = '4' and statusCode.value in ('20' | '30' | '90' | '130' | '140')) or (typeOfRequest.value = '10' and statusCode.value in ('20' | '30' | '90' | '140'))",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSLMRequestActivitiesV10"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.subjectOfCareId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Person eller samordnings-nummer enligt skatteverkets definition 12 tecken",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Person eller samordnings-nummer enligt skatteverkets definition 12 tecken. Del av instansen unikhet. Personnummer OID: 1.2.752.129.2.1.3.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.senderRequestId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Framställarens identitetsbeteckning för framställan",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Framställarens identitetsbeteckning för framställan. Är Remiss Id. Identifierare som är unik inom källsystemet. Om tomt så måste receiverRequestId vara infylld, alltså båda kan inte vara tomma.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receiverRequestId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Mottagarens identitetsbeteckning för framställan Identifierare som är unik inom källsystemet",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Mottagarens identitetsbeteckning för framställan Identifierare som är unik inom källsystemet. Om tomt så måste senderRequestId vara infylld, alltså båda kan inte vara tomma.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.typeOfRequest",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Kod som anger vilken typ av framställan som avses",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Kod som anger vilken typ av framställan som avses. Kodverket saknar nationell förankring. Giltiga värden: 1 = röntgenremiss 2 = labbremiss 4 = allmänremiss 10 = fysiologiremiss\nTillåtna värden enligt XSD: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestMedium",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Kod och klartext som anger medium för framställan",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Kod och klartext som anger medium för framställan. KTOV/KV Form av framställan (OID: 1.2.752.129.2.2.2.7). Giltiga värden: 3 = skriftligt elektroniskt 4 = skriftligt papper\nTillåtna värden enligt XSD: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByPersonName",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Namn på den person som framställt framställan",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Namn på den person som framställt framställan.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Identitetsbeteckning för den organisationsenhet inom vars uppdrag som framställan görs",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identitetsbeteckning för den organisationsenhet inom vars uppdrag som framställan görs. HSA-id OID 1.2.752.129.2.1.4.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.requestIssuedByOrganizationalUnitDescription",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Beskrivning av enheten",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Beskrivning av enheten. Format: fritext. Exempel: Närakuten +468 398 72, Solna Torg 3, 171 45 SOLNA. Saknas requestIssuedByOrganizationalUnitId så skrivs information om enheten här.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingPersonName",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Namn på den hälso- och sjukvårdspersonal som mottar framställan Motsvarar HSA ”fullName”",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Namn på den hälso- och sjukvårdspersonal som mottar framställan Motsvarar HSA ”fullName”.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Identitetsbeteckning för den enhet inom vars uppdrag som framställan mottages HSA-id OID 1.2.752.129.2.1.4.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identitetsbeteckning för den enhet inom vars uppdrag som framställan mottages HSA-id OID 1.2.752.129.2.1.4.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.receivingOrganizationalUnitDescription",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Beskrivning av enheten",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Beskrivning av enheten. Format: fritext Exempel: Närakuten +468 398 72, Solna Torg 3, 171 45 SOLNA. Om receivingOrganizationalUnitId saknas skrivs information om enheten här.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.careUnit",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.careUnit",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "HSA-id för informationsägande vårdenhet",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "HSA-id för informationsägande vårdenhet. Inre sekretess enligt PDL 4 kap. 4-5 <span class="fhir-conformance"></span> ”vårdenhet”. HSA-id OID 1.2.752.129.2.1.4.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.logicalSystemId",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Referens till informationskällan",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Referens till informationskällan. `&lt;Systemets HSA-id&gt;`. Format enligt aktuell identiferare, tex HSA-id OID 1.2.752.129.2.1.4.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.statusCode",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.statusCode",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Anger i vilken status remissen befinner sig i",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Anger i vilken status remissen befinner sig i. Kodverket saknar nationell förankring. kod=20 namn=Skickad, används av framställantyp (1=Ja, 4=Ja,10=Ja, 2=Ja) kod=30 namn=Mottagen används av framställantyp (1=Ja, 4=Ja, 10=Ja, 2=Ja) kod=90 namn=Bedömd används av framställantyp (1=Ja, 4=Ja, 10= Ja) kod=126 namn=Preliminärsvar skickat används av framställantyp (1=Ja , 2=Ja) kod=130 namn=Svar skickat används av framställantyp (1=Ja, 4=Ja, 2=Ja) kod=136 namn=Preliminärsvar mottaget används av framställantyp (1=Ja , 2=Ja) kod=140 namn=Svar mottaget används av framställantyp (1=Ja, 4=Ja, 10=Ja, 2=Ja)\nTillåtna värden enligt XSD: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 126, 130, 136, 140, 150, 160, 170.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.eventTime",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUri</a>" : "urn:riv:crm:requeststatus:1"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "SEEHDSLMRequestActivitiesV10.requestActivity.eventTime",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Anger tidspunkt när händelsen inträffade",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Anger tidspunkt när händelsen inträffade.",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "https://fhir.inera.se/ig/ehds-tk/StructureDefinition/SEEHDSRivString"
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+
+
+    <!-- insert notes if present -->
+  
+
+
+
+</div>
+
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+  <script src="assets/js/flags.js" type="text/javascript"> </script>
+
+  <script src="assets/js/tabs.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <script src="assets/js/togglechanges.js" type="text/javascript"> </script>
+  <script src="assets/js/requirements-table.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container" data-fhir="generated">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
+          Paket inera.ehds.ehds-tk#0.9.0 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Genererad 
+  <span title="2026-11-16 16:17:00 +0000">
+    2026-11-16
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Länkar: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Innehållsförteckning</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-rapport</a>
+                 
+                
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
