@@ -84,7 +84,7 @@
     <details class="filter" id="f-ver"><summary>IG och version</summary><div class="menu"></div></details>
     <details class="filter" id="f-cat"><summary>Kategori</summary><div class="menu"></div></details>
     <details class="filter" id="f-type"><summary>Typ</summary><div class="menu"></div></details>
-    <label class="toggle"><input type="checkbox" id="latest" checked> Bara senaste versionen av varje IG</label>
+    <label class="toggle"><input type="checkbox" id="latest" checked> Bara senaste publicerade versionen av varje IG</label>
     <button class="reset" id="reset" type="button">Rensa filter</button>
   </div>
   <div class="chips" id="chips" aria-live="polite"></div>
@@ -255,7 +255,7 @@
     var more = document.getElementById("more");
     more.hidden = list.length <= shown.length;
     more.querySelector("button").textContent = "Visa alla " + list.length + " artefakter";
-    var scope = state.ver.length ? "valda versioner" : state.latest ? "senaste versionen av varje IG" : "alla versioner";
+    var scope = state.ver.length ? "valda versioner" : state.latest ? "senaste publicerade versionen av varje IG" : "alla versioner och CI-byggen";
     document.getElementById("status").textContent =
       list.length + " av " + rows.length + " artefakter (" + scope + ")" + (shown.length < list.length ? ", visar de första " + shown.length : "");
     document.querySelectorAll("thead th").forEach(function (th) {
@@ -333,8 +333,10 @@
     data.igs.forEach(function (ig) {
       ig.versions.sort(function (a, b) { return verCmp(a.version, b.version); });
       igs[ig.name] = ig;
-      // The newest published version, or the CI build for an IG not yet published
-      latestKey[ig.name] = ig.name + "|" + ig.versions[0].version;
+      // The newest published version. An IG that is not published yet has
+      // none, and only shows when its CI build is chosen or all versions are.
+      var published = ig.versions.filter(function (v) { return v.status === "published"; });
+      if (published.length) latestKey[ig.name] = ig.name + "|" + published[0].version;
     });
     rows = data.rows.map(function (r) {
       var p = r.k.split("|");
