@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="sv" xmlns="http://www.w3.org/1999/xhtml" lang="sv" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Kravkatalog - Tjänstekatalogen v0.2.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/inera.css" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="assets/images/inera-thumbnail.png"/>
+<link rel="shortcut icon" href="assets/images/inera-thumbnail.png"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"[&quot;5&quot;]"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="inera-nav">
+  <a id="inera-logo" data-no-external="true" href="https://www.inera.se">
+    <img height="50" alt="Inera" src="assets/images/inera-logo-header.svg"/>
+  </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Tjänstekatalogen</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="Sweden flagga" src="../assets/images/swe.svg" height="16" title="Sweden"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">Hem</a></li>
+  <li><a href="introduction.html">Inledning</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Funktionellt<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="information-basis.html">Informationsunderlag</a></li>
+      <li><a href="use-cases.html">Användningsfall</a></li>
+      <li><a href="requirements.html">Kravkatalog</a></li>
+      <li><a href="roles-and-responsibilities.html">Roller och ansvar</a></li>
+      <li><a href="mappings.html">Mappning till profiler</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementering<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="rest-interactions.html">REST-interaktioner och sökparametrar</a></li>
+      <li><a href="expected-responses.html">Förväntade svar</a></li>
+      <li><a href="capabilitystatement.html">CapabilityStatement</a></li>
+      <li><a href="error-handling.html">Felhantering</a></li>
+      <li><a href="security.html">Säkerhet och behörighet</a></li>
+      <li><a href="testing.html">Testning och validering</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Om<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="about.html">Styrning och förvaltning</a></li>
+      <li><a href="downloads.html">Nedladdningar</a></li>
+      <li><a href="version-history.html">Versionshistorik</a></li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artefakter</a></li>
+  <li><a href="https://fhir.inera.se/" target="_blank" rel="noopener">FHIR på Inera <span aria-hidden="true">&#8599;</span></a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Kravkatalog</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Tjänstekatalogen (v0.2.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R5">FHIR (HL7® FHIR® Standard) v5.0.0</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="https://fhir.inera.se/ig/tjanstekatalog/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Kravkatalog</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#req-srch--sökning-av-ändpunkter-per-organisation" id="markdown-toc-req-srch--sökning-av-ändpunkter-per-organisation">REQ-SRCH — Sökning av ändpunkter per organisation</a></li>
+  <li><a href="#req-end--attribut-på-ändpunkt" id="markdown-toc-req-end--attribut-på-ändpunkt">REQ-END — Attribut på Ändpunkt</a></li>
+  <li><a href="#req-org--attribut-och-relationer-på-organisation" id="markdown-toc-req-org--attribut-och-relationer-på-organisation">REQ-ORG — Attribut och relationer på Organisation</a></li>
+  <li><a href="#req-wrt--synkronisering-mot-ehms-organization-endpoint-writer" id="markdown-toc-req-wrt--synkronisering-mot-ehms-organization-endpoint-writer">REQ-WRT — Synkronisering mot EHM:s Organization Endpoint Writer</a></li>
+  <li><a href="#req-mdl--övriga-entiteter-i-informationsunderlaget-och-avgränsningar" id="markdown-toc-req-mdl--övriga-entiteter-i-informationsunderlaget-och-avgränsningar">REQ-MDL — Övriga entiteter i informationsunderlaget och avgränsningar</a></li>
+  <li><a href="#req-exp--exponering-sök-api-externt-vs-admin-api-internt" id="markdown-toc-req-exp--exponering-sök-api-externt-vs-admin-api-internt">REQ-EXP — Exponering: sök-API externt vs. admin-API internt</a></li>
+  <li><a href="#req-adm--skrivbehörighet" id="markdown-toc-req-adm--skrivbehörighet">REQ-ADM — Skrivbehörighet</a></li>
+  <li><a href="#req-err--felsvar" id="markdown-toc-req-err--felsvar">REQ-ERR — Felsvar</a></li>
+  <li><a href="#req-dist--distributionfederering-till-lokala-kataloger" id="markdown-toc-req-dist--distributionfederering-till-lokala-kataloger">REQ-DIST — Distribution/federering till lokala kataloger</a></li>
+  <li><a href="#req-trc--spårbarhet-och-transaktionell-registrering" id="markdown-toc-req-trc--spårbarhet-och-transaktionell-registrering">REQ-TRC — Spårbarhet och transaktionell registrering</a></li>
+  <li><a href="#borttagna-krav" id="markdown-toc-borttagna-krav">Borttagna krav</a></li>
+</ul>
+
+</div>
+<p>Denna sida är den läsbara vyn av den formella kravkatalogen, uttryckt som en
+FHIR R5 <a href="Requirements-tk-tjanstekatalog-requirements.html"><code class="language-plaintext highlighter-rouge">Requirements</code></a>-resurs.
+Varje krav har en stabil nyckel (t.ex. <code class="language-plaintext highlighter-rouge">REQ-SRCH-1</code>) och en konformansnivå
+(SKA/BÖR/FÅR, motsvarande SHALL/SHOULD/MAY) och spåras via <code class="language-plaintext highlighter-rouge">satisfiedBy</code> till
+den eller de FHIR-artefakter (profilelement, extension, sökparameter,
+operation) som realiserar kravet — se länkarna i tabellerna nedan. Den
+omvända vyn, från attribut/profilelement till krav, finns i
+<a href="mappings.html">Mappning till profiler</a>.</p>
+
+<p>Krav grupperas efter ämne: <code class="language-plaintext highlighter-rouge">REQ-SRCH-*</code> sökning av ändpunkter per
+organisation, <code class="language-plaintext highlighter-rouge">REQ-END-*</code> attribut på Ändpunkt, <code class="language-plaintext highlighter-rouge">REQ-ORG-*</code> attribut och
+relationer på Organisation, <code class="language-plaintext highlighter-rouge">REQ-WRT-*</code> synkronisering mot EHM:s Organization
+Endpoint Writer, <code class="language-plaintext highlighter-rouge">REQ-MDL-*</code> övriga entiteter i informationsunderlaget och
+avgränsningar, <code class="language-plaintext highlighter-rouge">REQ-EXP-*</code> exponering (externt sök-API vs. internt admin-API),
+<code class="language-plaintext highlighter-rouge">REQ-ADM-*</code> skrivbehörighet, <code class="language-plaintext highlighter-rouge">REQ-ERR-*</code> felsvar, <code class="language-plaintext highlighter-rouge">REQ-DIST-*</code> distribution/federering
+till lokala kataloger, och <code class="language-plaintext highlighter-rouge">REQ-TRC-*</code> spårbarhet och transaktionell
+registrering. De fyra sistnämnda grupperna är tillägg utöver det
+ursprungliga informationsunderlaget — se <a href="mappings.html">Mappning till profiler</a>
+för respektive motivering, inklusive vilka som är stakeholder-beslutade och
+vilka som tillkom efter jämförelse med en annan implementation av samma
+problem.</p>
+
+<hr />
+
+<h3 id="req-srch--sökning-av-ändpunkter-per-organisation">REQ-SRCH — Sökning av ändpunkter per organisation</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Krav</th>
+      <th>Konformans</th>
+      <th>Beskrivning</th>
+      <th>Realiseras av</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>REQ-SRCH-1</td>
+      <td>SKA</td>
+      <td>Servern SKA stödja sökning av <code class="language-plaintext highlighter-rouge">Endpoint</code> via en sökparameter som returnerar samtliga ändpunkter en organisation listar via <code class="language-plaintext highlighter-rouge">Organization.endpoint</code> ("har"), skild från <code class="language-plaintext highlighter-rouge">managingOrganization</code>.</td>
+      <td><a href="SearchParameter-tk-endpoint-listed-by.html">SearchParameter: listed-by</a></td>
+    </tr>
+    <tr>
+      <td>REQ-SRCH-2</td>
+      <td>SKA</td>
+      <td>Ändpunktens URL SKA anges i <code class="language-plaintext highlighter-rouge">Endpoint.address</code>.</td>
+      <td><a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a></td>
+    </tr>
+    <tr>
+      <td>REQ-SRCH-3</td>
+      <td>BÖR</td>
+      <td>Servern BÖR, per nyttolast, ange vilka interoperabilitetsspecifikationer ändpunkten stödjer.</td>
+      <td><a href="StructureDefinition-tk-endpoint-payload-profile.html">TKEndpointPayloadProfile</a></td>
+    </tr>
+    <tr>
+      <td>REQ-SRCH-4</td>
+      <td>BÖR</td>
+      <td>Servern BÖR stödja sökning av <code class="language-plaintext highlighter-rouge">Endpoint</code> efter stödd interoperabilitetsspecifikation (<code class="language-plaintext highlighter-rouge">implements</code>).</td>
+      <td><a href="SearchParameter-tk-endpoint-implements.html">SearchParameter: implements</a></td>
+    </tr>
+    <tr>
+      <td>REQ-SRCH-5</td>
+      <td>SKA</td>
+      <td>Vid sökning med <code class="language-plaintext highlighter-rouge">identifier</code> på <code class="language-plaintext highlighter-rouge">Organization</code> SKA HSA-id matchas exakt (bindestrecket ingår). För organisationsnummer (<code class="language-plaintext highlighter-rouge">urn:oid:2.5.4.97</code>) SKA värdet godtas både med och utan bindestreck. Ingen normalisering görs när system saknas.</td>
+      <td><a href="CapabilityStatement-tk-search-api.html">TKSearchAPI</a>, <a href="CapabilityStatement-tk-admin-api.html">TKAdminAPI</a></td>
+    </tr>
+    <tr>
+      <td>REQ-SRCH-6</td>
+      <td>SKA</td>
+      <td><code class="language-plaintext highlighter-rouge">instantiates</code> och <code class="language-plaintext highlighter-rouge">implements</code> är av typen <code class="language-plaintext highlighter-rouge">reference</code> och SKA godta en kanonisk URL (matchar alla versioner) och <code class="language-plaintext highlighter-rouge">url\|version</code> (matchar endast den versionen). Literala referenser (<code class="language-plaintext highlighter-rouge">CapabilityStatement/[id]</code>) stöds inte.</td>
+      <td><a href="SearchParameter-tk-capabilitystatement-instantiates.html">SearchParameter: instantiates</a>, <a href="SearchParameter-tk-endpoint-implements.html">SearchParameter: implements</a></td>
+    </tr>
+    <tr>
+      <td>REQ-SRCH-7</td>
+      <td>SKA</td>
+      <td>Sökning på <code class="language-plaintext highlighter-rouge">Endpoint</code> utan <code class="language-plaintext highlighter-rouge">status</code> SKA utelämna ändpunkter med status <code class="language-plaintext highlighter-rouge">entered-in-error</code>. De returneras vid <code class="language-plaintext highlighter-rouge">status=entered-in-error</code> och alltid vid <code class="language-plaintext highlighter-rouge">read</code>. Övriga statusar och inaktiva organisationer filtreras inte bort.</td>
+      <td><a href="CapabilityStatement-tk-search-api.html">TKSearchAPI</a>, <a href="CapabilityStatement-tk-admin-api.html">TKAdminAPI</a></td>
+    </tr>
+    <tr>
+      <td>REQ-SRCH-8</td>
+      <td>SKA</td>
+      <td>Servern SKA INTE filtrera på giltighetsperiod eller ändra status när en period har löpt ut. En ändpunkt kan användas om <code class="language-plaintext highlighter-rouge">status = active</code> och aktuell tidpunkt ligger inom <code class="language-plaintext highlighter-rouge">period</code>.</td>
+      <td><a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a><code class="language-plaintext highlighter-rouge">.period</code>, <a href="StructureDefinition-tk-api-instance-period.html">TKAPIInstancePeriod</a></td>
+    </tr>
+    <tr>
+      <td>REQ-SRCH-9</td>
+      <td>SKA</td>
+      <td>Sök-API:t SKA stödja de sökparametrar som deklareras i TKSearchAPI, inklusive <code class="language-plaintext highlighter-rouge">_include=Organization:endpoint</code>, <code class="language-plaintext highlighter-rouge">partof</code>, <code class="language-plaintext highlighter-rouge">active</code>, <code class="language-plaintext highlighter-rouge">_count</code> och sidindelning. <code class="language-plaintext highlighter-rouge">name</code> SKA stödja <code class="language-plaintext highlighter-rouge">:contains</code> och <code class="language-plaintext highlighter-rouge">:exact</code>. Följer IHE mCSD (ITI-90).</td>
+      <td><a href="CapabilityStatement-tk-search-api.html">TKSearchAPI</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="req-end--attribut-på-ändpunkt">REQ-END — Attribut på Ändpunkt</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Krav</th>
+      <th>Konformans</th>
+      <th>Beskrivning</th>
+      <th>Realiseras av</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>REQ-END-1</td>
+      <td>SKA</td>
+      <td>Varje ändpunkt SKA ha ett unikt id.</td>
+      <td><a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a><code class="language-plaintext highlighter-rouge">.id</code></td>
+    </tr>
+    <tr>
+      <td>REQ-END-2</td>
+      <td>SKA</td>
+      <td>Ändpunktens status SKA anges.</td>
+      <td><a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a><code class="language-plaintext highlighter-rouge">.status</code></td>
+    </tr>
+    <tr>
+      <td>REQ-END-3</td>
+      <td>SKA</td>
+      <td>Ändpunktens namn SKA anges.</td>
+      <td><a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a><code class="language-plaintext highlighter-rouge">.name</code></td>
+    </tr>
+    <tr>
+      <td>REQ-END-4</td>
+      <td>SKA</td>
+      <td>Ändpunktens URL SKA anges.</td>
+      <td><a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a><code class="language-plaintext highlighter-rouge">.address</code></td>
+    </tr>
+    <tr>
+      <td>REQ-END-5</td>
+      <td>BÖR</td>
+      <td>Ändpunktens giltighetsperiod BÖR anges.</td>
+      <td><a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a><code class="language-plaintext highlighter-rouge">.period</code></td>
+    </tr>
+    <tr>
+      <td>REQ-END-6</td>
+      <td>BÖR</td>
+      <td>Ändpunktens säkerhetsmetod BÖR anges. Kodverket är preliminärt (example-bindning).</td>
+      <td><a href="StructureDefinition-tk-endpoint-security-method.html">TKEndpointSecurityMethod</a></td>
+    </tr>
+    <tr>
+      <td>REQ-END-7</td>
+      <td>BÖR (villkorat)</td>
+      <td>Om säkerhetsmetoden är OAuth 2.0-baserad BÖR URL till auktorisationsserverns token-endpoint anges.</td>
+      <td><a href="StructureDefinition-tk-endpoint-authorization-server-url.html">TKEndpointAuthorizationServerUrl</a></td>
+    </tr>
+    <tr>
+      <td>REQ-END-8</td>
+      <td>SKA</td>
+      <td>Minst ett protokoll ändpunkten stödjer SKA anges.</td>
+      <td><a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a><code class="language-plaintext highlighter-rouge">.connectionType</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="req-org--attribut-och-relationer-på-organisation">REQ-ORG — Attribut och relationer på Organisation</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Krav</th>
+      <th>Konformans</th>
+      <th>Beskrivning</th>
+      <th>Realiseras av</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>REQ-ORG-1</td>
+      <td>SKA</td>
+      <td>Varje organisation SKA ha ett unikt id och namn.</td>
+      <td><a href="StructureDefinition-tk-organization.html">TKOrganization</a></td>
+    </tr>
+    <tr>
+      <td>REQ-ORG-2</td>
+      <td>BÖR</td>
+      <td>Den juridiska personens organisationsnummer BÖR anges som identifierare, med systemet <code class="language-plaintext highlighter-rouge">urn:oid:2.5.4.97</code> (valt för att matcha vad EHM:s Organization Endpoint Writer kräver — se mappings.html). Värdet SKA anges som tio siffror utan bindestreck, t.ex. <code class="language-plaintext highlighter-rouge">2321000016</code>. Inera bör separat bekräfta att systemet även är Ineras eget föredragna.</td>
+      <td><a href="StructureDefinition-tk-organization.html">TKOrganization</a><code class="language-plaintext highlighter-rouge">.identifier</code></td>
+    </tr>
+    <tr>
+      <td>REQ-ORG-3</td>
+      <td>SKA</td>
+      <td>En organisation SKA kunna lista ("har") de ändpunkter den listar i tjänstekatalogen.</td>
+      <td><a href="StructureDefinition-tk-organization.html">TKOrganization</a><code class="language-plaintext highlighter-rouge">.endpoint</code>, <a href="SearchParameter-tk-endpoint-listed-by.html">SearchParameter: listed-by</a></td>
+    </tr>
+    <tr>
+      <td>REQ-ORG-4</td>
+      <td>SKA</td>
+      <td>Varje ändpunkt SKA ange sin förvaltande organisation ("förvaltar").</td>
+      <td><a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a><code class="language-plaintext highlighter-rouge">.managingOrganization</code></td>
+    </tr>
+    <tr>
+      <td>REQ-ORG-5</td>
+      <td>SKA</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.identifier</code> SKA fungera som den "logiska adress" tjänstesökning slår upp. Ingen separat identifierare för detta införs.</td>
+      <td><a href="StructureDefinition-tk-organization.html">TKOrganization</a><code class="language-plaintext highlighter-rouge">.identifier</code>, <a href="CapabilityStatement-tk-search-api.html">TKSearchAPI</a></td>
+    </tr>
+    <tr>
+      <td>REQ-ORG-6</td>
+      <td>SKA</td>
+      <td>Varje organisation SKA ha exakt ett HSA-id (<code class="language-plaintext highlighter-rouge">urn:oid:1.2.752.29.4.19</code>), som är dess primära identifierare. Format enligt <a href="https://inera.atlassian.net/wiki/spaces/OIKH/pages/346985304/Styrande+dokument">HSA:s styrande dokument</a>: 1–31 tecken ur a–z, A–Z, 0–9 och bindestreck. Den vanliga formen <code class="language-plaintext highlighter-rouge">SE</code> + producentens organisationsnummer + suffix (t.ex. <code class="language-plaintext highlighter-rouge">SE2321000016-1003</code>) är inte garanterad, och ingenting SKA härledas ur ett HSA-id, inte heller organisationsnumret.</td>
+      <td><a href="StructureDefinition-tk-organization.html">TKOrganization</a><code class="language-plaintext highlighter-rouge">.identifier</code> (slice <code class="language-plaintext highlighter-rouge">hsaId</code>)</td>
+    </tr>
+    <tr>
+      <td>REQ-ORG-7</td>
+      <td>SKA</td>
+      <td>Ett HSA-id, och likaså ett organisationsnummer, SKA identifiera högst en organisation. Admin-API:t avvisar dubbletter med <code class="language-plaintext highlighter-rouge">422</code> (<code class="language-plaintext highlighter-rouge">business-rule</code>). Gäller identifierare som är aktuella.</td>
+      <td><a href="StructureDefinition-tk-organization.html">TKOrganization</a>, <a href="CapabilityStatement-tk-admin-api.html">TKAdminAPI</a></td>
+    </tr>
+    <tr>
+      <td>REQ-ORG-8</td>
+      <td>SKA</td>
+      <td>Organisationsnummer SKA endast anges på den juridiska personen. Underliggande enheter har eget HSA-id och SKA ange den överordnade organisationen i <code class="language-plaintext highlighter-rouge">Organization.partOf</code>.</td>
+      <td><a href="StructureDefinition-tk-organization.html">TKOrganization</a><code class="language-plaintext highlighter-rouge">.partOf</code></td>
+    </tr>
+    <tr>
+      <td>REQ-ORG-9</td>
+      <td>SKA</td>
+      <td>Admin-API:t SKA i denna version endast godta organisationsidentifierare med systemen för HSA-id och organisationsnummer. Andra system avvisas med <code class="language-plaintext highlighter-rouge">422</code>.</td>
+      <td><a href="StructureDefinition-tk-organization.html">TKOrganization</a>, <a href="CapabilityStatement-tk-admin-api.html">TKAdminAPI</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="req-wrt--synkronisering-mot-ehms-organization-endpoint-writer">REQ-WRT — Synkronisering mot EHM:s Organization Endpoint Writer</h3>
+
+<blockquote>
+  <p><strong>Utkast.</strong> Kraven för synkronisering (REQ-WRT-*) och distribution
+(REQ-DIST-*) ingår inte i den fasta versionen av IG:n och kan ändras.</p>
+</blockquote>
+
+<p>Organization Endpoint Writer är E-hälsomyndighetens (EHM) egen aktörsroll,
+inte en roll tjänstekatalogens administrativa API implementerar — se
+<a href="mappings.html">Mappning mot EHM:s Organization Endpoint Writer</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Krav</th>
+      <th>Konformans</th>
+      <th>Beskrivning</th>
+      <th>Realiseras av</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>REQ-WRT-1</td>
+      <td>SKA</td>
+      <td>Synkroniseringstjänsten SKA läsa organisationer/ändpunkter via tjänstekatalogens admin-API, särskilt <code class="language-plaintext highlighter-rouge">listed-by</code>.</td>
+      <td><a href="ActorDefinition-tk-synkroniseringstjanst.html">ActorDefinition: Synkroniseringstjänst</a>, <a href="CapabilityStatement-tk-admin-api.html">CapabilityStatement: administrativt API</a></td>
+    </tr>
+    <tr>
+      <td>REQ-WRT-2</td>
+      <td>FÅR</td>
+      <td>Synkroniseringstjänsten FÅR, som Organization Endpoint Writer hos EHM, anropa EHM:s <code class="language-plaintext highlighter-rouge">$add-organization</code>.</td>
+      <td>EHM:s <a href="http://electronichealth.se/fhir/NDI/CapabilityStatement/organization-endpoint-writer-capabilities-er">CapabilityStatement</a> och OperationDefinition (extern, ej del av denna IG)</td>
+    </tr>
+    <tr>
+      <td>REQ-WRT-3</td>
+      <td>FÅR</td>
+      <td>Synkroniseringstjänsten FÅR anropa EHM:s <code class="language-plaintext highlighter-rouge">$remove-organization</code> analogt.</td>
+      <td>Som REQ-WRT-2</td>
+    </tr>
+    <tr>
+      <td>REQ-WRT-4</td>
+      <td>SKA</td>
+      <td>Ändpunkter SKA kunna korreleras med EHM:s eget Endpoint-id, eftersom EHM:s operationer adresserar via deras id.</td>
+      <td><a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a><code class="language-plaintext highlighter-rouge">.identifier</code> (slice <code class="language-plaintext highlighter-rouge">ehmEndpointId</code>)</td>
+    </tr>
+    <tr>
+      <td>REQ-WRT-5</td>
+      <td>SKA</td>
+      <td>Organisationsidentifierare till EHM SKA vara organisationsnummer i EHM:s format (<code class="language-plaintext highlighter-rouge">urn:oid:2.5.4.97</code>, siffror utan bindestreck). Personnummer/samordningsnummer SKA INTE användas här — de hör till EHM:s patientindex, inte till denna IG:s scope. Se mappningstabellen.</td>
+      <td><a href="StructureDefinition-tk-organization.html">TKOrganization</a><code class="language-plaintext highlighter-rouge">.identifier</code></td>
+    </tr>
+    <tr>
+      <td>REQ-WRT-6</td>
+      <td>SKA</td>
+      <td>Tjänstekatalogens admin-API SKA använda FHIR R5 (5.0.0) och JSON, liksom EHM:s gränssnitt.</td>
+      <td><a href="CapabilityStatement-tk-admin-api.html">CapabilityStatement: administrativt API</a></td>
+    </tr>
+    <tr>
+      <td>REQ-WRT-7</td>
+      <td>SKA</td>
+      <td>Innan koppling till EHM SKA motsvarande <code class="language-plaintext highlighter-rouge">Endpoint</code> finnas hos EHM, mappad enligt EHM:s profil <code class="language-plaintext highlighter-rouge">endpoint-er</code>.</td>
+      <td><a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a>, EHM:s <a href="http://electronichealth.se/fhir/NDI/StructureDefinition/endpoint-er">Endpoint-profil</a></td>
+    </tr>
+    <tr>
+      <td>REQ-WRT-8</td>
+      <td>SKA</td>
+      <td>Organisationen SKA finnas hos EHM, mappad enligt EHM:s profil <code class="language-plaintext highlighter-rouge">organization-er</code>. <code class="language-plaintext highlighter-rouge">Organization.type</code> saknar källa — se öppen fråga i mappings.html.</td>
+      <td><a href="StructureDefinition-tk-organization.html">TKOrganization</a>, EHM:s <a href="http://electronichealth.se/fhir/NDI/StructureDefinition/organization-er">Organization-profil</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="req-mdl--övriga-entiteter-i-informationsunderlaget-och-avgränsningar">REQ-MDL — Övriga entiteter i informationsunderlaget och avgränsningar</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Krav</th>
+      <th>Konformans</th>
+      <th>Beskrivning</th>
+      <th>Realiseras av</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>REQ-MDL-3</td>
+      <td>SKA</td>
+      <td>Kopplingen Ändpunkt → API → API-specifikation SKA kunna uttryckas — dels via <code class="language-plaintext highlighter-rouge">Endpoint.payload</code> + extension (snabb sökbarhet), dels via en egen resurs, TKAPIInstance, som ger "API" egen identitet.</td>
+      <td><a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a><code class="language-plaintext highlighter-rouge">.payload</code>, <a href="StructureDefinition-tk-endpoint-payload-profile.html">TKEndpointPayloadProfile</a>, <a href="StructureDefinition-tk-api-instance.html">TKAPIInstance</a></td>
+    </tr>
+    <tr>
+      <td>REQ-MDL-4</td>
+      <td>SKA</td>
+      <td>API-specifikation SKA kunna registreras och sökas som en egen resurs — <code class="language-plaintext highlighter-rouge">CapabilityStatement</code> (kind=requirements), sökbar på kanonisk url. Ersätter denna IG:s tidigare <code class="language-plaintext highlighter-rouge">ImplementationGuide</code>-rekommendation; fortfarande inte <code class="language-plaintext highlighter-rouge">ActorDefinition</code> (EHM:s val, avvisat) eller <code class="language-plaintext highlighter-rouge">Basic</code>.</td>
+      <td><a href="StructureDefinition-tk-api-specification-capability.html">TKAPISpecificationCapability</a></td>
+    </tr>
+    <tr>
+      <td>REQ-MDL-5</td>
+      <td>SKA</td>
+      <td>Spårbarhet (vem skapade/senast uppdaterade en post) SKA finnas — löst via en obligatorisk Provenance-post per registrering (tidigare uppskjutet).</td>
+      <td><a href="StructureDefinition-tk-provenance.html">TKProvenance</a>, REQ-TRC-1/2</td>
+    </tr>
+    <tr>
+      <td>REQ-MDL-6</td>
+      <td>BÖR</td>
+      <td>En API-instans (TKAPIInstance) BÖR kunna ange sin egen giltighetsperiod, oberoende av ändpunktens.</td>
+      <td><a href="StructureDefinition-tk-api-instance-period.html">TKAPIInstancePeriod</a></td>
+    </tr>
+    <tr>
+      <td>REQ-MDL-7</td>
+      <td>SKA</td>
+      <td>Varje TKAPIInstance SKA referera den ändpunkt som tillgängliggör den och den/de API-specifikationer den följer, sökbart via en egen sökparameter.</td>
+      <td><a href="StructureDefinition-tk-api-instance.html">TKAPIInstance</a>, <a href="SearchParameter-tk-capabilitystatement-instantiates.html">SearchParameter: instantiates</a></td>
+    </tr>
+    <tr>
+      <td>REQ-MDL-8</td>
+      <td>SKA</td>
+      <td>Flera versioner av samma API-specifikation FÅR finnas samtidigt. <code class="language-plaintext highlighter-rouge">version</code> SKA anges och <code class="language-plaintext highlighter-rouge">url</code> + <code class="language-plaintext highlighter-rouge">version</code> SKA vara unik. Sökning på <code class="language-plaintext highlighter-rouge">url</code> returnerar alla versioner; <code class="language-plaintext highlighter-rouge">version</code> och <code class="language-plaintext highlighter-rouge">date</code> (med <code class="language-plaintext highlighter-rouge">_sort=-date</code>) används för att välja. Hur API-instanser och ändpunkter refererar specifikationen anges i REQ-MDL-9.</td>
+      <td><a href="StructureDefinition-tk-api-specification-capability.html">TKAPISpecificationCapability</a>, <a href="CapabilityStatement-tk-search-api.html">TKSearchAPI</a></td>
+    </tr>
+    <tr>
+      <td>REQ-MDL-9</td>
+      <td>SKA</td>
+      <td>API-instanser (<code class="language-plaintext highlighter-rouge">instantiates</code>) och ändpunkter (<code class="language-plaintext highlighter-rouge">Endpoint.payload</code>-extensionen) SKA referera en API-specifikation som <code class="language-plaintext highlighter-rouge">url\|version</code>. En referens utan version betyder inte "alla versioner" utan löses till den senaste, och skulle ändra innebörd när en ny version registreras. Flera versioner anges som flera referenser. Admin-API:t avvisar en referens utan version med <code class="language-plaintext highlighter-rouge">422</code> (<code class="language-plaintext highlighter-rouge">invariant</code>).</td>
+      <td><a href="StructureDefinition-tk-api-instance.html">TKAPIInstance</a><code class="language-plaintext highlighter-rouge">.instantiates</code>, <a href="StructureDefinition-tk-endpoint-payload-profile.html">TKEndpointPayloadProfile</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="req-exp--exponering-sök-api-externt-vs-admin-api-internt">REQ-EXP — Exponering: sök-API externt vs. admin-API internt</h3>
+
+<p>Stakeholder-beslut, inte del av det ursprungliga informationsunderlaget —
+se "Avvikelser och tillägg" i <a href="mappings.html">Mappning till profiler</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Krav</th>
+      <th>Konformans</th>
+      <th>Beskrivning</th>
+      <th>Realiseras av</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>REQ-EXP-1</td>
+      <td>SKA</td>
+      <td>Läsande sökning SKA exponeras externt, via gateway, för sökande konsumenter.</td>
+      <td><a href="CapabilityStatement-tk-search-api.html">TKSearchAPI</a></td>
+    </tr>
+    <tr>
+      <td>REQ-EXP-2</td>
+      <td>SKA</td>
+      <td>Skrivande interaktioner SKA vara internt exponerade endast, inte nåbara via den externa gatewayen.</td>
+      <td><a href="CapabilityStatement-tk-admin-api.html">TKAdminAPI</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="req-adm--skrivbehörighet">REQ-ADM — Skrivbehörighet</h3>
+
+<p>Behörigheten registreras inte i katalogen. Se <a href="security.html">Säkerhet och behörighet</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Krav</th>
+      <th>Konformans</th>
+      <th>Beskrivning</th>
+      <th>Realiseras av</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>REQ-ADM-5</td>
+      <td>SKA</td>
+      <td>Admin-API:t SKA avgöra skrivbehörighet från de claims som Inera IdP utfärdar för anroparen: användarens HSA-id och HSA-id för den organisation användaren företräder. Behörigheten registreras inte som en resurs i katalogen.</td>
+      <td><a href="CapabilityStatement-tk-admin-api.html">TKAdminAPI</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="req-err--felsvar">REQ-ERR — Felsvar</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Krav</th>
+      <th>Konformans</th>
+      <th>Beskrivning</th>
+      <th>Realiseras av</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>REQ-ERR-1</td>
+      <td>SKA</td>
+      <td>Ett felsvar (<code class="language-plaintext highlighter-rouge">OperationOutcome</code>) SKA i varje <code class="language-plaintext highlighter-rouge">issue</code> ange anropets korrelations-id med standardextensionen <code class="language-plaintext highlighter-rouge">operationoutcome-instance-id</code>. Värdet är anropets <code class="language-plaintext highlighter-rouge">traceparent</code> enligt W3C Trace Context, samma värde som i svarshuvudet <code class="language-plaintext highlighter-rouge">traceparent</code>. Se <a href="error-handling.html">Felhantering</a>.</td>
+      <td><a href="StructureDefinition-tk-operation-outcome.html">TKOperationOutcome</a>, <a href="CapabilityStatement-tk-search-api.html">TKSearchAPI</a>, <a href="CapabilityStatement-tk-admin-api.html">TKAdminAPI</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="req-dist--distributionfederering-till-lokala-kataloger">REQ-DIST — Distribution/federering till lokala kataloger</h3>
+
+<blockquote>
+  <p><strong>Utkast</strong>, se REQ-WRT ovan.</p>
+</blockquote>
+
+<p>Stakeholder-beslut, inte del av det ursprungliga informationsunderlaget —
+se "Avvikelser och tillägg" i <a href="mappings.html">Mappning till profiler</a> och
+"Distribution och synkronisering" i <a href="rest-interactions.html">REST-interaktioner</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Krav</th>
+      <th>Konformans</th>
+      <th>Beskrivning</th>
+      <th>Realiseras av</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>REQ-DIST-1</td>
+      <td>BÖR</td>
+      <td>Servern BÖR stödja R5 topic-baserad <code class="language-plaintext highlighter-rouge">Subscription</code> mot ämnet <code class="language-plaintext highlighter-rouge">tk-organization-endpoint-changes</code>.</td>
+      <td><a href="SubscriptionTopic-tk-organization-endpoint-changes.html">SubscriptionTopic: tk-organization-endpoint-changes</a></td>
+    </tr>
+    <tr>
+      <td>REQ-DIST-2</td>
+      <td>BÖR</td>
+      <td>Servern BÖR stödja grundladdning via <code class="language-plaintext highlighter-rouge">_lastUpdated</code> på <code class="language-plaintext highlighter-rouge">Organization</code>, <code class="language-plaintext highlighter-rouge">Endpoint</code> och <code class="language-plaintext highlighter-rouge">CapabilityStatement</code>, i sök-API:t som notifieringarna hänvisar till.</td>
+      <td><a href="CapabilityStatement-tk-search-api.html">TKSearchAPI</a>, <a href="CapabilityStatement-tk-admin-api.html">TKAdminAPI</a></td>
+    </tr>
+    <tr>
+      <td>REQ-DIST-3</td>
+      <td>FÅR</td>
+      <td>Ett ursprungsmärke FÅR användas för att undvika rundgång i en dubbelriktad federerad miljö. Inte löst i detta utkast.</td>
+      <td><em>(öppen fråga, se mappings.html)</em></td>
+    </tr>
+    <tr>
+      <td>REQ-DIST-4</td>
+      <td>BÖR</td>
+      <td>Servern BÖR stödja <code class="language-plaintext highlighter-rouge">history-type</code> med <code class="language-plaintext highlighter-rouge">_since</code> på <code class="language-plaintext highlighter-rouge">Organization</code> och <code class="language-plaintext highlighter-rouge">Endpoint</code> för återsynk; till skillnad från <code class="language-plaintext highlighter-rouge">_lastUpdated</code> syns även borttagna poster. <code class="language-plaintext highlighter-rouge">$export</code> behövs inte.</td>
+      <td><a href="CapabilityStatement-tk-search-api.html">TKSearchAPI</a>, <a href="CapabilityStatement-tk-admin-api.html">TKAdminAPI</a></td>
+    </tr>
+    <tr>
+      <td>REQ-DIST-5</td>
+      <td>SKA</td>
+      <td>En ändring av <code class="language-plaintext highlighter-rouge">Organization.endpoint</code> ("har") SKA hanteras som en uppdatering av <code class="language-plaintext highlighter-rouge">Organization</code> (ny version, nytt <code class="language-plaintext highlighter-rouge">meta.lastUpdated</code>, notifiering). En ändring av en <code class="language-plaintext highlighter-rouge">Endpoint</code>, inklusive <code class="language-plaintext highlighter-rouge">managingOrganization</code>, ändrar inte organisationen.</td>
+      <td><a href="CapabilityStatement-tk-search-api.html">TKSearchAPI</a>, <a href="SubscriptionTopic-tk-organization-endpoint-changes.html">SubscriptionTopic: tk-organization-endpoint-changes</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="req-trc--spårbarhet-och-transaktionell-registrering">REQ-TRC — Spårbarhet och transaktionell registrering</h3>
+
+<p>Inte del av det ursprungliga informationsunderlaget — tillagt efter
+jämförelse med en annan implementation av samma problem, som löser detta
+med en obligatorisk Provenance-post i en transaction-Bundle. Se
+"Avvikelser och tillägg" i <a href="mappings.html">Mappning till profiler</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Krav</th>
+      <th>Konformans</th>
+      <th>Beskrivning</th>
+      <th>Realiseras av</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>REQ-TRC-1</td>
+      <td>SKA</td>
+      <td>Varje transaction-Bundle som registrerar en Organization, Endpoint eller CapabilityStatement SKA innehålla minst en Provenance-post som pekar ut den/de registrerade resurserna.</td>
+      <td><a href="StructureDefinition-tk-provenance.html">TKProvenance</a></td>
+    </tr>
+    <tr>
+      <td>REQ-TRC-2</td>
+      <td>SKA</td>
+      <td>Tjänstekatalogens administrativa API SKA stödja systeminteraktionen <code class="language-plaintext highlighter-rouge">transaction</code>, så att en registrerad resurs och dess Provenance-post skapas/uppdateras atomiskt tillsammans.</td>
+      <td><a href="CapabilityStatement-tk-admin-api.html">TKAdminAPI</a></td>
+    </tr>
+    <tr>
+      <td>REQ-TRC-3</td>
+      <td>BÖR</td>
+      <td><code class="language-plaintext highlighter-rouge">Provenance.agent.who</code> BÖR ange användarens HSA-id från Inera IdP, och <code class="language-plaintext highlighter-rouge">Provenance.agent.onBehalfOf</code> den organisation användaren företrädde (REQ-ADM-5).</td>
+      <td><a href="StructureDefinition-tk-provenance.html">TKProvenance</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="borttagna-krav">Borttagna krav</h3>
+
+<p>Nycklarna nedan används inte längre och återanvänds inte.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Krav</th>
+      <th>Borttaget i</th>
+      <th>Orsak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>REQ-MDL-1, REQ-MDL-2</td>
+      <td>0.2.0</td>
+      <td>Indexpost och Vård- och omsorgstagare hör till ett patientindex, inte till tjänstekatalogen.</td>
+    </tr>
+    <tr>
+      <td>REQ-ADM-1–4</td>
+      <td>0.2.0</td>
+      <td>Administratörsbehörighet registreras inte längre i katalogen (TKAdministratorRole). Ersatt av REQ-ADM-5.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<blockquote>
+  <p><strong>Vägledning för författare:</strong> Håll krav atomära och spårbara — ett krav
+per rad, med en stabil nyckel som aldrig återanvänds även om kravet senare
+utgår (markera det då som <code class="language-plaintext highlighter-rouge">retired</code> i <code class="language-plaintext highlighter-rouge">Requirements</code>-resursen istället).
+Uppdatera <code class="language-plaintext highlighter-rouge">satisfiedBy</code> när en artefakt som realiserar ett krav byter namn
+eller id.</p>
+</blockquote>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
+          Paket inera.infra.tjanstekatalog#0.2.0 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
+          Genererad 
+  <span title="2026-11-20 13:15:00 +0000">
+    2026-11-20
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Länkar: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Innehållsförteckning</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-rapport</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

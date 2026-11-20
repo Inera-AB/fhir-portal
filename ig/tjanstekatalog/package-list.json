@@ -1,0 +1,24 @@
+{
+  "list" : [{
+    "version" : "current",
+    "path" : "https://inera-ab.github.io/tjanstekatalog",
+    "status" : "ci-build",
+    "sequence" : "ci-build",
+    "desc" : "Continuous Integration Build (latest in version control) - Content subject to frequent changes"
+  },
+  {
+    "version" : "0.2.0",
+    "path" : "https://fhir.inera.se/ig/tjanstekatalog/0.2.0",
+    "status" : "release",
+    "sequence" : "Releases",
+    "fhirversion" : "5.0.0",
+    "date" : "2026-11-20",
+    "current" : true,
+    "desc" : "Första publicerade versionen."
+  }],
+  "package-id" : "inera.infra.tjanstekatalog",
+  "canonical" : "https://fhir.inera.se/ig/tjanstekatalog",
+  "title" : "Tjänstekatalogen",
+  "category" : "National Base",
+  "introduction" : "FHIR-gränssnitt för sökning av organisationers tekniska ändpunkter i tjänstekatalogen, samt administrativt API för att registrera organisationer, ändpunkter och deras kopplingar."
+}

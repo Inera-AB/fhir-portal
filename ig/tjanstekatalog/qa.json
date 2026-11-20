@@ -1,0 +1,20 @@
+{
+  "url" : "https://fhir.inera.se/ig/tjanstekatalog/ImplementationGuide/inera.infra.tjanstekatalog",
+  "name" : "IneraTjanstekatalog",
+  "title" : "Tjänstekatalogen",
+  "description" : "FHIR-gränssnitt för sökning av organisationers tekniska ändpunkter (endpoints) i tjänstekatalogen (externt sök-API), samt administrativt API (internt) för att registrera organisationer, ändpunkter, deras kopplingar och administratörsbehörigheter. Definierar aktören Synkroniseringstjänst, som läser härifrån och håller E-hälsomyndighetens Organization Endpoint Writer-register synkroniserat.",
+  "status" : "draft",
+  "package-id" : "inera.infra.tjanstekatalog",
+  "ig-ver" : "0.2.0",
+  "date" : "Fri, 20 Nov, 2026 13:15:09 +0000",
+  "dateISO8601" : "2026-11-20T13:15:09+00:00",
+  "errs" : 0,
+  "warnings" : 19,
+  "hints" : 108,
+  "broken-links" : 0,
+  "suppressed-hints" : 1,
+  "suppressed-warnings" : 148,
+  "version" : "5.0.0",
+  "tool" : "6.0.0-snapshot1 (3)",
+  "maxMemory" : 1655511024
+}

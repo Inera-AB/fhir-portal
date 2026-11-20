@@ -1,0 +1,96 @@
+# inera.infra.tjanstekatalog#0.2.0: Tjänstekatalogen(sv)
+
+## Pages
+
+* [Hem](sv/index.md)
+* [Förväntade svar](sv/expected-responses.md)
+* [Kravkatalog](sv/requirements.md)
+* [Testning och validering](sv/testing.md)
+* [Roller och ansvar](sv/roles-and-responsibilities.md)
+* [Om](sv/about.md)
+* [Felhantering](sv/error-handling.md)
+* [Sammanfattning av artefakter](sv/artifacts.md)
+* [REST-interaktioner och sökparametrar](sv/rest-interactions.md)
+* [Användningsfall](sv/use-cases.md)
+* [Inledning](sv/introduction.md)
+* [Mappning till profiler](sv/mappings.md)
+* [Säkerhet och behörighet](sv/security.md)
+* [Versionshistorik](sv/version-history.md)
+* [Informationsunderlag](sv/information-basis.md)
+* [CapabilityStatement](sv/capabilitystatement.md)
+* [Nedladdningar](sv/downloads.md)
+
+## Resources
+
+### CodeSystems
+
+* [Kategorier för API-specifikationer (kodsystem)](sv/CodeSystem-tk-api-specification-category.md)
+* [Säkerhetsmetoder för tekniska ändpunkter (kodsystem)](sv/CodeSystem-tk-endpoint-security-method.md)
+
+### ValueSets
+
+* [Kategorier för API-specifikationer](sv/ValueSet-tk-api-specification-category.md)
+* [Säkerhetsmetoder för tekniska ändpunkter](sv/ValueSet-tk-endpoint-security-method.md)
+
+### Resource Profiles
+
+* [Tjänstekatalogen API-instans](sv/StructureDefinition-tk-api-instance.md)
+* [Tjänstekatalogen API-specifikation](sv/StructureDefinition-tk-api-specification-capability.md)
+* [Tjänstekatalogen Endpoint](sv/StructureDefinition-tk-endpoint.md)
+* [Tjänstekatalogen OperationOutcome](sv/StructureDefinition-tk-operation-outcome.md)
+* [Tjänstekatalogen Organization](sv/StructureDefinition-tk-organization.md)
+* [Tjänstekatalogen Provenance](sv/StructureDefinition-tk-provenance.md)
+
+### Extensions
+
+* [Tillgängliggörande ändpunkt](sv/StructureDefinition-tk-api-instance-endpoint.md)
+* [API-instansens giltighetsperiod](sv/StructureDefinition-tk-api-instance-period.md)
+* [Specifikationskategori](sv/StructureDefinition-tk-api-specification-category.md)
+* [Referens till källa](sv/StructureDefinition-tk-api-specification-source-reference.md)
+* [Ansvarig organisation (strukturerad referens)](sv/StructureDefinition-tk-capabilitystatement-responsible-organization.md)
+* [URL till auktorisationsserver](sv/StructureDefinition-tk-endpoint-authorization-server-url.md)
+* [Stödd specifikation (payload profile)](sv/StructureDefinition-tk-endpoint-payload-profile.md)
+* [Säkerhetsmetod](sv/StructureDefinition-tk-endpoint-security-method.md)
+
+### ActorDefinitions
+
+* [Synkroniseringstjänst](sv/ActorDefinition-tk-synkroniseringstjanst.md)
+
+### CapabilityStatements
+
+* [Tjänstekatalogen: administrativt API](sv/CapabilityStatement-tk-admin-api.md)
+* [Tjänstekatalogen: sök-API (externt)](sv/CapabilityStatement-tk-search-api.md)
+
+### ImplementationGuides
+
+* [Tjänstekatalogen](sv/ImplementationGuide-inera.infra.tjanstekatalog.md)
+
+### NamingSystems
+
+* [HSA-id](sv/NamingSystem-hsa-id.md)
+* [Organisationsnummer](sv/NamingSystem-organisationsnummer.md)
+
+### Requirements
+
+* [Kravkatalog: Tjänstekatalogen](sv/Requirements-tk-tjanstekatalog-requirements.md)
+
+### SearchParameters
+
+* [CapabilityStatement: instantiates](sv/SearchParameter-tk-capabilitystatement-instantiates.md)
+* [CapabilityStatement: kind](sv/SearchParameter-tk-capabilitystatement-kind.md)
+* [Endpoint: implements](sv/SearchParameter-tk-endpoint-implements.md)
+* [Endpoint: listed-by](sv/SearchParameter-tk-endpoint-listed-by.md)
+
+### SubscriptionTopics
+
+* [Ändringar i Organisation/Ändpunkt](sv/SubscriptionTopic-tk-organization-endpoint-changes.md)
+
+### Examples
+
+* [TKAPIInstanceExample (CapabilityStatement)](sv/CapabilityStatement-TKAPIInstanceExample.md)
+* [Patientinformation (Inera FHIR IG) (CapabilityStatement)](sv/CapabilityStatement-TKAPISpecificationCapabilityExample.md)
+* [Exempelregionens patientinformations-API (Endpoint)](sv/Endpoint-TKEndpointExample.md)
+* [TKOperationOutcomeExample (OperationOutcome)](sv/OperationOutcome-TKOperationOutcomeExample.md)
+* [Exempelregionen (Organization)](sv/Organization-TKOrganizationExample.md)
+* [Exempelregionens vårdcentral (Organization)](sv/Organization-TKOrganizationUnitExample.md)
+* [TKProvenanceExample (Provenance)](sv/Provenance-TKProvenanceExample.md)

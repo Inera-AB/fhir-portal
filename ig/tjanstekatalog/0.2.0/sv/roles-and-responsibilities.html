@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="sv" xmlns="http://www.w3.org/1999/xhtml" lang="sv" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Roller och ansvar - Tjänstekatalogen v0.2.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/inera.css" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="assets/images/inera-thumbnail.png"/>
+<link rel="shortcut icon" href="assets/images/inera-thumbnail.png"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"[&quot;6&quot;]"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="inera-nav">
+  <a id="inera-logo" data-no-external="true" href="https://www.inera.se">
+    <img height="50" alt="Inera" src="assets/images/inera-logo-header.svg"/>
+  </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Tjänstekatalogen</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="Sweden flagga" src="../assets/images/swe.svg" height="16" title="Sweden"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">Hem</a></li>
+  <li><a href="introduction.html">Inledning</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Funktionellt<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="information-basis.html">Informationsunderlag</a></li>
+      <li><a href="use-cases.html">Användningsfall</a></li>
+      <li><a href="requirements.html">Kravkatalog</a></li>
+      <li><a href="roles-and-responsibilities.html">Roller och ansvar</a></li>
+      <li><a href="mappings.html">Mappning till profiler</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementering<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="rest-interactions.html">REST-interaktioner och sökparametrar</a></li>
+      <li><a href="expected-responses.html">Förväntade svar</a></li>
+      <li><a href="capabilitystatement.html">CapabilityStatement</a></li>
+      <li><a href="error-handling.html">Felhantering</a></li>
+      <li><a href="security.html">Säkerhet och behörighet</a></li>
+      <li><a href="testing.html">Testning och validering</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Om<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="about.html">Styrning och förvaltning</a></li>
+      <li><a href="downloads.html">Nedladdningar</a></li>
+      <li><a href="version-history.html">Versionshistorik</a></li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artefakter</a></li>
+  <li><a href="https://fhir.inera.se/" target="_blank" rel="noopener">FHIR på Inera <span aria-hidden="true">&#8599;</span></a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Roller och ansvar</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Tjänstekatalogen (v0.2.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R5">FHIR (HL7® FHIR® Standard) v5.0.0</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a data-no-external="true" href="https://fhir.inera.se/ig/tjanstekatalog/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Roller och ansvar</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<p>| Roll | Ansvar |
+|——|——–|
+| <strong>Tjänstekatalogen (server)</strong> | Tillhandahåller det administrativa API:et: tar emot och lagrar organisationer och ändpunkter, exponerar sökning (inklusive <code class="language-plaintext highlighter-rouge">listed-by</code>). |
+| <strong>Synkroniseringstjänst</strong> (utkast) | System som läser organisationer och tekniska ändpunkter från tjänstekatalogens administrativa API, och håller E-hälsomyndighetens (EHM) nationella register — Swedish Medical Record Index And Endpoint Registry — synkroniserat genom att i <strong>EHM:s</strong> system anta rollen <strong>Organization Endpoint Writer</strong>. Se <a href="ActorDefinition-tk-synkroniseringstjanst.html">ActorDefinition: Synkroniseringstjänst</a> och <a href="mappings.html">Mappning mot EHM:s Organization Endpoint Writer</a> för hur data mappas mellan de två gränssnitten. |
+| <strong>Sökande konsument</strong> | System som söker fram en organisations tekniska ändpunkter, t.ex. inför en integration, via sökparametern <code class="language-plaintext highlighter-rouge">listed-by</code> på <code class="language-plaintext highlighter-rouge">Endpoint</code>. Använder det externt exponerade <a href="CapabilityStatement-tk-search-api.html">sök-API:et</a> (via gateway) — se säkerhet och behörighet i security.html. |
+| <strong>Administratör</strong> | Användare som registrerar och ändrar poster i tjänstekatalogen för den organisation användaren företräder. Loggar in via Inera IdP; behörigheten avgörs från IdP:ns claims (användarens och organisationens HSA-id) och registreras inte i katalogen. Se REQ-ADM-5 och <a href="security.html">Säkerhet och behörighet</a>. |
+| <strong>Lokal katalog</strong> (utkast) | System som håller en lokal kopia av (delar av) tjänstekatalogens innehåll aktuell, antingen genom att prenumerera på <a href="SubscriptionTopic-tk-organization-endpoint-changes.html">SubscriptionTopic: tk-organization-endpoint-changes</a> eller genom periodisk grundladdning/återsynk via <code class="language-plaintext highlighter-rouge">_lastUpdated</code>. Se "Distribution och synkronisering" i rest-interactions.html och REQ-DIST-*. |</p>
+
+<p>Organization Endpoint Writer är alltså inte en roll denna IG:s administrativa
+API själv tar emot anrop i — det är <strong>EHM:s</strong> aktörsroll, definierad i deras
+egen IG (<a href="https://simplifier.net/guide/SwedishMedicalRecordIndexAndEndpointRegistry/">Swedish Medical Record Index And Endpoint Registry</a>).
+Synkroniseringstjänsten är den part som antar den rollen mot EHM, efter att
+först ha läst data härifrån.</p>
+
+<p>Förväntningar per roll, uttryckta enligt HL7 FHIR:s terminologi för
+förmågor (SHALL/SHOULD/MAY):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Roll</th>
+      <th>Förväntning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tjänstekatalogen (server)</td>
+      <td>SKA kunna producera <code class="language-plaintext highlighter-rouge">Organization</code>- och <code class="language-plaintext highlighter-rouge">Endpoint</code>-resurser som uppfyller <a href="StructureDefinition-tk-organization.html">TKOrganization</a> respektive <a href="StructureDefinition-tk-endpoint.html">TKEndpoint</a>. SKA stödja sökparametern <code class="language-plaintext highlighter-rouge">listed-by</code> på <code class="language-plaintext highlighter-rouge">Endpoint</code> (REQ-SRCH-1). SKA exponera sökning externt via gateway och hålla skrivinteraktioner internt (REQ-EXP-1/2). BÖR stödja prenumeration och grundladdning för distribution till lokala kataloger (REQ-DIST-1/2).</td>
+    </tr>
+    <tr>
+      <td>Synkroniseringstjänst</td>
+      <td>SKA läsa organisationer/ändpunkter härifrån (REQ-WRT-1). FÅR anropa EHM:s <code class="language-plaintext highlighter-rouge">$add-organization</code>/<code class="language-plaintext highlighter-rouge">$remove-organization</code> för att hantera "har"-relationen i EHM:s register (REQ-WRT-2, REQ-WRT-3), med data mappad enligt <a href="mappings.html">mappningstabellen</a> (REQ-WRT-4, REQ-WRT-5).</td>
+    </tr>
+    <tr>
+      <td>Sökande konsument</td>
+      <td>SKA kunna konsumera och bearbeta <code class="language-plaintext highlighter-rouge">Bundle</code>-resultat från sökningar på <code class="language-plaintext highlighter-rouge">Endpoint</code>, inklusive resultat från <code class="language-plaintext highlighter-rouge">listed-by</code>.</td>
+    </tr>
+    <tr>
+      <td>Administratör</td>
+      <td>SKA vara inloggad via Inera IdP och företräda den organisation vars poster ändras (REQ-ADM-5). SKA registrera via transaction-Bundle med tillhörande Provenance-post (REQ-TRC-1/2).</td>
+    </tr>
+    <tr>
+      <td>Lokal katalog</td>
+      <td>BÖR hålla sin kopia aktuell via prenumeration på <a href="SubscriptionTopic-tk-organization-endpoint-changes.html">SubscriptionTopic: tk-organization-endpoint-changes</a> och/eller grundladdning/återsynk via <code class="language-plaintext highlighter-rouge">_lastUpdated</code> (REQ-DIST-1/2).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Fr.o.m. FHIR R5 kan <code class="language-plaintext highlighter-rouge">CapabilityStatement</code> uttrycka denna typ av förväntningar
+formellt via elementet <code class="language-plaintext highlighter-rouge">obligations</code>. Denna IG definierar ett formellt
+CapabilityStatement för sin egen serverroll — <a href="CapabilityStatement-tk-admin-api.html">administrativt API</a> —
+se <a href="capabilitystatement.html">CapabilityStatement</a> under Implementering. EHM:s
+Organization Endpoint Writer Capabilities är ett separat CapabilityStatement,
+definierat och publicerat av EHM i deras egen IG, inte här.</p>
+
+<p>Arbetsflödet för att koppla en ändpunkt till en organisation utlöses av att
+Synkroniseringstjänsten upptäcker en ny eller ändrad koppling i
+tjänstekatalogen (t.ex. via <code class="language-plaintext highlighter-rouge">listed-by</code>). Den säkerställer att motsvarande
+ändpunkt finns hos EHM och anropar därefter EHM:s <code class="language-plaintext highlighter-rouge">$add-organization</code> för att
+koppla rätt organisation till den, enligt mappningen i
+<a href="mappings.html">Mappning mot EHM:s Organization Endpoint Writer</a>; en sökande
+konsument kan hela tiden hitta ändpunkten i tjänstekatalogen via <code class="language-plaintext highlighter-rouge">listed-by</code>,
+oberoende av EHM-synkroniseringen. Se <a href="information-basis.html">Informationsunderlag</a>
+för den fullständiga, auktoritativa beskrivningen av entiteterna som ingår.</p>
+
+<hr />
+
+<blockquote>
+  <p><strong>Vägledning för författare:</strong> Referera till relevanta nationella
+föreskrifter eller RIVTA-tjänstekontrakt där det är tillämpligt.</p>
+</blockquote>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
+          Paket inera.infra.tjanstekatalog#0.2.0 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>.
+          Genererad 
+  <span title="2026-11-20 13:14:00 +0000">
+    2026-11-20
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Länkar: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Innehållsförteckning</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-rapport</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

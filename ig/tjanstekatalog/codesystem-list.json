@@ -1,0 +1,18 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.inera.se/ig/tjanstekatalog/CodeSystem/tk-api-specification-category",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "TKAPISpecificationCategoryCS",
+    "title" : "Kategorier för API-specifikationer (kodsystem)",
+    "description" : "Kodsystem som anger vilken typ av interoperabilitetsspecifikation en API-specifikation är (API-specifikation.kategori i informationsunderlaget). Preliminärt förslag."
+  },
+  {
+    "url" : "https://fhir.inera.se/ig/tjanstekatalog/CodeSystem/tk-endpoint-security-method",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "TKEndpointSecurityMethodCS",
+    "title" : "Säkerhetsmetoder för tekniska ändpunkter (kodsystem)",
+    "description" : "Kodsystem som anger vilken säkerhetsmetod som skyddar en teknisk ändpunkt (Ändpunkt.säkerhetsmetod i informationsunderlaget). Preliminärt förslag, se REQ-END-6 i kravkatalogen."
+  }]
+}

@@ -1,0 +1,287 @@
+IneraTjanstekatalog : Validation Results
+=========================================
+
+err = 0, warn = 19, info = 108, broken links = 0
+$--
+Generated $--. FHIR version $-- for inera.infra.tjanstekatalog#$-- (canonical = https://fhir.inera.se/ig/tjanstekatalog)
+ Build Errors : 0 / 0 / 0
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/ActorDefinition-tk-synkroniseringstjanst : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/CapabilityStatement-TKAPIInstanceExample : 0 / 0 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/CapabilityStatement-TKAPISpecificationCapabilityExample : 0 / 1 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/CapabilityStatement-tk-admin-api : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/CapabilityStatement-tk-search-api : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/CodeSystem-tk-api-specification-category : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/CodeSystem-tk-endpoint-security-method : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/Endpoint-TKEndpointExample : 0 / 2 / 2
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/ImplementationGuide-inera.infra.tjanstekatalog : 0 / 0 / 20
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/NamingSystem-hsa-id : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/NamingSystem-organisationsnummer : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/OperationOutcome-TKOperationOutcomeExample : 0 / 0 / 1
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/Organization-TKOrganizationExample : 0 / 0 / 1
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/Organization-TKOrganizationUnitExample : 0 / 0 / 1
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/Provenance-TKProvenanceExample : 0 / 0 / 1
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/Requirements-tk-tjanstekatalog-requirements : 0 / 71 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/SearchParameter-tk-capabilitystatement-instantiates : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/SearchParameter-tk-capabilitystatement-kind : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/SearchParameter-tk-endpoint-implements : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/SearchParameter-tk-endpoint-listed-by : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-api-instance : 0 / 4 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-api-instance-endpoint : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-api-instance-period : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-api-specification-capability : 0 / 4 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-api-specification-category : 0 / 2 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-api-specification-source-reference : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-capabilitystatement-responsible-organization : 0 / 1 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-endpoint : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-endpoint-authorization-server-url : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-endpoint-payload-profile : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-endpoint-security-method : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-operation-outcome : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-organization : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/StructureDefinition-tk-provenance : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/SubscriptionTopic-tk-organization-endpoint-changes : 0 / 0 / 4
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/ValueSet-tk-api-specification-category : 0 / 1 / 3
+ /home/runner/work/_temp/publish/ig-builds/inera.infra.tjanstekatalog#0.2.0-milestone/fsh-generated/resources/ValueSet-tk-endpoint-security-method : 0 / 1 / 3
+</table>
+
+== n/a ==
+
+
+== fsh-generated/resources/ActorDefinition-tk-synkroniseringstjanst.json ==
+INFORMATION: ActorDefinition/tk-synkroniseringstjanst: ActorDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: ActorDefinition/tk-synkroniseringstjanst: ActorDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource ActorDefinition/tk-synkroniseringstjanst could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CapabilityStatement-TKAPIInstanceExample.json ==
+INFORMATION: CapabilityStatement/TKAPIInstanceExample: CapabilityStatement.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: CapabilityStatement/TKAPIInstanceExample: CapabilityStatement.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+
+
+== fsh-generated/resources/CapabilityStatement-TKAPISpecificationCapabilityExample.json ==
+INFORMATION: CapabilityStatement/TKAPISpecificationCapabilityExample: CapabilityStatement.extension[0].value.ofType(CodeableConcept): Referens till experimentell CodeSystem https://fhir.inera.se/ig/tjanstekatalog/CodeSystem/tk-api-specification-category|0.2.0
+WARNING: CapabilityStatement/TKAPISpecificationCapabilityExample: CapabilityStatement.extension[1].value.ofType(url): Ingen definition kunde hittas för URL-värdet 'https://fhir.inera.se/ig/patientinformation/'
+INFORMATION: CapabilityStatement/TKAPISpecificationCapabilityExample: CapabilityStatement.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: CapabilityStatement/TKAPISpecificationCapabilityExample: CapabilityStatement.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+
+
+== fsh-generated/resources/CapabilityStatement-tk-admin-api.json ==
+INFORMATION: CapabilityStatement/tk-admin-api: CapabilityStatement.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: CapabilityStatement/tk-admin-api: CapabilityStatement.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource CapabilityStatement/tk-admin-api could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CapabilityStatement-tk-search-api.json ==
+INFORMATION: CapabilityStatement/tk-search-api: CapabilityStatement.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: CapabilityStatement/tk-search-api: CapabilityStatement.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource CapabilityStatement/tk-search-api could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-tk-api-specification-category.json ==
+INFORMATION: CodeSystem/tk-api-specification-category: CodeSystem.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: CodeSystem/tk-api-specification-category: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/tk-api-specification-category should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/CodeSystem-tk-endpoint-security-method.json ==
+INFORMATION: CodeSystem/tk-endpoint-security-method: CodeSystem.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: CodeSystem/tk-endpoint-security-method: CodeSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource CodeSystem/tk-endpoint-security-method should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/Endpoint-TKEndpointExample.json ==
+INFORMATION: Endpoint/TKEndpointExample: Endpoint.extension[0].value.ofType(CodeableConcept): Referens till experimentell CodeSystem https://fhir.inera.se/ig/tjanstekatalog/CodeSystem/tk-endpoint-security-method|0.2.0
+WARNING: Endpoint/TKEndpointExample: Endpoint.extension[1].value.ofType(url): Ingen definition kunde hittas för URL-värdet 'https://auth.exempelregionen.se/oauth2/token'
+WARNING: Endpoint/TKEndpointExample: Endpoint.identifier[0].system: Ingen definition kunde hittas för URL-värdet 'http://electronichealth.se/fhir/NDI/Endpoint'
+
+
+== fsh-generated/resources/ImplementationGuide-inera.infra.tjanstekatalog.json ==
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[7].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[8].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[9].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[10].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[11].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[12].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[13].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[14].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[15].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[16].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[17].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[18].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[19].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[20].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[21].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: ImplementationGuide/inera.infra.tjanstekatalog: ImplementationGuide.definition.parameter[27].code: Referens till experimentell CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+INFORMATION: Resource: The resource ImplementationGuide/inera.infra.tjanstekatalog could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/NamingSystem-hsa-id.json ==
+INFORMATION: NamingSystem/hsa-id: NamingSystem.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: NamingSystem/hsa-id: NamingSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource NamingSystem/hsa-id could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/NamingSystem-organisationsnummer.json ==
+INFORMATION: NamingSystem/organisationsnummer: NamingSystem.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: NamingSystem/organisationsnummer: NamingSystem.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource NamingSystem/organisationsnummer could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/OperationOutcome-TKOperationOutcomeExample.json ==
+
+
+== fsh-generated/resources/Organization-TKOrganizationExample.json ==
+
+
+== fsh-generated/resources/Organization-TKOrganizationUnitExample.json ==
+
+
+== fsh-generated/resources/Provenance-TKProvenanceExample.json ==
+
+
+== fsh-generated/resources/Requirements-tk-tjanstekatalog-requirements.json ==
+INFORMATION: Requirements/tk-tjanstekatalog-requirements: Requirements.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: Requirements/tk-tjanstekatalog-requirements: Requirements.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Requirements/tk-tjanstekatalog-requirements: Requirements.actor[1]: En definition kunde inte hittas för kanonisk URL 'http://electronichealth.se/fhir/NDI/ActorDefinition/organization-endpoint-writer-actor-er'
+INFORMATION: Resource: The resource Requirements/tk-tjanstekatalog-requirements could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/SearchParameter-tk-capabilitystatement-instantiates.json ==
+INFORMATION: SearchParameter/tk-capabilitystatement-instantiates: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: SearchParameter/tk-capabilitystatement-instantiates: SearchParameter.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource SearchParameter/tk-capabilitystatement-instantiates could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/SearchParameter-tk-capabilitystatement-kind.json ==
+INFORMATION: SearchParameter/tk-capabilitystatement-kind: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: SearchParameter/tk-capabilitystatement-kind: SearchParameter.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource SearchParameter/tk-capabilitystatement-kind could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/SearchParameter-tk-endpoint-implements.json ==
+INFORMATION: SearchParameter/tk-endpoint-implements: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: SearchParameter/tk-endpoint-implements: SearchParameter.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource SearchParameter/tk-endpoint-implements could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/SearchParameter-tk-endpoint-listed-by.json ==
+INFORMATION: SearchParameter/tk-endpoint-listed-by: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: SearchParameter/tk-endpoint-listed-by: SearchParameter.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource SearchParameter/tk-endpoint-listed-by could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-api-instance.json ==
+INFORMATION: StructureDefinition/tk-api-instance: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-api-instance: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/tk-api-instance: StructureDefinition.snapshot.element[14].binding: Definitionen för elementet 'CapabilityStatement.versionAlgorithm[x]' binder till värdemängden 'http://hl7.org/fhir/ValueSet/version-algorithm|5.0.0' som är experimentell, men denna struktur är inte märkt som experimentell
+WARNING: StructureDefinition/tk-api-instance: StructureDefinition.snapshot.element[24].binding: Definitionen för elementet 'CapabilityStatement.jurisdiction' binder till värdemängden 'http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0' som är experimentell, men denna struktur är inte märkt som experimentell
+WARNING: StructureDefinition/tk-api-instance: StructureDefinition.snapshot.element[28].binding: Definitionen för elementet 'CapabilityStatement.kind' binder till värdemängden 'http://hl7.org/fhir/ValueSet/capability-statement-kind|5.0.0' som är experimentell, men denna struktur är inte märkt som experimentell
+WARNING: StructureDefinition/tk-api-instance: StructureDefinition.snapshot.element[67].binding: Definitionen för elementet 'CapabilityStatement.rest.resource.type' binder till värdemängden 'http://hl7.org/fhir/ValueSet/resource-types|5.0.0' som är experimentell, men denna struktur är inte märkt som experimentell
+INFORMATION: Resource: The resource StructureDefinition/tk-api-instance could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-api-instance-endpoint.json ==
+INFORMATION: StructureDefinition/tk-api-instance-endpoint: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-api-instance-endpoint: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/tk-api-instance-endpoint could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-api-instance-period.json ==
+INFORMATION: StructureDefinition/tk-api-instance-period: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-api-instance-period: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/tk-api-instance-period could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-api-specification-capability.json ==
+INFORMATION: StructureDefinition/tk-api-specification-capability: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-api-specification-capability: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/tk-api-specification-capability: StructureDefinition.snapshot.element[15].binding: Definitionen för elementet 'CapabilityStatement.versionAlgorithm[x]' binder till värdemängden 'http://hl7.org/fhir/ValueSet/version-algorithm|5.0.0' som är experimentell, men denna struktur är inte märkt som experimentell
+WARNING: StructureDefinition/tk-api-specification-capability: StructureDefinition.snapshot.element[25].binding: Definitionen för elementet 'CapabilityStatement.jurisdiction' binder till värdemängden 'http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0' som är experimentell, men denna struktur är inte märkt som experimentell
+WARNING: StructureDefinition/tk-api-specification-capability: StructureDefinition.snapshot.element[29].binding: Definitionen för elementet 'CapabilityStatement.kind' binder till värdemängden 'http://hl7.org/fhir/ValueSet/capability-statement-kind|5.0.0' som är experimentell, men denna struktur är inte märkt som experimentell
+WARNING: StructureDefinition/tk-api-specification-capability: StructureDefinition.snapshot.element[68].binding: Definitionen för elementet 'CapabilityStatement.rest.resource.type' binder till värdemängden 'http://hl7.org/fhir/ValueSet/resource-types|5.0.0' som är experimentell, men denna struktur är inte märkt som experimentell
+INFORMATION: Resource: The resource StructureDefinition/tk-api-specification-capability could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-api-specification-category.json ==
+INFORMATION: StructureDefinition/tk-api-specification-category: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-api-specification-category: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: StructureDefinition/tk-api-specification-category: StructureDefinition.differential.element[3].binding: Definitionen för elementet 'Extension.value[x]' binder till värdemängden 'https://fhir.inera.se/ig/tjanstekatalog/ValueSet/tk-api-specification-category' som är experimentell, men denna struktur är inte märkt som experimentell
+WARNING: StructureDefinition/tk-api-specification-category: StructureDefinition.snapshot.element[4].binding: Definitionen för elementet 'Extension.value[x]' binder till värdemängden 'https://fhir.inera.se/ig/tjanstekatalog/ValueSet/tk-api-specification-category' som är experimentell, men denna struktur är inte märkt som experimentell
+INFORMATION: Resource: The resource StructureDefinition/tk-api-specification-category could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-api-specification-source-reference.json ==
+INFORMATION: StructureDefinition/tk-api-specification-source-reference: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-api-specification-source-reference: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/tk-api-specification-source-reference could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-capabilitystatement-responsible-organization.json ==
+INFORMATION: StructureDefinition/tk-capabilitystatement-responsible-organization: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-capabilitystatement-responsible-organization: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/tk-capabilitystatement-responsible-organization could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+WARNING: StructureDefinition.where(url = 'https://fhir.inera.se/ig/tjanstekatalog/StructureDefinition/tk-capabilitystatement-responsible-organization'): The Implementation Guide contains no examples for this extension
+
+
+== fsh-generated/resources/StructureDefinition-tk-endpoint.json ==
+INFORMATION: StructureDefinition/tk-endpoint: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-endpoint: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/tk-endpoint could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-endpoint-authorization-server-url.json ==
+INFORMATION: StructureDefinition/tk-endpoint-authorization-server-url: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-endpoint-authorization-server-url: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/tk-endpoint-authorization-server-url could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-endpoint-payload-profile.json ==
+INFORMATION: StructureDefinition/tk-endpoint-payload-profile: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-endpoint-payload-profile: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/tk-endpoint-payload-profile could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-endpoint-security-method.json ==
+INFORMATION: StructureDefinition/tk-endpoint-security-method: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-endpoint-security-method: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/tk-endpoint-security-method could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-operation-outcome.json ==
+INFORMATION: StructureDefinition/tk-operation-outcome: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-operation-outcome: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/tk-operation-outcome could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-organization.json ==
+INFORMATION: StructureDefinition/tk-organization: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-organization: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/tk-organization could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/StructureDefinition-tk-provenance.json ==
+INFORMATION: StructureDefinition/tk-provenance: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/tk-provenance: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource StructureDefinition/tk-provenance could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/SubscriptionTopic-tk-organization-endpoint-changes.json ==
+INFORMATION: SubscriptionTopic/tk-organization-endpoint-changes: SubscriptionTopic.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: SubscriptionTopic/tk-organization-endpoint-changes: SubscriptionTopic.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+INFORMATION: Resource: The resource SubscriptionTopic/tk-organization-endpoint-changes could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-tk-api-specification-category.json ==
+INFORMATION: ValueSet/tk-api-specification-category: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: ValueSet/tk-api-specification-category: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/tk-api-specification-category should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
+== fsh-generated/resources/ValueSet-tk-endpoint-security-method.json ==
+INFORMATION: ValueSet/tk-endpoint-security-method: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: ValueSet/tk-endpoint-security-method: ValueSet.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#SE for language(s) 'sv'. The display is 'Sweden' which is a valid display for the default language
+WARNING: Resource: The resource ValueSet/tk-endpoint-security-method should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+

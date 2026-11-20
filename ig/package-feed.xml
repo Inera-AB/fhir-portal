@@ -4,11 +4,22 @@
     <description>Nya FHIR-paket publicerade av Inera</description>
     <link>https://fhir.inera.se/ig/package-feed.xml</link>
     <generator>HL7, Inc FHIR Publication tooling</generator>
-    <lastBuildDate>Mon, 16 Nov 2026 04:15:01 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 01:14:18 +0000</lastBuildDate>
     <atom:link href="https://fhir.inera.se/ig/package-feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 Nov 2026 04:15:01 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 01:14:18 +0000</pubDate>
     <language>sv-SE</language>
     <ttl>600</ttl>
+    <item>
+      <title>inera.infra.tjanstekatalog#0.2.0</title>
+      <description>Första publicerade versionen.</description>
+      <link>https://fhir.inera.se/ig/tjanstekatalog/0.2.0/package.tgz</link>
+      <guid isPermaLink="true">https://fhir.inera.se/ig/tjanstekatalog/0.2.0/package.tgz</guid>
+      <dc:creator>Inera AB</dc:creator>
+      <fhir:version>5.0.0</fhir:version>
+      <fhir:kind>IG</fhir:kind>
+      <pubDate>Fri, 20 Nov 2026 01:14:18 +0000</pubDate>
+      <fhir:details>Publication run at 20/11/2026 by runner using Version 3.0.5 (Git# cb04275ab57c). Built 2026-11-20T05:22:47.437Z (7 hours old) source id Unknown (todo)</fhir:details>
+    </item>
     <item>
       <title>inera.ehds.ehds-tk#0.9.0</title>
       <description>Övergång till IG Publishers officiella publiceringsläge, med logiska modeller och mappningar för alla aktiva tjänstekontraktsversioner.</description>

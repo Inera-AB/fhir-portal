@@ -36,5 +36,24 @@
       "date" : "2026-11-16",
       "path" : "https://fhir.inera.se/ig/ehds-tk/0.9.0"
     }
+  },
+  {
+    "path" : "tjanstekatalog/package-list.json",
+    "package-id" : "inera.infra.tjanstekatalog",
+    "title" : "Tjänstekatalogen",
+    "canonical" : "https://fhir.inera.se/ig/tjanstekatalog",
+    "category" : "National Base",
+    "ci-build" : "https://inera-ab.github.io/tjanstekatalog",
+    "version-count" : 1,
+    "latest" : {
+      "version" : "0.2.0",
+      "date" : "2026-11-20",
+      "path" : "https://fhir.inera.se/ig/tjanstekatalog/0.2.0"
+    },
+    "milestone" : {
+      "version" : "0.2.0",
+      "date" : "2026-11-20",
+      "path" : "https://fhir.inera.se/ig/tjanstekatalog/0.2.0"
+    }
   }]
 }

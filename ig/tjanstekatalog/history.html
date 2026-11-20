@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Tjänstekatalogen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="http://www.hl7.org"/>
+  <link href="fhir.css" rel="stylesheet"/>
+  <link href="dist-hist/css/bootstrap.css" rel="stylesheet"/>
+  <link href="assets-hist/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="assets-hist/css/project.css" rel="stylesheet"/>
+  <link href="assets-hist/css/pygments-manni.css" rel="stylesheet"/>
+	<link href="jquery-ui.css" rel="stylesheet"/>
+  <script type="application/javascript" src="https://hl7.org/fhir/history-cm.js"> </script>
+  <script type="application/javascript" src="https://hl7.org/fhir/history.js"> </script>
+  <link href="history.css" rel="stylesheet"/>
+  <!-- header.template starts here -->
+  <link rel="icon" href="https://fhir.inera.se/assets/images/favicon.png"/>
+  <style>
+    .inera-header { background: #A33662; box-shadow: 0 2px 6px rgba(0,0,0,.2); margin-bottom: 1.5rem; }
+    .inera-header-inner { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; height: 56px; display: flex; align-items: center; gap: 1rem; }
+    .inera-header img { height: 32px; width: auto; }
+    .inera-header a.inera-title { color: #fff; font-weight: 700; text-decoration: none; }
+    .inera-footer { max-width: 960px; margin: 2rem auto; padding: 1rem 1.5rem; border-top: 1px solid #ccc; color: #727373; font-size: .85rem; }
+  </style>
+  
+  <!-- header.template ends here -->
+</head>
+<!-- preamble.template starts here -->
+<body>
+<header class="inera-header">
+  <div class="inera-header-inner">
+    <a href="https://fhir.inera.se/"><img src="https://fhir.inera.se/assets/images/inera-logo.svg" alt="Inera"/></a>
+    <a class="inera-title" href="https://fhir.inera.se/ig/">Ineras FHIR Implementation Guides</a>
+  </div>
+</header>
+<div class="container">
+<h1 id="ig-title"></h1>
+
+<!-- preamble.template ends here -->
+
+<div class="col-12">
+
+<h2>Publication (Version) History</h2>
+
+<div id="intro"></div>
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<div id="history-data"></div>
+<style>
+    #history-data table td { padding-right: 1em; }
+</style>
+
+  <!-- postamble.template starts here -->
+</div>
+<footer class="inera-footer">
+  <span id="ig-footer"></span> · Publicerad av <a href="https://www.inera.se">Inera AB</a> · <a href="https://fhir.inera.se/ig/">Alla implementation guides</a>
+</footer>
+
+  <!-- postamble.template ends here -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets-hist/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./dist-hist/js/bootstrap.min.js"> </script>
+<script src="./assets-hist/js/respond.min.js"> </script>
+<script src="./assets-hist/js/fhir.js"> </script>
+
+<!-- Analytics Below
+================================================== -->
+
+<!--- Include in the page --->
+<script>
+var pageJSON = '{"list":[{"version":"current","path":"https://inera-ab.github.io/tjanstekatalog","status":"ci-build","sequence":"ci-build","desc":"Continuous Integration Build (latest in version control) - Content subject to frequent changes"},{"version":"0.2.0","path":"https://fhir.inera.se/ig/tjanstekatalog/0.2.0","status":"release","sequence":"Releases","fhirversion":"5.0.0","date":"2026-11-20","current":true,"desc":"Första publicerade versionen."}],"package-id":"inera.infra.tjanstekatalog","canonical":"https://fhir.inera.se/ig/tjanstekatalog","title":"Tjänstekatalogen","category":"National Base","introduction":"FHIR-gränssnitt för sökning av organisationers tekniska ändpunkter i tjänstekatalogen, samt administrativt API för att registrera organisationer, ändpunkter och deras kopplingar."}';
+load(pageJSON);
+</script>
+
+</body>
+</html>
+
+
