@@ -61,7 +61,20 @@ Hur ett IG-repo sätts upp och hur en release görs beskrivs i mallens [README](
 
 ### Behörighet
 
-IG-repot behöver hemligheten `FHIR_PORTAL_TOKEN`: en fine-grained PAT med **Contents: Read and write** på `inera-ab/fhir-portal` (och på `inera-ab/fhir-portal-test` för testpubliceringar).
+IG-repon och landningssidan skriver hit med en token från organisationens **GitHub App**. Appen har **Contents: Read and write** och är installerad bara på `inera-ab/fhir-portal` och `inera-ab/fhir-portal-test`. Workflowsen hämtar en ny token (giltig en timme) precis innan den används.
+
+Appens id och privata nyckel ligger som organisationshemligheter, tillgängliga för de repon som får publicera:
+
+| Hemlighet | Innehåll |
+|---|---|
+| `FHIR_PORTAL_APP_ID` | Appens id |
+| `FHIR_PORTAL_APP_KEY` | Appens privata nyckel (hela `.pem`-filen) |
+
+Ett nytt IG-repo läggs till under *Repository access* för de två hemligheterna i organisationens inställningar.
+
+`FHIR_PORTAL_TOKEN` (en personlig fine-grained PAT) används bara om apphemligheterna saknas, och körningen varnar då. Den ska tas bort.
+
+Branchen `gh-pages` skyddas av en regel som blockerar force-push och radering.
 
 ### Testpubliceringar
 
